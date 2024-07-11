@@ -3,7 +3,8 @@
      "description": "mtmb php project",
     "type": "library",
     "require": {
-        "php": "^7.4 || ^8.0"
+        "php": "^7.4 || ^8.0",
+        "codeigniter4/framework": "^4"
     },
     "require-dev": {
         "heroku/heroku-buildpack-php": "*"
