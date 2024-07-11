@@ -5,6 +5,9 @@
     "require": {
         "php": "^7.4 || ^8.0"
     },
+    "require-dev": {
+        "heroku/heroku-buildpack-php": "*"
+    },
     "autoload": {
         "psr-4": {
             "Makedweb\\MtmbSetting\\": "src/"
