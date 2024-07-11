@@ -1,0 +1,256 @@
+	/**
+	 * Author : 배진환
+	 * Usage : 상담분야
+	 * Description : 리팩터링 대상 (초기엔 19개 고정이었으나 갈수록 뭐가 하나씩 늘어남. 이제 예측 안됨. DB에서 관리하길 권장.)
+	 *  - use_partner : 협력업체 사용 범위
+	 *  - use_subscribe : 월간디자인 의뢰 범위
+	 *  - use_top : 사용자 화면에서 최상단 메뉴 여부
+	 *  - use_menu : 사용자 메뉴창 표시여부
+	 *  - use_statistics : 매출통계 사용여부
+	 *  - sort : 정렬 순서
+	 *  - color : 매출통계에서 사용하는 색상
+	 */
+	// public $business_list = [
+	// 	'consultation' => [
+	// 		'name' => '상담신청',
+	// 		'segment' => 'consultation',
+	// 		'use_partner' => false,
+	// 		'use_subscribe' => false,
+	// 		'use_top' => false,
+	// 		'use_menu' => false,
+	// 		'use_statistics' => false,
+	// 		'sort' => 0,
+	// 		'color' => "rgba(75, 192, 86, 0.3)"
+	// 	],
+	// 	'cibi' => [
+	// 		'name' => 'CI/BI',
+	// 		'segment' => 'cibi',
+	// 		'use_partner' => false,
+	// 		'use_subscribe' => true,
+	// 		'use_top' => false,
+	// 		'use_menu' => true,
+	// 		'use_statistics' => true,
+	// 		'sort' => 1,
+	// 		'color' => "rgba(255, 99, 132, 0.3)"
+	// 	],
+	// 	'bscard' => [
+	// 		'name' => '명함',
+	// 		'segment' => 'bscard',
+	// 		'use_partner' => true,
+	// 		'use_subscribe' => true,
+	// 		'use_top' => false,
+	// 		'use_menu' => true,
+	// 		'use_statistics' => true,
+	// 		'sort' => 2,
+	// 		'color' => "rgba(255, 159, 64, 0.3)"
+	// 	],
+	// 	'envelope' => [
+	// 		'name' => '봉투',
+	// 		'segment' => 'envelope',
+	// 		'use_partner' => true,
+	// 		'use_subscribe' => true,
+	// 		'use_top' => false,
+	// 		'use_menu' => true,
+	// 		'use_statistics' => true,
+	// 		'sort' => 3,
+	// 		'color' => "rgba(255, 205, 86, 0.3)"
+	// 	],
+	// 	'idcard' => [
+	// 		'name' => '사원증',
+	// 		'segment' => 'idcard',
+	// 		'use_partner' => true,
+	// 		'use_subscribe' => true,
+	// 		'use_top' => false,
+	// 		'use_menu' => true,
+	// 		'use_statistics' => true,
+	// 		'sort' => 4,
+	// 		'color' => "rgba(75, 192, 192, 0.3)"
+	// 	],
+	// 	'signboard' => [
+	// 		'name' => '현판',
+	// 		'segment' => 'signboard',
+	// 		'use_partner' => true,
+	// 		'use_subscribe' => true,
+	// 		'use_top' => false,
+	// 		'use_menu' => true,
+	// 		'use_statistics' => true,
+	// 		'sort' => 5,
+	// 		'color' => "rgba(54, 162, 235, 0.3)"
+	// 	],
+	// 	'foldleaflet' => [
+	// 		'name' => '리플렛',
+	// 		'segment' => 'foldleaflet',
+	// 		'use_partner' => true,
+	// 		'use_subscribe' => true,
+	// 		'use_top' => false,
+	// 		'use_menu' => true,
+	// 		'use_statistics' => true,
+	// 		'sort' => 6,
+	// 		'color' => "rgba(153, 102, 255, 0.3)"
+	// 	],
+	// 	'leaflet' => [
+	// 		'name' => '전단',
+	// 		'segment' => 'leaflet',
+	// 		'use_partner' => true,
+	// 		'use_subscribe' => true,
+	// 		'use_top' => false,
+	// 		'use_menu' => true,
+	// 		'use_statistics' => true,
+	// 		'sort' => 7,
+	// 		'color' => "rgba(201, 203, 207, 0.3)"
+	// 	],
+	// 	'brochure' => [
+	// 		'name' => '브로셔',
+	// 		'segment' => 'brochure',
+	// 		'use_partner' => true,
+	// 		'use_subscribe' => true,
+	// 		'use_top' => false,
+	// 		'use_menu' => true,
+	// 		'use_statistics' => true,
+	// 		'sort' => 8,
+	// 		'color' => "rgba(230, 126, 34, 0.3)"
+	// 	],
+	// 	'poster' => [
+	// 		'name' => '포스터',
+	// 		'segment' => 'poster',
+	// 		'use_partner' => true,
+	// 		'use_subscribe' => true,
+	// 		'use_top' => false,
+	// 		'use_menu' => true,
+	// 		'use_statistics' => true,
+	// 		'sort' => 9,
+	// 		'color' => "rgba(0, 128, 0, 0.3)"
+	// 	],
+	// 	'sticker' => [
+	// 		'name' => '스티커',
+	// 		'segment' => 'sticker',
+	// 		'use_partner' => true,
+	// 		'use_subscribe' => true,
+	// 		'use_top' => false,
+	// 		'use_menu' => true,
+	// 		'use_statistics' => true,
+	// 		'sort' => 10,
+	// 		'color' => "rgba(255, 215, 0, 0.3)"
+	// 	],
+	// 	'pamphlet' => [
+	// 		'name' => '책자',
+	// 		'segment' => 'pamphlet',
+	// 		'use_partner' => true,
+	// 		'use_subscribe' => true,
+	// 		'use_top' => false,
+	// 		'use_menu' => true,
+	// 		'use_statistics' => true,
+	// 		'sort' => 11,
+	// 		'color' => "rgba(0, 255, 255, 0.3)"
+	// 	],
+	// 	'realpicture' => [
+	// 		'name' => '실사출력',
+	// 		'segment' => 'realpicture',
+	// 		'use_partner' => true,
+	// 		'use_subscribe' => true,
+	// 		'use_top' => false,
+	// 		'use_menu' => true,
+	// 		'use_statistics' => true,
+	// 		'sort' => 12,
+	// 		'color' => "rgba(255, 192, 203, 0.3)"
+	// 	],
+	// 	'xbanner' => [
+	// 		'name' => '배너',
+	// 		'segment' => 'xbanner',
+	// 		'use_partner' => true,
+	// 		'use_subscribe' => true,
+	// 		'use_top' => false,
+	// 		'use_menu' => true,
+	// 		'use_statistics' => true,
+	// 		'sort' => 13,
+	// 		'color' => "rgba(255, 255, 0, 0.3)"
+	// 	],
+	// 	'banner' => [
+	// 		'name' => '현수막',
+	// 		'segment' => 'banner',
+	// 		'use_partner' => true,
+	// 		'use_subscribe' => true,
+	// 		'use_top' => false,
+	// 		'use_menu' => true,
+	// 		'use_statistics' => true,
+	// 		'sort' => 14,
+	// 		'color' => "rgba(0, 0, 128, 0.3)"
+	// 	],
+	// 	'infodesign' => [
+	// 		'name' => '상세페이지',
+	// 		'segment' => 'infodesign',
+	// 		'use_partner' => false,
+	// 		'use_subscribe' => true,
+	// 		'use_top' => false,
+	// 		'use_menu' => true,
+	// 		'use_statistics' => true,
+	// 		'sort' => 15,
+	// 		'color' => "rgba(0, 128, 128, 0.3)"
+	// 	],
+	// 	'webbanner' => [
+	// 		'name' => '웹배너',
+	// 		'segment' => 'webbanner',
+	// 		'use_partner' => false,
+	// 		'use_subscribe' => true,
+	// 		'use_top' => false,
+	// 		'use_menu' => true,
+	// 		'use_statistics' => true,
+	// 		'sort' => 16,
+	// 		'color' => "rgba(192, 192, 192, 0.3)"
+	// 	],
+	// 	'proposal' => [
+	// 		'name' => '비즈니스문서',
+	// 		'segment' => 'proposal',
+	// 		'use_partner' => false,
+	// 		'use_subscribe' => true,
+	// 		'use_top' => false,
+	// 		'use_menu' => true,
+	// 		'use_statistics' => true,
+	// 		'sort' => 17,
+	// 		'color' => "rgba(128, 0, 0, 0.3)"
+	// 	],
+	// 	'imageedit' => [
+	// 		'name' => '이미지편집',
+	// 		'segment' => 'imageedit',
+	// 		'use_partner' => false,
+	// 		'use_subscribe' => true,
+	// 		'use_top' => false,
+	// 		'use_menu' => true,
+	// 		'use_statistics' => true,
+	// 		'sort' => 18,
+	// 		'color' => "rgba(128, 128, 0, 0.3)"
+	// 	],
+	// 	'subscribe' => [
+	// 		'name' => '월간디자인',
+	// 		'segment' => 'subscribe',
+	// 		'use_partner' => false,
+	// 		'use_subscribe' => false,
+	// 		'use_top' => true,
+	// 		'use_menu' => true,
+	// 		'use_statistics' => true,
+	// 		'sort' => 19,
+	// 		'color' => "rgba(0, 0, 255, 0.3)"
+	// 	],
+	// 	'package' => [
+	// 		'name' => '패키지상품',
+	// 		'segment' => 'package',
+	// 		'use_partner' => true,
+	// 		'use_subscribe' => true,
+	// 		'use_top' => true,
+	// 		'use_menu' => true,
+	// 		'use_statistics' => true,
+	// 		'sort' => 20,
+	// 		'color' => "rgba(128, 0, 128, 0.3)"
+	// 	],
+	// 	'webdesign' => [
+	// 		'name' => '웹디자인가이드',
+	// 		'segment' => 'webdesign',
+	// 		'use_partner' => false,
+	// 		'use_subscribe' => true,
+	// 		'use_top' => true,
+	// 		'use_menu' => true,
+	// 		'use_statistics' => true,
+	// 		'sort' => 21,
+	// 		'color' => "rgba(255, 0, 0, 0.3)"
+	// 	],
+	// ];
