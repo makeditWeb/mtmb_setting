@@ -1,76 +1,80 @@
-<section class="sub_cont consulting">
-    <div class="sub_cont_top">
 
-        <!-- s: (0)시작 -->
-        <div class="container start consulting_step_start">
-            <div class="step_header">
-                <h1>견적요청</h1>
-            </div>
-            <div class="step_body">
-                <div class="row">
-                    <div class="col-12">
-                        <h2 class="step_title">디자인<br>견적요청</h2>
-                        <button type="button" class="btn_start btn_consulting_start_step">
-                            <img src="/resources/users/img/btn_start.png" alt="">
-                        </button>
-                        <div class="trg_group">
-                            <div class="trg_1"></div>
-                            <div class="trg_2"></div>
-                            <div class="trg_3"></div>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <ul class="step consulting_process_icons">
-                            <li>
-                                <img src="/resources/users/img/step_1.png" alt="">
-                                <p>고객 <br class="mo">의뢰</p>
-                            </li>
-                            <li>
-                                <img src="/resources/users/img/step_2.png" alt="">
-                                <p>담당자 <br class="mo">상담</p>
-                            </li>
-                            <li>
-                                <img src="/resources/users/img/step_3.png" alt="">
-                                <p>디자이너 <br class="mo">소통</p>
-                            </li>
-                            <li>
-                                <img src="/resources/users/img/step_4.png" alt="">
-                                <p>수정 및 <br class="mo">컨펌</p>
-                            </li>
-                            <li>
-                                <img src="/resources/users/img/step_5.png" alt="">
-                                <p>서비스 <br class="mo">제공</p>
-                            </li>
-                        </ul>
-                    </div>
+    <!-- pc -->
+    <section class="consulting_container pc">
+        <div class='content_wrap'>
+            <!-- step 00 -->
+            <div class='consulting_box step_0 start consulting_step_start'>
+                <div class='left_wrap'>
+                    <img class='section_text' src='resources/users/img/main/text/consulting.png' alt='consulting' />
+                    <ul>
+                        <li>
+                            <img src="resources/users/img/main/step_1.png" alt="상담 문의">
+                            <p>문의</p>
+                        </li>
+                        <li class="arrow_between">
+                            <img src="resources/users/img/icon/between_arrows.png">
+                        </li>
+                        <li>
+                            <img src="resources/users/img/main/step_2.png" alt="상담 진행">
+                            <p>상담</p>
+                        </li>
+                        <li class="arrow_between">
+                            <img src="resources/users/img/icon/between_arrows.png">
+                        </li>
+                        <li>
+                            <img src="resources/users/img/main/step_3.png" alt="화상 대면 미팅">
+                            <p>화상 · 대면 미팅</p>
+                        </li>
+                        <li class="arrow_between">
+                            <img src="resources/users/img/icon/between_arrows.png">
+                        </li>
+                        <li>
+                            <img src="resources/users/img/main/step_4.png" alt="작업 진행">
+                            <p>진행</p>
+                        </li>
+                        <li class="arrow_between">
+                            <img src="resources/users/img/icon/between_arrows.png">
+                        </li>
+                        <li>
+                            <img src="resources/users/img/main/step_5.png" alt="작업 수정">
+                            <p>수정</p>
+                        </li>
+                        <li class="arrow_between">
+                            <img src="resources/users/img/icon/between_arrows.png">
+                        </li>
+                        <li>
+                            <img src="resources/users/img/main/step_6.png" alt="작업 완료">
+                            <p>완료</p>
+                        </li>
+                    </ul>
+                    
+                </div>
+
+                <div class='right_wrap btn_consulting_start_step'>
+                    <p>견적문의 <img src="resources/users/img/icon/main_i_right.png"> </p>
+                    <span>Start</span>
                 </div>
             </div>
-        </div>
-        <!-- s: (0)시작 -->
 
+            <!-- step 01 -->
+            <div class='consulting_box step_box step_01 consulting_step d-none'>
+                <div class='left_wrap'>
+                    <img class='section_text' src='resources/users/img/main/text/consulting.png' alt='consulting' />
+                </div>
 
+                <div class='right_wrap'>
+                    <div class='survey_form_container'>
+                        <span class='survey_title'>서비스 분야</span>
 
-        <!-- s: (1)카테고리 -->
-        <div class="container step_01 consulting_step d-none">
-            <div class="step_header">
-                <h1 class="mo">견적요청<span>의뢰하실 카테고리를 선택하세요.</span></h1>
-                <h1 class="pc">Design<br>consulting</h1>
-                <p class="pc">의뢰하실 카테고리를<br>선택하세요</p>
-            </div>
-            <div class="step_body">
-                <div class="row">
-                    <div class="col-12 col-lg-8">
-                        <div class="category_wrap">
-                            <h6>다중 선택 가능합니다.</h6>
-                            <h6 class="description">선택이 어려우실 경우 상담신청을 선택하시면 담당자가 확인후 연락드립니다.</h6>
-                            <div class="check_wrap">
-                                <?php
+                        <div class="survey_scroller">
+                            <div class='check_container'>
+                                     <?php
                                 $i = 0;
                                 foreach ($business_list as $blist) {
                                     $category_list[$blist['segment']] = false;
                                 ?>
-                                    <div class="check_group">
-                                        <input type="checkbox" id="cate_<?= $i ?>" class="consulting_category" data-segment="<?= $blist['segment'] ?>" value="<?= $blist['name'] ?>">
+                                    <div class="check_wrap check_group">
+                                        <input type='checkbox' id="cate_<?= $i ?>" class="consulting_category" data-segment="<?= $blist['segment'] ?>" value="<?= $blist['name'] ?>" />
                                         <label for="cate_<?= $i ?>"><?= $blist['name'] ?></label>
                                     </div>
                                 <?php
@@ -79,536 +83,1224 @@
                                 ?>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-12 col-lg-8">
-                        <div class="step_pagination">
-                            <ul>
-                                <li></li>
-                                <li class="prev move_step btn_consulting_move_step" data-step-move="0">
-                                    <!-- <img src="/resources/users/img/icon/i_left.png" alt=""> -->
-                                    <p>이전</p>
-                                </li>
-                                <li class="next move_step btn_consulting_move_step" data-step-move="1">
-                                    <!-- <img src="/resources/users/img/icon/i_right.png" alt=""> -->
-                                    <p>다음</p>
-                                </li>
-                                <li></li>
-                            </ul>
+
+                        <span class='description'>
+                            다중 선택 가능합니다.<br />
+                            <span><strong>상담 신청</strong>을 선택하시면 담당자 배정 후 연락드립니다.</span>
+                        </span>
+
+                        <div class='step_control_container'>
+                            <div class='prev move_step btn_consulting_move_step' data-step-move="0">
+                                <img src="resources/users/img/icon/arrow_left.png">
+                                <span>이전</span>
+                            </div>
+
+                            <span><b>1</b> / 5</span>
+
+                            <div class='next next move_step btn_consulting_move_step' data-step-move="1">
+                                <span>다음</span>
+                                <img src="resources/users/img/icon/arrow_right.png">
+                            </div>
                         </div>
                     </div>
 
-                    <div class="col-12 col-lg-4">
-                        <div class="result_wrap">
-                            <div class="step_result">
-                                <h6>선택 카테고리</h6>
-                                <div id="print_result_step_1"></div>
+                    <div class="survey_container_wrapper">
+                        <div class='survey_container'>
+                            <span class='survey_content_title'>문의 내용</span>
+                            <div class='survey_wrap' id='print_result_step_1'>
+                                <span class='title'>상담신청</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- s: (1)카테고리 -->
 
-
-        <!-- s: (2)세부사항 -->
-        <div class="container step_02 consulting_step d-none">
-            <div class="step_header">
-                <h1 class="mo">견적요청<span>세부 사항을 선택하세요</span></h1>
-                <h1 class="pc">Design<br>consulting</h1>
-                <p class="pc">세부사항을<br>선택하세요</p>
-            </div>
-            <div class="step_body">
-                <div class="row">
-                    <div class="col-12 col-lg-8">
-                        <div class="category_wrap" id="business_questions"></div>
-                    </div>
-                    <div class="col-12 col-lg-8">
-                        <div class="step_pagination">
-                            <ul>
-                                <li></li>
-                                <li class="prev move_step btn_consulting_move_step" data-step-move="0">
-                                    <!-- <img src="/resources/users/img/icon/i_left.png" alt=""> -->
-                                    <p>이전</p>
-                                </li>
-                                <li class="next move_step btn_consulting_move_step" data-step-move="2">
-                                    <!-- <img src="/resources/users/img/icon/i_right.png" alt=""> -->
-                                    <p>다음</p>
-                                </li>
-                                <li></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-4">
-                        <div class="result_wrap">
-                            <div class="step_result">
-                                <h6>선택 카테고리</h6>
-                                <div id="print_result_step_2"></div>
-                            </div>
-                        </div>
-                    </div>
+            <!-- step 02 -->
+            <div class='consulting_box step_box step_02 consulting_step d-none'>
+                <div class='left_wrap'>
+                    <img class='section_text' src='resources/users/img/main/text/consulting.png' alt='consulting' />
                 </div>
-            </div>
-        </div>
-        <!-- e: (2)세부사항 -->
 
-        <!-- s: (3)의뢰인 정보 -->
-        <div class="container step_03 consulting_step d-none">
-            <div class="step_header">
-                <h1 class="mo">견적요청<span>의뢰자 정보를 입력해주세요.</span></h1>
-                <h1 class="pc">Design<br>consulting</h1>
-                <p class="pc">의뢰자 정보를<br>입력해주세요.</p>
-            </div>
-            <div class="step_body">
-                <div class="row">
-                    <div class="col-12 col-lg-8">
-                        <div class="category_wrap">
-                            <div class="input_wrap" id="consulting_customer_info1">
-                                <div class="input_group_two">
-                                    <label>업체명</label>
-                                    <input type="text" class="form-valid fv_empty" name="company_name" value="" maxlength="20">
-                                </div>
-                                <div class="input_group_two">
-                                    <label>담당자</label>
-                                    <input type="text" class="form-valid fv_empty" name="company_user_name" value="" maxlength="20">
-                                </div>
-                                <div class="input_group_two">
-                                    <label>대표번호</label>
-                                    <div class="phone_number">
-                                        <input type="number" class="form-valid fv_empty fv_numeric use_maxlength" data-maxlength="4" name="company_tel1" value="">
-                                        <span>-</span>
-                                        <input type="number" class="form-valid fv_empty fv_numeric use_maxlength" data-maxlength="4" name="company_tel2" value="">
-                                        <span>-</span>
-                                        <input type="number" class="form-valid fv_empty fv_numeric use_maxlength" data-maxlength="4" name="company_tel3" value="">
+                <div class='right_wrap'>
+                    <div class='survey_form_container'>
+                        <span class='survey_title'>세부 사항</span>
+
+                        <div class="survey_scroller category_wrap" id="business_questions"></div>
+
+                        <!-- <div class="survey_scroller">
+                            <div class='form_container'>
+                                <span class='form_title'>상담 신청</span>
+                                <div class='form_wrap'>
+                                    <span class='form_sub_title'>상담유형</span>
+
+                                    <div class='form_checkbox_container'>
+                                        <div class='check_wrap'>
+                                            <input type='checkbox' id='phone_consult_check' /><label></label>
+                                            <label for='phone_consult_check'>전화상담</label>
+                                        </div>
+                                        <div class='check_wrap'>
+                                            <input type='checkbox' id='email_consult_check' /><label></label>
+                                            <label for='email_consult_check'>이메일 상담</label>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="input_group_two">
-                                    <label>휴대전화</label>
-                                    <div class="phone_number">
-                                        <input type="number" class="form-valid fv_empty fv_numeric use_maxlength" data-maxlength="4" name="company_user_tel1" value="">
-                                        <span>-</span>
-                                        <input type="number" class="form-valid fv_empty fv_numeric use_maxlength" data-maxlength="4" name="company_user_tel2" value="">
-                                        <span>-</span>
-                                        <input type="number" class="form-valid fv_empty fv_numeric use_maxlength" data-maxlength="4" name="company_user_tel3" value="">
+                            </div>
+
+                            <div class='form_container'>
+                                <span class='form_title'>사업계획서</span>
+
+                                <div class='form_wrap'>
+                                    <span class='form_sub_title'>전체페이지</span>
+
+                                    <div class='form_checkbox_container'>
+                                        <div class='check_wrap'>
+                                            <input type='checkbox' id='page_check_01' />
+                                            <label for='page_check_01'>10~20P</label>
+                                        </div>
+                                        <div class='check_wrap'>
+                                            <input type='checkbox' id='page_check_02' />
+                                            <label for='page_check_02'>~30P</label>
+                                        </div>
+                                        <div class='check_wrap'>
+                                            <input type='checkbox' id='page_check_03' />
+                                            <label for='page_check_03'>~40P</label>
+                                        </div>
+                                        <div class='check_wrap'>
+                                            <input type='checkbox' id='page_check_04' />
+                                            <label for='page_check_04'>40P 이상</label>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="input_group_two">
-                                    <label>이메일</label>
-                                    <input type="email" class="form-valid fv_empty fv_email" name="company_user_email" maxlength="50" value="">
+
+                                <div class='form_wrap'>
+                                    <span class='form_sub_title'>작업일정</span>
+
+                                    <div class='form_checkbox_container'>
+                                        <div class='check_wrap'>
+                                            <input type='checkbox' id='schedule_check_01' />
+                                            <label for='schedule_check_01'>3~4일</label>
+                                        </div>
+                                        <div class='check_wrap'>
+                                            <input type='checkbox' id='schedule_check_02' />
+                                            <label for='schedule_check_02'>~4~5일</label>
+                                        </div>
+                                        <div class='check_wrap'>
+                                            <input type='checkbox' id='schedule_check_03' />
+                                            <label for='schedule_check_03'>1주일 이상</label>
+                                        </div>
+                                        <div class='check_wrap'>
+                                            <input type='checkbox' id='schedule_check_04' />
+                                            <label for='schedule_check_04'>긴급(2일이내)</label>
+                                        </div>
+                                    </div>
                                 </div>
+                            </div>
+                        </div> -->
+
+                        <div class='step_control_container'>
+                            <div class='prev move_step btn_consulting_move_step' data-step-move="0">
+                                <img src="resources/users/img/icon/arrow_left.png">
+                                <span>이전</span>
+                            </div>
+
+                            <span><b>2</b> / 5</span>
+
+                            <div class='next move_step btn_consulting_move_step' data-step-move="2">
+                                <span>다음</span>
+                                <img src="resources/users/img/icon/arrow_right.png">
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-8">
-                        <div class="step_pagination">
-                            <ul>
-                                <li></li>
-                                <li class="prev move_step btn_consulting_move_step" data-step-move="1">
-                                    <!-- <img src="/resources/users/img/icon/i_left.png" alt=""> -->
-                                    <p>이전</p>
-                                </li>
-                                <li class="next move_step btn_consulting_move_step" data-step-move="3">
-                                    <!-- <img src="/resources/users/img/icon/i_right.png" alt=""> -->
-                                    <p>다음</p>
-                                </li>
-                                <li></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-4">
-                        <div class="result_wrap">
-                            <div class="step_result">
-                                <h6>선택 카테고리</h6>
-                                <div id="print_result_step_3"></div>
+
+                    <div class="survey_container_wrapper">
+                        <div class='survey_container'>
+                            <span class='survey_content_title'>문의 내용</span>
+                            <div class='survey_wrap' id='print_result_step_1'>
+                                <span class='title'>상담신청</span>
+                            </div>
+
+                            </div>
+                            <div class='survey_wrap' id='print_result_step_2'>
+                                <span class='title'>사업계획서</span>
+                                <span class='content'>~30P<br />긴급(2일이내)</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- e: (3)의뢰인 정보 -->
 
-        <!-- s: (4)기타정보 -->
-        <div class="container step_04 consulting_step d-none">
-            <div class="step_header">
-                <h1 class="mo">견적요청<span>추가 요청사항을 입력해주세요.</span></h1>
-                <h1 class="pc">Design<br>consulting</h1>
-                <p class="pc">추가 요청사항을<br>입력해주세요.</p>
+            <!-- step 03 -->
+            <div class='consulting_box step_box step_03 consulting_step d-none'>
+                <div class='left_wrap'>
+                    <img class='section_text' src='resources/users/img/main/text/consulting.png' alt='consulting' />
+                </div>
+
+                <div class='right_wrap'>
+                    <div class='survey_form_container'>
+                        <span class='survey_title'>고객 정보</span>
+
+                        <div class="survey_scroller">
+                            <div class='input_wrap first_input_wrap'>
+                                <label for='company_name'>업체명</label>
+                                <input type="text" class="form-valid fv_empty" name="company_name" value="" maxlength="20" />
+                            </div>
+                            <div class='input_wrap'>
+                                <label for='company_user_name'>담당자</label>
+                                <input type="text" class="form-valid fv_empty" name="company_user_name" value="" maxlength="20" />
+                            </div>
+                            <div class='input_wrap'>
+                                <label for='company_name'>대표번호</label>
+                                <input type="number" class="form-valid fv_empty fv_numeric use_maxlength" data-maxlength="4" name="company_tel1" value="">
+                                <span>-</span>
+                                <input type="number" class="form-valid fv_empty fv_numeric use_maxlength" data-maxlength="4" name="company_tel2" value="">
+                                <span>-</span>
+                                <input type="number" class="form-valid fv_empty fv_numeric use_maxlength" data-maxlength="4" name="company_tel3" value="">
+                            </div>
+                            <div class='input_wrap'>
+                                <label for='company_name'>휴대전화</label>
+                                <input type="number" class="form-valid fv_empty fv_numeric use_maxlength" data-maxlength="4" name="company_tel1" value="">
+                                <span>-</span>
+                                <input type="number" class="form-valid fv_empty fv_numeric use_maxlength" data-maxlength="4" name="company_tel2" value="">
+                                <span>-</span>
+                                <input type="number" class="form-valid fv_empty fv_numeric use_maxlength" data-maxlength="4" name="company_tel3" value="">
+                            </div>
+                            <div class='input_wrap'>
+                                <label for='company_name'>이메일</label>
+                                <input type="email" class="form-valid fv_empty fv_email" name="company_user_email" maxlength="50" value="">
+                            </div>
+                        </div>
+                        <div class='step_control_container'>
+                            <div class='prev move_step btn_consulting_move_step' data-step-move="1">
+                                <img src="resources/users/img/icon/arrow_left.png">
+                                <span>이전</span>
+                            </div>
+
+                            <span><b>3</b> / 5</span>
+
+                            <div class='next move_step btn_consulting_move_step' data-step-move="3">
+                                <span>다음</span>
+                                <img src="resources/users/img/icon/arrow_right.png">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="survey_container_wrapper">
+                        <div class='survey_container'>
+                            <span class='survey_content_title'>문의 내용</span>
+                            <div class='survey_wrap'>
+                                <span class='title'>상담신청</span>
+                                <span class='content'>이메일 상담</span>
+                            </div>
+                            <div class='survey_wrap'>
+                                <span class='title'>사업계획서</span>
+                                <span class='content'>~30P<br />긴급(2일이내)</span>
+                            </div>
+                            <div class='survey_wrap'>
+                                <span class='title'>고객정보</span>
+                                <span class='content'>
+                                    엠티엠비코리<br />
+                                    홍길동<br />
+                                    010-1234-1234<br />
+                                    010-1234-1234<br />
+                                    abc@gmail.com<br />
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="step_body">
-                <div class="row">
-                    <div class="col-12 col-lg-8">
-                        <div class="category_wrap">
-                            <div class="input_wrap" id="consulting_customer_info2">
-                                <textarea name="request" class="form-valid fv_empty" name="request" cols="30" rows="5" placeholder="기타 세부사항에 대해 적어주시면 더욱 상세한 견적을 받으실 수 있습니다."></textarea>
-                                <div class="input_group_two mt-3">
+
+            <!-- step 04 -->
+            <div class='consulting_box step_box step_04 consulting_step d-none'>
+                <div class='left_wrap'>
+                    <img class='section_text' src='resources/users/img/main/text/consulting.png' alt='consulting' />
+                </div>
+
+                <div class='right_wrap'>
+                    <div class='survey_form_container'>
+                        <span class='survey_title'>추가 정보</span>
+
+                        <div class="survey_scroller">
+                            <div class='detail_input_wrap'>
+                                <span>세부 내용을 작성하시면 더욱 상세한 견적을 받으실 수 있습니다</span>
+                                <textarea cols="30" rows="5"></textarea>
+                            </div>
+
+                            <div class='password_input_wrap'>
+                                <input type='password' placeholder='패스워드를 입력해 주세요' />
+                            </div>
+
+                            <div class='file_input_container'>
+                                <div class='file_input_wrap'>
                                     <input type="file" name="consulting_file1" id="consulting_file1" placeholder="파일을 선택해주세요." />
                                 </div>
-                                <div class="input_group_two mt-3">
+                                <div class='file_input_wrap'>
                                     <input type="file" name="consulting_file2" id="consulting_file2" placeholder="파일을 선택해주세요." />
                                 </div>
-                                <div class="input_group_two mt-3">
-                                    <input type="file" name="consulting_file3" id="consulting_file3" placeholder="파일을 선택해주세요." />
-                                </div>
-                                <div class="input_group_two mt-3">
+                                <div class='file_input_wrap'>
                                     <input type="password" class="form-valid fv_empty" name="consulting_pass" value="" placeholder="패스워드를 입력해주세요">
                                 </div>
                             </div>
+                        </div>
 
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-8">
-                        <div class="step_pagination">
-                            <ul>
-                                <li></li>
-                                <li class="prev move_step btn_consulting_move_step" data-step-move="2">
-                                    <!-- <img src="/resources/users/img/icon/i_left.png" alt=""> -->
-                                    <p>이전</p>
-                                </li>
-                                <li class="next move_step btn_consulting_move_step" data-step-move="4">
-                                    <!-- <img src="/resources/users/img/icon/i_right.png" alt=""> -->
-                                    <p>다음</p>
-                                </li>
-                                <li></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-4">
-                        <div class="result_wrap">
-                            <div class="step_result">
-                                <h6>선택 카테고리</h6>
-                                <div id="print_result_step_4"></div>
+                        <div class='step_control_container'>
+                            <div class='prev move_step btn_consulting_move_step' data-step-move="2">
+                                <img src="resources/users/img/icon/arrow_left.png">
+                                <span>이전</span>
+                            </div>
+
+                            <span><b>4</b> / 5</span>
+
+                            <div class='next move_step btn_consulting_move_step' data-step-move="4">
+                                <span>다음</span>
+                                <img src="resources/users/img/icon/arrow_right.png">
                             </div>
                         </div>
                     </div>
+
+                    <div class="survey_container_wrapper">
+                        <div class='survey_container'>
+                            <span class='survey_content_title'>문의 내용</span>
+                            <div class='survey_wrap'>
+                                <span class='title'>상담신청</span>
+                                <span class='content'>이메일 상담</span>
+                            </div>
+                            <div class='survey_wrap'>
+                                <span class='title'>사업계획서</span>
+                                <span class='content'>~30P<br />긴급(2일이내)</span>
+                            </div>
+                            <div class='survey_wrap'>
+                                <span class='title'>고객정보</span>
+                                <span class='content'>
+                                    엠티엠비코리<br />
+                                    홍길동<br />
+                                    010-1234-1234<br />
+                                    010-1234-1234<br />
+                                    abc@gmail.com<br />
+                                </span>
+                            </div>
+                            <div class='survey_wrap'>
+                                <span class='title'>추가정보</span>
+                                <span class='content'>
+                                    엠티엠비코리아<br />
+                                    홍길동<br />
+                                    010-1234-1234<br />
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- step 05 -->
+            <div class='consulting_box step_box step_05 consulting_step d-none'>
+                <div class='left_wrap'>
+                    <img class='section_text' src='resources/users/img/main/text/consulting.png' alt='consulting' />
+                </div>
+
+                <div class='right_wrap'>
+                    <div class='survey_form_container'>
+
+                        <div class='complete_wrap'>
+                            <span>감사합니다</span>
+
+                            <span>
+                                1:1맞춤 컨설팅을 위해<br />
+                                담당자 배정 후 연락드리겠습니다<br />
+                                <span>(약 30분 이내)</span>
+                            </span>
+
+                            <hr />
+
+                            <span>
+                                대표전화(02-3663-0332)로 연락 주시면<br />
+                                보다 신속하게 상담받으실 수 있습니다
+                            </span>
+                        </div>
+
+
+                        <div class='step_control_container'>
+                            <span><b>5</b> / 5</span>
+                        </div>
+                    </div>
+
+                    <div class="survey_container_wrapper">
+                        <div class='survey_container'>
+                            <span class='survey_content_title'>문의 내용</span>
+                            <div class='survey_wrap'>
+                                <span class='title'>상담신청</span>
+                                <span class='content'>이메일 상담</span>
+                            </div>
+                            <div class='survey_wrap'>
+                                <span class='title'>사업계획서</span>
+                                <span class='content'>~30P<br />긴급(2일이내)</span>
+                            </div>
+                            <div class='survey_wrap'>
+                                <span class='title'>고객정보</span>
+                                <span class='content'>
+                                    엠티엠비코리<br />
+                                    홍길동<br />
+                                    010-1234-1234<br />
+                                    010-1234-1234<br />
+                                    abc@gmail.com<br />
+                                </span>
+                            </div>
+                            <div class='survey_wrap'>
+                                <span class='title'>추가정보</span>
+                                <span class='content'>
+                                    엠티엠비코리아<br />
+                                    홍길동<br />
+                                    010-1234-1234<br />
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q & A -->
+            <div class='consulting_qa_container' id='consultingList'>
+                <div class='left_wrap'>
+                    <div class='top_wrap'>
+                        <div class='title_wrap'>
+                            <span>Consulting List</span>
+                            <img src='resources/users/img/main/text/title_arrow.png' />
+                        </div>
+
+                        <div class='search_wrap'>
+                            <select name="search" class="select">
+                                <option disabled selected>제목+내용</option>
+                                <option value="apple">제목</option>
+                                <option value="orange">내용</option>
+                                <option value="grape">제목+내용</option>
+                            </select>
+
+                            <!-- TODO: 검색 버튼 -->
+                            <input type='text' class='search' class="consulting_keyword" />
+                        </div>
+                    </div>
+
+
+                    
+                    <div class="notice_pagination">
+                        <ul class="pagination_arrow">
+                            <li class="prev btn_consulting_prev_page">
+                                <img src="resources/users/img/icon/arrow_left.png">
+                            </li>
+                            <li class="next btn_consulting_next_page"><img src="resources/users/img/icon/arrow_right.png"></li>
+                        </ul>
+                        <ul class="pagination_number">
+                            <li class="now_page consulting_curr_page">2</li>
+                            <li>/</li>
+                            <li class="total_page consulting_total_page">80</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="request_table_wrapper">
+                    <table class="request_table">
+                        <tbody id='table_consulting_list_pc'>
+                        </tbody>
+                    </table>
+                </div>
+
+                
+
+            </div>
+
+            <!-- Review List -->
+            <div class='review_container' id='reviewList'>
+                <div class='left_wrap'>
+                    <div class='top_wrap'>
+                        <div class='title_wrap'>
+                            <span>Review</span>
+                            <img src='resources/users/img/main/text/title_arrow.png' />
+                        </div>
+
+                        <div class='search_wrap'>
+                            <select name="search" class="select">
+                                <option disabled selected>제목+내용</option>
+                                <option value="apple">제목</option>
+                                <option value="orange">내용</option>
+                                <option value="grape">제목+내용</option>
+                            </select>
+
+                            <input type='text' class='search' />
+                        </div>
+                    </div>
+
+                    <div class="cont_bot">
+
+                        <div class="input_write_button">
+                            <button class="qna-btn write-btn btn_review_add">
+                                <p>글쓰기</p>
+                                <img src="resources/users/img/icon/arrow_right.png">
+                            </button>
+                        </div>
+                        <div class="notice_pagination">
+                            <ul class="pagination_arrow">
+                                <li class="prev btn_review_prev_page">
+                                    <img src="resources/users/img/icon/arrow_left.png">
+                                </li>
+                                <li class="next btn_review_next_page"><img src="resources/users/img/icon/arrow_right.png"></li>
+                            </ul>
+                            <ul class="pagination_number">
+                                <li class="now_page review_curr_page">2</li>
+                                <li>/</li>
+                                <li class="total_page review_total_page">80</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="request_table_wrapper">
+                    <table class="review_table" id='table_review_list_pc'>
+                    </table>
+                </div>
+            </div>
+
+            
+            <!-- 파트너사 롤링배너 -->
+            <div class="partner_container" id='partnerCompany'>
+                <div class='partner_wrap marquee'>
+                    <ul class="marquee-content">
+                        <li class='marquee-item'><img src='resources/users/img/partner/partner_01.png' /></i></li>
+                        <li class='marquee-item'><img src='resources/users/img/partner/partner_02.png' /></li>
+                        <li class='marquee-item'><img src='resources/users/img/partner/partner_03.png' /></i></li>
+                        <li class='marquee-item'><img src='resources/users/img/partner/partner_04.png' /></li>
+                        <li class='marquee-item'><img src='resources/users/img/partner/partner_05.png' /></li>
+                        <li class='marquee-item'><img src='resources/users/img/partner/partner_06.png' /></li>
+                        <li class='marquee-item'><img src='resources/users/img/partner/partner_07.png' /></li>
+                        <li class='marquee-item'><img src='resources/users/img/partner/partner_08.png' /></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 포트폴리오 영역 -->
+            <div class='portfolio_container' id='portfolioWrap'>
+                <div class='portfolio_content'>
+                    <div class='title'>
+                        <span>Portfolio</span>
+                        <img src='resources/users/img/main/text/title_arrow.png' />
+                    </div>
+
+                    <ul class='portfolio_list'>
+                        <?php
+                        foreach ($portfolio_list as $list) {
+                            $img = json_decode($list->img_name)[0];
+                        ?>
+                            <li class='portfolio_wrap select_portfolio' data-curridx="<?= $list->idx ?>">
+                                <div class="portfolio_img_inner">
+                                    <img src="<?= $img ?>" alt="<?= $list->title ?>">
+                                </div>
+                                <div class="hover_overlay">
+                                    <div class="hover_top">
+                                        <img src='resources/users/img/main/view_detail.png' />
+                                        <span><?= $list->title ?></span>
+                                    </div>
+                                </div>
+                            </li>
+                        <?php } ?>
+                    </ul>
+                    <div id="sentinel"></div>
                 </div>
             </div>
         </div>
-        <!-- e: (4)기타정보 -->
+    </section>
 
-        <!-- s: (5)접수완료 -->
-        <div class="container step_05 consulting_step d-none">
-            <div class="step_header">
-                <h1 class="mo">견적요청<span>견적의뢰가 접수되었습니다.</span></h1>
-                <h1 class="pc">Design<br>consulting</h1>
-                <p class="pc">견적의뢰가<br>접수되었습니다.</p>
+    <!-- mobile -->
+    <section class="consulting_container mo">
+        <div class='content_wrap'>
+            <!-- step 00 -->
+            <div class='consulting_box step_0 active'>
+                <div class='left_wrap'>
+                    <img class='section_text' src='resources/users/img/main/text/consulting.png' alt='consulting' />
+                    <ul>
+                        <li>
+                            <img src="resources/users/img/main/step_1.png" alt="상담 문의">
+                            <p>문의</p>
+                        </li>
+                        <li class="arrow_between">
+                            <img src="resources/users/img/icon/between_arrows.png">
+                        </li>
+                        <li>
+                            <img src="resources/users/img/main/step_2.png" alt="상담 진행">
+                            <p>상담</p>
+                        </li>
+                        <li class="arrow_between">
+                            <img src="resources/users/img/icon/between_arrows.png">
+                        </li>
+                        <li>
+                            <img src="resources/users/img/main/step_3.png" alt="화상 대면 미팅">
+                            <p>화상 · 대면 미팅</p>
+                        </li>
+                        <li class="arrow_between">
+                            <img src="resources/users/img/icon/between_arrows.png">
+                        </li>
+                        <li>
+                            <img src="resources/users/img/main/step_4.png" alt="작업 진행">
+                            <p>진행</p>
+                        </li>
+                        <li class="arrow_between">
+                            <img src="resources/users/img/icon/between_arrows.png">
+                        </li>
+                        <li>
+                            <img src="resources/users/img/main/step_5.png" alt="작업 수정">
+                            <p>수정</p>
+                        </li>
+                        <li class="arrow_between">
+                            <img src="resources/users/img/icon/between_arrows.png">
+                        </li>
+                        <li>
+                            <img src="resources/users/img/main/step_6.png" alt="작업 완료">
+                            <p>완료</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class='right_wrap'>
+                    <p>견적문의  <img src="resources/users/img/icon/main_i_right.png"> </p>
+                    <span>Start</span>
+                </div>
             </div>
-            <div class="step_body">
-                <div class="row">
-                    <div class="col-12 col-lg-8">
-                        <div class="category_wrap">
-                            <p class="message">의뢰해 주셔서 감사합니다.<br><br>배정된 1:1 맞춤 컨설팅 담당자가<br>연락드릴 예정입니다.<br>(약
-                                30분 이내)<br><br>빠른 답변을 원하시면<br>유선 연락바랍니다.<br>(02-3663-0332)</p>
+
+            <!-- step 01 -->
+            <div class='consulting_box step_box step_01'>
+                <div class='left_wrap'>
+                    <img class='section_text' src='resources/users/img/main/text/consulting.png' alt='consulting' />
+                </div>
+
+                <div class='right_wrap'>
+                    <div class='survey_form_container'>
+                        <div class="survey_top">
+                            <div class="survey_eng">
+                                <img src="resources/users/img/main/text/consulting_sub.png">
+                            </div>
+                            <span class='survey_title'>서비스 분야</span>
+                        </div>
+                        
+                        <div class="mo_consult_scroll">
+                            <div class='check_container'>
+                                <div class='check_wrap'>
+                                    <input type='checkbox' id='mo_check_01' />
+                                    <label for='mo_check_01'>상담신청</label>
+                                </div>
+                                <div class='check_wrap'>
+                                    <input type='checkbox' id='mo_check_02' />
+                                    <label for='mo_check_02'>사업계획서</label>
+                                </div>
+                                <div class='check_wrap'>
+                                    <input type='checkbox' id='mo_check_03' />
+                                    <label for='mo_check_03'>업무보고서</label>
+                                </div>
+                                <div class='check_wrap'>
+                                    <input type='checkbox' id='mo_check_04' />
+                                    <label for='mo_check_04'>성과보고서</label>
+                                </div>
+                                <div class='check_wrap'>
+                                    <input type='checkbox' id='mo_check_05' />
+                                    <label for='mo_check_05'>IR보고서</label>
+                                </div>
+                                <div class='check_wrap'>
+
+                                    <input type='checkbox' id='mo_check_06' />
+                                    <label for='mo_check_06'>연구보고서</label>
+                                </div>
+                                <div class='check_wrap'>
+
+                                    <input type='checkbox' id='mo_check_07' />
+                                    <label for='mo_check_07'>영업보고서</label>
+                                </div>
+                                <div class='check_wrap'>
+
+                                    <input type='checkbox' id='mo_check_08' />
+                                    <label for='mo_check_08'>입점제안서</label>
+                                </div>
+                                <div class='check_wrap'>
+
+                                    <input type='checkbox' id='mo_check_09' />
+                                    <label for='mo_check_09'>사업제안서</label>
+                                </div>
+                                <div class='check_wrap'>
+
+                                    <input type='checkbox' id='mo_check_10' />
+                                    <label for='mo_check_10'>입찰제안서</label>
+                                </div>
+                                <div class='check_wrap'>
+
+                                    <input type='checkbox' id='mo_check_11' />
+                                    <label for='mo_check_11'>투자제안서</label>
+                                </div>
+                                <div class='check_wrap'>
+
+                                    <input type='checkbox' id='mo_check_12' />
+                                    <label for='mo_check_12'>마케팅제안서</label>
+                                </div>
+                                <div class='check_wrap'>
+
+                                    <input type='checkbox' id='mo_check_13' />
+                                    <label for='mo_check_13'>제휴제안서</label>
+                                </div>
+                                <div class='check_wrap'>
+
+                                    <input type='checkbox' id='mo_check_14' />
+                                    <label for='mo_check_14'>강의자료</label>
+                                </div>
+                                <div class='check_wrap'>
+
+                                    <input type='checkbox' id='mo_check_15' />
+                                    <label for='mo_check_15'>교육자료</label>
+                                </div>
+                                <div class='check_wrap'>
+
+                                    <input type='checkbox' id='mo_check_16' />
+                                    <label for='mo_check_16'>세미나자료</label>
+                                </div>
+                                <div class='check_wrap'>
+
+                                    <input type='checkbox' id='mo_check_17' />
+                                    <label for='mo_check_17'>회사소개서</label>
+                                </div>
+                                <div class='check_wrap'>
+
+                                    <input type='checkbox' id='mo_check_18' />
+                                    <label for='mo_check_18'>제품소개서</label>
+                                </div>
+                                <div class='check_wrap'>
+
+                                    <input type='checkbox' id='mo_check_19' />
+                                    <label for='mo_check_19'>서비스소개서</label>
+                                </div>
+                                <div class='check_wrap'>
+
+                                    <input type='checkbox' id='mo_check_20' />
+                                    <label for='mo_check_20'>기타</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <span class='description'>
+                            다중 선택 가능합니다.<br />
+                            <span><strong>상담 신청</strong>을 선택하시면 담당자 배정 후 연락드립니다.</span>
+                        </span>
+
+                        <div class='step_control_container'>
+                            <div class='prev'>
+                                <img src="resources/users/img/icon/arrow_left.png">
+                                <span>이전</span>
+                            </div>
+
+                            <span><b>1</b> / 5</span>
+
+                            <div class='next'>
+                                <span>다음</span>
+                                <img src="resources/users/img/icon/arrow_right.png">
+                            </div>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-4">
-                        <div class="result_wrap">
-                            <div class="step_result">
-                                <h6>선택 카테고리</h6>
-                                <div id="print_result_step_5"></div>
+
+                    <div class="survey_container_wrapper">
+                        <div class='survey_container'>
+                            <span class='survey_content_title'>문의 내용</span>
+                            <div class='survey_wrap'>
+                                <span class='title'>상담신청</span>
+                            </div>
+                            <div class='survey_wrap'>
+                                <span class='title'>사업계획서</span>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <!-- step 02 -->
+            <div class='consulting_box step_box step_02'>
+                <div class='left_wrap'>
+                    <img class='section_text' src='resources/users/img/main/text/consulting.png' alt='consulting' />
+                </div>
+
+                <div class='right_wrap'>
+                    <div class='survey_form_container'>
+                        <div class="survey_top">
+                            <div class="survey_eng">
+                                <img src="resources/users/img/main/text/consulting_sub.png">
+                            </div>
+                            <span class='survey_title'>세부 사항</span>
+                        </div>
+
+                        <div class="mo_consult_scroll">
+                            <div class='form_container'>
+                                <span class='form_title'>상담 신청</span>
+                                <div class='form_wrap'>
+                                    <span class='form_sub_title'>상담유형</span>
+
+                                    <div class='form_checkbox_container'>
+                                        <div class='check_wrap'>
+                                            <input type='checkbox' id='mo_phone_consult_check' />
+                                            <label for='mo_phone_consult_check'>전화상담</label>
+                                        </div>
+                                        <div class='check_wrap'>
+                                            <input type='checkbox' id='mo_email_consult_check' />
+                                            <label for='mo_email_consult_check'>이메일 상담</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class='form_container'>
+                                <span class='form_title'>사업계획서</span>
+
+                                <div class='form_wrap'>
+                                    <span class='form_sub_title'>전체페이지</span>
+
+                                    <div class='form_checkbox_container'>
+                                        <div class='check_wrap'>
+                                            <input type='checkbox' id='mo_page_check_01' />
+                                            <label for='mo_page_check_01'>10~20P</label>
+                                        </div>
+                                        <div class='check_wrap'>
+                                            <input type='checkbox' id='mo_page_check_02' />
+                                            <label for='mo_page_check_02'>~30P</label>
+                                        </div>
+                                        <div class='check_wrap'>
+                                            <input type='checkbox' id='mo_page_check_03' />
+                                            <label for='mo_page_check_03'>~40P</label>
+                                        </div>
+                                        <div class='check_wrap'>
+                                            <input type='checkbox' id='mo_page_check_04' />
+                                            <label for='mo_page_check_04'>40P 이상</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class='form_wrap'>
+                                    <span class='form_sub_title'>작업일정</span>
+
+                                    <div class='form_checkbox_container'>
+                                        <div class='check_wrap'>
+                                            <input type='checkbox' id='mo_schedule_check_01' />
+                                            <label for='mo_schedule_check_01'>3~4일</label>
+                                        </div>
+                                        <div class='check_wrap'>
+                                            <input type='checkbox' id='mo_schedule_check_02' />
+                                            <label for='mo_schedule_check_02'>~4~5일</label>
+                                        </div>
+                                        <div class='check_wrap'>
+                                            <input type='checkbox' id='mo_schedule_check_03' />
+                                            <label for='mo_schedule_check_03'>1주일 이상</label>
+                                        </div>
+                                        <div class='check_wrap'>
+                                            <input type='checkbox' id='mo_schedule_check_04' />
+                                            <label for='mo_schedule_check_04'>긴급(2일이내)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        
+                        <div class='step_control_container'>
+                            <div class='prev'>
+                                <img src="resources/users/img/icon/arrow_left.png">
+                                <span>이전</span>
+                            </div>
+
+                            <span><b>2</b> / 5</span>
+
+                            <div class='next'>
+                                <span>다음</span>
+                                <img src="resources/users/img/icon/arrow_right.png">
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="survey_container_wrapper">
+                        <div class='survey_container'>
+                            <span class='survey_content_title'>문의 내용</span>
+                            <div class='survey_wrap'>
+                                <span class='title'>상담신청</span>
+                                <span class='content'>이메일 상담</span>
+                            </div>
+                            <div class='survey_wrap'>
+                                <span class='title'>사업계획서</span>
+                                <span class='content'>~30P<br />긴급(2일이내)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- step 03 -->
+            <div class='consulting_box step_box step_03'>
+                <div class='left_wrap'>
+                    <img class='section_text' src='resources/users/img/main/text/consulting.png' alt='consulting' />
+                </div>
+
+                <div class='right_wrap'>
+                    
+                    <div class='survey_form_container'>
+                        <div class="survey_top">
+                            <div class="survey_eng">
+                                <img src="resources/users/img/main/text/consulting_sub.png">
+                            </div>
+                            <span class='survey_title'>서비스분야</span>
+                        </div>
+
+                        <div class="mo_consult_scroll">
+                            <div class='input_wrap'>
+                                <label for='company_name'>업체명</label>
+                                <input type='text' name='company_name' id='company_name' />
+                            </div>
+                            <div class='input_wrap'>
+                                <label for='company_name'>담당자</label>
+                                <input type='text' name='name' id='name' />
+                            </div>
+                            <div class='input_wrap'>
+                                <label for='company_name'>대표번호</label>
+                                <input type='text' name='company_phone' id='company_phone' />
+                            </div>
+                            <div class='input_wrap'>
+                                <label for='company_name'>휴대전화</label>
+                                <input type='text' name='phone' id='phone' />
+                            </div>
+                            <div class='input_wrap'>
+                                <label for='company_name'>이메일</label>
+                                <input type='email' name='email' id='email' />
+                            </div>
+                            </div>
+                        <div class='step_control_container'>
+                            <div class='prev'>
+                                <img src="resources/users/img/icon/arrow_left.png">
+                                <span>이전</span>
+                            </div>
+
+                            <span><b>3</b> / 5</span>
+
+                            <div class='next'>
+                                <span>다음</span>
+                                <img src="resources/users/img/icon/arrow_right.png">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="survey_container_wrapper">
+                        <div class='survey_container'>
+                            <span class='survey_content_title'>문의 내용</span>
+                            <div class='survey_wrap'>
+                                <span class='title'>상담신청</span>
+                                <span class='content'>이메일 상담</span>
+                            </div>
+                            <div class='survey_wrap'>
+                                <span class='title'>사업계획서</span>
+                                <span class='content'>~30P<br />긴급(2일이내)</span>
+                            </div>
+                            <div class='survey_wrap'>
+                                <span class='title'>고객정보</span>
+                                <span class='content'>
+                                    엠티엠비코리<br />
+                                    홍길동<br />
+                                    010-1234-1234<br />
+                                    010-1234-1234<br />
+                                    abc@gmail.com<br />
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- step 04 -->
+            <div class='consulting_box step_box step_04'>
+                <div class='left_wrap'>
+                    <img class='section_text' src='resources/users/img/main/text/consulting.png' alt='consulting' />
+                </div>
+
+                <div class='right_wrap'>
+                    <div class='survey_form_container'>
+                        <div class="survey_top">
+                            <div class="survey_eng">
+                                <img src="resources/users/img/main/text/consulting_sub.png">
+                            </div>
+                            <span class='survey_title'>추가정보</span>
+                        </div>
+
+                        <div class="mo_consult_scroll">
+                            <div class="scroll_inner_left">
+                                <div class='detail_input_wrap'>
+                                    <span>세부 내용을 작성하시면 더욱 상세한 견적을 받으실 수 있습니다</span>
+                                    <textarea cols="30" rows="5"></textarea>
+                                </div>
+
+
+
+                                <div class='password_input_wrap'>
+                                    <input type='password' placeholder='패스워드를 입력해 주세요' />
+                                </div>
+
+                                <div class='file_input_container'>
+                                    <div class='file_input_wrap'>
+                                        <input type='file' />
+                                    </div>
+                                    <div class='file_input_wrap'>
+                                        <input type='file' />
+                                    </div>
+                                    <div class='file_input_wrap'>
+                                        <input type='file' />
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class='step_control_container'>
+                            <div class='prev'>
+                                <img src="resources/users/img/icon/arrow_left.png">
+                                <span>이전</span>
+                            </div>
+
+                            <span><b>4</b> / 5</span>
+
+                            <div class='next'>
+                                <span>다음</span>
+                                <img src="resources/users/img/icon/arrow_right.png">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="survey_container_wrapper">
+                        <div class='survey_container'>
+                            <span class='survey_content_title'>문의 내용</span>
+                            <div class='survey_wrap'>
+                                <span class='title'>상담신청</span>
+                                <span class='content'>이메일 상담</span>
+                            </div>
+                            <div class='survey_wrap'>
+                                <span class='title'>사업계획서</span>
+                                <span class='content'>~30P<br />긴급(2일이내)</span>
+                            </div>
+                            <div class='survey_wrap'>
+                                <span class='title'>고객정보</span>
+                                <span class='content'>
+                                    엠티엠비코리<br />
+                                    홍길동<br />
+                                    010-1234-1234<br />
+                                    010-1234-1234<br />
+                                    abc@gmail.com<br />
+                                </span>
+                            </div>
+                            <div class='survey_wrap'>
+                                <span class='title'>추가정보</span>
+                                <span class='content'>
+                                    엠티엠비코리아<br />
+                                    홍길동<br />
+                                    010-1234-1234<br />
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- step 05 -->
+            <div class='consulting_box step_box step_05'>
+                <div class='left_wrap'>
+                    <img class='section_text' src='resources/users/img/main/text/consulting.png' alt='consulting' />
+                </div>
+
+                <div class='right_wrap'>
+                    <div class='survey_form_container'>
+
+                        <div class='complete_wrap'>
+                            <span>감사합니다</span>
+
+                            <span>
+                                1:1맞춤 컨설팅을 위해<br />
+                                담당자 배정 후 연락드리겠습니다<br />
+                                <span>(약 30분 이내)</span>
+                            </span>
+
+                            <hr />
+
+                            <span>
+                                대표전화(02-3663-0332)로 연락 주시면<br />
+                                보다 신속하게 상담받으실 수 있습니다
+                            </span>
+                        </div>
+
+
+                        <div class='step_control_container'>
+                            <span><b>5</b> / 5</span>
+                        </div>
+                    </div>
+
+                    <div class='survey_container_wrapper'>
+                        <div class='survey_container'>
+                            <span class='survey_content_title'>문의 내용</span>
+                            <div class='survey_wrap'>
+                                <span class='title'>상담신청</span>
+                                <span class='content'>이메일 상담</span>
+                            </div>
+                            <div class='survey_wrap'>
+                                <span class='title'>사업계획서</span>
+                                <span class='content'>~30P<br />긴급(2일이내)</span>
+                            </div>
+                            <div class='survey_wrap'>
+                                <span class='title'>고객정보</span>
+                                <span class='content'>
+                                    엠티엠비코리<br />
+                                    홍길동<br />
+                                    010-1234-1234<br />
+                                    010-1234-1234<br />
+                                    abc@gmail.com<br />
+                                </span>
+                            </div>
+                            <div class='survey_wrap'>
+                                <span class='title'>추가정보</span>
+                                <span class='content'>
+                                    엠티엠비코리아<br />
+                                    홍길동<br />
+                                    010-1234-1234<br />
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Consulting List -->
+            <div class='consulting_qa_container'>
+                <div class='left_wrap'>
+                    <div class='top_wrap'>
+                        <div class='title_wrap'>
+                            <img src='resources/users/img/main/text/title_arrow.png' />
+                            <span>Consulting List</span>
+                        </div>
+
+                        <div class='search_wrap'>
+                            <select name="search" class="select">
+                                <option disabled selected>제목+내용</option>
+                                <option value="apple">제목</option>
+                                <option value="orange">내용</option>
+                                <option value="grape">제목+내용</option>
+                            </select>
+
+                            <input type='text' class='search' />
+                        </div>
+                    </div>
+                </div>
+
+                <div class='consulting_content_container'>
+                    <table>
+                        <tbody id='table_consulting_list_mo'>
+
+                        </tbody>
+                    </table>
+
+                    <div class='pagination_wrap'>
+                        <div class='arrow_wrap'>
+                            <span class='btn_consulting_prev_page'><img src="resources/users/img/icon/arrow_left.png"></span>
+                            <span class='btn_consulting_next_page'><img src="resources/users/img/icon/arrow_right.png"></span>
+                        </div>
+
+                        <span>
+                            <b class='consulting_curr_page'>2</b>/<span class='consulting_total_page'></span>
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 파트너사 롤링배너 -->
+                <div class="partner_container" id='partnerCompanyMobile'>
+                <div class='partner_wrap marquee'>
+                    <ul class="marquee-content">
+                        <li class='marquee-item'><img src='resources/users/img/partner/partner_01.png' /></i></li>
+                        <li class='marquee-item'><img src='resources/users/img/partner/partner_02.png' /></li>
+                        <li class='marquee-item'><img src='resources/users/img/partner/partner_03.png' /></i></li>
+                        <li class='marquee-item'><img src='resources/users/img/partner/partner_04.png' /></li>
+                        <li class='marquee-item'><img src='resources/users/img/partner/partner_05.png' /></li>
+                        <li class='marquee-item'><img src='resources/users/img/partner/partner_06.png' /></li>
+                        <li class='marquee-item'><img src='resources/users/img/partner/partner_07.png' /></li>
+                        <li class='marquee-item'><img src='resources/users/img/partner/partner_08.png' /></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Review List -->
+            <div class='review_container' id='reviewListMobile'>
+                <div class='left_wrap'>
+                    <div class='top_wrap'>
+                        <div class='title_wrap'>
+                            <img src='resources/users/img/main/text/title_arrow.png' />
+                            <span>Review</span>
+                        </div>
+
+                        <div class='search_container'>
+                            <div class='search_wrap'>
+                                <select name="search" class="select">
+                                    <option disabled selected>제목+내용</option>
+                                    <option value="apple">제목</option>
+                                    <option value="orange">내용</option>
+                                    <option value="grape">제목+내용</option>
+                                </select>
+
+                                <input type='text' class='search' />
+                            </div>
+                            <button type='button' class='review-button btn_review_add'>
+                                <span>글쓰기</span>
+                                <img src='resources/users/img/icon/main_i_right.png' />
+                            </button>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class='consulting_content_container'>
+                    <table>
+                        <tbody id='table_review_list_mo'>
+
+                        </tbody>
+                    </table>
+
+                    <div class='pagination_wrap'>
+                        <div class='arrow_wrap'>
+                            <span class='btn_review_prev_page'><img src="resources/users/img/icon/arrow_left.png"></span>
+                            <span class='btn_review_next_page'><img src="resources/users/img/icon/arrow_right.png"></span>
+                        </div>
+
+                        <span>
+                            <b class='review_curr_page'></b>/<span class='review_total_page'></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 포트폴리오 영역 -->
+            <div class='portfolio_container' id='portfolioWrapMobile'>
+                <div class='title'>
+                    <span>Portfolio</span>
+                    <img src='resources/users/img/main/text/title_arrow.png' />
+                </div>
+
+                <ul class='portfolio_list'>
+                    <?php
+                    foreach ($portfolio_list as $list) {
+                        $img = json_decode($list->img_name)[0];
+                    ?>
+                        <li class='portfolio_wrap select_portfolio' data-curridx="<?= $list->idx ?>">
+                            <img src="<?= $img ?>" alt="<?= $list->title ?>">
+                        </li>
+                    <?php } ?>
+
+                </ul>
+                <div id="sentinel"></div>
             </div>
         </div>
-        <!-- e: (5)접수완료 -->
-    </div>
-
-
-    <div class="sub_cont_body">
-        <div id="list"></div>
-        <!-- s: (모바일)의뢰현황-->
-        <section class="container mo">
-            <div class="cont_header">
-                <h1 class="cont_title">의뢰목록</h1>
-            </div>
-            <div class="cont_body">
-                <div class="row">
-                    <div class="col-4">
-                        <!-- 키워드 고려 필요 -->
-                        <div class="input_group type2">
-                            <select name="">
-                                <option value="">기업명 or 작성자</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-8">
-                        <div class="input_group type2">
-                            <input type="text" class="consulting_keyword" placeholder="검색어를 입력해주세요">
-                            <button type="button" class="btn_search btn_get_consulting_list"></button>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <table class="request_table">
-                            <colgroup>
-                                <col width="12%" />
-                                <col width="68%" />
-                                <col width="20%" />
-                            </colgroup>
-                            <tbody id="table_consulting_list_mo"></tbody>
-                        </table>
-                        <div class="table_pagination">
-                            <ul>
-                                <li class="prev btn_consulting_prev_page"><span>◀</span>이전</li>
-                                <li class="consulting_curr_page"></li>
-                                <li>/</li>
-                                <li class="consulting_total_page"></li>
-                                <li class="next btn_consulting_next_page">다음<span>▶</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- e: (모바일)의뢰현황-->
-
-        <!-- s: (PC)의뢰현황-->
-        <section class="container pc mt-5">
-            <div class="row">
-                <div class="col-3">
-                    <div class="cont_left">
-                        <h1 class="cont_title">의뢰목록</h1>
-                        <div class="cont_bot">
-                            <div class="input_group type2">
-                                <select name="">
-                                    <option value="">기업명 or 작성자</option>
-                                </select>
-                            </div>
-                            <div class="input_group type2 mt-2">
-                                <input type="text" class="consulting_keyword" placeholder="검색어를 입력해주세요">
-                                <button type="button" class="btn_search btn_get_consulting_list"></button>
-                            </div>
-                            <div class="table_pagination">
-                                <ul>
-                                    <li class="prev btn_consulting_prev_page"><span>◀</span>이전</li>
-                                    <li class="next btn_consulting_next_page">다음<span>▶</span></li>
-                                </ul>
-                                <ul>
-                                    <li class="consulting_curr_page"></li>
-                                    <li>/</li>
-                                    <li class="consulting_total_page"></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-9">
-                    <div class="cont_right">
-                        <table class="request_table">
-                            <colgroup>
-                                <col width="10%" />
-                                <col width="50%" />
-                                <col width="12%" />
-                                <col width="14%" />
-                                <col width="14%" />
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th>번호</th>
-                                    <th>제목</th>
-                                    <th>작성자</th>
-                                    <th>작성일</th>
-                                    <th>상태</th>
-                                </tr>
-                            </thead>
-                            <tbody id="table_consulting_list_pc"></tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- e: (PC)의뢰현황-->
-
-        <div id="review"></div>
-        <!-- s: (모바일)만족도 -->
-        <section class="container mt-5 mo">
-            <div class="cont_header">
-                <h1 class="cont_title">만족도</h1>
-                <button type="button" class="btn_primary btn_review_add">글쓰기</button>
-            </div>
-            <div class="cont_body">
-                <div class="row">
-                    <div class="col-4">
-                        <div class="input_group type2">
-                            <select name="">
-                                <option value="">제목 + 내용</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-8">
-                        <div class="input_group type2">
-                            <input type="text" class="review_keyword" placeholder="검색어를 입력해주세요">
-                            <button type="button" class="btn_search btn_get_review_list"></button>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <table class="request_table">
-                            <colgroup>
-                                <col width="12%" />
-                                <col width="68%" />
-                                <col width="20%" />
-                            </colgroup>
-                            <tbody id="table_review_list_mo"></tbody>
-                        </table>
-                        <div class="table_pagination">
-                            <ul>
-                                <li class="prev btn_review_prev_page"><span>◀</span>이전</li>
-                                <li class="review_curr_page"></li>
-                                <li>/</li>
-                                <li class="review_total_page"></li>
-                                <li class="next btn_review_next_page">다음<span>▶</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- e: (모바일)만족도-->
-
-        <!-- s: (PC)만족도-->
-        <section class="container pc mt-5">
-            <div class="row">
-                <div class="col-3">
-                    <div class="cont_left">
-                        <h1 class="cont_title">만족도</h1>
-                        <div class="cont_bot">
-                            <button type="button" class="btn_primary btn_review_add">글쓰기</button>
-                            <div class="input_group type2">
-                                <select name="">
-                                    <option value="">제목 + 내용</option>
-                                </select>
-                            </div>
-                            <div class="input_group type2 mt-2">
-                                <input type="text" class="review_keyword" placeholder="검색어를 입력해주세요">
-                                <button type="button" class="btn_search btn_get_review_list"></button>
-                            </div>
-                            <div class="table_pagination">
-                                <ul>
-                                    <li class="prev btn_review_prev_page"><span>◀</span>이전</li>
-                                    <li class="next btn_review_next_page">다음<span>▶</span></li>
-                                </ul>
-                                <ul>
-                                    <li class="review_curr_page"></li>
-                                    <li>/</li>
-                                    <li class="review_total_page"></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-9">
-                    <div class="cont_right">
-                        <table class="request_table type2">
-                            <colgroup>
-                                <col width="8%" />
-                                <col width="12%" />
-                                <col width="44%" />
-                                <col width="12%" />
-                                <col width="12%" />
-                                <col width="12%" />
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th>번호</th>
-                                    <th>만족도</th>
-                                    <th>제목</th>
-                                    <th>작성자</th>
-                                    <th>작성일</th>
-                                    <th>조회수</th>
-                                </tr>
-                            </thead>
-                            <tbody id="table_review_list_pc">
-                                <!-- scale 7 -->
-                                <tr>
-                                    <td>20</td>
-                                    <td class="ta_center">
-                                        <ul class="star">
-                                            <li class="on">★</li>
-                                            <li class="on">★</li>
-                                            <li class="on">★</li>
-                                            <li class="on">★</li>
-                                            <li>☆</li>
-                                        </ul>
-                                    </td>
-                                    <td>'(주)제스엔지니어링'님의 디자인 견적요청이 접수되었습니다.</td>
-                                    <td class="ta_center">홍길동</td>
-                                    <td class="ta_center">2023.04.04</td>
-                                    <td class="ta_center">20</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- e: (PC)만족도-->
-
-        <div id="partner"></div>
-        <!-- s: 파트너사 -->
-        <section class="container partner">
-            <h1>파트너사</h1>
-            <?php
-            $partbanner_list_mod = array_chunk($partbanner_list, ceil(count($partbanner_list) / 3));
-            ?>
-            <div class="swiper partnerSubSwiper">
-                <div class="swiper-wrapper">
-                    <?php
-                    foreach ($partbanner_list_mod[0] as $list) {
-                    ?>
-                        <div class="swiper-slide">
-                            <img src="<?= $list->img_name ?>" alt="<?= $list->title ?>">
-                        </div>
-                    <?php } ?>
-                </div>
-            </div>
-            <div class="swiper partnerSubSwiper">
-                <div class="swiper-wrapper">
-                    <?php
-                    foreach ($partbanner_list_mod[1] as $list) {
-                    ?>
-                        <div class="swiper-slide">
-                            <img src="<?= $list->img_name ?>" alt="<?= $list->title ?>">
-                        </div>
-                    <?php } ?>
-                </div>
-            </div>
-            <div class="swiper partnerSubSwiper">
-                <div class="swiper-wrapper">
-                    <?php
-                    foreach ($partbanner_list_mod[2] as $list) {
-                    ?>
-                        <div class="swiper-slide">
-                            <img src="<?= $list->img_name ?>" alt="<?= $list->title ?>">
-                        </div>
-                    <?php } ?>
-                </div>
-            </div>
-            <div class="partner swiper-button-next pc"></div>
-            <div class="partner swiper-button-prev pc"></div>
-        </section>
-        <!-- e: 파트너사 -->
-
-        <div id="portfolio"></div>
-        <!-- s: 포트폴리오 -->
-        <section class="container pf">
-            <h1>포트폴리오</h1>
-            <div class="row">
-                <?php
-                foreach ($portfolio_list as $list) {
-                    $img = json_decode($list->img_name)[0];
-                ?>
-                    <div class="col-6 col-lg-3 select_portfolio" data-curridx="<?= $list->idx ?>">
-                        <img src="<?= $img ?>" alt="<?= $list->title ?>">
-                    </div>
-                <?php } ?>
-            </div>
-        </section>
-        <!-- e: 포트폴리오 -->
-
-    </div>
-</section>
+    </section>
 
 <div class="modal fade write-modal view-modal" id="modal-consulting-view" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="consultingModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -741,9 +1433,6 @@
     </div>
 </div>
 
-
-
-
 <!-- s:게시글 조회 모달 -->
 <div class="modal fade write-modal view-modal" id="modal-portfolio-view" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -762,14 +1451,13 @@
     </div>
 </div>
 
-
-
 <script src="/resources/users/lib/jquery.min.js"></script>
 <script src="/resources/users/lib/bootstrap.bundle.min.js"></script>
 <script src="/resources/users/lib/jquery.fullpage.min.js"></script>
 <script src="/resources/users/lib/swiper-bundle.min.js"></script>
 <script src="/resources/users/js/examples.js?<?= time() ?>"></script>
 <script src="/resources/users/js/common.js?<?= time() ?>"></script>
+<script src="/resources/users/js/consulting.js?<?= time() ?>"></script>
 <script>
     section = "<?= $page_info['section'] ?>";
 
@@ -856,7 +1544,9 @@
             category_name = $(this).val();
 
             if (chk_flag) {
-                label_tags = $("<label/>").text(category_name);
+                label_tags = $("<span/>", {
+                    class: 'content'
+                }).text(category_name);
                 div_tags = $("<div/>", {
                     class: "input_group " + category_segment
                 }).append(label_tags);
@@ -1028,11 +1718,19 @@
             var result = JSON.parse(data);
             if (result.flag) {
                 question_count = 0;
-                $.each(choose_category_list, function(key, val) {
-                    // 카테고리 명
-                    $(par_idv).append($('<h5/>').text(val.text));
+               $.each(choose_category_list, function(key, val) {
+                    // 각 카테고리 컨테이너 생성
+                    var formContainer = $('<div/>', {
+                        class: 'form_container'
+                    });
 
-                    question_list = result.data.questions.filter(question => question.segment == val.segment);
+                    // 카테고리 제목
+                    $(formContainer).append($('<span/>', {
+                        class: 'form_title'
+                    }).text(val.text));
+
+                    // 질문 리스트 필터링
+                    var question_list = result.data.questions.filter(question => question.segment == val.segment);
                     var segment = val.segment;
 
                     $.each(question_list, function(key, val) {
@@ -1041,21 +1739,30 @@
                         var input_name = question_id;
                         question_count++;
 
-                        var question_tags = $('<p/>', {
-                            class: 'mt-3'
-                        }).html(question_val);
-                        // 질문
-                        $(par_idv).append(question_tags);
-
-                        answer_list = result.data.answers.filter(answer => answer.question_idx == val.idx);
-
-                        var answer_tags = $('<div/>', {
-                            class: 'check_wrap'
+                        // 질문 컨테이너 생성
+                        var formWrap = $('<div/>', {
+                            class: 'form_wrap'
                         });
+
+                        // 질문 제목
+                        $(formWrap).append($('<span/>', {
+                            class: 'form_sub_title'
+                        }).html(question_val));
+
+                        // 답변 리스트 필터링
+                        var answer_list = result.data.answers.filter(answer => answer.question_idx == val.idx);
+
+                        // 답변 컨테이너 생성
+                        var formCheckboxContainer = $('<div/>', {
+                            class: 'form_checkbox_container'
+                        });
+
                         $.each(answer_list, function(key, val) {
-                            answer_id = question_id + '_' + val.idx;
-                            var group_tags = $('<div/>', {
-                                class: 'check_group'
+                            var answer_id = question_id + '_' + val.idx;
+
+                            // 체크박스 그룹 생성
+                            var checkWrap = $('<div/>', {
+                                class: 'check_wrap'
                             });
 
                             var radio_tags = $('<input/>', {
@@ -1071,17 +1778,29 @@
                                 name: input_name,
                                 id: answer_id
                             });
+
+                            var frag_label_tags = $('<label/>');
+
                             var label_tags = $('<label/>', {
                                 for: answer_id
                             }).html(val.answer);
-                            $(group_tags).append(radio_tags).append(label_tags);
-                            $(answer_tags).append(group_tags);
+
+                            // 체크박스 그룹에 라디오 버튼과 라벨 추가
+                            $(checkWrap).append(radio_tags).append(frag_label_tags).append(label_tags);
+                            // 답변 컨테이너에 체크박스 그룹 추가
+                            $(formCheckboxContainer).append(checkWrap);
                         });
-                        // 답변목록
-                        $(par_idv).append(answer_tags);
+
+                        // 질문 컨테이너에 답변 컨테이너 추가
+                        $(formWrap).append(formCheckboxContainer);
+                        // 카테고리 컨테이너에 질문 컨테이너 추가
+                        $(formContainer).append(formWrap);
                     });
-                    $(par_idv).append($("<hr/>"));
+
+                    // 부모 요소에 카테고리 컨테이너 추가
+                    $(par_idv).append(formContainer);
                 });
+
             } else {
                 $modal_alert("MTMbiz Design", "카테고리별 질문목록을 불러오지 못했습니다. 문의 바랍니다.", function() {
                     $modal_hide();
@@ -1447,7 +2166,7 @@
                     div_tags = $("<div/>", {
                         class: 'col-lg-6 col-sm-12 mb-2 text-center'
                     });
-                    img_tags = $("<img/>", {
+                    img_tags = $("<resources/users/img/>", {
                         class: 'w100per',
                         src: value
                     });

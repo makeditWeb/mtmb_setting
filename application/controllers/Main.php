@@ -32,7 +32,7 @@ class Main extends MTMbiz_Controller
             $this->load->model('Review_model');
             $review_list = $this->Review_model->get_review_list($page_info);
 
-            $page_info['page_scale'] =  "5";
+            // $page_info['page_scale'] =  "5";
             $this->load->model('Notice_model');
             $notice_list = $this->Notice_model->get_notice_list($page_info);
 

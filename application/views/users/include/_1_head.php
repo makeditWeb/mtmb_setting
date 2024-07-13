@@ -20,6 +20,37 @@
 
     <link rel="icon" href="/resources/users/favicon/favicon.ico">
     <link rel="stylesheet" href="/resources/users/css/styles.css?<?= time() ?>">
+    
+    <?php
+        // URL에서 경로만 추출하고 파일 이름을 얻습니다.
+        $url_path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+        $current_page = basename($url_path, ".php");
+
+        // 공통 스타일시트 로드
+        if (strpos($url_path, 'business/list') !== false) {
+            echo '<link rel="stylesheet" type="text/css" href="/resources/users/css/subpage/detail.css">';
+            echo '<link rel="stylesheet" type="text/css" href="/resources/users/css/subpage/common.css">';
+        }
+
+        // 페이지 이름에 따라 스타일시트를 로드합니다.
+        switch ($current_page) {
+            case 'consulting':
+                echo '<link rel="stylesheet" type="text/css" href="/resources/users/css/subpage/consulting.css">';
+                break;
+            case 'business':
+                echo '<link rel="stylesheet" type="text/css" href="/resources/users/css/subpage/business.css">';
+                break;
+            case 'company':
+                echo '<link rel="stylesheet" type="text/css" href="/resources/users/css/subpage/company.css">';
+                break;
+            case 'customer':
+                echo '<link rel="stylesheet" type="text/css" href="/resources/users/css/subpage/customer.css">';
+                break;
+            default:
+                // 기본 스타일시트를 로드하거나 아무 것도 하지 않습니다.
+            break;
+        }
+?>
 
     <!-- Biz Spring Logger -->
     <script type="text/javascript">

@@ -1,26 +1,35 @@
-<body>
+<body id='pageTop'>
     <div class="wrap">
         <!-- s:pc -->
         <!-- s:header -->
         <header class="header" id="header">
             <div class="header_wrap">
                 <ul class="header_i">
-                    <li class="menu mo" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
-                        <span class="i i_menu"></span>
+                    <li class="menu mo" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop"
+                        aria-controls="offcanvasTop">
+                        <div class="menu_wrap off">
+                            <p class="menu_line n1"></p>
+                            <p class="menu_line n2"></p>
+                            <p class="menu_line n3"></p>
+                        </div>
                     </li>
-                    <li class="menu pc" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
-                        <span class="i i_menu"></span>
+                    <li class="menu pc" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop"
+                        aria-controls="offcanvasTop">
+                        <div class="menu_wrap off">
+                            <p class="menu_line n1"></p>
+                            <p class="menu_line n2"></p>
+                            <p class="menu_line n3"></p>
+                        </div>
                     </li>
                     <li>
-                        <a href="/">
-                            <span class="i i_home_main"></span>
-                            <!-- <img src="/resources/users/img/header_logo.png" alt=""> -->
-                        </a>
+                        <a href='/'><span class='logo_text'>MTMBPPT</span></a>
                     </li>
                 </ul>
             </div>
         </header>
         <!-- e:header -->
+
+
 
         <?php
         $business_list_show = array_filter($business_list, function ($item) {
@@ -30,717 +39,836 @@
         $this->load->view('/users/include/_2_nav_offcanvas', ['business_list' => $business_list_show]);
         ?>
 
+        <!-- s: (모바일) offcanvas -->
+        <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+            <div class="offcanvas-header">
+
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="row">
+                    <div class="col-6 col-lg-12">
+                        <dl>
+                            <dt>
+                                <a href="/company">회사소개</a>
+                            </dt>
+                            <dd>
+                                <a href="/company#about">- 인사말</a>
+                            </dd>
+                            <dd class='pc'>
+                                <a href="/company#location">- 위치</a>
+                            </dd>
+                            <dd class='mo'>
+                                <a href="/company#locationMobile">- 위치</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a href="/business">비지니스</a>
+                            </dt>
+                            <dd>
+                                <a href="/business">- 전체서비스</a>
+                            </dd>
+                            <dd>
+                                <a href="/business?pptIndex=1">- 제안서</a>
+                            </dd>
+                            <dd>
+                                <a href="/business?pptIndex=2">- 소개서</a>
+                            </dd>
+                            <dd>
+                                <a href="/business?pptIndex=3">- 보고서</a>
+                            </dd>
+                            <dd>
+                                <a href="/business?pptIndex=4">- 교육•강의</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a href="/consulting">견적문의</a>
+                            </dt>
+                            <dd>
+                                <a href="/consulting">- 견적문의</a>
+                            </dd>
+                            <dd class='pc'>
+                                <a href="/consulting#reviewList">- 이용후기</a>
+                            </dd>
+                            <dd class='mo'>
+                                <a href="/consulting#reviewListMobile">- 이용후기</a>
+                            </dd>
+                            <dd class='pc'>
+                                <a href="/consulting#partnerCompany">- 파트너사</a>
+                            </dd>
+                            <dd class='mo'>
+                                <a href="/consulting#partnerCompanyMobile">- 파트너사</a>
+                            </dd>
+
+                            <dd class='pc'>
+                                <a href="/consulting#portfolioWrap">- 포트폴리오</a>
+                            </dd>
+                            <dd class='mo'>
+                                <a href="/consulting#portfolioWrapMobile">- 포트폴리오</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a href="/customer">고객센터</a>
+                            </dt>
+                            <dd>
+                                <a href="/customer">- 공지사항</a>
+                            </dd>
+                            <dd>
+                                <a href="/customer#serviceQna">- 문의하기</a>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="col-6 mo">
+                        <dl>
+                            <dd>
+                                <a href="detailpage_businessPlan">사업계획서</a>
+                            </dd>
+                            <dd>
+                                <a href="detailpage_workReport">업무보고서</a>
+                            </dd>
+                            <dd>
+                                <a href="detailpage_performance-report">성과보고서</a>
+                            </dd>
+                            <dd>
+                                <a href="detailpage_irReport">IR보고서</a>
+                            </dd>
+                            <dd>
+                                <a href="detailpage_researchReport">연구보고서</a>
+                            </dd>
+                            <dd>
+                                <a href="detailpage_salesReport">영업보고서</a>
+                            </dd>
+                            <dd>
+                                <a href="detailpage_storeProposal">입점제안서</a>
+                            </dd>
+                            <dd>
+                                <a href="detailpage_businessProposal">사업제안서</a>
+                            </dd>
+                            <dd>
+                                <a href="detailpage_biddingProposal">입찰제안서</a>
+                            </dd>
+                            <dd>
+                                <a href="detailpage_investmentProposal">투자제안서</a>
+                            </dd>
+                            <dd>
+                                <a href="detailpage_marketingProposal">마케팅제안서</a>
+                            </dd>
+                            <dd>
+                                <a href="detailpage_partnershipProposal">제휴제안서</a>
+                            </dd>
+                            <dd>
+                                <a href="detailpage_lectureMaterials">강의자료</a>
+                            </dd>
+                            <dd>
+                                <a href="detailpage_education">교육자료</a>
+                            </dd>
+                            <dd>
+                                <a href="detailpage_seminarMaterials">세미나자료</a>
+                            </dd>
+                            <dd>
+                                <a href="detailpage_company">회사소개서</a>
+                            </dd>
+                            <dd>
+                                <a href="detailpage_productIntroduction">제품소개서</a>
+                            </dd>
+                            <dd>
+                                <a href="detailpage_serviceIntroduction">서비스소개서</a>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e: (모바일) offcanvas -->
+
         <!-- s:fullpage -->
         <div id="fullpage" class="pc">
             <div class="section section_01" id="section_01">
-                <div class="sc_wrap">
-                    <h1>고객 맞춤형 디자인 전문기업</h1>
-                    <img class="main_logo" src="/resources/users/img/main_logo.png" alt="Biz Design">
-                    <h6>고객이 원하는</h6>
-                </div>
-                <div class="main_cont_01">
-                    <ul>
-                        <li>
-                            <dl>
-                                <dt>가치</dt>
-                                <dd>Value</dd>
-                                <dd>+</dd>
-                            </dl>
-                        </li>
-                        <li>
-                            <dl>
-                                <dt>비용</dt>
-                                <dd>Cost</dd>
-                                <dd>+</dd>
-                            </dl>
-                        </li>
-                        <li>
-                            <dl>
-                                <dt>소통</dt>
-                                <dd>Communication</dd>
-                                <dd>+</dd>
-                            </dl>
-                        </li>
-                    </ul>
-                </div>
-                <div class="swiper_cont">
-                    <div class="swiper listSwiper listSwiper_pc">
-                        <div class="swiper-wrapper">
-                            <?php
-                            $i = 0;
-                            foreach ($business_list_show as $list) {
-                            ?>
-                                <div class="swiper-slide slide_<?= sprintf('%02d', $i) ?> move_page" data-url="/business/list/<?= $list['segment'] ?>">
-                                    <div class="slide_box">
-                                        <img src="/resources/users/img/business/colorful/<?= $list['segment'] ?>.png" alt="<?= $list['name'] ?>">
-                                        <h5><?= $list['name'] ?></h5>
-                                    </div>
-                                    <div class="slide_imgbox">
-                                        <img src="/resources/users/img/business/picture/<?= $list['segment'] ?>.jpg" alt="<?= $list['name'] ?>">
-                                        <h5><?= $list['name'] ?></h5>
-                                    </div>
-                                </div>
-                            <?php
-                                $i++;
-                            }
-                            ?>
+                <div class='sc_wrap'>
+                    <div class='title_wrap'>
+                        <div class='top_wrap'>
+                            <div class='description_wrap'>
+                                <span>고객이 원하는</span>
+                                <span>PPT Design</span>
+                            </div>
+                            <span>Value</span>
                         </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
+                        <h1>Cost</h1>
+                        <h2>Result</h2>
                     </div>
-                </div>
-            </div>
-            <div class="section section_02" id="section_02">
-                <div class="container box">
-                    <div class="row">
-                        <div class="col-6">
-                            <div class="main_cont_02 justify-content-end">
-                                <h2>디자인<br>견적요청</h2>
-                                <button type="button" class="link_to_consulting">
-                                    <img src="/resources/users/img/btn_start.png" alt="">
-                                </button>
+
+                    <div class='content_01'>
+                        <div class='swiper section01_listSwiper'>
+                            <div class='swiper-wrapper'>
+                                <a href='business?pptIndex=1' class='swiper-slide content'>
+                                    <div class='proposal'>
+                                        <span>Proposal<br />document</span>
+                                    </div>
+                                </a>
+                                <a href='business?pptIndex=4' class='swiper-slide content'>
+                                    <div class='lecture'>
+                                        <span>Lecture <br />materials</span>
+                                    </div>
+                                </a>
+                                <a href='business?pptIndex=2' class='swiper-slide content'>
+                                    <div class='introduction'>
+                                        <span>Introduction</span>
+                                    </div>
+                                </a>
+                                <a href='business?pptIndex=4' class='swiper-slide content'>
+                                    <div class='educational'>
+                                        <span>Educational<br />materials</span>
+                                    </div>
+                                </a>
+                                <a href='business?pptIndex=3' class='swiper-slide content'>
+                                    <div class='business'>
+                                        <span>Business report</span>
+                                    </div>
+                                </a>
+                                <a href='business?pptIndex=1' class='swiper-slide content'>
+                                    <div class='proposal'>
+                                        <span>Proposal<br />document</span>
+                                    </div>
+                                </a>
+                                <a href='business?pptIndex=4' class='swiper-slide content'>
+                                    <div class='lecture'>
+                                        <span>Lecture <br />materials</span>
+                                    </div>
+                                </a>
+                                <a href='business?pptIndex=2' class='swiper-slide content'>
+                                    <div class='introduction'>
+                                        <span>Introduction</span>
+                                    </div>
+                                </a>
+                                <a href='business?pptIndex=4' class='swiper-slide content'>
+                                    <div class='educational'>
+                                        <span>Educational<br />materials</span>
+                                    </div>
+                                </a>
+                                <a href='business?pptIndex=3' class='swiper-slide content'>
+                                    <div class='business'>
+                                        <span>Business report</span>
+                                    </div>
+                                </a>
                             </div>
                         </div>
-                        <div class="col-6">
-                            <div class="main_cont_02 justify-content-start">
-                                <ul>
-                                    <li>
-                                        <img src="/resources/users/img/step_1.png" alt="">
-                                        <p>고객 <br class="mo">의뢰</p>
-                                    </li>
-                                    <li>
-                                        <img src="/resources/users/img/step_2.png" alt="">
-                                        <p>담당자 <br class="mo">상담</p>
-                                    </li>
-                                    <li>
-                                        <img src="/resources/users/img/step_3.png" alt="">
-                                        <p>디자이너 <br class="mo">소통</p>
-                                    </li>
-                                    <li>
-                                        <img src="/resources/users/img/step_4.png" alt="">
-                                        <p>수정 및 <br class="mo">컨펌</p>
-                                    </li>
-                                    <li>
-                                        <img src="/resources/users/img/step_5.png" alt="">
-                                        <p>서비스 <br class="mo">제공</p>
-                                    </li>
-                                </ul>
-                            </div>
+
+                        <div class='swiper-hero-progress-wrap'>
+                            <div class="swiper-hero-progress"></div>
                         </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-6">
-                            <div class="cont_partner">
-                                <h3 class="sc_title move_page" data-url="/consulting?section=partner">파트너사<button type="button"><i class="i i_more"></i></button></h3>
-                                <div class="cont_swiper">
-                                    <?php
-                                    $partbanner_list_mod = array_chunk($partbanner_list, ceil(count($partbanner_list) / 2));
-                                    ?>
-                                    <div class="swiper partnerSwiper partnerSwiperOne">
-                                        <div class="swiper-wrapper">
-                                            <?php
-                                            foreach ($partbanner_list_mod[0] as $list) {
-                                            ?>
-                                                <div class="swiper-slide">
-                                                    <img src="<?= $list->img_name ?>" alt="<?= $list->title ?>">
-                                                </div>
-                                            <?php } ?>
-                                        </div>
-                                    </div>
-                                    <div class="swiper partnerSwiper partnerSwiperOne m-0">
-                                        <div class="swiper-wrapper">
-                                            <?php
-                                            foreach ($partbanner_list_mod[1] as $list) {
-                                            ?>
-                                                <div class="swiper-slide">
-                                                    <img src="<?= $list->img_name ?>" alt="<?= $list->title ?>">
-                                                </div>
-                                            <?php } ?>
-                                        </div>
-                                    </div>
+
+
+                        <div class='content-panel active'>
+                            <div class='img-wrap'>
+                                <img src='resources/users/img/main/contentImage/introduction-1.png' />
+                            </div>
+                            <div class='right-wrap'>
+                                <img src='resources/users/img/main/section01/arrow.png' />
+                                <div class='description_wrap'>
+                                    <span>소개서</span>
+                                    <span>Introduction</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-6">
-                            <div class="cont_portfolio type2">
-                                <h3 class="sc_title move_page" data-url="/consulting?section=portfolio">포트폴리오<button type="button"><i class="i i_more"></i></button></h3>
-                                <div class="cont_swiper">
-                                    <div class="swiper portfolioSwiper">
-                                        <div class="swiper-wrapper">
-                                            <?php
-                                            foreach ($portfolio_list as $list) {
-                                                $img = json_decode($list->img_name)[0];
-                                            ?>
-                                                <div class="swiper-slide">
-                                                    <img src="<?= $img ?>" alt="<?= $list->title ?>">
-                                                </div>
-                                            <?php } ?>
-                                        </div>
-                                    </div>
+
+                        <div class='content-panel'>
+                            <div class='img-wrap'>
+                                <img src='resources/users/img/main/contentImage/proposal-report-1.png' />
+                            </div>
+                            <div class='right-wrap'>
+                                <img src='resources/users/img/main/section01/arrow.png' />
+                                <div class='description_wrap'>
+                                    <span>제안서</span>
+                                    <span>Proposal document</span>
                                 </div>
+                            </div>
+                        </div>
+
+                        <div class='content-panel'>
+                            <div class='img-wrap'>
+                                <img src='resources/users/img/main/contentImage/business-report-1.png' />
+                            </div>
+                            <div class='right-wrap'>
+                                <img src='resources/users/img/main/section01/arrow.png' />
+                                <div class='description_wrap'>
+                                    <span>보고서</span>
+                                    <span>Business report</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class='content-panel'>
+                            <div class='img-wrap'>
+                                <img src='resources/users/img/main/contentImage/education-1.png' />
+                            </div>
+                            <div class='right-wrap'>
+                                <img src='resources/users/img/main/section01/arrow.png' />
+                                <div class='description_wrap'>
+                                    <span>교육자료</span>
+                                    <span>Educational meterials</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class='content-panel'>
+                            <div class='img-wrap'>
+                                <img src='resources/users/img/main/contentImage/education-2.png' />
+                            </div>
+                            <div class='right-wrap'>
+                                <img src='resources/users/img/main/section01/arrow.png' />
+                                <div class='description_wrap'>
+                                    <span>강의자료</span>
+                                    <span>Lecture meterials</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class='content-panel'>
+                            <div class='img-wrap'>
+                                <img src='resources/users/img/main/contentImage/introduction-2.png' />
+                            </div>
+                            <div class='right-wrap'>
+                                <img src='resources/users/img/main/section01/arrow.png' />
+                                <div class='description_wrap'>
+                                    <span>소개서</span>
+                                    <span>Introduction</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class='content-panel'>
+                            <div class='img-wrap'>
+                                <img src='resources/users/img/main/contentImage/proposal-report-2.png' />
+                            </div>
+                            <div class='right-wrap'>
+                                <img src='resources/users/img/main/section01/arrow.png' />
+                                <div class='description_wrap'>
+                                    <span>제안서</span>
+                                    <span>Proposal document</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class='content-panel'>
+                            <div class='img-wrap'>
+                                <img src='resources/users/img/main/contentImage/business-report-2.png' />
+                            </div>
+                            <div class='right-wrap'>
+                                <img src='resources/users/img/main/section01/arrow.png' />
+                                <div class='description_wrap'>
+                                    <span>보고서</span>
+                                    <span>Business report</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class='content-panel'>
+                            <div class='img-wrap'>
+                                <img src='resources/users/img/main/contentImage/education-1.png' />
+                            </div>
+                            <div class='right-wrap'>
+                                <img src='resources/users/img/main/section01/arrow.png' />
+                                <div class='description_wrap'>
+                                    <span>교육자료</span>
+                                    <span>Educational meterials</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class='content-panel'>
+                            <div class='img-wrap'>
+                                <img src='resources/users/img/main/contentImage/education-2.png' />
+                            </div>
+                            <div class='right-wrap'>
+                                <img src='resources/users/img/main/section01/arrow.png' />
+                                <div class='description_wrap'>
+                                    <span>강의자료</span>
+                                    <span>Lecture meterials</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="scroll-controller">
+                            <div class="arrow_wrap">
+                                <svg id='section_01_list_swiper_up' width="18" height="18" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M6 15l6-6 6 6" />
+                                </svg>
+                                <div class="line"></div>
+                                <svg id='section_01_list_swiper_down' width="18" height="18" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M6 9l6 6 6-6" />
+                                </svg>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <img class='scroll_img' src='resources/users/img/scroll_mouse.png' />
             </div>
 
+            <div class="section section_02" id="section_02">
+                <div class='content_02'>
+                    <div class='consulting_box'>
+                        <div class='left_wrap'>
+                            <img class='section_text' src='resources/users/img/main/text/consulting.png' alt='consulting' />
+                            <ul>
+                                <li>
+                                    <img src="resources/users/img/main/step_1.png" alt="상담 문의">
+                                    <p>문의</p>
+                                </li>
+                                <li class="arrow_between">
+                                    <img src="resources/users/img/icon/between_arrows.png">
+                                </li>
+                                <li>
+                                    <img src="resources/users/img/main/step_2.png" alt="상담 진행">
+                                    <p>상담</p>
+                                </li>
+                                <li class="arrow_between">
+                                    <img src="resources/users/img/icon/between_arrows.png">
+                                </li>
+                                <li>
+                                    <img src="resources/users/img/main/step_3.png" alt="화상 대면 미팅">
+                                    <p>화상 · 대면 미팅</p>
+                                </li>
+                                <li class="arrow_between">
+                                    <img src="resources/users/img/icon/between_arrows.png">
+                                </li>
+                                <li>
+                                    <img src="resources/users/img/main/step_4.png" alt="작업 진행">
+                                    <p>진행</p>
+                                </li>
+                                <li class="arrow_between">
+                                    <img src="resources/users/img/icon/between_arrows.png">
+                                </li>
+                                <li>
+                                    <img src="resources/users/img/main/step_5.png" alt="작업 수정">
+                                    <p>수정</p>
+                                </li>
+                                <li class="arrow_between">
+                                    <img src="resources/users/img/icon/between_arrows.png">
+                                </li>
+                                <li>
+                                    <img src="resources/users/img/main/step_6.png" alt="작업 완료">
+                                    <p>완료</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <a href="consulting?consultingIndex=2" class='right_wrap'>
+                            <span>견적문의
+                                <img src='resources/users/img/icon/main_i_right.png' />
+                            </span>
+                            <span>Start</span>
+                        </a>
+                    </div>
+                    <div class='made_it_wrap'>
+                        <div class='text_wrap'>
+                            <div class='title_wrap'>
+                                <h2>We made it</h2>
+                                <img src='resources/users/img/main/text/title_arrow.png' />
+                            </div>
+                            <a href='consulting#portfolioWrap' class='view_all_wrap_link'>
+                                <div class='view_all_wrap'>
+                                    <span>전체보기</span>
+                                    <img src='resources/users/img/icon/main_i_right.png' />
+                                </div>
+                            </a>
+                        </div>
+                        <div class='made_it_list swiper weMadeItSwiper'>
+                            <div class='swiper-wrapper'>
+                                <div class='swiper-slide'>
+                                    <img src='resources/users/img/main/made_it_01.png' />
+                                </div>
+                                <div class='swiper-slide'>
+                                    <img src='resources/users/img/main/made_it_02.png' />
+                                </div>
+                                <div class='swiper-slide'>
+                                    <img src='resources/users/img/main/made_it_03.png' />
+                                </div>
+                                <div class='swiper-slide'>
+                                    <img src='resources/users/img/main/made_it_04.png' />
+                                </div>
+                                <div class='swiper-slide'>
+                                    <img src='resources/users/img/main/made_it_01.png' />
+                                </div>
+                                <div class='swiper-slide'>
+                                    <img src='resources/users/img/main/made_it_02.png' />
+                                </div>
+                                <div class='swiper-slide'>
+                                    <img src='resources/users/img/main/made_it_03.png' />
+                                </div>
+                                <div class='swiper-slide'>
+                                    <img src='resources/users/img/main/made_it_04.png' />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="section section_03" id="section_03">
-                <div class="container-xl">
-                    <div class="main_cont_03">
-                        <div class="row">
-                            <div class="col-6 d-flex align-items-center">
-                                <div class="service_title">
-                                    <h1 class="title">All Service</h1>
-                                    <p class="desc">고객을 위한 분야별 전문 디자인 서비스를 제공합니다.</p>
+                <div class='content_03'>
+                    <div class='all_service_wrap'>
+                        <div class='title_wrap'>
+                            <span>ALL Service</span>
+                            <img src='resources/users/img/main/text/title_arrow.png' />
+                        </div>
+
+                        <div class='service_list'>
+                                <?php
+                                $index = 1; // 인덱스 초기값 설정
+                                foreach ($business_list_show as $list) {
+                                    // 두 자리 숫자로 포맷팅
+                                    $formattedIndex = sprintf("%02d", $index);
+                                ?>
+                                    <!-- 보고서 -->
+                                    <a href="/business/list/<?= $list['segment'] ?>/" class='service_wrap'>
+                                        <img src='resources/users/img/main/services/service_<?= $formattedIndex ?>.png'   />
+                                        <div class='service_text'>
+                                            <span><?= $list['name'] ?></span>
+                                            <img src='resources/users/img/icon/main_i_right.png' alt='Right Arrow' />
+                                        </div>
+                                    </a>
+                                <?php
+                                    $index++; 
+                                }
+                                ?>
+                        </div>
+                    </div>
+
+                    <div class="partner_container marquee">
+                        <ul class="partner_wrap marquee-content">
+                            <li class='marquee-item'><img src='resources/users/img/partner/partner_01.png' /></li>
+                            <li class='marquee-item'><img src='resources/users/img/partner/partner_02.png' /></li>
+                            <li class='marquee-item'><img src='resources/users/img/partner/partner_03.png' /></li>
+                            <li class='marquee-item'><img src='resources/users/img/partner/partner_04.png' /></li>
+                            <li class='marquee-item'><img src='resources/users/img/partner/partner_05.png' /></li>
+                            <li class='marquee-item'><img src='resources/users/img/partner/partner_06.png' /></li>
+                            <li class='marquee-item'><img src='resources/users/img/partner/partner_07.png' /></li>
+                            <li class='marquee-item'><img src='resources/users/img/partner/partner_08.png' /></li>
+                        </ul>
+                    </div>
+
+                    <div class='review_wrap'>
+                        <div class='text_wrap'>
+                            <div class='title_wrap'>
+                                <h2>Review</h2>
+                                <img src='resources/users/img/main/text/title_arrow.png' />
+                            </div>
+                            <a href='consulting#reviewList' class='view_all_wrap_link'>
+                                <div class='view_all_wrap'>
+                                    <span>전체보기</span>
+                                    <img src='resources/users/img/icon/main_i_right.png' />
+                                </div>
+                            </a>
+                        </div>
+                        <ul class='review_list'>
+                        <?php
+                        foreach ($review_list as $list) {
+                        ?>
+                            <li class='review_box'>
+                                <span class='review_title' data-idx="<?= $list->idx ?>"><?= $list->subject ?></span>
+                                <span class='review_author'><?= $list->name ?></span>
+                            </li>
+                        <?php } ?>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section section_04" id="section_04">
+                <div class='title_wrap'>
+                    <span>PPT</span>
+                    <img src='resources/users/img/main/text/title_arrow.png' />
+                </div>
+                <div class='content_04'>
+                    <div class='left_wrap'>
+                        <div class='title'>
+                            <span>Proposal<br />document</span>
+                            <img src='resources/users/img/main/text/title_arrow.png' />
+                        </div>
+                        <div class='sub_title'>
+                            <span>제안서</span>
+                            <span class="sub_tiitle_text">
+                                차별성 높은 표현력과 설득력 있는 스토리 구성을 통해<br />
+                                우리만의 경쟁력을 극대화합니다.
+                            </span>
+                        </div>
+                        <div class='more_info'>
+                            <span><a href='business?pptIndex=1'>용역제안</a></span>
+                            <span><a href='business?pptIndex=1'>제휴제안</a></span>
+                            <span><a href='business?pptIndex=1'>입찰제안</a></span>
+                            <span><a href='business?pptIndex=1'>마케팅제안</a></span>
+                            <span><a href='business?pptIndex=1'>영업제안</a></span>
+                            <span><a href='business?pptIndex=1'>투자제안</a></span>
+                        </div>
+
+                        <a href='business?pptIndex=1' class='view_all_wrap_link'>
+                            <div class='view_all_wrap'>
+                                <span>상세보기</span>
+                                <img src='resources/users/img/icon/main_i_right.png' />
+                            </div>
+                        </a>
+                    </div>
+                    <img src='resources/users/img/main/content_04.png' />
+                </div>
+            </div>
+
+            <div class="section section_05" id="section_05">
+                <div class="content_05">
+                    <div class='content_container'>
+                        <div class='left_wrap'>
+                            <img src='resources/users/img/main/content_05.png' />
+                            <div class='introduction_list swiper introducationSwiper'>
+                                <div class=' swiper-wrapper'>
+                                    <div class='swiper-slide'>
+                                        <img src='resources/users/img/main/introduce_01.png' />
+                                    </div>
+                                    <div class='swiper-slide'>
+                                        <img src='resources/users/img/main/introduce_02.png' />
+                                    </div>
+                                    <div class='swiper-slide'>
+                                        <img src='resources/users/img/main/introduce_03.png' />
+                                    </div>
+                                    <div class='swiper-slide'>
+                                        <img src='resources/users/img/main/introduce_04.png' />
+                                    </div>
+                                    <div class='swiper-slide'>
+                                        <img src='resources/users/img/main/introduce_01.png' />
+                                    </div>
+                                    <div class='swiper-slide'>
+                                        <img src='resources/users/img/main/introduce_02.png' />
+                                    </div>
+                                    <div class='swiper-slide'>
+                                        <img src='resources/users/img/main/introduce_03.png' />
+                                    </div>
+                                    <div class='swiper-slide'>
+                                        <img src='resources/users/img/main/introduce_04.png' />
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-6">
-                                <div class="row box_list_01">
-                                    <div class="col-6 move_page" data-url="/business/list/proposal">
-                                        <div class="box op">
-                                            <img src="/resources/users/img/business/symbol/proposal.png" alt="<?= $business_list['proposal']['name'] ?>">
-                                            <div class="box_text">
-                                                <h2><?= $business_list['proposal']['name'] ?></h2>
-                                                <p class="ta_l">보고서 / 제안서<br>회사소개서 / 교육자료</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-3 move_page" data-url="/business/list/package">
-                                        <div class="box">
-                                            <img src="/resources/users/img/business/symbol/package.png" alt="<?= $business_list['package']['name'] ?>">
-                                            <p><?= $business_list['package']['name'] ?></p>
-                                        </div>
-                                    </div>
-                                    <div class="col-3 move_page" data-url="/business/list/webdesign">
-                                        <div class="box">
-                                            <img src="/resources/users/img/business/symbol/webdesign.png" alt="<?= $business_list['webdesign']['name'] ?>">
-                                            <p><?= $business_list['webdesign']['name'] ?></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper_cont">
-                                    <div class="swiper serviceIcon01">
-                                        <div class="swiper-wrapper">
-                                            <?php
-                                            $business_list_show_no_top = array_filter($business_list_show, function ($item) {
-                                                return $item['use_top'] === false;
-                                            });
-
-                                            $business_list_show_1 = [];
-                                            $business_list_show_2 = [];
-                                            $business_list_show_3 = [];
-                                            $business_list_show_4 = [];
-
-                                            $business_list_show_1 = array_slice($business_list_show_no_top, 0, 5);
-                                            $business_list_show_2 = array_slice($business_list_show_no_top, 5, 5);
-                                            $business_list_show_3 = array_slice($business_list_show_no_top, 10, 4);
-                                            $business_list_show_4 = array_slice($business_list_show_no_top, 14, 4);
-
-                                            foreach ($business_list_show_1 as $list) {
-                                            ?>
-                                                <div class="swiper-slide move_page" data-url="/business/list/<?= $list['segment'] ?>">
-                                                    <div class="box">
-                                                        <img src="/resources/users/img/business/symbol/<?= $list['segment'] ?>.png" alt="<?= $list['name'] ?>">
-                                                        <p><?= $list['name'] ?></p>
-                                                    </div>
-                                                </div>
-                                            <?php
-                                            }
-
-
-                                            foreach ($business_list_show_1 as $list) {
-                                            ?>
-                                                <div class="swiper-slide move_page" data-url="/business/list/<?= $list['segment'] ?>">
-                                                    <div class="box">
-                                                        <img src="/resources/users/img/business/symbol/<?= $list['segment'] ?>.png" alt="<?= $list['name'] ?>">
-                                                        <p><?= $list['name'] ?></p>
-                                                    </div>
-                                                </div>
-                                            <?php
-                                            }
-                                            ?>
-                                        </div>
-                                    </div>
-
-                                    <div class="swiper serviceIcon01 mt-3">
-                                        <div class="swiper-wrapper">
-                                            <?php
-                                            foreach ($business_list_show_2 as $list) {
-                                            ?>
-                                                <div class="swiper-slide move_page" data-url="/business/list/<?= $list['segment'] ?>">
-                                                    <div class="box">
-                                                        <img src="/resources/users/img/business/symbol/<?= $list['segment'] ?>.png" alt="<?= $list['name'] ?>">
-                                                        <p><?= $list['name'] ?></p>
-                                                    </div>
-                                                </div>
-                                            <?php
-                                            }
-
-                                            foreach ($business_list_show_2 as $list) {
-                                            ?>
-                                                <div class="swiper-slide move_page" data-url="/business/list/<?= $list['segment'] ?>">
-                                                    <div class="box">
-                                                        <img src="/resources/users/img/business/symbol/<?= $list['segment'] ?>.png" alt="<?= $list['name'] ?>">
-                                                        <p><?= $list['name'] ?></p>
-                                                    </div>
-                                                </div>
-                                            <?php
-                                            }
-                                            ?>
-                                        </div>
-                                    </div>
-                                </div>
+                        </div>
+                        <div class='right_wrap'>
+                            <div class='title'>
+                                <span>Introduction</span>
+                                <img src='resources/users/img/main/text/title_arrow.png' />
                             </div>
-                            <div class="col-7 d-flex align-items-center">
-                                <div class="cont_review">
-                                    <h3 class="sc_title move_page" data-url="/consulting?section=review">만족도<button type="button"><i class="i i_more"></i></button></h3>
-                                    <ul class="review_list">
-                                        <?php
-                                        foreach ($review_list as $list) {
-                                        ?>
-                                            <li>
-                                                <dl>
-                                                    <dt>
-                                                        <ul class="star">
-                                                            <li class="on">★</li>
-                                                            <li class="<?= ($list->score > 1) ? "on" : "" ?>"><?= ($list->score > 1) ? "★" : "☆" ?></li>
-                                                            <li class="<?= ($list->score > 2) ? "on" : "" ?>"><?= ($list->score > 2) ? "★" : "☆" ?></li>
-                                                            <li class="<?= ($list->score > 3) ? "on" : "" ?>"><?= ($list->score > 3) ? "★" : "☆" ?></li>
-                                                            <li class="<?= ($list->score > 4) ? "on" : "" ?>"><?= ($list->score > 4) ? "★" : "☆" ?></li>
-                                                        </ul>
-                                                    </dt>
-                                                    <dd class="cursor_hand get_review_info" data-idx="<?= $list->idx ?>"><?= $list->subject ?></dd>
-                                                    <dd><?= $list->name ?></dd>
-                                                </dl>
-                                            </li>
-                                        <?php } ?>
-                                    </ul>
-                                </div>
+                            <div class='sub_title'>
+                                <span>소개서</span>
+                                <span>
+                                    임팩트 강한 키워드와 논리적 정보전달을 통해<br />
+                                    신뢰성과 긍정적 이미지를 유도합니다
+                                </span>
                             </div>
-                            <div class="col-5">
-                                <div class="swiper_cont">
-                                    <div class="swiper serviceIcon02">
-                                        <div class="swiper-wrapper">
-                                            <?php
-                                            foreach ($business_list_show_3 as $list) {
-                                            ?>
-                                                <div class="swiper-slide move_page" data-url="/business/list/<?= $list['segment'] ?>">
-                                                    <div class="box">
-                                                        <img src="/resources/users/img/business/symbol/<?= $list['segment'] ?>.png" alt="<?= $list['name'] ?>">
-                                                        <p><?= $list['name'] ?></p>
-                                                    </div>
-                                                </div>
-                                            <?php
-                                            }
-
-                                            foreach ($business_list_show_3 as $list) {
-                                            ?>
-                                                <div class="swiper-slide move_page" data-url="/business/list/<?= $list['segment'] ?>">
-                                                    <div class="box">
-                                                        <img src="/resources/users/img/business/symbol/<?= $list['segment'] ?>.png" alt="<?= $list['name'] ?>">
-                                                        <p><?= $list['name'] ?></p>
-                                                    </div>
-                                                </div>
-                                            <?php
-                                                $i++;
-                                            }
-                                            ?>
-                                        </div>
-                                    </div>
-
-                                    <div class="swiper serviceIcon02 mt-3">
-                                        <div class="swiper-wrapper">
-                                            <?php
-                                            foreach ($business_list_show_4 as $list) {
-                                            ?>
-                                                <div class="swiper-slide move_page" data-url="/business/list/<?= $list['segment'] ?>">
-                                                    <div class="box">
-                                                        <img src="/resources/users/img/business/symbol/<?= $list['segment'] ?>.png" alt="<?= $list['name'] ?>">
-                                                        <p><?= $list['name'] ?></p>
-                                                    </div>
-                                                </div>
-                                            <?php
-                                            }
-
-                                            foreach ($business_list_show_4 as $list) {
-                                            ?>
-                                                <div class="swiper-slide move_page" data-url="/business/list/<?= $list['segment'] ?>">
-                                                    <div class="box">
-                                                        <img src="/resources/users/img/business/symbol/<?= $list['segment'] ?>.png" alt="<?= $list['name'] ?>">
-                                                        <p><?= $list['name'] ?></p>
-                                                    </div>
-                                                </div>
-                                            <?php
-                                            }
-                                            ?>
-                                        </div>
-                                    </div>
-                                </div>
-
+                            <div class='more_info'>
+                                <span><a href='business?pptIndex=2'>회사소개</a></span>
+                                <span><a href='business?pptIndex=2'>사업소개</a></span>
+                                <span><a href='business?pptIndex=2'>제품소개</a></span>
                             </div>
+                            <a href='business?pptIndex=2' class='view_all_wrap_link'>
+                                <div class='view_all_wrap'>
+                                    <span>상세보기</span>
+                                    <img src='resources/users/img/icon/main_i_right.png' />
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="section section_05 new" id="section_04">
-                <div class="container">
-                    <div class="main_cont_05">
-                        <div class="sc_left">
-                            <div class="sc_left_top">
-                                <div class="work_top">
-                                    <p><span>WORKS</span></p>
-                                    <h1>PPT디자인</h1>
-                                    <h6>전략적이고 성공적인 프리젠테이션을 위한 최적의 디자인 솔루션을 제공합니다.</h6>
-                                </div>
-                            </div>
-
-                            <div class="sc_right_top">
-                                <div class="swiper pptDesignSwiper">
-                                    <div class="swiper-wrapper move_page" data-url="/business/list/proposal/">
-                                        <?php
-                                        foreach ($refrence_list as $list) {
-                                            $img = json_decode($list->img_name)[0];
-                                        ?>
-                                            <div class="swiper-slide">
-                                                <img src="<?= $img ?>">
-                                            </div>
-                                        <?php } ?>
-
-                                        <?php
-                                        foreach ($refrence_list as $list) {
-                                            $img = json_decode($list->img_name)[0];
-                                        ?>
-                                            <div class="swiper-slide">
-                                                <img src="<?= $img ?>">
-                                            </div>
-                                        <?php } ?>
-                                    </div>
-                                </div>
-                            </div>
+            <div class="section section_06" id="section_06">
+                <div class='content_06'>
+                    <div class='left_wrap'>
+                        <div class='title'>
+                            <span>Business<br />report</span>
+                            <img src='resources/users/img/main/text/title_arrow.png' />
                         </div>
-                        <div class="sc_bottom">
-                            <div class="row">
-                                <div class="col-4">
-                                    <div class="ppt_box">
-                                        <div class="ppt_header">
-                                            <h2>보고용 PPT</h2>
-                                            <p>심플한 구성과 다양한 시각자료 활용으로 효과적인 프리젠테이션 진행</p>
-                                        </div>
-
-                                        <div class="ppt_body move_page" data-url="/business?section=work&tab=0">
-                                            <ul>
-                                                <li>사업계획서</li>
-                                                <li>업무보고서</li>
-                                                <li>성과보고서</li>
-                                                <li>IR자료</li>
-                                                <li>연구보고서</li>
-                                                <li>영업자료</li>
-                                            </ul>
-                                        </div>
-                                        <div class="ppt_footer">
-                                            <img src="/resources/users/img/ppt/ppt_01.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="ppt_box">
-                                        <div class="ppt_header">
-                                            <h2>경쟁PT용 PPT</h2>
-                                            <p>차별점을 강조하는 구성과 디자인으로 프로젝트 선정확률 극대화</p>
-                                        </div>
-                                        <div class="ppt_body move_page" data-url="/business?section=work&tab=0">
-                                            <ul>
-                                                <li>대리점입점</li>
-                                                <li>대학사업제안</li>
-                                                <li>입찰제안서</li>
-                                                <li>투자제안서</li>
-                                                <li>마케팅제안</li>
-                                                <li>영업제휴</li>
-                                            </ul>
-                                        </div>
-                                        <div class="ppt_footer">
-                                            <img src="/resources/users/img/ppt/ppt_02.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="ppt_box">
-                                        <div class="ppt_header">
-                                            <h2>교육·홍보용 PPT</h2>
-                                            <p>간단 명료한 디자인과 전략적인 구성으로 교육목표 및 효과적인 홍보 달성</p>
-                                        </div>
-                                        <div class="ppt_body move_page" data-url="/business?section=work&tab=0">
-                                            <ul>
-                                                <li>강의자료</li>
-                                                <li>교육자료</li>
-                                                <li>세미나 자료</li>
-                                                <li>회사소개서</li>
-                                                <li>제품소개서</li>
-                                                <li>서비스소개서</li>
-                                            </ul>
-                                        </div>
-                                        <div class="ppt_footer">
-                                            <img src="/resources/users/img/ppt/ppt_03.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class='sub_title'>
+                            <span>보고서</span>
+                            <span>
+                                가독성 높은 디자인과 데이터 시각화를 통해<br />
+                                원하는 성과목표 메시지를 명확하게 전달합니다
+                            </span>
                         </div>
+                        <div class='more_info'>
+                            <span><a href='business?pptIndex=3'>업무보고</a></span>
+                            <span><a href='business?pptIndex=3'>성과보고</a></span>
+                            <span><a href="business?pptIndex=3">IR보고</a></span>
+                        </div>
+
+                        <a href='business?pptIndex=3' class='view_all_wrap_link'>
+                            <div class='view_all_wrap'>
+                                <span>상세보기</span>
+                                <img src='resources/users/img/icon/main_i_right.png' />
+                            </div>
+                        </a>
+                    </div>
+                    <img src='resources/users/img/main/content_06.png' />
+                </div>
+            </div>
+
+            <div class="section section_07" id="section_07">
+                <div class='content_07'>
+                    <div class='top_wrap'>
+                        <div class='left_wrap'>
+                            <div class='title'>
+                                <span>Educational<br />materials</span>
+                                <img src='resources/users/img/main/text/title_arrow.png' />
+                            </div>
+                            <div class='sub_title'>
+                                <span>교육<span class='dot'>•</span>강의</span>
+                                <span>
+                                    이해도 높은 구성력과 간결한 메시지를 통해 <br/>
+                                    참석자와의 원활한 소통과 공감대를 형성합니다
+                                </span>
+                            </div>
+                            <div class='more_info'>
+                                <span><a href='business?pptIndex=4'>강의교재</a></span>
+                                <span><a href='business?pptIndex=4'>교육책자</a></span>
+                                <span><a href='business?pptIndex=4'>세미나자료</a></span>
+                            </div>
+
+                            <a href='business?pptIndex=4' class='view_all_wrap_link'>
+                                <div class='view_all_wrap'>
+                                    <span>상세보기</span>
+                                    <img src='resources/users/img/icon/main_i_right.png' />
+                                </div>
+                            </a>
+                        </div>
+
+                        <img src='resources/users/img/main/content_07.png' />
+                    </div>
+
+                    <div class='education_list'>
+                        <img src='resources/users/img/main/education_02.png' />
+                        <img src='resources/users/img/main/education_01.png' />
+                        <img src='resources/users/img/main/education_03.png' />
                     </div>
                 </div>
             </div>
 
+            <div class="section section_08 fp-auto-height" id="section_08">
+                <div class="content_08">
+                    <div class='top_wrap'>
+                        <div class='about_wrap'>
+                            <div class='title'>
+                                <span>About</span>
+                                <img src='resources/users/img/main/text/title_arrow.png' />
+                            </div>
 
+                            <div class='description_wrap'>
+                                <span class='description_01'>
+                                    PPT Design<br /> Outsourcing company
+                                </span>
 
-            <div class="section section_06" id="section_5">
-                <div class="main_cont_06">
-                    <div class="sc_left">
-                        <div class="sc_left_top">
-                            <div class="work_top">
-                                <p><span>WORKS</span></p>
-                                <h1>중소기업</h1>
-                                <h6>사업의 방향과 기획 의도에 맞춘<br>고객이 원하는 디자인을 제공합니다.</h6>
-                                <div class="row">
-                                    <div class="col-4">
-                                        <div class="box">명함</div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="box">사원증</div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="box">제품 카달록</div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="box">회사 소개서</div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="box">프로젝트 기획서</div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="box">홍보전단</div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="box">카드뉴스</div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="box">팝업 광고</div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="box">웹사이트 리뉴얼</div>
-                                    </div>
-                                </div>
+                                <span class='description_02'>
+                                    MTMBPPT는 고객과의 소통을 최우선으로<br />
+                                    최적의 디자인과 최고의 가치를 제공하고 고객이 원하는 목표를 달성할 수 있도록<br />
+                                    디자인 서비스를 제공하는 고객 맞춤형 PPT디자인 전문 기업입니다.
+                                </span>
                             </div>
+
+                            <a href='/company' class='view_all_wrap_link'>
+                                <div class='view_all_wrap'>
+                                    <span>상세보기</span>
+
+                                    <img src='resources/users/img/icon/main_i_right.png' />
+                                </div>
+                            </a>
                         </div>
-                        <div class="sc_left_bot"></div>
-                    </div>
-                    <div class="sc_right">
-                        <div class="row">
-                            <div class="col-9">
-                                <div class="swiper workImg10">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide slide_01"></div>
-                                        <div class="swiper-slide slide_02"></div>
-                                    </div>
-                                </div>
+
+                        <div class='notice_wrap'>
+                            <div class='title'>
+                                <span>Notice</span>
+                                <img src='resources/users/img/main/text/title_arrow.png' />
                             </div>
-                            <div class="col-3"></div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="row m-0">
-                                    <div class="col-2">
-                                        <div class="w_img work_img_11"></div>
-                                    </div>
-                                    <div class="col-10">
-                                        <div class="w_img work_img_12"></div>
-                                    </div>
+
+                            <ul class='notice_list'>
+                                <li class='notice_box'>
+                                    <span class='notice_title'>웹사이트 디자인 서비스가 새롭게 개편되었습니다</span>
+                                </li>
+                                <li class='notice_box'>
+                                    <span class='notice_title'>[패키지상품] 현수막, 실사출력물, 배너 제작 이벤트</span>
+                                </li>
+                                <li class='notice_box'>
+                                    <span class='notice_title'>디자인구독 서비스로 기업의 부담은 낮추고 퀄리티 있는 제작물을..</span>
+                                </li>
+                                <li class='notice_box'>
+                                    <span class='notice_title'>[엑스배너] 신규 탬플릿이 추가 되었습니다.</span>
+                                </li>
+                                <li class='notice_box'>
+                                    <span class='notice_title'>MTMBPPT 홈페이지 OPEN</span>
+                                </li>
+                            </ul>
+                            <a href='/customer' class='view_all_wrap_link'>
+                                <div class='view_all_wrap'>
+                                    <span>상세보기</span>
+
+                                    <img src='resources/users/img/icon/main_i_right.png' />
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="section section_07" id="section_06">
-                <div class="main_cont_07">
-                    <div class="sc_left">
-                        <div class="sc_left_top">
-                            <div class="work_top">
-                                <p><span>WORKS</span></p>
-                                <h1>공공기관</h1>
-                                <h6>기관이 원하는 일정을 최우선으로<br>최적의 디자인을 제공합니다.</h6>
-                                <div class="row">
-                                    <div class="col-4">
-                                        <div class="box">규정가이드북</div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="box">시설안내 리플렛</div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="box">행사포스터</div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="box">행사보고 소책자</div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="box">전기간행 소식지</div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="box">정책안내 브로셔</div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="box">문서 템플릿</div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="box">엑스배너</div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="box">현수막</div>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class='portfolio_container'>
+                        <div class='title'>
+                            <span>Portfolio</span>
+                            <img src='resources/users/img/main/text/title_arrow.png' />
                         </div>
-                        <div class="sc_left_bot"></div>
-                    </div>
-                    <div class="sc_right">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="w_img work_img_13"></div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-4">
-                                <div class="swiper workImg14">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide slide_01"></div>
-                                        <div class="swiper-slide slide_02"></div>
+
+                        <ul class='portfolio_list'>
+                            <?php
+                            foreach ($portfolio_list as $list) {
+                                $img = json_decode($list->img_name)[0];
+                                $currIdx = htmlspecialchars($list->idx, ENT_QUOTES, 'UTF-8');
+                                $imgSrc = htmlspecialchars($img, ENT_QUOTES, 'UTF-8');
+                                $title = htmlspecialchars($list->title, ENT_QUOTES, 'UTF-8');
+                                ?>
+                                <li class="portfolio_wrap" data-curridx="<?= $currIdx ?>">
+                                    <div class="portfolio_img_inner">
+                                            <img src="<?= $imgSrc ?>" alt="<?= $title ?>">
                                     </div>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="w_img work_img_15"></div>
-                            </div>
-                        </div>
+                                    <div class="hover_overlay">
+                                        <div class="hover_top">
+                                            <img src='resources/users/img/main/view_detail.png' />
+                                            <span><?= $title ?></span>
+                                        </div>
+                                    </div>
+                                </li>
+                            <?php
+                            }
+                            ?>
+                        </ul>
+                        <div id="sentinelPC"></div>
                     </div>
                 </div>
             </div>
 
-
-
-            <div class="section section_04" id="section_07">
-                <div class="main_cont_04">
-                    <div class="sc_left">
-                        <div class="sc_left_top">
-                            <div class="work_top">
-                                <p><span>WORKS</span></p>
-                                <h1>월간디자인</h1>
-                                <h6>설정 기간 중 분야별 요청 디자인들을 <br>통합 비용으로 제공합니다.</h6>
-                                <ul class="work_list">
-                                    <li>필요한 <span> 다양한 분야</span>의 디자인 작업들을</li>
-                                    <li>내가원하는 <span>퀄리티를 보장</span>하면서</li>
-                                    <li><span>합리적인 비용</span>으로 제작할 방법은 없을까?
-                                        <button type="button"><i class="i i_more"></i></button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="sc_left_bot">
-                            <div class="row">
-                                <div class="col-6"></div>
-                                <div class="col-6">
-                                    <div class="w_img work_img_01"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sc_right">
-                        <div class="row">
-                            <div class="col-4">
-                                <div class="w_img work_img_02"></div>
-                                <div class="w_img work_img_03"></div>
-                                <div class="w_img work_img_04"></div>
-                            </div>
-                            <div class="col-8">
-                                <div class="w_img work_img_05"></div>
-                                <div class="swiper workImg06">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide slide_01"></div>
-                                        <div class="swiper-slide slide_02"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="section section_08" id="section_08">
-                <div class="main_cont_08">
-                    <div class="container-fluid">
-                        <div class="notice_wrap">
-                            <div class="row">
-                                <div class="col-5">
-                                    <div class="company">
-                                        Design<br>Outsourcing company
-                                    </div>
-                                </div>
-                                <div class="col-5">
-                                    <h6><b>엠티엠비즈 디자인</b>은 고객과의 소통을 최우선으로<br>
-                                        최적의 서비스 제안과 최고의 가치를 제공하여 고객이 원하는 목표를 달성할 수 있도록<br>
-                                        디자인 서비스를 제공하는 고객 맞춤형 디자인 전문기업입니다.</h6>
-                                </div>
-                                <div class="col-2">
-                                    <button type="button"><i class="i i_more"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-5"></div>
-                            <div class="col-7">
-                                <div class="sc_notice">
-                                    <h3 class="sc_title move_page" data-url="/customer?section=notice">공지사항<button type="button"><i class="i i_more"></i></button>
-                                    </h3>
-                                    <ul>
-                                        <?php
-                                        foreach ($notice_list as $list) {
-                                        ?>
-                                            <li class="cursor_hand get_notice_info" data-idx="<?= $list->idx ?>"><?= $list->title ?></li>
-                                        <?php } ?>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-
-            <footer class="footer section fp-auto-height pc">
+            <footer class="footer fp-auto-height pc" id='footer'>
                 <div class="ft_wrap">
                     <div class="row">
                         <div class="col-2">
                             <p><b>(주)엠티엠비코리아</b></p>
                         </div>
                         <div class="col-4">
-                            <p>대표 : 정세종 <br> 서울특별시 강서구 양천로 424 데시앙플렉스 지식산업센터 1231호<br>
-                                Tel : 02-3663-0332 Fax : 02-374-0335 E-mail : mtmb@mtmbkorea.com</p>
+                            <p>대표 : 정세종</p>
+                            <p>서울특별시 강서구 양천로 424 데시앙플렉스 지식산업센터 1231호<br>
+                                Tel : 02-374-0336 Fax : 02-374-0335 E-mail : mtmb@mtmbkorea.com</p>
+                            <button>
+                                <a href='#'>관리자</a>
+                            </button>
                         </div>
                         <div class="col-4">
-                            <p>사업자번호 : 130-87-09598 통신판매업신고증 : 제 2023-서울강서-3726호
-                                COPYRIGHT (c) 2021 MTMBKOREA Co., Ltd. ALL RIGHTS RESERVED.</p>
-                        </div>
-                        <div class="col-2">
-                            <p>개인정보보호책임자 : 진동호</p>
-                            <p><button class="btn btn-sm bg-white" onclick="location.href='/main/manager';">관리자</button></p>
+                            <p>사업자번호 : 130-87-09598 <span>통신판매업신고증 : 제 2021-서울마포-1684호</span><br />
+                                개인정보보호책임자 : 진동호</p>
+                            <p class='copyright'>COPYRIGHT (c) 2021 MTMBKOREA Co., Ltd. ALL RIGHTS RESERVED.</p>
                         </div>
                     </div>
                 </div>
@@ -749,40 +877,37 @@
         <!-- e:fullpage -->
 
         <!-- s:lnb -->
-        <div class="lnb d-none" id="lnb">
+        <div class="lnb" id="lnb">
             <div class="lnb_wrap">
-                <div class="line_01"></div>
-                <div class="line_02"></div>
-                <div class="line_03"></div>
                 <div class="lnb_menu_01">
                     <ul>
-                        <li class="all_service">
-                            <a href="/business">All Service </a>
+                        <li>
+                            <a href="business" class='all-ppt'>ALL PPT</a>
                         </li>
                         <li>
-                            <a href="/business?section=work&tab=0">PPT디자인</a>
+                            <a href="business?pptIndex=1">제안서</a>
                         </li>
                         <li>
-                            <a href="/business?section=work&tab=1">공공기관</a>
+                            <a href="business?pptIndex=2">소개서</a>
                         </li>
                         <li>
-                            <a href="/business?section=work&tab=2">중소기업</a>
+                            <a href="business?pptIndex=3">보고서</a>
                         </li>
                         <li>
-                            <a href="/business?section=work&tab=3">월간디자인</a>
+                            <a href="business?pptIndex=4">교육강의</a>
                         </li>
                     </ul>
                 </div>
                 <div class="lnb_menu_02">
                     <ul>
                         <li>
-                            <a href="/consulting">견적요청</a>
+                            <a href="consulting">견적문의</a>
                         </li>
                         <li>
-                            <a href="/consulting?section=portfolio">포트폴리오</a>
+                            <a href="consulting#portfolioWrap">포트폴리오</a>
                         </li>
                         <li>
-                            <a href="/consulting?section=partner">파트너사</a>
+                            <a href="consulting#partnerCompany">파트너사</a>
                         </li>
                     </ul>
                 </div>
@@ -794,61 +919,192 @@
         <!-- s:mo -->
         <div class="mo">
             <!-- s:section_01-->
-            <section class="section_01" id="top">
-                <div class="sc_wrap">
-                    <h1>고객 맞춤형 디자인 전문기업</h1>
-                    <img class="main_logo" src="/resources/users/img/main_logo.png" alt="Biz Design">
-                    <h6>고객이 원하는</h6>
-                </div>
-                <div class="main_cont_01">
-                    <ul>
-                        <li>
-                            <dl>
-                                <dt>가치</dt>
-                                <dd>Value</dd>
-                                <dd>+</dd>
-                            </dl>
-                        </li>
-                        <li>
-                            <dl>
-                                <dt>비용</dt>
-                                <dd>Cost</dd>
-                                <dd>+</dd>
-                            </dl>
-                        </li>
-                        <li>
-                            <dl>
-                                <dt>소통</dt>
-                                <dd>Communication</dd>
-                                <dd>+</dd>
-                            </dl>
-                        </li>
-                    </ul>
-                </div>
-                <div class="swiper_cont">
-                    <div class="swiper listSwiper listSwiper_mo">
-                        <div class="swiper-wrapper">
-                            <?php
-                            $i = 0;
-                            foreach ($business_list_show as $list) {
-                            ?>
-                                <div class="swiper-slide slide_<?= sprintf('%02d', $i) ?> move_page" data-url="/business/list/<?= $list['segment'] ?>">
-                                    <div class="slide_box">
-                                        <img src="/resources/users/img/business/colorful/<?= $list['segment'] ?>.png" alt="<?= $list['name'] ?>">
-                                        <h5><?= $list['name'] ?></h5>
-                                    </div>
-                                    <div class="slide_imgbox">
-                                        <img src="/resources/users/img/business/picture/<?= $list['segment'] ?>.jpg" alt="<?= $list['name'] ?>">
-                                        <h5><?= $list['name'] ?></h5>
-                                    </div>
-                                </div>
-                            <?php
-                                $i++;
-                            }
-                            ?>
+            <section class="section_01">
+                <div class='sc_wrap'>
+                    <div class='title_wrap'>
+                        <div class='top_wrap'>
+                            <div class='description_wrap'>
+                                <span>고객이 원하는</span>
+                                <span>PPT Design</span>
+                            </div>
+                            <span>Value</span>
                         </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
+                        <h1>Cost</h1>
+                        <h2>Result</h2>
+                    </div>
+
+                    <div class='content-divider-wrap'>
+                        <div class='content-divider'></div>
+                    </div>
+
+                    <div class='content_01'>
+                        <div class='swiper section01_listMobileSwiper'>
+                            <div class='swiper-wrapper'>
+                                <div class='content proposal swiper-slide'>
+                                    <span>Proposal<br />document</span>
+                                </div>
+                                <div class='content lecture swiper-slide'>
+                                    <span>Lecture <br />materials</span>
+                                </div>
+                                <div class='content introduction swiper-slide'>
+                                    <span>Introduction</span>
+                                </div>
+                                <div class='content educational swiper-slide'>
+                                    <span>Educational<br />materials</span>
+                                </div>
+                                <div class='content business swiper-slide'>
+                                    <span>Business report</span>
+                                </div>
+                                <div class='content proposal swiper-slide'>
+                                    <span>Proposal<br />document</span>
+                                </div>
+                                <div class='content lecture swiper-slide'>
+                                    <span>Lecture <br />materials</span>
+                                </div>
+                                <div class='content introduction swiper-slide'>
+                                    <span>Introduction</span>
+                                </div>
+                                <div class='content educational swiper-slide'>
+                                    <span>Educational<br />materials</span>
+                                </div>
+                                <div class='content business swiper-slide'>
+                                    <span>Business report</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class='content-panel-wrap'>
+                            <svg id="section_01_list_swiper_left" width="24" height="24" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M15 6l-6 6 6 6" />
+                            </svg>
+                            <div class='content-panel active'>
+                                <div class='img-wrap'>
+                                    <img src='resources/users/img/main/contentImage/introduction-1.png' />
+                                </div>
+                                <div class='bottom-wrap'>
+                                    <div class='title_arrow_wrap'>
+                                        <span>소개서</span>
+                                        <img src='resources/users/img/main/arrow_top.png' />
+                                    </div>
+                                    <span>Introduction</span>
+                                </div>
+                            </div>
+                            <div class='content-panel'>
+                                <div class='img-wrap'>
+                                    <img src='resources/users/img/main/contentImage/proposal-report-1.png' />
+                                </div>
+                                <div class='bottom-wrap'>
+                                    <div class='title_arrow_wrap'>
+                                        <span>제안서</span>
+                                        <img src='resources/users/img/main/arrow_top.png' />
+                                    </div>
+                                    <span>Proposal document</span>
+                                </div>
+                            </div>
+                            <div class='content-panel'>
+                                <div class='img-wrap'>
+                                    <img src='resources/users/img/main/contentImage/business-report-1.png' />
+                                </div>
+                                <div class='bottom-wrap'>
+                                    <div class='title_arrow_wrap'>
+                                        <span>보고서</span>
+                                        <img src='resources/users/img/main/arrow_top.png' />
+                                    </div>
+                                    <span>Business report</span>
+                                </div>
+                            </div>
+                            <div class='content-panel'>
+                                <div class='img-wrap'>
+                                    <img src='resources/users/img/main/contentImage/education-1.png' />
+                                </div>
+                                <div class='bottom-wrap'>
+                                    <div class='title_arrow_wrap'>
+                                        <span>교육자료</span>
+                                        <img src='resources/users/img/main/arrow_top.png' />
+                                    </div>
+                                    <span>Educational meterials</span>
+                                </div>
+                            </div>
+                            <div class='content-panel'>
+                                <div class='img-wrap'>
+                                    <img src='resources/users/img/main/contentImage/education-2.png' />
+                                </div>
+                                <div class='bottom-wrap'>
+                                    <div class='title_arrow_wrap'>
+                                        <span>강의자료</span>
+                                        <img src='resources/users/img/main/arrow_top.png' />
+                                    </div>
+                                    <span>Lecture meterials</span>
+                                </div>
+                            </div>
+                            <div class='content-panel'>
+                                <div class='img-wrap'>
+                                    <img src='resources/users/img/main/contentImage/introduction-2.png' />
+                                </div>
+                                <div class='bottom-wrap'>
+                                    <div class='title_arrow_wrap'>
+                                        <span>소개서</span>
+                                        <img src='resources/users/img/main/arrow_top.png' />
+                                    </div>
+                                    <span>Introduction</span>
+                                </div>
+                            </div>
+                            <div class='content-panel'>
+                                <div class='img-wrap'>
+                                    <img src='resources/users/img/main/contentImage/proposal-report-2.png' />
+                                </div>
+                                <div class='bottom-wrap'>
+                                    <div class='title_arrow_wrap'>
+                                        <span>제안서</span>
+                                        <img src='resources/users/img/main/arrow_top.png' />
+                                    </div>
+                                    <span>Proposal document</span>
+                                </div>
+                            </div>
+                            <div class='content-panel'>
+                                <div class='img-wrap'>
+                                    <img src='resources/users/img/main/contentImage/business-report-2.png' />
+                                </div>
+                                <div class='bottom-wrap'>
+                                    <div class='title_arrow_wrap'>
+                                        <span>보고서</span>
+                                        <img src='resources/users/img/main/arrow_top.png' />
+                                    </div>
+                                    <span>Business report</span>
+                                </div>
+                            </div>
+                            <div class='content-panel'>
+                                <div class='img-wrap'>
+                                    <img src='resources/users/img/main/contentImage/education-1.png' />
+                                </div>
+                                <div class='bottom-wrap'>
+                                    <div class='title_arrow_wrap'>
+                                        <span>교육자료</span>
+                                        <img src='resources/users/img/main/arrow_top.png' />
+                                    </div>
+                                    <span>Educational meterials</span>
+                                </div>
+                            </div>
+                            <div class='content-panel'>
+                                <div class='img-wrap'>
+                                    <img src='resources/users/img/main/contentImage/education-2.png' />
+                                </div>
+                                <div class='bottom-wrap'>
+                                    <div class='title_arrow_wrap'>
+                                        <span>강의자료</span>
+                                        <img src='resources/users/img/main/arrow_top.png' />
+                                    </div>
+                                    <span>Lecture meterials</span>
+                                </div>
+                            </div>
+                            <svg id="section_01_list_swiper_right" width="24" height="24" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 18l6-6-6-6" />
+                            </svg>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -856,36 +1112,101 @@
 
             <!-- s:section_02-->
             <section class="section_02">
-                <div class="sc_wrap">
-                    <div class="main_cont_02">
-                        <h2>디자인<br>견적요청</h2>
-                        <button type="button" class="link_to_consulting">
-                            <img src="/resources/users/img/btn_start.png" alt="">
-                        </button>
-                    </div>
-                    <div class="main_cont_02 mt_10">
+                <div class='consulting_box'>
+                    <div class='left_wrap'>
+                        <img class='section_text' src='resources/users/img/main/text/consulting.png' alt='consulting' />
                         <ul>
                             <li>
-                                <img src="/resources/users/img/step_1.png" alt="">
-                                <p>고객 <br class="mo">의뢰</p>
+                                <img src="resources/users/img/main/step_1.png" alt="상담 문의">
+                                <p>문의</p>
+                            </li>
+                            <li class="arrow_between">
+                                <img src="resources/users/img/icon/between_arrows.png">
                             </li>
                             <li>
-                                <img src="/resources/users/img/step_2.png" alt="">
-                                <p>담당자 <br class="mo">상담</p>
+                                <img src="resources/users/img/main/step_2.png" alt="상담 진행">
+                                <p>상담</p>
+                            </li>
+                            <li class="arrow_between">
+                                <img src="resources/users/img/icon/between_arrows.png">
                             </li>
                             <li>
-                                <img src="/resources/users/img/step_3.png" alt="">
-                                <p>디자이너 <br class="mo">소통</p>
+                                <img src="resources/users/img/main/step_3.png" alt="화상 대면 미팅">
+                                <p>화상 · 대면<br />미팅</p>
+                            </li>
+                            <li class="arrow_between">
+                                <img src="resources/users/img/icon/between_arrows.png">
                             </li>
                             <li>
-                                <img src="/resources/users/img/step_4.png" alt="">
-                                <p>수정 및 <br class="mo">컨펌</p>
+                                <img src="resources/users/img/main/step_4.png" alt="작업 진행">
+                                <p>진행</p>
+                            </li>
+                            <li class="arrow_between">
+                                <img src="resources/users/img/icon/between_arrows.png">
                             </li>
                             <li>
-                                <img src="/resources/users/img/step_5.png" alt="">
-                                <p>서비스 <br class="mo">제공</p>
+                                <img src="resources/users/img/main/step_5.png" alt="작업 수정">
+                                <p>수정</p>
+                            </li>
+                            <li class="arrow_between">
+                                <img src="resources/users/img/icon/between_arrows.png">
+                            </li>
+                            <li>
+                                <img src="resources/users/img/main/step_6.png" alt="작업 완료">
+                                <p>완료</p>
                             </li>
                         </ul>
+                    </div>
+
+                    <div>
+                        <a href="consulting?consultingIndex=2" class='right_wrap'>
+                            <span>견적문의
+                                <img src='resources/users/img/icon/main_i_right.png' />
+                            </span>
+                            <span>Start</span>
+                        </a>
+                    </div>
+                </div>
+                <div class='made_it_wrap'>
+                    <div class='text_wrap'>
+                        <div class='title_wrap'>
+                            <h2>We made it</h2>
+                            <img src='resources/users/img/main/text/title_arrow.png' />
+                        </div>
+                        <a href='consulting#portfolioWrapMobile' class='view_all_wrap_link'>
+                            <div class='view_all_wrap'>
+                                <span>전체보기</span>
+                                <img src='resources/users/img/icon/main_i_right.png' />
+                            </div>
+                        </a>
+                    </div>
+                    <div class='made_it_list swiper weMadeItSwiper'>
+                        <div class='swiper-wrapper'>
+                            <div class='swiper-slide'>
+                                <img src='resources/users/img/main/made_it_01.png' />
+                            </div>
+                            <div class='swiper-slide'>
+                                <img src='resources/users/img/main/made_it_02.png' />
+                            </div>
+                            <div class='swiper-slide'>
+                                <img src='resources/users/img/main/made_it_03.png' />
+                            </div>
+                            <div class='swiper-slide'>
+                                <img src='resources/users/img/main/made_it_04.png' />
+                            </div>
+                            <div class='swiper-slide'>
+                                <img src='resources/users/img/main/made_it_01.png' />
+                            </div>
+                            <div class='swiper-slide'>
+                                <img src='resources/users/img/main/made_it_02.png' />
+                            </div>
+                            <div class='swiper-slide'>
+                                <img src='resources/users/img/main/made_it_03.png' />
+                            </div>
+                            <div class='swiper-slide'>
+                                <img src='resources/users/img/main/made_it_04.png' />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -893,67 +1214,170 @@
 
             <!-- s:section_03-->
             <section class="section_03">
-                <div class="sc_wrap">
-                    <h3 class="sc_title move_page" data-url="/consulting?section=partner">파트너사<button type="button"><i class="i i_more"></i></button></h3>
-                    <div class="cont_swiper cont_swiper_op mb-5">
-                        <div class="swiper partnerSwiper partnerSwiperOne">
-                            <div class="swiper-wrapper">
-                                <?php
-                                foreach ($partbanner_list as $list) {
-                                ?>
-                                    <div class="swiper-slide">
-                                        <img src="<?= $list->img_name ?>" alt="<?= $list->title ?>">
-                                    </div>
-                                <?php } ?>
-                            </div>
+                <div class='title_wrap'>
+                    <span>ALL Service</span>
+                    <img src='resources/users/img/main/text/title_arrow.png' />
+                </div>
+
+
+                <div class='service_list'>
+                    <!-- 보고서 -->
+                    <a href="detailpage_businessPlan" class='service_wrap'>
+                        <img src='resources/users/img/main/services/service_01.png' />
+                        <div class='service_text'>
+                            <span>사업계획서</span>
                         </div>
-                        <div class="swiper partnerSwiper partnerSwiperOne m-0">
-                            <div class="swiper-wrapper">
-                                <?php
-                                foreach (array_reverse($partbanner_list) as $list) {
-                                ?>
-                                    <div class="swiper-slide">
-                                        <img src="<?= $list->img_name ?>" alt="<?= $list->title ?>">
-                                    </div>
-                                <?php } ?>
-                            </div>
+                    </a>
+                    <a href="detailpage_workReport" class='service_wrap'>
+                        <img src='resources/users/img/main/services/service_02.png' />
+                        <div class='service_text'>
+                            <span>업무보고서</span>
                         </div>
+                    </a>
+                    <a href="detailpage_performance-report" class='service_wrap'>
+                        <img src='resources/users/img/main/services/service_03.png' />
+                        <div class='service_text'>
+                            <span>성과보고서</span>
+                        </div>
+                    </a>
+                    <a href="detailpage_irReport" class='service_wrap'>
+                        <img src='resources/users/img/main/services/service_04.png' />
+                        <div class='service_text'>
+                            <span>IR보고서</span>
+                        </div>
+                    </a>
+                    <a href="detailpage_researchReport" class='service_wrap'>
+                        <img src='resources/users/img/main/services/service_05.png' />
+                        <div class='service_text'>
+                            <span>연구보고서</span>
+                        </div>
+                    </a>
+                    <a href="detailpage_salesReport" class='service_wrap'>
+                        <img src='resources/users/img/main/services/service_06.png' />
+                        <div class='service_text'>
+                            <span>영업보고서</span>
+                        </div>
+                    </a>
+
+                    <!-- 제안서 -->
+                    <a href="detailpage_storeProposal" class='service_wrap'>
+                        <img src='resources/users/img/main/services/service_07.png' />
+                        <div class='service_text'>
+                            <span>입점제안서</span>
+                        </div>
+                    </a>
+                    <a href="detailpage_businessProposal" class='service_wrap'>
+                        <img src='resources/users/img/main/services/service_08.png' />
+                        <div class='service_text'>
+                            <span>사업제안서</span>
+                        </div>
+                    </a>
+                    <a href="detailpage_biddingProposal" class='service_wrap'>
+                        <img src='resources/users/img/main/services/service_09.png' />
+                        <div class='service_text'>
+                            <span>입찰제안서</span>
+                        </div>
+                    </a>
+                    <a href="detailpage_investmentProposal" class='service_wrap'>
+                        <img src='resources/users/img/main/services/service_10.png' />
+                        <div class='service_text'>
+                            <span>투자제안서</span>
+                        </div>
+                    </a>
+                    <a href="detailpage_marketingProposal" class='service_wrap'>
+                        <img src='resources/users/img/main/services/service_11.png' />
+                        <div class='service_text'>
+                            <span>마케팅제안서</span>
+                        </div>
+                    </a>
+                    <a href="detailpage_partnershipProposal" class='service_wrap'>
+                        <img src='resources/users/img/main/services/service_12.png' />
+                        <div class='service_text'>
+                            <span>제휴제안서</span>
+                        </div>
+                    </a>
+
+                    <!-- 소개서 및 자료 -->
+                    <a href="detailpage_lectureMaterials" class='service_wrap'>
+                        <img src='resources/users/img/main/services/service_13.png' />
+                        <div class='service_text'>
+                            <span>강의자료</span>
+                        </div>
+                    </a>
+                    <a href="detailpage_education" class='service_wrap'>
+                        <img src='resources/users/img/main/services/service_14.png' />
+                        <div class='service_text'>
+                            <span>교육자료</span>
+                        </div>
+                    </a>
+                    <a href="detailpage_seminarMaterials" class='service_wrap'>
+                        <img src='resources/users/img/main/services/service_15.png' />
+                        <div class='service_text'>
+                            <span>세미나자료</span>
+                        </div>
+                    </a>
+                    <a href="detailpage_company" class='service_wrap'>
+                        <img src='resources/users/img/main/services/service_16.png' />
+                        <div class='service_text'>
+                            <span>회사소개서</span>
+                        </div>
+                    </a>
+                    <a href="detailpage_productIntroduction" class='service_wrap'>
+                        <img src='resources/users/img/main/services/service_17.png' />
+                        <div class='service_text'>
+                            <span>제품소개서</span>
+                        </div>
+                    </a>
+                    <a href="detailpage_serviceIntroduction" class='service_wrap'>
+                        <img src='resources/users/img/main/services/service_18.png' />
+                        <div class='service_text'>
+                            <span>서비스소개서</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class='review_container'>
+                    <div class='text_wrap'>
+                        <div class='title_wrap'>
+                            <h2>Review</h2>
+                            <img src='resources/users/img/main/text/title_arrow.png' />
+                        </div>
+                        <a href='/consulting#reviewListMobile' class='view_all_wrap_link'>
+                            <div class='view_all_wrap'>
+                                <span>전체보기</span>
+                                <img src='resources/users/img/icon/main_i_right.png' />
+                            </div>
+                        </a>
                     </div>
-                    <h3 class="sc_title move_page" data-url="/consulting?section=portfolio">포트폴리오<button type="button"><i class="i i_more"></i></button></h3>
-                    <div class="cont_swiper mb-5">
-                        <div class="swiper portfolioSwiper">
-                            <div class="swiper-wrapper">
-                                <?php
-                                foreach ($portfolio_list as $list) {
-                                    $img = json_decode($list->img_name)[0];
-                                ?>
-                                    <div class="swiper-slide">
-                                        <img src="<?= $img ?>" alt="<?= $list->title ?>">
-                                    </div>
-                                <?php } ?>
-                            </div>
-                        </div>
-                    </div>
-                    <h3 class="sc_title move_page" data-url="/consulting?section=review">만족도<button type="button"><i class="i i_more"></i></button></h3>
-                    <ul class="review_list">
-                        <?php
-                        foreach ($review_list as $list) {
-                        ?>
-                            <li>
-                                <dl>
-                                    <dt>
-                                        <ul class="star">
-                                            <li class="on">★</li>
-                                            <li class="<?= ($list->score > 1) ? "on" : "" ?>"><?= ($list->score > 1) ? "★" : "☆" ?></li>
-                                            <li class="<?= ($list->score > 2) ? "on" : "" ?>"><?= ($list->score > 2) ? "★" : "☆" ?></li>
-                                            <li class="<?= ($list->score > 3) ? "on" : "" ?>"><?= ($list->score > 3) ? "★" : "☆" ?></li>
-                                            <li class="<?= ($list->score > 4) ? "on" : "" ?>"><?= ($list->score > 4) ? "★" : "☆" ?></li>
-                                        </ul>
-                                    </dt>
-                                    <dd class="cursor_hand get_review_info" data-idx="<?= $list->idx ?>"><?= $list->subject ?></dd>
-                                </dl>
-                            </li>
-                        <?php } ?>
+                    <ul class='review_list'>
+                        <li class='review_box'>
+                            <span class='review_title'>친절한 상담 너무 감사드려요~</span>
+                        </li>
+                        <li class='review_box'>
+                            <span class='review_title'>미니 배너 너무 잘 사용하고 있습니다</span>
+                        </li>
+                        <li class='review_box'>
+                            <span class='review_title'>빠른 상담과 견적...모든게 빠르게 진행되어 만족합니다.</span>
+                        </li>
+                        <li class='review_box'>
+                            <span class='review_title'>가격대비 디자인과 품질 모두 만족합니다.</span>
+                        </li>
+                        <li class='review_box'>
+                            <span class='review_title'>친절한 상담 너무 감사드려요~</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="partner_box marquee">
+                    <ul class="partner_wrap marquee-content">
+                        <li class='marquee-item'><img src='resources/users/img/partner/partner_01.png' /></i></li>
+                        <li class='marquee-item'><img src='resources/users/img/partner/partner_02.png' /></li>
+                        <li class='marquee-item'><img src='resources/users/img/partner/partner_03.png' /></i></li>
+                        <li class='marquee-item'><img src='resources/users/img/partner/partner_04.png' /></li>
+                        <li class='marquee-item'><img src='resources/users/img/partner/partner_05.png' /></li>
+                        <li class='marquee-item'><img src='resources/users/img/partner/partner_06.png' /></li>
+                        <li class='marquee-item'><img src='resources/users/img/partner/partner_07.png' /></li>
+                        <li class='marquee-item'><img src='resources/users/img/partner/partner_08.png' /></li>
                     </ul>
                 </div>
             </section>
@@ -961,243 +1385,246 @@
 
             <!-- s:section_04-->
             <section class="section_04">
-                <div class="sc_top">
-                    <h1>All Service</h1>
-                    <p>고객을 위한 분야별 전문 디자인 서비스를 제공합니다.</p>
-                </div>
-                <div class="sc_wrap">
-                    <div class="row box_list_01">
-                        <div class="col-12">
-                            <div class="box op move_page" data-url="/business/list/proposal">
-                                <img src="/resources/users/img/business/symbol/proposal.png" alt="<?= $business_list['proposal']['name'] ?>">
-                                <div class="box_text">
-                                    <h2><?= $business_list['proposal']['name'] ?></h2>
-                                    <p class="ta_l">보고서 / 제안서<br />회사소개서 / 교육자료</p>
+                <div class='content_04'>
+                    <div class='title_wrap'>
+                        <span>PPT</span>
+                        <img src='resources/users/img/main/text/title_arrow.png' />
+                    </div>
+
+                    <div class='ppt_wrap'>
+                        <div class='proposal_document'>
+                            <div class='sub_title accordion-trigger'>
+                                <img src='resources/users/img/main/text/title_arrow.png' class='accordion-trigger-arrow-img' />
+                                <span>Proposal document</span>
+                            </div>
+                            <div class='ppt_content accordion-panel'>
+                                <div class='description_wrap'>
+                                    <span>제안서</span>
+                                    <span>
+                                        차별성 높은 표현력과 설득력 있는 스토리 구성을 통해 우리만의 경쟁력을 극대화합니다.
+                                    </span>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="box move_page" data-url="/business/list/webdesign">
-                                <img src="/resources/users/img/business/symbol/webdesign.png" alt="<?= $business_list['webdesign']['name'] ?>">
-                                <p><?= $business_list['webdesign']['name'] ?></p>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="box move_page" data-url="/business/list/package">
-                                <img src="/resources/users/img/business/symbol/package.png" alt="<?= $business_list['package']['name'] ?>">
-                                <p><?= $business_list['package']['name'] ?></p>
+                                <div class='type_example_wrap'>
+                                    <span><a href='business?pptIndex=1'>용역제안</a></span>
+                                    <span><a href='business?pptIndex=1'>제휴제안</a></span>
+                                    <span><a href='business?pptIndex=1'>입찰제안</a></span>
+                                    <span><a href='business?pptIndex=1'>마케팅제안</a></span>
+                                    <span><a href='business?pptIndex=1'>영업제안</a></span>
+                                    <span><a href='business?pptIndex=1'>투자제안</a></span>
+                                </div>
+                                <div class='img_wrap'>
+                                    <a href='business?pptIndex=1' class='view_all_wrap_link'>
+                                        <div class='view_all_wrap'>
+                                            <span>전체보기</span>
+                                            <img src='resources/users/img/icon/main_i_right.png' />
+                                        </div>
+                                    </a>
+                                    <img src='resources/users/img/main/mobile/proposal_img.png' />
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row box_list_02">
-                        <?php
-                        foreach ($business_list_show_no_top as $list) {
-                        ?>
-                            <div class="col-4">
-                                <div class="box move_page" data-url="/business/list/<?= $list['segment'] ?>">
-                                    <img src="/resources/users/img/business/symbol/<?= $list['segment'] ?>.png" alt="<?= $list['name'] ?>">
-                                    <p><?= $list['name'] ?></p>
+
+                    <div class='ppt_wrap'>
+                        <div class='introduction'>
+                            <div class='sub_title accordion-trigger'>
+                                <img src='resources/users/img/main/text/title_arrow.png' class='accordion-trigger-arrow-img' />
+                                <span>Introduction</span>
+                            </div>
+                            <div class='ppt_content accordion-panel'>
+                                <div class='description_wrap'>
+                                    <span>소개서</span>
+                                    <span>
+                                        임팩트 강한 키워드와 논리적 정보전달을 통해<br />
+                                        신뢰성과 긍정적 이미지를 유도합니다
+                                    </span>
+                                </div>
+                                <div class='type_example_wrap'>
+                                    <span><a href='business?pptIndex=2'>회사소개</a></span>
+                                    <span><a href='business?pptIndex=2'>사업소개</a></span>
+                                    <span><a href='business?pptIndex=2'>제품소개</a></span>
+                                </div>
+                                <div class='img_wrap'>
+                                    <a href='business?pptIndex=2' class='view_all_wrap_link'>
+                                        <div class='view_all_wrap'>
+                                            <span>상세보기</span>
+                                            <img src='resources/users/img/icon/main_i_right.png' />
+                                        </div>
+                                    </a>
+                                    <img src='resources/users/img/main/mobile/introduction_img.png' />
                                 </div>
                             </div>
-                        <?php
-                        }
-                        ?>
+                        </div>
+                    </div>
+
+                    <div class='ppt_wrap'>
+                        <div class='business_report'>
+                            <div class='sub_title accordion-trigger'>
+                                <img src='resources/users/img/main/text/title_arrow.png' class='accordion-trigger-arrow-img' />
+                                <span>Business report</span>
+                            </div>
+                            <div class='ppt_content accordion-panel'>
+                                <div class='description_wrap'>
+                                    <span>보고서</span>
+                                    <span>
+                                        가독성 높은 디자인과 데이터 시각화를 통해<br />
+                                        원하는 성과목표 메시지를 명확하게 전달합니다
+                                    </span>
+                                </div>
+                                <div class='type_example_wrap'>
+                                    <span><a href='business?pptIndex=3'>업무보고</a></span>
+                                    <span><a href='business?pptIndex=3'>성과보고</a></span>
+                                    <span><a href="business?pptIndex=3">IR보고</a></span>
+                                </div>
+                                <div class='img_wrap'>
+                                    <a href='business?pptIndex=3' class='view_all_wrap_link'>
+
+                                        <div class='view_all_wrap'>
+                                            <span>전체보기</span>
+                                            <img src='resources/users/img/icon/main_i_right.png' />
+                                        </div>
+                                    </a>
+                                    <img src='resources/users/img/main/mobile/business_report_img.png' />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='ppt_wrap'>
+                        <div class='education'>
+                            <div class='sub_title accordion-trigger'>
+                                <img src='resources/users/img/main/text/title_arrow.png' class='accordion-trigger-arrow-img' />
+                                <span>Educational materials</span>
+                            </div>
+                            <div class='ppt_content accordion-panel'>
+                                <div class='description_wrap'>
+                                    <span>교육·강의</span>
+                                    <span>
+                                        이해도 높은 구성력과 간결한 메시지를 통해<br />
+                                        참석자와의 원활한 소통과 공감대를 형성합니다
+                                    </span>
+                                </div>
+                                <div class='type_example_wrap'>
+                                    <span><a href='business?pptIndex=4'>강의교재</a></span>
+                                    <span><a href='business?pptIndex=4'>교육책자</a></span>
+                                    <span><a href='business?pptIndex=4'>세미나자료</a></span>
+                                </div>
+                                <div class='img_wrap'>
+                                    <a href='business?pptIndex=4' class='view_all_wrap_link'>
+                                        <div class='view_all_wrap'>
+                                            <span>전체보기</span>
+                                            <img src='resources/users/img/icon/main_i_right.png' />
+                                        </div>
+                                    </a>
+                                    <img src='resources/users/img/main/mobile/educational_img.png' />
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
             <!-- e:section_04-->
 
-            <section class="section_06">
-                <div class="sc_work">
-                    <div class="work_top">
-                        <p><span>WORKS</span></p>
-                        <h1>PPT디자인</h1>
-                        <h6>전략적이고 성공적인 프리젠테이션을 위한 최적의 디자인<br> 솔루션을 제공합니다.</h6>
-                        <div class="row move_page" data-url="/business?section=work&tab=0">
-                            <div class="col-4">
-                                <div class="box">사업계획서</div>
-                            </div>
-                            <div class="col-4">
-                                <div class="box">IR자료</div>
-                            </div>
-                            <div class="col-4">
-                                <div class="box">연구보고서</div>
-                            </div>
-                            <div class="col-4">
-                                <div class="box">대학사업제안</div>
-                            </div>
-                            <div class="col-4">
-                                <div class="box">입찰제안서</div>
-                            </div>
-                            <div class="col-4">
-                                <div class="box">투자제안서</div>
-                            </div>
-                            <div class="col-4">
-                                <div class="box">강의자료</div>
-                            </div>
-                            <div class="col-4">
-                                <div class="box">세미나자료</div>
-                            </div>
-                            <div class="col-4">
-                                <div class="box">회사소개서</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="work_img">
-                        <div class="swiper pptDesignSwiper_mo">
-                            <div class="swiper-wrapper">
-                                <?php
-                                foreach ($refrence_list as $list) {
-                                    $img = json_decode($list->img_name)[0];
-                                ?>
-                                    <div class="swiper-slide">
-                                        <img src="<?= $img ?>" alt="<?= $list->title ?>">
-                                    </div>
-                                <?php } ?>
-                            </div>
-                        </div>
-                        <!-- <img src="/resources/users/img/work/m_work_05.png" alt=""> -->
-                    </div>
-                </div>
-            </section>
-
+            <!-- s:section_05-->
             <section class="section_05">
-                <div class="sc_work">
-                    <div class="work_top">
-                        <p><span>WORKS</span></p>
-                        <h1>공공기관</h1>
-                        <h6>기관이 원하는 일정을 최우선으로 최적의 디자인을 제공합니다.</h6>
-                        <div class="row move_page" data-url="/business?section=work&tab=1">
-                            <div class="col-4">
-                                <div class="box">규정 가이드북</div>
+                <div class='content_05'>
+                    <div class='about_wrap'>
+                        <div class='sub_title accordion-trigger'>
+                            <div class='sub_title_wrap'>
+                                <span>About</span>
+                                <img src='resources/users/img/main/text/title_arrow.png' class='accordion-trigger-arrow-img' />
                             </div>
-                            <div class="col-4">
-                                <div class="box">시설안내 리플렛</div>
-                            </div>
-                            <div class="col-4">
-                                <div class="box">행사포스터</div>
-                            </div>
-                            <div class="col-4">
-                                <div class="box">행사보고 소책자</div>
-                            </div>
-                            <div class="col-4">
-                                <div class="box">정기간행 소식지</div>
-                            </div>
-                            <div class="col-4">
-                                <div class="box">정책안내 브로셔</div>
-                            </div>
-                            <div class="col-4">
-                                <div class="box">문서 템플릿</div>
-                            </div>
-                            <div class="col-4">
-                                <div class="box">엑스배너</div>
-                            </div>
-                            <div class="col-4">
-                                <div class="box">현수막</div>
-                            </div>
+
+                            <a href='/company' class='view_all_wrap_link'>
+                                <div class='view_all_wrap'>
+                                    <span>상세보기</span>
+                                    <img src='resources/users/img/icon/main_i_right.png' />
+                                </div>
+                            </a>
+
+                        </div>
+                        <div class='about_content accordion-panel'>
+                            <span class='sub_description'>
+                                PPT Design<br />
+                                Outsourcing company
+                            </span>
+                            <span class='detail_description'>
+                                MTMBPPT는 고객과의 소통을 최우선으로
+                                최적의 디자인과 최고의 가치를 제공하여
+                                고객이 원하는 목표를 달성할 수 있도록 디자인 서비스를 제공하는
+                                고객 맞춤형 PPT 디자인 전문 기업입니다.
+                            </span>
                         </div>
                     </div>
-                    <div class="work_img">
-                        <img src="/resources/users/img/work/m_work_04.jpg" alt="">
+
+                    <div class='notice_wrap'>
+                        <div class='sub_title accordion-trigger'>
+                            <div class='sub_title_wrap'>
+                                <span>Notice</span>
+                                <img src='resources/users/img/main/text/title_arrow.png' class='accordion-trigger-arrow-img' />
+                            </div>
+                            <a href='/customer' class='view_all_wrap_link'>
+
+                                <div class='view_all_wrap'>
+                                    <span>전체보기</span>
+                                    <img src='resources/users/img/icon/main_i_right.png' />
+                                </div>
+                            </a>
+                        </div>
+                        <div class='notice_list_wrap accordion-panel'>
+                            <ul class='notice_list'>
+                                <li>웹사이트 디자인 서비스가 새롭게 개편되었습니다.</li>
+                                <li>[패키지상품] 현수막, 실사출력물, 배너 제작 이벤트</li>
+                                <li>디자인 구독 서비스로 기업의 부담은 낮추고 퀄리티 있는 제작</li>
+                                <li>[엑스베너] 신규 탬플릿이 추가 되었습니다.</li>
+                                <li>MTM Biz-Design 홈페이지 OPEN</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </section>
+            <!-- e:section_05-->
 
+            <!-- s:section_06-->
             <section class="section_06">
-                <div class="sc_work">
-                    <div class="work_top">
-                        <p><span>WORKS</span></p>
-                        <h1>중소기업</h1>
-                        <h6>사업의 방향과 기획 의도에 맞춘 고객이 원하는 디자인을 제공합니다.</h6>
-                        <div class="row move_page" data-url="/business?section=work&tab=2">
-                            <div class="col-4">
-                                <div class="box">명함</div>
-                            </div>
-                            <div class="col-4">
-                                <div class="box">사원증</div>
-                            </div>
-                            <div class="col-4">
-                                <div class="box">제품 카달록</div>
-                            </div>
-                            <div class="col-4">
-                                <div class="box">회사 소개서</div>
-                            </div>
-                            <div class="col-4">
-                                <div class="box">프로젝트 기획서</div>
-                            </div>
-                            <div class="col-4">
-                                <div class="box">홍보전단</div>
-                            </div>
-                            <div class="col-4">
-                                <div class="box">카드뉴스</div>
-                            </div>
-                            <div class="col-4">
-                                <div class="box">팝업 광고</div>
-                            </div>
-                            <div class="col-4">
-                                <div class="box">웹사이트 리뉴얼</div>
+                <div class='content_06'>
+                    <div class='about_wrap' id='infinite-scroll-section-mo'>
+                        <div class='sub_title accordion-trigger'>
+                            <div class='sub_title_wrap'>
+                                <span>Portfolio</span>
+                                <img src='resources/users/img/main/text/title_arrow.png' class='accordion-trigger-arrow-img' />
                             </div>
                         </div>
-                    </div>
-                    <div class="work_img">
-                        <img src="/resources/users/img/work/m_work_03.jpg" alt="">
-                    </div>
-                </div>
-            </section>
 
-            <section class="section_05">
-                <div class="sc_work">
-                    <div class="work_top">
-                        <p><span>WORKS</span></p>
-                        <h1>월간디자인</h1>
-                        <h6>설정 기간 중 분야별 요청 디자인들을 통합 비용으로 제공합니다.</h6>
-                        <ul class="work_list move_page" data-url="/business?section=work&tab=3">
-                            <li>필요한 <span> 다양한 분야</span>의 디자인 작업들을</li>
-                            <li>내가원하는 <span>퀄리티를 보장</span>하면서</li>
-                            <li><span>합리적인 비용</span>으로 제작할 방법은 없을까?<button type="button"><i class="i i_more"></i></button>
+                        <ul class='portfolio_list accordion-panel '>
+                            <li class='portfolio_wrap'>
                             </li>
                         </ul>
-                    </div>
-                    <div class="work_img">
-                        <img src="/resources/users/img/work/m_work_01.jpg" alt="">
+                        <div id="sentinelMO"></div>
                     </div>
                 </div>
             </section>
+            <!-- e:section_06-->
 
-            <!-- s:section_09-->
-            <section class="section_09">
-                <div class="sc_wrap">
-                    <div class="logo_text">
-                        <p>Design<br>Outsourcing company</p>
-                    </div>
-                    <img src="/resources/users/img/main_logo.png" alt="">
-                    <p class="about"><b>엠티엠비즈 디자인</b>은 고객과의 소통을 최우선으로<br>
-                        최적의 서비스 제안과 최고의 가치를 제공하여 고객이 원하는 목표를<br>
-                        달성할 수 있도록 디자인 서비스를 제공하는 고객 맞춤형 디자인<br>
-                        전문기업입니다.</p>
-                </div>
-                <div class="sc_notice">
-                    <h3 class="sc_title move_page" data-url="/customer?section=notice">공지사항<button type="button"><i class="i i_more"></i></button></h3>
-                    <ul>
-                        <?php
-                        foreach ($notice_list as $list) {
-                        ?>
-                            <li class="cursor_hand get_notice_info" data-idx="<?= $list->idx ?>"><?= $list->title ?></li>
-                        <?php } ?>
-                    </ul>
-                </div>
-            </section>
-            <!-- e:section_09-->
-
-            <footer class="footer">
+            <footer class="footer mo" id='footer'>
                 <div class="ft_wrap">
                     <p><b>(주)엠티엠비코리아</b></p>
-                    <p>대표 : 정세종 <br>서울특별시 강서구 양천로 424 데시앙플렉스 지식산업센터 1231호<br>
-                        Tel : 02-3663-0332 Fax : 02-374-0335 E-mail : mtmb@mtmbkorea.com</p>
-                    <p>사업자번호 : 130-87-09598 통신판매업신고증 : 제 2023-서울강서-3726호
-                        COPYRIGHT (c) 2021 MTMBKOREA Co., Ltd. ALL RIGHTS RESERVED.</p>
-                    <p>개인정보보호책임자 : 진동호</p>
-                    <p><button class="btn btn-sm bg-white" onclick="location.href='/main/manager/';">관리자</button></p>
+                    <p>
+                        대표: 정세종<br />
+                        서울특별시 강서구 양천로 424 데시앙플렉스 지식산업센터 1231호<br />
+                        Tel : 02-374-0336 &emsp; Fax : 02-374-0335<br />
+                        E-mail : mtmb@mtmbkorea.com<br />
+                        사업자번호 : 130-87-09598 &emsp; 개인정보보호책임자 : 진동호 <br />
+                        통신판매업신고증 : 제 2021-서울마포-1684호
+                    </p>
+                    <p>
+                    </p>
+                    <div class='copyright_wrap'>
+                        <p>COPYRIGHT (c) 2021 MTMBKOREA Co., Ltd.<br /> ALL RIGHTS RESERVED.</p>
+                        <button class='footer_btn'>
+                            <a href='#'>관리자</a>
+                        </button>
+                    </div>
                 </div>
             </footer>
 
@@ -1206,12 +1633,30 @@
 
         <!-- s:top_fixed -->
         <div class="top" id="top_fixed">
-            <button type="button" class="pc" onclick="location.href='#main'">TOP</button>
-            <button type="button" class="mo" onclick="location.href='#top'">TOP</button>
+            <button type="button" onclick="location.href='#0'">
+                <img src='resources/users/img/main/top.png' id='top-icon-img' />
+            </button>
         </div>
         <!-- e:top_fixed -->
 
+        <!-- s:right_fixed -->
+        <div class="right-fixed mo">
+            <button>
+                <img src='resources/users/img/icon/i_kakao_button.png' />
+            </button>
+            <button onclick="location.href='#pageTop'">
+                <img src='resources/users/img/icon/i_home_button.png' />
+            </button>
+            <button onclick="window.history.back()">
+                <img src='resources/users/img/icon/i_back_button.png' />
+            </button>
+            <button onclick="location.href='#pageTop'">
+                <img src='resources/users/img/icon/i_top_button.png' />
+            </button>
+        </div>
+        <!-- e:right_fixed -->
     </div>
+
 
 
     <div class="modal fade write-modal view-modal" id="modal-review-view" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
@@ -1286,8 +1731,12 @@
 <script src="/resources/users/lib/bootstrap.bundle.min.js"></script>
 <script src="/resources/users/lib/jquery.fullpage.min.js"></script>
 <script src="/resources/users/lib/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="/resources/users/lib/vendors/scrolloverflow.min.js"></script>
 <script src="/resources/users/js/examples.js?<?= time() ?>"></script>
+<script src="/resources/users/js/main.js?<?= time() ?>"></script>
 <script src="/resources/users/js/common.js?<?= time() ?>"></script>
+<script src="/resources/users/js/portfolio.js"></script>
+
 
 <script>
     let modal_review_view;
@@ -1305,7 +1754,7 @@
             keyboard: false,
         });
 
-        $(document).on("click", ".get_review_info", function() {
+        $(document).on("click", ".review_box", function() {
             curr_review_idx = $(this).data("idx");
             view_review();
         });
@@ -1342,7 +1791,7 @@
             if (result.flag) {
                 $("#modal-review-subject").text(result.data.subject);
                 $("#modal-review-regdate").text(dateToIsoString(result.data.regdate));
-                $("#modal-review-content").html(replaceToBr(result.data.contents));
+                $("#modal-review-content")(replaceToBr(result.data.contents));
                 (result.data.score > 1) ? $("#modal-review-score li").eq(1).addClass("on").text("★"): $("#modal-review-score li").eq(1).removeClass("on").text("☆");
                 (result.data.score > 2) ? $("#modal-review-score li").eq(2).addClass("on").text("★"): $("#modal-review-score li").eq(2).removeClass("on").text("☆");
                 (result.data.score > 3) ? $("#modal-review-score li").eq(3).addClass("on").text("★"): $("#modal-review-score li").eq(3).removeClass("on").text("☆");
@@ -1360,7 +1809,7 @@
             if (result.flag) {
                 $("#modal-notice-subject").text(result.data.title);
                 $("#modal-notice-regdate").text(dateToIsoString(result.data.regdate));
-                $("#modal-notice-content").html(replaceToBr(result.data.contents));
+                $("#modal-notice-content")(replaceToBr(result.data.contents));
                 modal_notice_view.show();
             }
         });

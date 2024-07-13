@@ -1,0 +1,2384 @@
+@import url(./common.css);
+
+/********************** Section Style **********************/
+.consulting_container {
+  position: relative;
+}
+
+.consulting_container::before {
+  position: absolute;
+  content: '';
+  background: #000;
+  width: 0.5px;
+  height: 100%;
+  left: 219px;
+  top: 1.75%;
+
+  z-index: 1;
+}
+
+.consulting_container {
+  /* header height */
+  padding-top: 75px;
+
+  /* footer height */
+  padding-bottom: 150px;
+}
+
+/* consulting box default */
+.consulting_container .consulting_box {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  justify-content: flex-start;
+  width: 85%;
+  height: 650px;
+
+  background: #000;
+  border-radius: 0px 100px 100px 0px;
+
+  overflow: hidden;
+
+  margin-top: 130px;
+}
+
+.consulting_container .consulting_box .left_wrap {
+  width: 63%;
+  height: 100%;
+  padding: 100px 90px 150px 200px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border-radius: 0px 100px 100px 0px;
+
+  background: url("../../img/section_02/image1.png");
+  background-position: center;
+  background-size: cover;
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* 추가 */
+/* .consulting_container .consulting_box .left_wrap::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #212121;
+  z-index: 0;
+  inset: 0;
+  opacity: 1;
+} */
+
+.consulting_container .consulting_box .left_wrap .section_text {
+  width: 326px;
+  z-index: 1;
+  height: auto;
+}
+
+.consulting_container .consulting_box .left_wrap>ul {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.consulting_container .consulting_box .left_wrap>ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  position: relative;
+  text-align: center;
+
+  width: 100px;
+}
+
+.consulting_container .consulting_box .left_wrap>ul li:nth-child(5) {
+  width: 215px;
+}
+
+.consulting_container .consulting_box .left_wrap>ul li.arrow_between {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.consulting_container .consulting_box .left_wrap>ul li.arrow_between img {
+  width: 12px;
+  height: auto;
+  position: absolute;
+  bottom: -3px;
+  filter: invert(100%) sepia(0%) saturate(7430%) hue-rotate(352deg) brightness(118%) contrast(99%);
+  transform: none;
+}
+
+/* .consulting_container .consulting_box .left_wrap>ul li::after {
+  background: url(../../img/main/right_arrow.png) no-repeat;
+  background-size: 50%;
+  background-position-x: center;
+  background-position-y: bottom;
+  content: "";
+
+  display: inline-block;
+
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+
+  width: 20px;
+  height: 50%;
+
+  z-index: 1;
+} */
+
+.consulting_container .consulting_box .left_wrap>ul li:last-child::after {
+  display: none;
+}
+
+.consulting_container .consulting_box .left_wrap>ul li img {
+  transform: scale(0.66);
+  transition: 0.3s;
+  z-index: 1;
+
+  width: auto;
+  height: 50px;
+}
+
+.consulting_container .consulting_box .left_wrap>ul li p {
+  color: #fff;
+  font-size: 15px;
+  text-align: center;
+  word-break: keep-all;
+  z-index: 1;
+  margin-top: 15px;
+}
+
+.consulting_container .consulting_box .right_wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  color: #fff;
+
+  margin-left: 200px;
+  padding: 0 0 160px;
+}
+
+.consulting_container .consulting_box .right_wrap>span:first-child {
+  display: flex;
+  align-items: center;
+
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 100%;
+
+  margin-bottom: 12px;
+}
+
+.consulting_container .consulting_box .right_wrap>p {
+  color: #fff;
+  font-size: 30px;
+  letter-spacing: -0.02em;
+  font-family: 'SUIT';
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.consulting_container .consulting_box .right_wrap>p img {
+  width: 10px;
+  height: auto;
+  margin-left: 10px;
+}
+
+.consulting_container .consulting_box .right_wrap>span:last-child {
+  font-size: 80px;
+  font-family: 'GmarketSans';
+  font-weight: 700;
+  color: #02ead7;
+  line-height: 100%;
+  letter-spacing: -0.04em;
+  cursor: pointer;
+}
+
+/********************** Consulting Box Step 1-5 Style **********************/
+/* .consulting_container .step_box {
+  display: none;
+} */
+
+.consulting_container .step_box.active {
+  display: flex;
+}
+
+.consulting_container .step_box .left_wrap {
+  width: 50%;
+  padding: 90px 40px 0px 200px;
+  justify-content: flex-start;
+}
+
+.consulting_container .step_box .left_wrap .section_text {
+  width: 100%;
+}
+
+.consulting_container .step_box .right_wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 0;
+  width: 100%;
+  margin: 40px 120px 40px 40px;
+}
+
+.consulting_container .step_box .survey_title {
+  width: 100%;
+
+  font-family: 'SUIT';
+  font-weight: 700;
+  font-size: 30px;
+
+  border-bottom: 1px solid #7f7f7f;
+
+  padding: 20px 0px;
+}
+
+.consulting_container .step_box .right_wrap .survey_form_container {
+  width: 60%;
+  height: 100%;
+  margin-right: 28px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  overflow-y: auto;
+}
+
+.consulting_container .step_box .right_wrap .survey_container {
+  overflow-y: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-right: 20px;
+
+}
+
+.survey_container_wrapper {
+  padding: 30px 12px 30px 30px;
+  width: 40%;
+  height: 100%;
+  background-color: #fff;
+}
+
+.consulting_container .step_box .right_wrap .survey_container .survey_content_title {
+  font-family: 'SUIT';
+  font-weight: 400;
+  font-size: 16px;
+
+  color: #646464;
+  margin-bottom: 15px;
+}
+
+.consulting_container .step_box .right_wrap .survey_container .survey_wrap {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  margin-bottom: 20px;
+}
+
+.consulting_container .step_box .right_wrap .survey_container .survey_wrap .title {
+  width: 100%;
+  padding: 4px 0px;
+  ;
+  border-bottom: 1px solid #000;
+
+  font-family: 'SUIT';
+  font-weight: 600;
+  font-size: 16px;
+
+  color: #000000;
+}
+
+.consulting_container .step_box .right_wrap .survey_container .survey_wrap .content {
+  width: 100%;
+  padding: 4px 0px;
+  ;
+
+  font-family: 'SUIT';
+  font-weight: 500;
+  font-size: 16px;
+
+  color: #000000;
+}
+
+/* 상담신청  > 이전/다음 페이지네이션 */
+.consulting_container .step_box .right_wrap .step_control_container {
+  width: 50%;
+  margin: 0px auto;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.consulting_container .step_box .right_wrap .step_control_container .prev,
+.consulting_container .step_box .right_wrap .step_control_container .next {
+  position: relative;
+  cursor: pointer;
+  font-family: SUIT;
+  font-weight: 500;
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+
+
+.consulting_container .step_box .right_wrap .step_control_container .prev span {
+  margin-left: 30px;
+}
+
+.consulting_container .step_box .right_wrap .step_control_container .next span {
+  margin-right: 30px;
+}
+
+.consulting_container .step_box .right_wrap .step_control_container .prev::after,
+.consulting_container .step_box .right_wrap .step_control_container .next::after {
+  background-color: #02ead7;
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: '';
+  border-radius: 50px;
+}
+
+
+/* 상담신청 > 체크박스 check box  */
+/* .consulting_container .step_box .check_wrap {
+  min-width: fit-content;
+  cursor: pointer;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.consulting_container .step_box .check_wrap label:last-child {
+  font-family: SUIT;
+  font-weight: 700;
+  font-size: 16px;
+  color: #b3b3b3;
+
+
+  cursor: pointer;
+}
+
+.consulting_container .step_box .check_wrap input {
+  display: none;
+}
+
+
+.consulting_container .step_box .check_wrap input+label {
+  width: 20px;
+  height: 20px;
+
+  position: relative;
+  box-sizing: border-box;
+  border: 2px solid #b3b3b3;
+
+  margin-right: 8px;
+
+  color: #b3b3b3;
+  cursor: pointer;
+}
+
+
+.consulting_container .step_box .check_wrap input:checked+label {
+  position: relative;
+  cursor: pointer; 
+} */
+
+
+.check_wrap {
+  align-items: center;
+
+}
+
+
+input[type=checkbox] {
+  position: relative;
+  border: 2px solid #b3b3b3;
+  border-radius: 2px;
+  background: none;
+  cursor: pointer;
+  line-height: 0;
+  margin: 0 .6em 0 0;
+  outline: 0;
+  padding: 0 !important;
+  vertical-align: text-top;
+  height: 18px;
+  width: 18px;
+  -webkit-appearance: none;
+  opacity: 1;
+}
+
+input[type=checkbox]:checked {
+  background-color: #000;
+}
+
+input[type=checkbox]:checked:before {
+  border: solid #0ff9db;
+  border-width: 0 3px 3px 0;
+  margin: -1px -1px 0 -1px;
+  width: 11px;
+  height: 13px;
+  background: #000;
+}
+
+.check_wrap label {
+  cursor: pointer;
+}
+
+input[type=checkbox]:before {
+  content: '';
+  position: absolute;
+  right: -4px;
+  top: 11%;
+  width: 7px;
+  height: 10px;
+  border: solid transparent;
+  border-width: 0 3px 3px 0;
+  margin: -1px -1px 0 -1px;
+  transform: rotate(45deg) translate(-50%, -50%);
+  z-index: 2;
+}
+
+/* step1 style */
+.consulting_container .step_box.step_01 .description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0px auto;
+  margin-top: 28px;
+  margin-bottom: 32px;
+
+
+  font-family: SUIT;
+  font-weight: 500;
+  font-size: 16px;
+
+  line-height: 125%;
+}
+
+.consulting_container .step_box.step_01 .description>span {
+  font-size: 14px;
+}
+
+.consulting_container .step_box.step_01 .description strong {
+  color: #02ead7;
+}
+
+.consulting_container .step_box.step_01 .check_container {
+  width: 100%;
+  padding: 16px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* step2 style */
+.consulting_container .step_box.step_02 .form_container {
+  padding: 20px 0px 0;
+  border-bottom: 1px solid #808080;
+}
+
+.consulting_container .step_box.step_02 .form_container .form_title {
+  font-family: SUIT;
+  font-weight: 500;
+  font-size: 24px;
+  color: #fff;
+}
+
+.survey_scroller {
+  height: calc(100% - 135px);
+  overflow-y: auto;
+  width: 100%;
+  padding-right: 30px;
+  margin-top: 12px;
+}
+
+
+.survey_scroller::-webkit-scrollbar {
+  width: 4px;
+}
+
+.survey_scroller::-webkit-scrollbar-track {
+  background-color: #4e4e4e;
+}
+
+.survey_scroller::-webkit-scrollbar-thumb {
+  background-color: #fff;
+}
+
+.survey_scroller::-webkit-scrollbar-button {
+  display: none;
+}
+
+
+.survey_container::-webkit-scrollbar {
+  width: 4px;
+}
+
+.survey_container::-webkit-scrollbar-track {
+  background-color: #d3d3d3;
+}
+
+.survey_container::-webkit-scrollbar-thumb {
+  background-color: #000;
+}
+
+.survey_container::-webkit-scrollbar-button {
+  display: none;
+}
+
+.consulting_container .step_box.step_02 .form_container .form_wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  margin-bottom: 20px;
+  margin-top: 18px;
+}
+
+.consulting_container .step_box.step_02 .form_container .form_wrap .form_sub_title {
+  font-family: SUIT;
+  font-weight: 400;
+  font-size: 20px;
+  color: #fff;
+
+  margin-bottom: 18px;
+}
+
+.consulting_container .step_box.step_02 .form_container .form_wrap .form_checkbox_container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* step3 style */
+.consulting_container .step_box.step_03 .input_wrap {
+  width: 100%;
+
+  padding: 12px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  margin-bottom: 35px;
+
+  border-bottom: 1px solid #616161;
+}
+
+.consulting_container .step_box.step_03 .input_wrap.first_input_wrap {
+  padding: 35px 12px 12px;
+}
+
+.consulting_container .step_box.step_03 .input_wrap label {
+  min-width: 80px;
+
+  font-family: SUIT;
+  font-weight: 400;
+  font-size: 16px;
+
+  color: #fff;
+  margin-right: 12px;
+}
+
+.consulting_container .step_box.step_03 .input_wrap input {
+  font-family: SUIT;
+  font-weight: 400;
+  font-size: 16px;
+
+  color: #fff;
+
+  border: none;
+  background: transparent;
+}
+
+/* step4 style */
+.consulting_container .step_box.step_04 .detail_input_wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  margin-bottom: 30px;
+}
+
+.consulting_container .step_box.step_04 .detail_input_wrap span {
+  font-family: SUIT;
+  font-weight: 400;
+  font-size: 16px;
+
+  margin-bottom: 12px;
+}
+
+.consulting_container .step_box.step_04 .detail_input_wrap textarea {
+  width: 100%;
+  background: transparent;
+  border: 1px solid #616161;
+  padding: 8px;
+
+  color: #fff;
+  outline: none;
+}
+
+.consulting_container .step_box.step_04 .password_input_wrap {
+  width: 100%;
+  margin-bottom: 28px;
+}
+
+.consulting_container .step_box.step_04 .password_input_wrap input {
+  width: 100%;
+  padding: 18px 0px;
+
+  font-family: SUIT;
+  font-weight: 400;
+  font-size: 16px;
+
+  color: #fff;
+
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #616161;
+}
+
+.consulting_container .step_box.step_04 .file_input_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.consulting_container .step_box.step_04 .file_input_wrap {
+  display: flex;
+  justify-content: flex-start;
+  padding: 8px 0px;
+  border-bottom: 1px solid #616161;
+  margin-bottom: 8px;
+}
+
+.consulting_container .step_box.step_04 .file_input_wrap input[type=file] {
+  font-family: SUIT;
+  font-weight: 400;
+  font-size: 14px;
+  color: #6b6b6b;
+}
+
+.consulting_container .step_box.step_04 .file_input_wrap input[type=file]::file-selector-button {
+  width: 120px;
+  height: 22px;
+
+  font-family: SUIT;
+  font-weight: 400;
+  font-size: 14px;
+  color: #000;
+
+  background: #fff;
+  border: 1px solid rgb(77, 77, 77);
+  cursor: pointer;
+
+  margin-right: 18px;
+}
+
+.consulting_container .step_box.step_04 .file_input_wrap input[type=file]::file-selector-button:hover {
+  background: rgb(77, 77, 77);
+  color: #fff;
+}
+
+
+/* step5 style */
+.consulting_container .step_box.step_05 .survey_form_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.consulting_container .step_box.step_05 .complete_wrap {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 30px;
+
+  text-align: center;
+}
+
+.consulting_container .step_box.step_05 .complete_wrap span:first-child {
+  font-family: SUIT;
+  font-weight: 500;
+  font-size: 20px;
+  color: #fff;
+
+  margin-bottom: 24px;
+}
+
+.consulting_container .step_box.step_05 .complete_wrap span:nth-child(2) {
+  font-family: SUIT;
+  font-weight: 400;
+  font-size: 18px;
+  color: #fff;
+
+  margin-bottom: 32px;
+}
+
+.consulting_container .step_box.step_05 .complete_wrap span:nth-child(2) span {
+  font-size: 16px;
+}
+
+.consulting_container .step_box.step_05 .complete_wrap span:nth-child(3) {
+  font-family: SUIT;
+  font-weight: 400;
+  font-size: 18px;
+  color: #fff;
+
+}
+
+.consulting_container .step_box.step_05 .complete_wrap hr {
+  background: #fff;
+  opacity: 1;
+  width: 100px;
+  height: 2px;
+  margin-bottom: 30px;
+}
+
+.consulting_container .step_box.step_05 .right_wrap .step_control_container {
+  justify-content: center;
+
+}
+
+.consulting_container .consulting_qa_container table tr {
+  width: 100%;
+}
+
+.consulting_container .consulting_qa_container table tr td:nth-child(1) {
+  width: 10%;
+}
+
+.consulting_container .consulting_qa_container table tr.question td:first-child {
+  vertical-align: middle;
+  text-align: center;
+  border-bottom: 1px solid #a2a2a2;
+}
+
+.consulting_container .consulting_qa_container table tr td:nth-child(2) {
+  width: 65%;
+  text-align: left;
+}
+
+.consulting_container .consulting_qa_container table tr td:nth-child(3) {
+  width: 15%;
+  text-align: center;
+}
+
+.consulting_container .consulting_qa_container table tr td:nth-child(4) {
+  width: 10%;
+  text-align: center;
+}
+
+.consulting_qa_container table.request_table tr.answer_qna td:nth-child(1) {
+  width: 65%;
+}
+
+.consulting_qa_container table.request_table tr.answer_qna td:nth-child(2) {
+  width: 15%;
+  text-align: center;
+}
+
+.consulting_qa_container table.request_table tr.answer_qna td:nth-child(3) {
+  width: 10%;
+}
+
+.input_write_button {
+  width: 100%;
+  margin: 0 0 30px 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.review_container .qna-btn {
+  border: none;
+  box-shadow: none;
+  height: 35px;
+  width: 64%;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  color: #fefefe;
+  font-size: 14px;
+  font-family: 'SUIT', sans-serif;
+}
+
+/********************** Partner Swiper Style **********************/
+.consulting_container .consulting_qa_container,
+.consulting_container .review_container {
+  width: 86%;
+  margin-left: 200px;
+  margin-bottom: 80px;
+  border-top: 1px solid #000;
+  display: flex;
+  justify-content: flex-start;
+
+}
+
+.review_container .cont_bot {
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 0 0 0 14%;
+}
+
+.qna-btn img {
+  margin-left: 12px;
+  width: 9px;
+}
+
+.request_table_wrapper {
+  width: 75%;
+  padding-right: 200px;
+  padding-top: 40px;
+}
+
+.request_table_wrapper table {
+  width: 100%;
+}
+
+/* .review_table tbody{
+  padding-top: 35px;
+  display: table-cell;
+  padding-right: 200px;
+} */
+/* .request_table tbody{
+  padding-top: 35px;
+  display: table-cell;
+  padding-right: 200px;
+} */
+.consulting_container .consulting_qa_container .left_wrap,
+.consulting_container .review_container .left_wrap {
+  width: 25%;
+  height: 360px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  margin-right: 160px;
+}
+
+.consulting_container .consulting_qa_container .left_wrap .top_wrap,
+.consulting_container .review_container .left_wrap .top_wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-left: 22px;
+  padding-top: 24px;
+}
+
+.consulting_container .consulting_qa_container .left_wrap .top_wrap .title_wrap,
+.consulting_container .review_container .left_wrap .top_wrap .title_wrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 24px;
+  margin-bottom: 30px;
+
+  /* border-bottom: 1px solid #000; */
+  position: relative;
+}
+
+.consulting_container .consulting_qa_container .left_wrap .top_wrap .title_wrap::before,
+.consulting_container .review_container .left_wrap .top_wrap .title_wrap::before {
+  content: '';
+  position: absolute;
+  background: #000;
+  left: -24px;
+  bottom: 0px;
+  width: calc(100% + 24px);
+  height: 1px;
+
+  z-index: 2;
+}
+
+.consulting_container .consulting_qa_container .left_wrap .top_wrap .title_wrap::after,
+.consulting_container .review_container .left_wrap .top_wrap .title_wrap::after {
+  content: '';
+  position: absolute;
+  width: calc(100% - 29px);
+  height: calc(100% + 24px);
+  background: #fff;
+  z-index: 1;
+  left: -24px;
+  bottom: 0px;
+}
+
+.consulting_container .consulting_qa_container .left_wrap .top_wrap .title_wrap span,
+.consulting_container .review_container .left_wrap .top_wrap .title_wrap span {
+  font-family: 'GmarketSans';
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 0.6;
+  z-index: 3;
+  letter-spacing: -0.06em;
+
+}
+
+/* .question td,
+.answer td,
+.consulting_qa_container table td,
+.review_container table td {
+  padding: 20px;
+} */
+
+.question td:first-child {
+  vertical-align: top;
+  font-family: 'SUIT';
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.06em;
+  padding: 20px 0 0;
+}
+
+.consulting_container .review_container table tr {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.consulting_container .review_container table tr td:nth-child(1) {
+  width: 10%;
+  text-align: center;
+}
+
+.consulting_container .review_container table tr td:nth-child(2) {
+  width: 60%;
+  padding: 0px;
+  /* ... 처리 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.consulting_container .review_container table tr td:nth-child(3) {
+  width: 12%;
+}
+
+.consulting_container .review_container table tr td:nth-child(4) {
+  width: 15%;
+  text-align: center;
+}
+
+.consulting_container .review_container table tr td:nth-child(5) {
+  width: 10%;
+  text-align: center;
+}
+
+.consulting_container .review_container table tr td {
+  vertical-align: middle;
+  padding: 10px 20px;
+  height: 40px;
+  color: #646464;
+  font-size: 16px;
+  letter-spacing: -0.06em;
+  font-family: 'SUIT';
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.review_container tr {
+  height: 40px;
+}
+
+.review_container td {
+  height: 40px;
+}
+
+.answer td:nth-child(1) span {
+  font-family: 'Pretendard';
+  font-weight: 400px;
+}
+
+.question td {
+  font-size: 16px;
+  color: #646464;
+  font-weight: 500;
+  letter-spacing: -0.06em;
+  height: 40px;
+}
+
+.answer td:nth-child(1) {
+  color: #000;
+  font-weight: 600;
+}
+
+.consulting_container .consulting_qa_container table tr td {
+  padding: 10px 0;
+}
+
+.answer td {
+  font-size: 16px;
+  color: #646464;
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.06em;
+  height: 40px;
+}
+
+
+.consulting_container .consulting_qa_container .left_wrap .top_wrap .title_wrap img,
+.consulting_container .review_container .left_wrap .top_wrap .title_wrap img {
+  width: 37px;
+  height: auto;
+  object-fit: contain;
+}
+
+
+/* 검색 영역 */
+.consulting_container .search_wrap {
+  width: 80%;
+
+  display: flex;
+  align-items: flex-end;
+  align-self: flex-end;
+
+  border-bottom: 1px solid #b2b2b2;
+}
+
+.consulting_container .search_wrap select {
+  width: 40%;
+  font-size: 16px;
+  font-family: 'SUIT';
+  font-weight: 500;
+  padding-bottom: 12px;
+  padding-left: 10px;
+  border: none;
+
+  text-align: left;
+
+
+  appearance: none;
+
+  background-color: #fff;
+  background-image: url('../../img/icon/i_down.png');
+  background-repeat: no-repeat;
+  background-position: 100% 34%;
+
+  color: #000;
+}
+
+.consulting_container .search_wrap input[type=text] {
+  width: 60%;
+  padding-bottom: 12px;
+  box-sizing: border-box;
+  border: none;
+  background-color: white;
+  background-image: url(../../img/icon/i_search.png);
+  background-position: 87% 30%;
+  background-repeat: no-repeat;
+  background-size: 15%;
+  font-size: 16px;
+  font-family: 'SUIT';
+  font-weight: 500;
+}
+
+.notice_pagination ul {
+  display: flex;
+}
+
+.notice_pagination {
+  display: flex;
+  justify-content: flex-end;
+  gap: 60px;
+}
+
+.notice_pagination .pagination_arrow li {
+  position: relative;
+  padding-right: 20px;
+  margin-right: 20px;
+}
+
+.notice_pagination .pagination_arrow li:first-child::after {
+  position: absolute;
+  content: '';
+  right: 0;
+  top: 0;
+  height: 100%;
+  background: #626262;
+  width: 1px;
+
+}
+
+
+.notice_pagination .pagination_number li {
+  font-size: 16px;
+  font-family: 'SUIT';
+  font-weight: 500;
+  color: #646464;
+}
+
+.notice_pagination .pagination_number li.total_page {
+  font-weight: 300;
+  padding-left: 5px;
+}
+
+.notice_pagination .pagination_number li.now_page {
+  font-weight: 600;
+  padding-right: 5px;
+}
+
+
+/* 페이지네이션 */
+.consulting_container .consulting_qa_container .pagination_wrap,
+.consulting_container .review_container .pagination_wrap {
+  align-self: flex-end;
+  display: flex;
+  justify-content: space-between;
+}
+
+.consulting_container .consulting_qa_container .pagination_wrap .arrow_wrap,
+.consulting_container .review_container .pagination_wrap .arrow_wrap {
+  position: relative;
+
+  width: 80px;
+
+  display: flex;
+  justify-content: space-between;
+
+  margin-right: 50px;
+}
+
+.consulting_container .consulting_qa_container .pagination_wrap .arrow_wrap::before,
+.consulting_container .review_container .pagination_wrap .arrow_wrap::before {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 1px;
+  background: #626262;
+  left: 50%;
+}
+
+
+.consulting_container .consulting_qa_container {
+  margin-top: 90px;
+}
+
+/********************** Partner Swiper Style **********************/
+
+.consulting_container .partner_container {
+  /* 80px (좌측 여백) + 150px (좌측 메뉴 width) */
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 50px;
+  margin-left: auto;
+
+  background: #fff;
+}
+
+.consulting_container .partner_container .partner_wrap {
+  background: #fff;
+  z-index: 3;
+  position: relative;
+  width: max-content;
+  padding: 40px 0px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+
+.consulting_container .partner_box {
+  margin-top: 24px;
+  padding: 24px;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+.consulting_container .partner_container .partner_wrap .swiper-slide {
+  width: auto;
+}
+
+.consulting_container .partner_container .partner_wrap .swiper-slide img {
+  width: auto;
+}
+
+.partner_box .swiper-slide img {
+  width: auto;
+}
+
+
+/********************** Portfolio Style **********************/
+.consulting_container .portfolio_container {
+  width: 100%;
+  padding-top: 100px;
+
+  background: #fff;
+
+  position: relative;
+  z-index: 2;
+}
+
+.consulting_container .portfolio_container .portfolio_content {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.consulting_container .portfolio_container .title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin-bottom: 25px;
+}
+
+.consulting_container .portfolio_container .title>span {
+  font-family: 'GmarketSans';
+  font-weight: 700;
+  font-size: 50px;
+  margin-right: 8px;
+  line-height: 100%;
+}
+
+.consulting_container .portfolio_container .portfolio_list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.consulting_container .portfolio_container .portfolio_list .portfolio_wrap {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  position: relative;
+}
+
+ .portfolio_wrap .portfolio_img_inner img {
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio_wrap>img {
+  align-self: flex-end;
+}
+
+.hover_overlay {
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+  transition: opacity 0.3s ease;
+}
+
+.hover_overlay::after {
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  content: '';
+  background: #fff;
+  width: 100%;
+  height: 1px;
+}
+
+.hover_overlay::before {
+  right: 0;
+  top: 50%;
+  position: absolute;
+  content: '';
+  background: #fff;
+  width: 1px;
+  height: 95%;
+  transform: translateY(-50%);
+}
+
+
+li.portfolio_wrap:nth-child(4n) .hover_overlay::before {
+  display: none;
+}
+
+.hover_top {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.hover_top span {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  color: #fff;
+  font-family: 'SUIT';
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+}
+
+.portfolio_wrap:hover .hover_overlay {
+  opacity: 0;
+}
+
+
+.consulting_container .portfolio_container {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.consulting_container .portfolio_container .sticky_title {
+  position: absolute;
+}
+
+.consulting_container .portfolio_container .portfolio_list .portfolio_wrap>img {
+  align-self: flex-end;
+}
+
+.consulting_container .portfolio_container .portfolio_list .portfolio_wrap>span {
+  font-size: 20px;
+  color: #fff;
+}
+
+.next img {
+  width: 15px;
+  height: auto;
+}
+
+.prev img {
+  width: 15px;
+  height: auto;
+}
+
+/********************** 반응형 Style **********************/
+/* 1920 * 1080 */
+/* 1600 * 900 */
+/* 1280 * 800 */
+/* 1024 * 768 */
+
+@media (max-width: 1800px) {
+
+  /* 상담신청 반응형 */
+  .consulting_container .step_box .right_wrap {
+    margin: 40px 100px 40px 40px
+  }
+}
+
+@media (max-width: 1600px) {
+
+
+  .consulting_container::before {
+    left: 150px;
+  }
+
+  /* 상담신청 반응형 */
+  .consulting_container .consulting_box {
+    width: 90%;
+  }
+
+  .consulting_container .step_box .left_wrap {
+    width: 45%;
+    padding: 90px 40px 0px 120px
+  }
+
+  .consulting_container .step_box .right_wrap {
+    margin: 32px 80px 32px 32px
+  }
+
+  /* QA + Review 반응형 */
+  .consulting_container .consulting_qa_container,
+  .consulting_container .review_container {
+    width: calc(100% - 120px);
+    margin-left: 120px;
+    margin-bottom: 60px;
+  }
+
+  .consulting_container .consulting_qa_container .left_wrap,
+  .consulting_container .review_container .left_wrap {
+    width: 28%;
+    margin-right: 100px;
+  }
+}
+
+@media (max-width: 1500px) {
+
+  /* QA + Review 반응형 */
+  .consulting_container .consulting_qa_container .left_wrap .top_wrap .title_wrap span,
+  .consulting_container .review_container .left_wrap .top_wrap .title_wrap span {
+    font-size: 28px;
+  }
+
+  .consulting_container .consulting_qa_container .left_wrap .top_wrap .title_wrap img,
+  .consulting_container .review_container .left_wrap .top_wrap .title_wrap img {
+    width: 38px;
+  }
+}
+
+@media (max-width: 1400px) {
+
+  /* 상담신청 반응형 */
+  .consulting_container .consulting_box {
+    width: 90%;
+    height: 520px;
+  }
+
+  .consulting_container .step_box .left_wrap {
+    width: 42%;
+    padding: 90px 40px 0px 120px
+  }
+
+  .consulting_container .step_box .right_wrap {
+    padding: 12px;
+    margin: 28px 60px 28px 28px
+  }
+
+  .consulting_container .step_box .check_wrap label:last-child {
+    font-size: 16px;
+  }
+
+  /* QA + Review 반응형 */
+  .consulting_container .consulting_qa_container .left_wrap,
+  .consulting_container .review_container .left_wrap {
+    height: auto;
+  }
+
+  .consulting_container .consulting_qa_container .left_wrap .top_wrap .title_wrap span,
+  .consulting_container .review_container .left_wrap .top_wrap .title_wrap span {
+    font-size: 24px;
+  }
+
+  .consulting_container .consulting_qa_container .left_wrap .top_wrap .title_wrap img,
+  .consulting_container .review_container .left_wrap .top_wrap .title_wrap img {
+    width: 32px;
+  }
+}
+
+@media (max-width: 1280px) {
+
+  /* 상담신청 반응형 */
+  .consulting_container .consulting_box {
+    width: 95%;
+    height: 500px;
+  }
+
+  .consulting_container .step_box .survey_title {
+    font-size: 16px;
+    padding: 0px;
+    margin-bottom: 0;
+    border-bottom: none;
+  }
+
+  .consulting_container .step_box.step_02 .form_container {
+    padding: 16px 0px;
+    width: 100%;
+  }
+
+  .consulting_container .step_box.step_02 .form_container .form_title {
+    font-size: 20px;
+  }
+
+  .consulting_container .step_box.step_02 .form_container .form_wrap .form_sub_title {
+    font-size: 18px;
+  }
+
+  .consulting_container .step_box .left_wrap {
+    width: 40%;
+    padding: 90px 40px 0px 100px
+  }
+
+  .consulting_container .step_box .right_wrap {
+    padding: 8px;
+    margin: 28px 52px 28px 28px
+  }
+
+  .consulting_container .step_box .check_wrap label:last-child {
+    font-size: 14px;
+  }
+
+  /* QA + Review 반응형 */
+  .consulting_container .consulting_qa_container,
+  .consulting_container .review_container {
+    width: calc(100% - 100px);
+    margin-left: 100px;
+    margin-bottom: 50px;
+  }
+
+  .consulting_container .consulting_qa_container .left_wrap,
+  .consulting_container .review_container .left_wrap {
+    width: 30%;
+    margin-right: 80px;
+  }
+}
+
+@media (max-width: 1024px) {
+
+  /* QA + Review 반응형 */
+  .consulting_container .consulting_qa_container table,
+  .consulting_container .review_container table {
+    width: 100%;
+  }
+}
+
+/********************** 모바일 Style **********************/
+
+@media (max-width: 992px) {
+  .consulting_container .consulting_qa_container .left_wrap .top_wrap .title_wrap::after {
+    content: none;
+  }
+
+  .consulting_container::before {
+    content: none;
+  }
+
+
+  .consulting_container .portfolio_container {
+    padding-top: 80px;
+    position: relative;
+  }
+
+  .consulting_container .consulting_qa_container .left_wrap .top_wrap .title_wrap::after,
+  .consulting_container .review_container .left_wrap .top_wrap .title_wrap::after {
+    content: none;
+  }
+
+  .consulting_container .consulting_qa_container .left_wrap .top_wrap .title_wrap,
+  .consulting_container .review_container .left_wrap .top_wrap .title_wrap {
+    border-bottom: 1px solid #000;
+
+  }
+
+  .consulting_container .consulting_qa_container .left_wrap .top_wrap .title_wrap::before,
+  .consulting_container .review_container .left_wrap .top_wrap .title_wrap::before {
+    content: none;
+  }
+
+
+  .consulting_container .consulting_qa_container .left_wrap .top_wrap .title_wrap::after,
+  .consulting_container .review_container .left_wrap .top_wrap .title_wrap::after {
+    content: '';
+    position: absolute;
+    left: 42px;
+    bottom: 0px;
+    height: calc(100% + 24px + 96px);
+    width: 1px;
+    background: #000;
+  }
+
+  .consulting_container .consulting_qa_container .left_wrap .top_wrap,
+  .consulting_container .review_container .left_wrap .top_wrap {
+    padding: 0 30px;
+  }
+
+  /* Consulting Wrap */
+  .consulting_container .consulting_box {
+    flex-direction: column;
+    height: fit-content;
+    margin-top: 100px;
+  }
+
+  .consulting_container .consulting_box .left_wrap {
+    width: 100%;
+    height: fit-content;
+    padding: 50px;
+    justify-content: space-between;
+  }
+
+  .consulting_container .consulting_box .left_wrap .section_text {
+    margin-bottom: 120px;
+  }
+
+  .consulting_container .consulting_box .right_wrap {
+    height: fit-content;
+    margin: 60px auto;
+    align-self: center;
+    justify-content: center;
+  }
+
+  /* step 01 ~ step 05 공통 스타일 */
+
+  .consulting_container .step_box .left_wrap {
+    display: none;
+  }
+
+  .consulting_container .step_box .right_wrap {
+    width: 100%;
+    flex-direction: column;
+    margin: 18px 60px;
+  }
+
+  .consulting_container .consulting_box .left_wrap>ul {
+    align-items: flex-end;
+  }
+
+
+  .consulting_container .consulting_box .left_wrap>ul li:nth-child(5) {
+    width: 135px;
+  }
+
+  .consulting_container .step_box .right_wrap .survey_form_container {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+
+  .consulting_container .step_box .right_wrap .survey_container {
+    width: 100%;
+    height: 100%;
+    /* margin: 0 auto; */
+
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding-right: 0;
+    padding: 10px 20px;
+    height: 100%;
+  }
+
+  .survey_container_wrapper {
+    width: calc(100% - 12px);
+    max-height: 200px;
+    overflow-y: scroll;
+
+    margin: 8px;
+    padding: 0px 8px;
+    padding-right: 12px;
+
+    background: none;
+  }
+  
+  .consulting_container .step_box .right_wrap .survey_container_wrapper::-webkit-scrollbar,
+  .consulting_container .step_box .right_wrap .mo_consult_scroll::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  .consulting_container .step_box .right_wrap .survey_container_wrapper::-webkit-scrollbar-track,
+  .consulting_container .step_box .right_wrap .mo_consult_scroll::-webkit-scrollbar-track {
+    background-color: #4e4e4e;
+  }
+
+  .consulting_container .step_box .right_wrap .survey_container_wrapper::-webkit-scrollbar-thumb,
+  .consulting_container .step_box .right_wrap .mo_consult_scroll::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+  }
+
+  .consulting_container .step_box .right_wrap .step_control_container {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .consulting_container .step_box.step_02 .form_container {
+    width: calc(100% - 12px);
+    margin-right: 12px;
+  }
+
+  .consulting_container .step_box.step_02 .form_container .form_wrap .form_checkbox_container {
+    grid-template-columns: repeat(2, 1fr)
+  }
+
+  /* QA + Review */
+
+  .consulting_container .consulting_qa_container,
+  .consulting_container .review_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  .consulting_container .consulting_qa_container,
+  .consulting_container .review_container {
+    border-top: none;
+    margin-top: 40px
+  }
+
+  .consulting_container .consulting_qa_container .left_wrap,
+  .consulting_container .review_container .left_wrap {
+    width: 100%;
+  }
+
+  .consulting_container .consulting_qa_container .left_wrap .top_wrap .title_wrap,
+  .consulting_container .review_container .left_wrap .top_wrap .title_wrap {
+    justify-content: flex-start;
+  }
+
+  .consulting_container .consulting_qa_container .left_wrap .top_wrap .title_wrap img,
+  .consulting_container .review_container .left_wrap .top_wrap .title_wrap img {
+    margin-right: 20px;
+  }
+
+  .consulting_container .search_wrap {
+    width: 30%;
+    min-width: 200px;
+    align-self: flex-start;
+  }
+
+  .consulting_container .search_wrap input[type=text] {
+    background-size: 16%;
+  }
+
+  .consulting_container .consulting_content_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 30px 40px;
+    margin-top: 20px;
+  }
+
+  .consulting_container {
+    padding-bottom: 0;
+  }
+
+  .consulting_container .consulting_qa_container table,
+  .consulting_container .review_container table {
+    max-width: none;
+    font-size: 12px;
+  }
+
+  .consulting_container .consulting_qa_container table tr.question {
+    border: none;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  .consulting_container .consulting_qa_container table tr.question td {
+    height: 49px;
+    padding: 0;
+  }
+
+  .consulting_content_container .question td span {
+    font-size: 12px;
+    color: #646464;
+    letter-spacing: -0.06em;
+  }
+
+  .consulting_content_container .answer td:nth-child(2) {
+    font-size: 12px;
+    color: #000;
+    letter-spacing: -0.06em;
+    font-family: 'SUIT';
+    font-weight: 500;
+  }
+
+  .review_container .left_wrap .top_wrap .search_container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .review_container .left_wrap .top_wrap .search_container .review-button {
+    border: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 200px;
+    background: #000;
+
+    padding: 8px 0px;
+  }
+
+  .review_container .left_wrap .top_wrap .search_container button.review-button span {
+    color: #fefefe;
+    font-family: 'SUIT', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+
+    margin-right: 18px;
+  }
+
+  .consulting_container .consulting_qa_container table tr td:nth-child(2) {
+    width: 65%;
+  }
+
+  .consulting_container .consulting_qa_container table tr td {
+    font-size: 12px;
+  }
+
+  .consulting_container .consulting_qa_container table tr td:nth-child(3) {
+    width: 65%;
+    text-align: center;
+    padding: 0;
+  }
+
+  .consulting_container .consulting_qa_container table tr.answer {
+    border-bottom: 1px solid #a2a2a2;
+    height: 42px;
+  }
+
+  .review_container table td:nth-child(3) {
+    min-width: fit-content;
+  }
+
+  .consulting_qa_container table tr td:last-child,
+  .review_container table tr td:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .arrow_wrap span {
+    width: 12px;
+    height: auto;
+  }
+
+  .arrow_wrap img {
+    width: 100%;
+  }
+
+  .review_container .left_wrap .top_wrap .search_container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .review_container .left_wrap .top_wrap .search_container .review-button {
+    border: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 200px;
+    background: #000;
+
+    padding: 4px 0px;
+  }
+
+  .review_container .left_wrap .top_wrap .search_container button.review-button span {
+    color: #fefefe;
+    font-family: 'SUIT', sans-serif;
+    font-weight: 500;
+    font-size: 3vw;
+
+    margin-right: 10px;
+  }
+
+  .review_container .left_wrap .top_wrap .search_container button.review-button img {
+    width: 8px;
+  }
+
+  .review_container tr {
+    height: 50px;
+    padding: 10px 0;
+  }
+
+  .consulting_container .consulting_qa_container .pagination_wrap,
+  .consulting_container .review_container .pagination_wrap {
+    align-self: center;
+    margin-top: 20px;
+  }
+
+  /* 파트너사 100% */
+  .consulting_container .partner_container .partner_wrap {
+    width: 100%;
+    padding: 20px 0;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+  }
+
+  /* 포트폴리오 */
+  .consulting_container .content_wrap .portfolio_list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .consulting_container .content_wrap .portfolio_list .portfolio_wrap {
+    background: #f5f5f5;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+  }
+
+  .consulting_container .content_wrap .portfolio_list .portfolio_wrap::after {
+    position: absolute;
+    content: '';
+    right: 0;
+    top: 50%;
+    height: 90%;
+    width: 1px;
+    background: #d1d1d1;
+    transform: translate(0, -50%);
+  }
+
+  .consulting_container .content_wrap .portfolio_list .portfolio_wrap::before {
+    position: absolute;
+    content: '';
+    left: 50%;
+    bottom: 0;
+    height: 1px;
+    width: 90%;
+    background: #d1d1d1;
+    transform: translate(-50%, 0);
+  }
+
+  .consulting_container .content_wrap .portfolio_list .portfolio_wrap.service_wrap:not(:nth-child(-n + 4)) {
+    display: none;
+  }
+
+  .consulting_container .content_wrap .portfolio_list .portfolio_wrap>img {
+    align-self: flex-start;
+    width: 100%;
+    height: 100%;
+  }
+
+  .consulting_container .content_wrap .portfolio_list .portfolio_wrap>span {
+    font-size: 20px;
+    color: #fff;
+  }
+
+  input[type=checkbox]:checked+label:before {
+    /* width: 80%;
+    height: 100%; 
+    right: -5px; */
+  }
+
+
+  input[type=checkbox] {
+    width: 15px;
+    height: 15px;
+    margin-right: .3rem
+  }
+}
+
+@media (max-width: 650px) {
+
+  .consulting_container .consulting_box .right_wrap>p {
+    font-size: 18px;
+    padding-left: 0.5rem;
+  }
+
+  .consulting_container .consulting_box .right_wrap {
+    margin: 0;
+    padding: 30px 14px 35px 30px;
+  }
+
+  .consulting_container .consulting_box .right_wrap>span:last-child {
+    font-size: 45px;
+  }
+
+  .mo_consult_scroll {
+    margin: 8px 0;
+    height: 33vh;
+    width: max-content;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: 100%;
+  }
+
+  .consulting_container .step_box.step_01 .description {
+    margin-top: 13px;
+    margin-bottom: 4px;
+  }
+
+  .step_control_container .prev img {
+    width: 10px;
+  }
+
+  .step_control_container .next img {
+    width: 10px;
+  }
+
+  .consulting_container .step_box.step_04 .detail_input_wrap {
+    padding-top: 14px;
+    margin-bottom: 15px;
+  }
+
+  .scroll_inner_left {
+    padding-right: 20px;
+  }
+
+  .consulting_container .step_box.step_04 .password_input_wrap input {
+    padding: 10px 0px;
+  }
+
+  .mo_consult_scroll .survey_scroller::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .mo_consult_scroll .survey_scroller::-webkit-scrollbar-track {
+    background-color: #4e4e4e;
+  }
+
+  .mo_consult_scroll .survey_scroller::-webkit-scrollbar-thumb {
+    background-color: #fff;
+  }
+
+  .mo_consult_scroll .survey_scroller::-webkit-scrollbar-button {
+    display: none;
+  }
+
+  .consulting_container .step_box.step_01 .check_container {
+    padding: 16px 12px 16px 0;
+  }
+
+  .consulting_container .consulting_box .left_wrap {
+    padding: 32px;
+    border-radius: 0px 50px 50px 0px;
+  }
+
+  .consulting_container .consulting_box .left_wrap .section_text {
+    width: 72%;
+    margin-bottom: 72px;
+  }
+
+  .survey_eng {
+    width: 148px;
+    height: auto;
+  }
+
+  .survey_top {
+    display: flex;
+    align-items: center;
+    padding-bottom: 12px;
+    gap: 20px;
+    width: 100%;
+    border-bottom: 1px solid #fff;
+  }
+
+  .survey_eng img {
+    width: 100%;
+  }
+
+  .consulting_container .consulting_box .left_wrap>ul li {
+    width: 92px;
+  }
+
+  .consulting_container .consulting_box .left_wrap>ul li img {
+    width: 52px;
+    height: 52px;
+  }
+
+  .consulting_container .consulting_box .left_wrap>ul li p {
+    font-size: 12px;
+  }
+
+
+  .consulting_container .step_box .right_wrap .survey_form_container {
+    width: 95%;
+    margin-bottom: 20px;
+  }
+
+
+  .consulting_container .content_wrap .portfolio_list .portfolio_wrap>span {
+    font-size: 18px;
+  }
+
+  .consulting_container .content_wrap .portfolio_list .portfolio_wrap {
+    padding: 28px 32px
+  }
+
+
+  .consulting_container .portfolio_container {
+    width: 100%;
+    padding: 50px 30px 0;
+    padding-top: 80px;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  .consulting_container .portfolio_container::after {
+    position: absolute;
+    top: 0;
+    left: 30px;
+    content: '';
+    background: #000;
+    width: 86%;
+    height: 1px;
+  }
+
+  .consulting_container .portfolio_container .title span {
+    font-size: 46px;
+  }
+
+  .consulting_container .portfolio_container .title>img {
+    width: 34px;
+    height: auto;
+    padding-bottom: 0;
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 500px) {
+  .consulting_container .consulting_box .left_wrap .section_text {
+    margin-bottom: 50px;
+  }
+
+  .consulting_container .consulting_box .left_wrap>ul li {
+    height: 82px;
+  }
+
+  .consulting_container .consulting_box .left_wrap>ul li img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .consulting_container .consulting_box .left_wrap>ul li p {
+    font-size: 10px;
+  }
+
+  .consulting_container .step_box.step_01 .check_container{
+    padding: 12px 4px 12px 0;
+  }
+
+  .consulting_container .content_wrap .portfolio_list .portfolio_wrap>span {
+    font-size: 16px;
+  }
+
+  .consulting_container .content_wrap .portfolio_list .portfolio_wrap {
+    padding: 0;
+  }
+
+  .consulting_container .portfolio_container .title span {
+    font-size: 42px;
+  }
+
+  .consulting_container .portfolio_container .title>img {
+    width: 30px;
+    padding-bottom: 0;
+  }
+
+  .question td,
+  .answer td,
+  .consulting_qa_container table td,
+  .review_container table td {
+    padding: 12px;
+  }
+
+  .consulting_container .consulting_qa_container .left_wrap .top_wrap .title_wrap,
+  .consulting_container .review_container .left_wrap .top_wrap .title_wrap {
+    padding-left: 12px;
+    padding-bottom: 12px;
+    margin-bottom: 22px;
+  }
+
+  .consulting_container .consulting_box .left_wrap>ul li.arrow_between img {
+    width: 7px;
+    height: auto;
+    position: absolute;
+    bottom: 1px;
+  }
+
+  .consulting_container .search_wrap input[type=text] {
+    padding-bottom: 6px;
+  }
+
+  .consulting_container .consulting_qa_container .left_wrap .top_wrap .title_wrap::after,
+  .consulting_container .review_container .left_wrap .top_wrap .title_wrap::after {
+    left: 54px;
+  }
+
+  .review_container .left_wrap .top_wrap .search_container button.review-button {
+    min-width: 150px;
+  }
+
+
+  .review_container tr {
+    height: 40px;
+    padding: 4px 0;
+  }
+}
+
+
+@media (max-width: 450px) {
+  .review_container table td:nth-child(2) {
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .consulting_container .review_container table tr td:nth-child(2) {
+    width: 70%;
+  }
+
+  .consulting_container .review_container table tr td:nth-child(2) span {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-break: break-all;
+  }
+
+  .consulting_container .review_container table tr td {
+    padding: 5px 0;
+    height: auto;
+    font-size: 12px;
+  }
+
+  .consulting_qa_container table tr td:last-child,
+  .review_container table tr td:last-child {
+    height: 33px;
+  }
+
+  .review_container .left_wrap .top_wrap .search_container button.review-button {
+    min-width: 100px;
+    width: 35%;
+  }
+
+  .consulting_container .search_wrap select {
+    font-size: 14px;
+    background-position: 100% 24%;
+    padding-bottom: 6px;
+  }
+
+  .consulting_container .review_container table tr:last-child {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 400px) {
+
+  .question td,
+  .answer td,
+  .consulting_qa_container table td,
+  .review_container table td {
+    padding: 10px;
+  }
+
+  .review_container table td:nth-child(2) {
+    /* max-width: 80px; */
+  }
+
+
+  .consulting_container .content_wrap .portfolio_list .portfolio_wrap>span {
+    font-size: 14px;
+  }
+
+  .consulting_container .content_wrap .portfolio_list .portfolio_wrap {
+    padding: 13px;
+  }
+
+
+
+  .consulting_container .portfolio_container .title span {
+    font-size: 32px;
+  }
+
+  .consulting_container .portfolio_container .title>img {
+    width: 24px;
+    padding-bottom: 8px;
+  }
+
+  .consulting_container .portfolio_container {
+    width: 100%;
+    padding: 0 30px;
+    padding-top: 80px;
+  }
+
+  .review_container .left_wrap .top_wrap .search_container button.review-button {
+    min-width: 100px;
+  }
+
+  input[type=checkbox]{
+    width: 10px;
+    height: 10px;
+  }
+  input[type=checkbox]:checked:before {
+    width: 8px;
+    height: 10px;
+  }
+}
+
+@media (max-width: 350px) {
+  .review_container table td:nth-child(2) {
+    min-width: 50px;
+  }
+
+  .question td,
+  .answer td,
+  .consulting_qa_container table td,
+  .review_container table td {
+    padding: 8px;
+  }
+
+  .consulting_container .content_wrap .portfolio_list .portfolio_wrap>span {
+    font-size: 12px;
+  }
+
+  .consulting_container .content_wrap .portfolio_list .portfolio_wrap {
+    padding: 16px 20px
+  }
+
+  .consulting_container .portfolio_container .title span {
+    font-size: 28px;
+  }
+
+  .consulting_container .portfolio_container .title>img {
+    width: 20px;
+    padding-bottom: 8px;
+  }
+}
+
+/* 파트너사 Marquee 설정 */
+:root {
+  --marquee-width: 100vw;
+  --marquee-height: 10vh;
+  /* --marquee-elements: 12; */ /* defined with JavaScript */
+  --marquee-elements-displayed: 10;
+  --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
+  --marquee-animation-duration: calc(var(--marquee-elements) * 2s);
+}
+
+@media (max-width: 990px) {
+  :root {
+    --marquee-height: 8vh;
+    --marquee-elements-displayed: 5;
+  }
+  .marquee:before, .marquee:after { width: 5rem; }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --marquee-height: 5vh;
+    --marquee-elements-displayed: 4;
+  }
+}
+
+@media (max-width: 400px) {
+  :root {
+    --marquee-height: 4vh;
+    --marquee-elements-displayed: 3;
+  }
+}

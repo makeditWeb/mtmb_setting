@@ -264,36 +264,40 @@ class Consulting extends MTMbiz_Controller
 
 
                 $list_mo .= <<<LIST_MO
-                    <tr>
+                    <tr class='question'>
                         <td rowspan='{$row_span}' class="ta_center">{$list->row_num}</td>
-                        <td class="cursor_hand get_consulting_info" data-idx="{$list->idx}">'{$list->name}'님의<br>디자인 견적요청이 접수되었습니다.</td>
-                        <td class="ta_center">{$list->employee_name}<br>{$regdate}<br>{$status_txt}</td>
+                        <td class="cursor_hand get_consulting_info" data-idx="{$list->idx}">
+                          <span>'{$list->name}'님의<br>디자인 견적요청이 접수되었습니다.</span>
+                        </td>
+                        <td class="ta_center">
+                           <span>{$list->employee_name}</span>
+                           <span>{$regdate}</span>
+                        </td>
                     </tr>
                 LIST_MO;
                 if ($list->status > 0) {
                     $list_mo .= <<<LIST_MO
-                        <tr>
+                        <tr class='answer'>
                             <td class="cursor_hand get_consulting_info" data-idx="{$list->idx}">↳ 상담이 완료되었습니다.</td>
-                            <td><b>MTM Biz Design</b></td>
+                            <td><b>답변완료</b></td>
                         </tr>
                     LIST_MO;
                 }
 
                 $list_pc .= <<<LIST_PC
                     <tr>
-                        <td rowspan='{$row_span}' class="ta_center">{$list->row_num}</td>
-                        <td class="cursor_hand get_consulting_info" data-idx="{$list->idx}">'{$list->name}'님의 디자인 견적요청이 접수되었습니다.</td>
-                        <td class="ta_center">{$list->employee_name}</td>
-                        <td class="ta_center">{$regdate}</td>
-                        <td class="ta_center">{$status_txt}</td>
+                        <td class="ta_center" rowspan="{$row_span}">{$list->row_num}</td>
+                        <td data-idx="{$list->idx}">'{$list->name}'님의 디자인 견적요청이 접수되었습니다.</td>
+                        <td>{$regdate}</td>
+                        <td>{$status_txt}</td>
                     </tr>
                 LIST_PC;
                 if ($list->status > 0) {
                     $list_pc .= <<<LIST_PC
-                        <tr>
+                        <tr class="answer_qna">
                             <td class="cursor_hand get_consulting_info" data-idx="{$list->idx}">↳ 상담이 완료되었습니다.</td>
-                            <td colspan="2" class="ta_l"><b>MTM Biz Design</b></td>                            
-                            <td></td>
+                            <td><b>MTM Biz Design</b></td>                            
+                            <td>답변완료</td>
                         </tr>
                     LIST_PC;
                 }
@@ -418,17 +422,18 @@ class Consulting extends MTMbiz_Controller
                     <tr>
                         <td class="ta_center">{$list->row_num}</td>
                         <td class="cursor_hand get_review_info" data-idx="{$list->idx}">
-                            {$score_html}
-                            <p>{$list->subject}</p>
+                                {$list->subject}
                         </td>
-                        <td class="ta_center">{$list->name}<br />{$regdate}<br />조회수 <span>{$list->read_count}</span></td>
+                        <td class="ta_center">
+                            <span>{$list->name}</span>
+                            <span>{$regdate}</span>
+                        </td>
                     </tr>
                 LIST_MO;
 
                 $list_pc .= <<<LIST_PC
                     <tr>
                         <td>{$list->row_num}</td>
-                        <td class="ta_center">{$score_html}</td>
                         <td class="cursor_hand get_review_info" data-idx="{$list->idx}">{$list->subject}</td>
                         <td class="ta_center">{$list->name}</td>
                         <td class="ta_center">{$regdate}</td>

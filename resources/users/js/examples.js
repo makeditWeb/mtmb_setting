@@ -1,80 +1,24 @@
-$(document)
-  .ready(function () {
-    if (window.innerWidth > 992) {
-      // 다바이스 크기가 992px 이상일 때
+const contentPanelPC = $('.pc .content-panel');
+const contentPanelMobile = $('.mo .content-panel');
 
-      // 풀페이지 옵션
-      $(document).ready(function () {
-        $("#fullpage").fullpage({
-          // anchors: ["main", "consulting", "allservice", "subscribe", "founded", "smallbusiness", "institutions", "notice", "footer"],
-          anchors: [
-            "main",
-            "consulting",
-            "allservice",
-            "pptdesign",
-            "institutions",
-            "smallbusiness",
-            "subscribe",
-            "notice",
-            "footer",
-          ],
-          menu: "#header",
-          verticalCentered: true, // 세로 중앙 정렬
-          scrollOverflow: false,
-          sectionsColor: ["#fff", "#f9f9f9", "#f9f9f9"], // 섹션별 컬러
-          navigation: true,
-          keyboardScrolling: true,
-          animateAnchor: true,
-          recordHistory: true,
-          css3: true,
-          navigationPosition: "right",
-          loopHorizontal: false, // 반복여부
-          controlArrows: false, // 슬라이드 좌우 이동 제어
-          onLeave: function (anchorLink, index, direction) {
-            var pages = $(".section").length;
-            var currentPage = index - 1;
-          },
+const ROLLING_CONTENT_LENGTH = 10;
 
-          afterLoad: function (anchorLink, index) {
-            if (index != "1") {
-              $(".header_i img").fadeIn();
-              $(".header_i li a span.i_home_main").fadeIn();
-              $("#top_fixed").fadeIn();
-              $("#lnb").removeClass("d-none").fadeIn();
-            } else {
-              $("#lnb").fadeOut();
-              $(".header_i li a span.i_home_main").fadeOut();
-              $(".header_i img").fadeOut();
-              $("#top_fixed").fadeOut();
-            }
+$(document).ready(function () {
 
-            if (index == "5") {
-              $("#lnb .line_02").show();
-              $("#lnb .lnb_menu_02 ul li").addClass("active");
-              $(".header_login li").addClass("active");
-            } else if (index == "7") {
-              $("#lnb .line_02").show();
-              $("#lnb .lnb_menu_02 ul li").addClass("active");
-              $(".header_login li").addClass("active");
-            } else {
-              $("#lnb .line_02").hide();
-              $("#lnb .lnb_menu_02 ul li").removeClass("active");
-              $(".header_login li").removeClass("active");
-            }
-          },
-        });
-      });
+  const handleResize = () => {
+    const isLargeScreen = window.innerWidth > 992;
+    $('#lnb').css('display', isLargeScreen ? 'block' : 'none');
 
+    if (isLargeScreen) {
       // listSwiper
-      var listSwiper_pc = new Swiper(".listSwiper_pc", {
+      var listSwiper = new Swiper(".listSwiper", {
         slidesPerView: 9,
         spaceBetween: 0, // 슬라이드 여백
         centeredSlides: true, // 슬라이드 중앙정렬
-        centeredSlidesBounds: false, // t슬라이드 시작과 끝의 중앙배치
+        centeredSlidesBounds: true, // t슬라이드 시작과 끝의 중앙배치
         loop: true, // 무한반복
         autoplay: {
           delay: 4000,
-          disableOnInteraction: false,
         },
         navigation: {
           nextEl: ".swiper-button-next",
@@ -84,14 +28,19 @@ $(document)
 
       // partnerSwiperOne
       var partnerSwiper = new Swiper(".partnerSwiper", {
-        slidesPerView: 4,
-        spaceBetween: 0, // 슬라이드 여백
-        loop: true, // 무한반복
+        spaceBetween: 0,
+        freeMode: false,
+        enteredSlides: true,
+        speed: 5000,
         autoplay: {
-          delay: 2000,
-          disableOnInteraction: false,
+          delay: 1,
         },
+        loop: true,
+        slidesPerView: 'auto',
+        allowTouchMove: false,
+        disableOnInteraction: true
       });
+
 
       // partnerSwiperOne + Two 연동제어
       // partnerSwiperOne.controller.control = partnerSwiperTwo;
@@ -105,7 +54,6 @@ $(document)
         // touchRatio: 0,//드래그 금지
         autoplay: {
           delay: 2500,
-          disableOnInteraction: false,
         },
       });
 
@@ -129,7 +77,6 @@ $(document)
         loop: true, // 무한반복
         autoplay: {
           delay: 3000,
-          disableOnInteraction: false,
         },
         navigation: false,
       });
@@ -143,7 +90,6 @@ $(document)
         loop: true, // 무한반복
         autoplay: {
           delay: 2000,
-          disableOnInteraction: false,
         },
         navigation: false,
       });
@@ -157,7 +103,6 @@ $(document)
         loop: true, // 무한반복
         autoplay: {
           delay: 2000,
-          disableOnInteraction: false,
         },
         navigation: false,
       });
@@ -171,7 +116,6 @@ $(document)
         loop: true, // 무한반복
         autoplay: {
           delay: 2000,
-          disableOnInteraction: false,
         },
         navigation: false,
       });
@@ -198,7 +142,6 @@ $(document)
         loop: true, // 무한반복
         autoplay: {
           delay: 3000,
-          disableOnInteraction: false,
         },
         navigation: {
           nextEl: ".swiper-button-next",
@@ -213,36 +156,74 @@ $(document)
         grid: {
           rows: 3,
         },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
         spaceBetween: 20,
       });
 
       var product_01_02 = new Swiper(".product_01_02", {
         spaceBetween: 10,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
         thumbs: {
           swiper: product_01_01,
         },
       });
 
-      // pptDesignSwiper
-      var pptDesignSwiper = new Swiper(".pptDesignSwiper", {
-        slidesPerView: 3,
+      // weMadeItSwiper
+      var weMadeItSwiper = new Swiper(".weMadeItSwiper", {
+        slidesPerView: 4,
         spaceBetween: 0, // 슬라이드 여백
+        centeredSlides: false, // 슬라이드 중앙정렬
         loop: true, // 무한반복
-        // touchRatio: 0,//드래그 금지
+        touchRatio: 0,
         autoplay: {
-          delay: 2500,
+          delay: 3000,
         },
       });
 
+      // weMadeItSwiper
+      var introducationSwiper = new Swiper(".introducationSwiper", {
+        slidesPerView: 4,
+        spaceBetween: 0, // 슬라이드 여백
+        centeredSlides: false, // 슬라이드 중앙정렬
+        loop: true, // 무한반복
+        touchRatio: 0,
+        autoplay: {
+          delay: 2000,
+        },
+      });
+
+      // section03 partner swiper
+      var section03PartnerSwiper = new Swiper(".section03_partnerSwiper", {
+        loop: true,
+        spaceBetween: 0,
+        freeMode: false,
+        enteredSlides: true,
+        speed: 5000,
+        autoplay: {
+          delay: 1,
+        },
+        slidesPerView: 'auto',
+        allowTouchMove: false,
+        disableOnInteraction: true
+      });
     } else {
       // 디바이스 크기가 992px 이하일 때
+      // weMadeItSwiper
+      var weMadeItSwiper = new Swiper(".weMadeItSwiper", {
+        slidesPerView: 2,
+        spaceBetween: 0, // 슬라이드 여백
+        centeredSlides: false, // 슬라이드 중앙정렬
+        loop: true, // 무한반복
+        touchRatio: 0,
+        autoplay: {
+          delay: 3000,
+        },
+      });
 
       // listSwiper
-      var listSwiper_mo = new Swiper(".listSwiper_mo", {
+      var listSwiper = new Swiper(".listSwiper", {
         slidesPerView: 3,
         spaceBetween: 0, // 슬라이드 여백
         centeredSlides: true, // 슬라이드 중앙정렬
@@ -250,7 +231,7 @@ $(document)
         loop: true, // 무한반복
         autoplay: {
           delay: 2000,
-          disableOnInteraction: false, // 쓸어 넘기거나 버튼 클릭 시 자동 슬라이드 정지
+          // disableOnInteraction: true // 쓸어 넘기거나 버튼 클릭 시 자동 슬라이드 정지
         },
         navigation: {
           nextEl: ".swiper-button-next",
@@ -260,14 +241,17 @@ $(document)
 
       // partnerSwiper
       var partnerSwiper = new Swiper(".partnerSwiper", {
-        slidesPerView: 3,
-        spaceBetween: 5, // 슬라이드 여백
-        centeredSlides: true, // 슬라이드 중앙정렬
-        loop: true, // 무한반복
+        spaceBetween: 0,
+        freeMode: false,
+        enteredSlides: true,
+        speed: 2000,
         autoplay: {
-          delay: 2000,
-          disableOnInteraction: false,
+          delay: 1,
         },
+        loop: true,
+        slidesPerView: 'auto',
+        allowTouchMove: false,
+        disableOnInteraction: true
       });
 
       // ppSwiper
@@ -278,20 +262,8 @@ $(document)
         loop: true, // 무한반복
         autoplay: {
           delay: 3000,
-          disableOnInteraction: false,
         },
       });
-
-      var pptDesignSwiper_mo = new Swiper(".pptDesignSwiper_mo", {
-        slidesPerView: 1,
-        spaceBetween: 0, // 슬라이드 여백
-        centeredSlides: false, // 슬라이드 중앙정렬
-        loop: true, // 무한반복        
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-      });      
 
       // consulting_partnerSubSwiper
       var partnerSubSwiper = new Swiper(".partnerSubSwiper", {
@@ -301,7 +273,6 @@ $(document)
         loop: true, // 무한반복
         autoplay: {
           delay: 3000,
-          disableOnInteraction: false,
         },
       });
 
@@ -309,45 +280,224 @@ $(document)
       // 명함
       var product_01_01 = new Swiper(".product_01_01", {
         spaceBetween: 10,
-        slidesPerView: 3,
+        slidesPerView: 2,
         freeMode: true,
         watchSlidesProgress: true,
+      });
+
+      var product_01_02 = new Swiper(".product_01_02", {
+        spaceBetween: 10,
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
-      });
-      var product_01_02 = new Swiper(".product_01_02", {
-        spaceBetween: 10,
         thumbs: {
           swiper: product_01_01,
         },
       });
     }
-  })
-  .resize();
+  };
 
-$(document).ready(function () {
-  $(".sub_menu li").click(function () {
-    $(this).toggleClass("active");
-  });
-});
+  handleResize();
 
-// sub top fixed
-let topFixed = document.getElementById("top_fixed");
-window.onscroll = function () {
-  if (topFixed) scrollFunction();
-};
+  // 맨 마지막 slide는 스타일이 적용되어있지 않는 현상 수정을 위한 코드
+  function applySlideStyles(swiper) {
+    const slides = swiper.slides;
+    const borderStyle = '1px solid #626262';
 
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    topFixed.style.display = "block";
-  } else {
-    topFixed.style.display = "none";
+    for (let i = 0; i < slides.length; i++) {
+      const slide = slides[i];
+
+      // Remove all borders first
+      slide.style.border = 'none';
+
+      // Apply top and bottom borders to all slides
+      slide.style.borderTop = borderStyle;
+      slide.style.borderLeft = borderStyle;
+
+      if (i === swiper.activeIndex + 3) {
+        slide.style.borderRight = borderStyle;
+      } else {
+        slide.style.borderRight = 'none';
+      }
+    }
+
+    // Ensure that the first slide has a left border and the last slide has a right border
+    slides[0].style.borderLeft = borderStyle;
+    slides[slides.length - 1].style.borderRight = borderStyle;
   }
-}
 
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
+  const progressBar = $('.swiper-hero-progress');
+  const mobileProgressBar = $('.content-divider');
+
+  // listSwiper
+  var section01Swiper = new Swiper(".section01_listSwiper", {
+    slidesPerView: 4,
+    slidePerGroup: 2,
+    loopAdditionalSlides: 4,
+    spaceBetween: 0,
+    grabCursor: true,
+    speed: 500,
+    loop: true,
+    autoplay: {
+      delay: 1000,
+      disableOnInteraction: false,
+    },
+    effect: 'slide',
+    direction: 'vertical',
+    grabCursor: true,
+    watchOverflow: true,
+    watchSlidesProgress: true,
+    watchSlidesVisibility: true,
+    roundLengths: true,
+    observer: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false
+    },
+    on: {
+      slideChange: function () {
+        const realIndex = this.realIndex;
+        const rollingIndex = realIndex >= ROLLING_CONTENT_LENGTH ? realIndex % ROLLING_CONTENT_LENGTH : realIndex
+
+        for (let i = 0; i < ROLLING_CONTENT_LENGTH; i++) {
+          if (i === rollingIndex) {
+            $(contentPanelPC[i]).addClass('active')
+          } else {
+            $(contentPanelPC[i]).removeClass('active');
+          }
+        }
+      },
+      autoplayTimeLeft(s, time, progress) {
+        // progressLine.style.setProperty("--progress", 1 - progress)
+        // progressBar.css('width', ((1 - progress)) + '%')
+        progressBar.css('width', ((1 - progress) * 100) + '%')
+      }
+    }
+  });
+
+  $('#section_01_list_swiper_up').on('click', function () {
+    section01Swiper.slidePrev();
+  });
+
+  $('#section_01_list_swiper_down').on('click', function () {
+    section01Swiper.slideNext();
+  });
+
+  var section01MobileSwiper = new Swiper('.section01_listMobileSwiper', {
+    slidesPerView: 4,
+    slidePerGroup: 1,
+    loopAdditionalSlides: 4,
+    spaceBetween: 0,
+    grabCursor: true,
+    speed: 500,
+    loop: true,
+    autoplay: {
+      delay: 1000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    on: {
+      slideChange: function () {
+        applySlideStyles(this);
+
+        const realIndex = this.realIndex;
+        const rollingIndex = realIndex >= ROLLING_CONTENT_LENGTH ? realIndex % ROLLING_CONTENT_LENGTH : realIndex
+
+        for (let i = 0; i < ROLLING_CONTENT_LENGTH; i++) {
+          if (i === rollingIndex) {
+            $(contentPanelMobile[i]).addClass('active')
+          } else {
+            $(contentPanelMobile[i]).removeClass('active');
+          }
+        }
+      },
+      autoplayTimeLeft(s, time, progress) {
+        mobileProgressBar.css('height', ((1 - progress) * 100) + '%')
+
+      }
+    }
+  });
+
+  $('#section_01_list_swiper_left').on('click', function () {
+    section01MobileSwiper.slidePrev();
+  });
+
+  $('#section_01_list_swiper_right').on('click', function () {
+    section01MobileSwiper.slideNext();
+  });
+
+
+  $('.accordion-trigger').click(function () {
+    $('.accordion-panel').slideUp();
+    $('.accordion-trigger').removeClass('active');
+    $('.accordion-trigger .accordion-trigger-arrow-img').attr('src', 'resources/users/img/main/text/title_arrow.png');
+
+    if (!$(this).parent().find('.accordion-panel').is(':visible')) {
+      $(this).parent().find('.accordion-panel').slideDown();
+      $(this).addClass('active');
+      $(this).find('.accordion-trigger-arrow-img').attr('src', 'resources/users/img/main/mobile/arrow_bottom.png');
+    }
+  });
+
+  // const originalList = $('.marquee-item-list');
+  // const clonedList = originalList.clone();
+  // $('.marquee-block').append(clonedList);
+
+  // Intersection Observer 설정
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0 // 섹션이 조금이라도 보이면 콜백 실행
+  };
+
+  const observerCallback = (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        $('.right-fixed').css('bottom', '240px')
+      } else {
+        $('.right-fixed').css('bottom', '10%')
+      }
+    });
+  };
+
+  const isLargeScreen = window.innerWidth > 992;
+  const observer = new IntersectionObserver(observerCallback, observerOptions);
+  const footerElement = document.querySelectorAll('.footer');
+  observer.observe(footerElement[1]);
+
+  const marqueeSetPc = () => {
+    const root = document.documentElement;
+    const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
+    const marqueeContent = document.querySelector(".pc ul.marquee-content");
+
+    root.style.setProperty("--marquee-elements", marqueeContent.children.length);
+
+    for (let i = 0; i < marqueeElementsDisplayed; i++) {
+      marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
+    }
+  }
+
+  const marqueeSetMobile = () => {
+    const root = document.documentElement;
+    const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
+    const marqueeContent = document.querySelector(".mo ul.marquee-content");
+
+    if (marqueeContent && marqueeContent.children && marqueeContent.children.length) {
+      root.style.setProperty("--marquee-elements", marqueeContent.children.length);
+
+      for (let i = 0; i < marqueeElementsDisplayed; i++) {
+        marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
+      }
+    }
+  }
+
+  if (isLargeScreen) {
+    marqueeSetPc();
+  } else {
+    marqueeSetMobile();
+  }
+});

@@ -1,19 +1,30 @@
-<section class="sub_cont consulting sc">
-    <div class="sub_cont_top" id="">
-        <div class="container_wrap">
+<section class="service_container">
+    <div class="container_wrap">
+        <div class="service_notice_wrap" id="serviceNotice">
             <!-- s: (모바일) 공지사항 -->
             <div class="container mo">
-                <h1>공지사항</h1>
-                <div class="notice_wrap">
-                    <ul class="table_notice_list"></ul>
+                <div class='title_wrap'>
+                    <h2>Notice</h2>
+                    <img src='resources/users/img/main/text/title_arrow.png' alt='텍스트 우측 하단 화살표 이미지' />
+                </div>
+                <div class="notice_wrap cont_right">
+                    <table class="notice_table">
+                        <ul id="table_notice_list"></ul>
+                    </table>
                 </div>
                 <div class="notice_pagination">
-                    <ul>
-                        <li class="prev btn_notice_prev_page"><span>◀</span>이전</li>
-                        <li class="notice_curr_page"></li>
+                    <ul class="pagination_arrow">
+                        <li class="prev btn_notice_prev_page">
+                            <img src="resources/users/img/icon/arrow_left.png">
+                        </li>
+                        <li class="next btn_notice_next_page">
+                            <img src="resources/users/img/icon/arrow_right.png">
+                        </li>
+                    </ul>
+                    <ul class="pagination_number">
+                        <li class="notice_curr_page now_page"></li>
                         <li>/</li>
-                        <li class="notice_total_page"></li>
-                        <li class="next btn_notice_next_page">다음<span>▶</span></li>
+                        <li class="notice_total_page total_page"></li>
                     </ul>
                 </div>
             </div>
@@ -21,136 +32,166 @@
 
             <!-- s: (PC) 공지사항 -->
             <div class="container pc">
-                <div class="row">
-                    <div class="col-4">
+                <div class="servce_notice_inner">
+                    <div class="servce_notice_left">
                         <div class="cont_left">
-                            <h1 class="cont_title">공지사항</h1>
+                            <div class='title_wrap'>
+                                <h2>Notice</h2>
+                                <img src='resources/users/img/main/text/title_arrow.png' alt='텍스트 우측 하단 화살표 이미지' />
+                            </div>
                             <div class="cont_bot">
                                 <div class="notice_pagination">
-                                    <ul>
-                                        <li class="prev btn_notice_prev_page"><span>◀</span>이전</li>
-                                        <li class="notice_curr_page"></li>
+                                    <ul class="pagination_arrow">
+                                        <li class="prev btn_notice_prev_page">
+                                            <img src="resources/users/img/icon/arrow_left.png">
+                                        </li>
+                                        <li class="next btn_notice_next_page">
+                                            <img src="resources/users/img/icon/arrow_right.png">
+                                        </li>
+                                    </ul>
+                                    <ul class="pagination_number">
+                                        <li class="notice_curr_page now_page"></li>
                                         <li>/</li>
-                                        <li class="notice_total_page"></li>
-                                        <li class="next btn_notice_next_page">다음<span>▶</span></li>
+                                        <li class="notice_total_page total_page"></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-8">
-                        <div class="cont_right notice_wrap">
-                            <ul class="table_notice_list"></ul>
-                        </div>
+        
+                    <div class="cont_right notice_wrap">
+                         <ul class="table_notice_list"></ul>
                     </div>
                 </div>
+
                 <!-- e: (PC) 공지사항 -->
             </div>
         </div>
-    </div>
 
-    <div class="sub_cont_body pb-5" id="qna">
-        <!-- s: (모바일)문의하기 -->
-        <section class="container mo">
-            <div class="cont_header">
-                <h1 class="cont_title m-0">문의하기</h1>
-                <button type="button" class="btn_primary btn_qna_add">글쓰기</button>
-            </div>
-            <div class="cont_body">
-                <div class="row">
-                    <div class="col-4">
-                        <div class="input_group type2">
-                            <select name="" id="">
-                                <option value="">제목 + 내용</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-8">
-                        <div class="input_group type2">
-                            <input type="text" class="qna_keyword" placeholder="검색어를 입력해주세요">
-                            <button type="button" class="btn_search btn_get_qna_list"></button>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <table class="request_table">
-                            <colgroup>
-                                <col width="12%" />
-                                <col width="60%" />
-                                <col width="28%" />
-                            </colgroup>
-                            <tbody id="table_qna_list_mo"></tbody>
-                        </table>
-                        <div class="table_pagination">
-                            <ul>
-                                <li class="prev btn_qna_prev_page"><span>◀</span>이전</li>
-                                <li class="qna_curr_page"></li>
-                                <li>/</li>
-                                <li class="qna_total_page"></li>
-                                <li class="next btn_qna_next_page">다음<span>▶</span></li>
-                            </ul>
-                        </div>
+        <div class="qna_contact_wrap" id="serviceQna">
+
+            <!-- s: (모바일)문의하기 -->
+            <div class="container mo">
+                <div class="cont_header">
+                    <div class='title_wrap'>
+                        <h2>Q&A</h2>
+                        <img src='resources/users/img/main/text/title_arrow.png' alt='텍스트 우측 하단 화살표 이미지' />
                     </div>
                 </div>
-            </div>
-        </section>
-        <!-- e: (모바일)문의하기-->
+                <div class="servce_qna_inner_wrapper">
 
-        <!-- s: (PC)문의하기-->
-        <section class="container pc mt-5 ">
-            <div class="row">
-                <div class="col-4">
-                    <div class="cont_left">
-                        <h1 class="cont_title type2">문의하기 <button type="button" class="btn_primary btn_qna_add">글쓰기</button></h1>
-                        <div class="cont_bot">
-                            <div class="sc input_wrap">
-                                <div class="input_group type2">
+                        <div class="input_wrap qna_input_wrapp">
+                            <div class="input_search_service">
+                                <div class="input_group type2 select_input_option">
                                     <select name="" id="">
                                         <option value="">제목 + 내용</option>
                                     </select>
                                 </div>
-                                <div class="input_group type2">
-                                    <input type="text" class="qna_keyword" placeholder="검색어를 입력해주세요">
-                                    <button type="button" class="btn_search btn_get_qna_list"></button>
+                                <div class="input_group type2 input_search_wrap">
+                                    <input type="text" class="qna_keyword" placeholder="">
+                                    <button type="button" class="btn_search btn_get_qna_list btn_search">
+                                        <img src="resources/users/img/icon/i_search.png">
+                                    </button>
                                 </div>
                             </div>
 
+                            <div class="input_write_button">
+                                <button class="qna-btn write-btn">
+                                    <p>글쓰기</p>
+                                    <img src="resources/users/img/icon/arrow_right.png">
+                                </button>
+                            </div>
+
+                        </div>
+                        
+                        <div class="notice_qna_wrapper">
+                            <table class="request_table">
+                                <colgroup>
+                                    <col style="width:10%;">
+                                    <col style="width:60%;">
+                                    <col style="width:16%;">
+                                    <col style="width:15%;">
+                                </colgroup>
+                                 <tbody id="table_qna_list_mo"></tbody>
+                            </table>
                             <div class="notice_pagination">
-                                <ul>
-                                    <li class="prev btn_qna_prev_page"><span>◀</span>이전</li>
+                                <ul class="pagination_arrow">
+                                    <li class="prev btn_qna_prev_page">
+                                        <img src="resources/users/img/icon/arrow_left.png">
+                                    </li>
+                                    <li class="next btn_qna_next_page"><img src="resources/users/img/icon/arrow_right.png"></li>
+                                </ul>
+                                <ul class="pagination_number">
                                     <li class="qna_curr_page"></li>
                                     <li>/</li>
                                     <li class="qna_total_page"></li>
-                                    <li class="next btn_qna_next_page">다음<span>▶</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <!-- e: (모바일)만족도-->
+
+            <!-- s: (PC)만족도-->
+            <div class="container pc">
+                <div class="servce_qna_inner">
+
+                    <div class="cont_left">
+                        <div class="qna_left_content">
+                            <div class='title_wrap'>
+                                <h2>Q&A</h2>
+                                <img src='resources/users/img/main/text/title_arrow.png' alt='텍스트 우측 하단 화살표 이미지' />
+                            </div>
+                            
+                            <div class="input_wrap qna_input_wrapp">
+                                <div class="input_group type2 select_input_option">
+                                    <select name="" id="">
+                                        <option value="">제목 + 내용</option>
+                                    </select>
+                                </div>
+                                <div class="input_group type2 input_search_wrap">
+                                    <input type="text" class="qna_keyword" placeholder="">
+                                    <button  type="button" class="btn_search btn_search btn_get_qna_list">
+                                        <img src="resources/users/img/icon/i_search.png">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cont_bot">
+                            <div class="input_write_button">
+                                <button class="qna-btn write-btn">
+                                    <p>글쓰기</p>
+                                    <img src="resources/users/img/icon/arrow_right.png">
+                                </button>
+                            </div>
+                            <div class="notice_pagination">
+                                <ul class="pagination_arrow">
+                                    <li class="prev btn_qna_prev_page">
+                                        <img src="resources/users/img/icon/arrow_left.png">
+                                    </li>
+                                    <li class="next btn_qna_next_page">
+                                        <img src="resources/users/img/icon/arrow_right.png">
+                                    </li>
+                                </ul>
+                                <ul class="pagination_number">
+                                    <li class="qna_curr_page now_page"></li>
+                                    <li>/</li>
+                                    <li class="qna_total_page"></li>
                                 </ul>
                             </div>
                         </div>
 
                     </div>
-                </div>
-                <div class="col-8">
                     <div class="cont_right">
                         <table class="request_table">
-                            <colgroup>
-                                <col width="10%" />
-                                <col width="60%" />
-                                <col width="15%" />
-                                <col width="15%" />
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th>번호</th>
-                                    <th>제목</th>
-                                    <th>작성자</th>
-                                    <th>작성일</th>
-                                </tr>
-                            </thead>
-                            <tbody id="table_qna_list_pc"></tbody>
+                             <tbody id="table_qna_list_pc"></tbody>
                         </table>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- e: (PC)문의하기-->
+            <!-- e: (PC)만족도-->
+        </div>
     </div>
 </section>
 

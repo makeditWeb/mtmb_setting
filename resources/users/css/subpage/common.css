@@ -1,0 +1,145 @@
+@import url(../animate.css);
+@import url(../swiper.css);
+
+/********************** Business Header Style **********************/
+.sub_wrap .header {
+    background: #fff;
+    padding: 0 50px;
+}
+
+.sub_wrap .header .header_wrap .logo_text {
+    color: #000;
+}
+
+.sub_wrap .header .header_wrap .menu_line {
+    background: #000;
+}
+
+.sub_wrap .header .header_wrap .sub_menu {
+    width: 1200px;
+}
+
+/* 모바일 header style */
+@media (max-width: 992px) {
+    .sub_wrap .header_wrap {
+        height: 75px;
+        border-bottom: none;
+        padding: 0 30px;
+    }
+
+    .sub_wrap .header{padding: 0;}
+    .sub_wrap .menu_wrap{padding: 0;}
+
+    .header>.menu_wrap{
+        padding: 0 30px;
+    }
+    .header_i {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header>.menu_wrap {
+        border-bottom: 1px solid #000;
+    }
+
+    .header>.menu_wrap .active {
+        position: relative;
+    }
+
+    .sub_menu li.active a{border-bottom: none; padding-bottom: 0;}
+
+    .header>.menu_wrap .active::before {
+        position: absolute;
+        content: '';
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -8px;
+        width: 120%;
+        height: 3px;
+        background-color: #000;
+    }
+}
+
+/* footer */
+.footer {
+    position: relative;
+}
+
+/* 우측 고정 리스트 */
+.right-fixed {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    gap: 10px;
+    
+    right: 20px;
+    bottom: 21%;
+
+    z-index: 10;
+}
+
+.right-fixed button {
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+.right-fixed button img {
+    width: 100%;
+}
+
+/* 모바일에서만 노출 */
+@media (max-width: 992px) {
+    .right-fixed {
+        right:24px;
+        bottom: 10%;
+    }
+
+
+}
+
+/* 모바일 right icon */
+@media (max-width: 600px) {
+    .right-fixed {
+        right: 30px
+    }
+
+    .right-fixed button{
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* 모바일 right icon */
+@media (max-width: 500px) {
+    .right-fixed {
+        right: 24px
+    }
+
+    .right-fixed button{
+        width: 34px;
+        height: 34px;
+    }
+}
+
+/* 모바일 right icon */
+@media (max-width: 400px) {
+    .right-fixed {
+        right: 16px
+    }
+
+    .right-fixed button{
+        width: 28px;
+        height: 28px;
+    }
+
+
+}
+
+#footer {
+   bottom: 0px;   
+}
