@@ -68,7 +68,7 @@
 
                         <div class="survey_scroller">
                             <div class='check_container'>
-                                     <?php
+                                <?php
                                 $i = 0;
                                 foreach ($business_list as $blist) {
                                     $category_list[$blist['segment']] = false;
@@ -107,9 +107,7 @@
                     <div class="survey_container_wrapper">
                         <div class='survey_container'>
                             <span class='survey_content_title'>문의 내용</span>
-                            <div class='survey_wrap' id='print_result_step_1'>
-                                <span class='title'>상담신청</span>
-                            </div>
+                            <div class='survey_wrap' id='print_result_step_1'></div>
                         </div>
                     </div>
                 </div>
@@ -215,15 +213,7 @@
                     <div class="survey_container_wrapper">
                         <div class='survey_container'>
                             <span class='survey_content_title'>문의 내용</span>
-                            <div class='survey_wrap' id='print_result_step_1'>
-                                <span class='title'>상담신청</span>
-                            </div>
-
-                            </div>
-                            <div class='survey_wrap' id='print_result_step_2'>
-                                <span class='title'>사업계획서</span>
-                                <span class='content'>~30P<br />긴급(2일이내)</span>
-                            </div>
+                                <div class='survey_wrap' id="print_result_step_2"></div>
                         </div>
                     </div>
                 </div>
@@ -249,7 +239,7 @@
                                 <input type="text" class="form-valid fv_empty" name="company_user_name" value="" maxlength="20" />
                             </div>
                             <div class='input_wrap'>
-                                <label for='company_name'>대표번호</label>
+                                <label for='phone_number'>대표번호</label>
                                 <input type="number" class="form-valid fv_empty fv_numeric use_maxlength" data-maxlength="4" name="company_tel1" value="">
                                 <span>-</span>
                                 <input type="number" class="form-valid fv_empty fv_numeric use_maxlength" data-maxlength="4" name="company_tel2" value="">
@@ -257,15 +247,15 @@
                                 <input type="number" class="form-valid fv_empty fv_numeric use_maxlength" data-maxlength="4" name="company_tel3" value="">
                             </div>
                             <div class='input_wrap'>
-                                <label for='company_name'>휴대전화</label>
-                                <input type="number" class="form-valid fv_empty fv_numeric use_maxlength" data-maxlength="4" name="company_tel1" value="">
+                                <label for='phone_number'>휴대전화</label>
+                                <input type="number" class="form-valid fv_empty fv_numeric use_maxlength" data-maxlength="4" name="company_user_tel1" value="">
                                 <span>-</span>
-                                <input type="number" class="form-valid fv_empty fv_numeric use_maxlength" data-maxlength="4" name="company_tel2" value="">
+                                <input type="number" class="form-valid fv_empty fv_numeric use_maxlength" data-maxlength="4" name="company_user_tel2" value="">
                                 <span>-</span>
-                                <input type="number" class="form-valid fv_empty fv_numeric use_maxlength" data-maxlength="4" name="company_tel3" value="">
+                                <input type="number" class="form-valid fv_empty fv_numeric use_maxlength" data-maxlength="4" name="company_user_tel3" value="">
                             </div>
                             <div class='input_wrap'>
-                                <label for='company_name'>이메일</label>
+                                <label for='company_user_email'>이메일</label>
                                 <input type="email" class="form-valid fv_empty fv_email" name="company_user_email" maxlength="50" value="">
                             </div>
                         </div>
@@ -285,27 +275,10 @@
 
                     </div>
 
-                    <div class="survey_container_wrapper">
-                        <div class='survey_container'>
+                    <div class="survey_container_wrapper result_wrap">
+                        <div class='survey_container step_result'>
                             <span class='survey_content_title'>문의 내용</span>
-                            <div class='survey_wrap'>
-                                <span class='title'>상담신청</span>
-                                <span class='content'>이메일 상담</span>
-                            </div>
-                            <div class='survey_wrap'>
-                                <span class='title'>사업계획서</span>
-                                <span class='content'>~30P<br />긴급(2일이내)</span>
-                            </div>
-                            <div class='survey_wrap'>
-                                <span class='title'>고객정보</span>
-                                <span class='content'>
-                                    엠티엠비코리<br />
-                                    홍길동<br />
-                                    010-1234-1234<br />
-                                    010-1234-1234<br />
-                                    abc@gmail.com<br />
-                                </span>
-                            </div>
+                            <div id="print_result_step_3"></div>
                         </div>
                     </div>
                 </div>
@@ -324,11 +297,11 @@
                         <div class="survey_scroller">
                             <div class='detail_input_wrap'>
                                 <span>세부 내용을 작성하시면 더욱 상세한 견적을 받으실 수 있습니다</span>
-                                <textarea cols="30" rows="5"></textarea>
+                                <textarea cols="30" rows="5" class="form-valid fv_empty" name="request" placeholder="기타 세부사항에 대해 적어주시면 더욱 상세한 견적을 받으실 수 있습니다."></textarea>
                             </div>
 
                             <div class='password_input_wrap'>
-                                <input type='password' placeholder='패스워드를 입력해 주세요' />
+                                <input type="password" class="form-valid fv_empty" name="consulting_pass" value="" placeholder="패스워드를 입력해주세요" />
                             </div>
 
                             <div class='file_input_container'>
@@ -339,7 +312,7 @@
                                     <input type="file" name="consulting_file2" id="consulting_file2" placeholder="파일을 선택해주세요." />
                                 </div>
                                 <div class='file_input_wrap'>
-                                    <input type="password" class="form-valid fv_empty" name="consulting_pass" value="" placeholder="패스워드를 입력해주세요">
+                                    <input type="file" name="consulting_file2" id="consulting_file3" placeholder="파일을 선택해주세요." />
                                 </div>
                             </div>
                         </div>
@@ -362,32 +335,7 @@
                     <div class="survey_container_wrapper">
                         <div class='survey_container'>
                             <span class='survey_content_title'>문의 내용</span>
-                            <div class='survey_wrap'>
-                                <span class='title'>상담신청</span>
-                                <span class='content'>이메일 상담</span>
-                            </div>
-                            <div class='survey_wrap'>
-                                <span class='title'>사업계획서</span>
-                                <span class='content'>~30P<br />긴급(2일이내)</span>
-                            </div>
-                            <div class='survey_wrap'>
-                                <span class='title'>고객정보</span>
-                                <span class='content'>
-                                    엠티엠비코리<br />
-                                    홍길동<br />
-                                    010-1234-1234<br />
-                                    010-1234-1234<br />
-                                    abc@gmail.com<br />
-                                </span>
-                            </div>
-                            <div class='survey_wrap'>
-                                <span class='title'>추가정보</span>
-                                <span class='content'>
-                                    엠티엠비코리아<br />
-                                    홍길동<br />
-                                    010-1234-1234<br />
-                                </span>
-                            </div>
+                            <div id="print_result_step_4"></div>
                         </div>
                     </div>
 
@@ -429,32 +377,7 @@
                     <div class="survey_container_wrapper">
                         <div class='survey_container'>
                             <span class='survey_content_title'>문의 내용</span>
-                            <div class='survey_wrap'>
-                                <span class='title'>상담신청</span>
-                                <span class='content'>이메일 상담</span>
-                            </div>
-                            <div class='survey_wrap'>
-                                <span class='title'>사업계획서</span>
-                                <span class='content'>~30P<br />긴급(2일이내)</span>
-                            </div>
-                            <div class='survey_wrap'>
-                                <span class='title'>고객정보</span>
-                                <span class='content'>
-                                    엠티엠비코리<br />
-                                    홍길동<br />
-                                    010-1234-1234<br />
-                                    010-1234-1234<br />
-                                    abc@gmail.com<br />
-                                </span>
-                            </div>
-                            <div class='survey_wrap'>
-                                <span class='title'>추가정보</span>
-                                <span class='content'>
-                                    엠티엠비코리아<br />
-                                    홍길동<br />
-                                    010-1234-1234<br />
-                                </span>
-                            </div>
+                                <div id="print_result_step_5"></div>
                         </div>
                     </div>
                 </div>
@@ -561,19 +484,17 @@
                 </div>
             </div>
 
-            
             <!-- 파트너사 롤링배너 -->
             <div class="partner_container" id='partnerCompany'>
                 <div class='partner_wrap marquee'>
                     <ul class="marquee-content">
-                        <li class='marquee-item'><img src='resources/users/img/partner/partner_01.png' /></i></li>
-                        <li class='marquee-item'><img src='resources/users/img/partner/partner_02.png' /></li>
-                        <li class='marquee-item'><img src='resources/users/img/partner/partner_03.png' /></i></li>
-                        <li class='marquee-item'><img src='resources/users/img/partner/partner_04.png' /></li>
-                        <li class='marquee-item'><img src='resources/users/img/partner/partner_05.png' /></li>
-                        <li class='marquee-item'><img src='resources/users/img/partner/partner_06.png' /></li>
-                        <li class='marquee-item'><img src='resources/users/img/partner/partner_07.png' /></li>
-                        <li class='marquee-item'><img src='resources/users/img/partner/partner_08.png' /></li>
+                            <?php
+                                foreach ($partbanner_list as $list) {
+                                ?>
+                                    <li class='marquee-item'>
+                                        <img src="<?= $list->img_name ?>" alt="<?= $list->title ?>">
+                                    </li>
+                            <?php } ?>
                     </ul>
                 </div>
             </div>
@@ -614,7 +535,7 @@
     <section class="consulting_container mo">
         <div class='content_wrap'>
             <!-- step 00 -->
-            <div class='consulting_box step_0 active'>
+            <div class='consulting_box step_0 consulting_step_start'>
                 <div class='left_wrap'>
                     <img class='section_text' src='resources/users/img/main/text/consulting.png' alt='consulting' />
                     <ul>
@@ -660,14 +581,14 @@
                     </ul>
                 </div>
 
-                <div class='right_wrap'>
+                <div class='right_wrap btn_consulting_start_step'>
                     <p>견적문의  <img src="resources/users/img/icon/main_i_right.png"> </p>
                     <span>Start</span>
                 </div>
             </div>
 
             <!-- step 01 -->
-            <div class='consulting_box step_box step_01'>
+            <div class='consulting_box step_box step_01 consulting_step d-none'>
                 <div class='left_wrap'>
                     <img class='section_text' src='resources/users/img/main/text/consulting.png' alt='consulting' />
                 </div>
@@ -683,101 +604,19 @@
                         
                         <div class="mo_consult_scroll">
                             <div class='check_container'>
-                                <div class='check_wrap'>
-                                    <input type='checkbox' id='mo_check_01' />
-                                    <label for='mo_check_01'>상담신청</label>
-                                </div>
-                                <div class='check_wrap'>
-                                    <input type='checkbox' id='mo_check_02' />
-                                    <label for='mo_check_02'>사업계획서</label>
-                                </div>
-                                <div class='check_wrap'>
-                                    <input type='checkbox' id='mo_check_03' />
-                                    <label for='mo_check_03'>업무보고서</label>
-                                </div>
-                                <div class='check_wrap'>
-                                    <input type='checkbox' id='mo_check_04' />
-                                    <label for='mo_check_04'>성과보고서</label>
-                                </div>
-                                <div class='check_wrap'>
-                                    <input type='checkbox' id='mo_check_05' />
-                                    <label for='mo_check_05'>IR보고서</label>
-                                </div>
-                                <div class='check_wrap'>
-
-                                    <input type='checkbox' id='mo_check_06' />
-                                    <label for='mo_check_06'>연구보고서</label>
-                                </div>
-                                <div class='check_wrap'>
-
-                                    <input type='checkbox' id='mo_check_07' />
-                                    <label for='mo_check_07'>영업보고서</label>
-                                </div>
-                                <div class='check_wrap'>
-
-                                    <input type='checkbox' id='mo_check_08' />
-                                    <label for='mo_check_08'>입점제안서</label>
-                                </div>
-                                <div class='check_wrap'>
-
-                                    <input type='checkbox' id='mo_check_09' />
-                                    <label for='mo_check_09'>사업제안서</label>
-                                </div>
-                                <div class='check_wrap'>
-
-                                    <input type='checkbox' id='mo_check_10' />
-                                    <label for='mo_check_10'>입찰제안서</label>
-                                </div>
-                                <div class='check_wrap'>
-
-                                    <input type='checkbox' id='mo_check_11' />
-                                    <label for='mo_check_11'>투자제안서</label>
-                                </div>
-                                <div class='check_wrap'>
-
-                                    <input type='checkbox' id='mo_check_12' />
-                                    <label for='mo_check_12'>마케팅제안서</label>
-                                </div>
-                                <div class='check_wrap'>
-
-                                    <input type='checkbox' id='mo_check_13' />
-                                    <label for='mo_check_13'>제휴제안서</label>
-                                </div>
-                                <div class='check_wrap'>
-
-                                    <input type='checkbox' id='mo_check_14' />
-                                    <label for='mo_check_14'>강의자료</label>
-                                </div>
-                                <div class='check_wrap'>
-
-                                    <input type='checkbox' id='mo_check_15' />
-                                    <label for='mo_check_15'>교육자료</label>
-                                </div>
-                                <div class='check_wrap'>
-
-                                    <input type='checkbox' id='mo_check_16' />
-                                    <label for='mo_check_16'>세미나자료</label>
-                                </div>
-                                <div class='check_wrap'>
-
-                                    <input type='checkbox' id='mo_check_17' />
-                                    <label for='mo_check_17'>회사소개서</label>
-                                </div>
-                                <div class='check_wrap'>
-
-                                    <input type='checkbox' id='mo_check_18' />
-                                    <label for='mo_check_18'>제품소개서</label>
-                                </div>
-                                <div class='check_wrap'>
-
-                                    <input type='checkbox' id='mo_check_19' />
-                                    <label for='mo_check_19'>서비스소개서</label>
-                                </div>
-                                <div class='check_wrap'>
-
-                                    <input type='checkbox' id='mo_check_20' />
-                                    <label for='mo_check_20'>기타</label>
-                                </div>
+                                <?php
+                                $i = 0;
+                                foreach ($business_list as $blist) {
+                                    $category_list[$blist['segment']] = false;
+                                ?>
+                                    <div class="check_wrap check_group">
+                                        <input type='checkbox' id="cate_<?= $i ?>_mo" class="consulting_category" data-segment="<?= $blist['segment'] ?>" value="<?= $blist['name'] ?>" />
+                                        <label for="cate_<?= $i ?>_mo"><?= $blist['name'] ?></label>
+                                    </div>
+                                <?php
+                                    $i++;
+                                }
+                                ?>
                             </div>
                         </div>
                         
@@ -787,14 +626,14 @@
                         </span>
 
                         <div class='step_control_container'>
-                            <div class='prev'>
+                            <div class='prev move_step btn_consulting_move_step'  data-step-move="0">
                                 <img src="resources/users/img/icon/arrow_left.png">
                                 <span>이전</span>
                             </div>
 
                             <span><b>1</b> / 5</span>
 
-                            <div class='next'>
+                            <div class='next next move_step btn_consulting_move_step' data-step-move="1">
                                 <span>다음</span>
                                 <img src="resources/users/img/icon/arrow_right.png">
                             </div>
@@ -804,19 +643,14 @@
                     <div class="survey_container_wrapper">
                         <div class='survey_container'>
                             <span class='survey_content_title'>문의 내용</span>
-                            <div class='survey_wrap'>
-                                <span class='title'>상담신청</span>
-                            </div>
-                            <div class='survey_wrap'>
-                                <span class='title'>사업계획서</span>
-                            </div>
+                            <div class='survey_wrap' id='print_result_step_1_mo'></div>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- step 02 -->
-            <div class='consulting_box step_box step_02'>
+            <div class='consulting_box step_box step_02 consulting_step d-none'>
                 <div class='left_wrap'>
                     <img class='section_text' src='resources/users/img/main/text/consulting.png' alt='consulting' />
                 </div>
@@ -830,87 +664,18 @@
                             <span class='survey_title'>세부 사항</span>
                         </div>
 
-                        <div class="mo_consult_scroll">
-                            <div class='form_container'>
-                                <span class='form_title'>상담 신청</span>
-                                <div class='form_wrap'>
-                                    <span class='form_sub_title'>상담유형</span>
-
-                                    <div class='form_checkbox_container'>
-                                        <div class='check_wrap'>
-                                            <input type='checkbox' id='mo_phone_consult_check' />
-                                            <label for='mo_phone_consult_check'>전화상담</label>
-                                        </div>
-                                        <div class='check_wrap'>
-                                            <input type='checkbox' id='mo_email_consult_check' />
-                                            <label for='mo_email_consult_check'>이메일 상담</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class='form_container'>
-                                <span class='form_title'>사업계획서</span>
-
-                                <div class='form_wrap'>
-                                    <span class='form_sub_title'>전체페이지</span>
-
-                                    <div class='form_checkbox_container'>
-                                        <div class='check_wrap'>
-                                            <input type='checkbox' id='mo_page_check_01' />
-                                            <label for='mo_page_check_01'>10~20P</label>
-                                        </div>
-                                        <div class='check_wrap'>
-                                            <input type='checkbox' id='mo_page_check_02' />
-                                            <label for='mo_page_check_02'>~30P</label>
-                                        </div>
-                                        <div class='check_wrap'>
-                                            <input type='checkbox' id='mo_page_check_03' />
-                                            <label for='mo_page_check_03'>~40P</label>
-                                        </div>
-                                        <div class='check_wrap'>
-                                            <input type='checkbox' id='mo_page_check_04' />
-                                            <label for='mo_page_check_04'>40P 이상</label>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class='form_wrap'>
-                                    <span class='form_sub_title'>작업일정</span>
-
-                                    <div class='form_checkbox_container'>
-                                        <div class='check_wrap'>
-                                            <input type='checkbox' id='mo_schedule_check_01' />
-                                            <label for='mo_schedule_check_01'>3~4일</label>
-                                        </div>
-                                        <div class='check_wrap'>
-                                            <input type='checkbox' id='mo_schedule_check_02' />
-                                            <label for='mo_schedule_check_02'>~4~5일</label>
-                                        </div>
-                                        <div class='check_wrap'>
-                                            <input type='checkbox' id='mo_schedule_check_03' />
-                                            <label for='mo_schedule_check_03'>1주일 이상</label>
-                                        </div>
-                                        <div class='check_wrap'>
-                                            <input type='checkbox' id='mo_schedule_check_04' />
-                                            <label for='mo_schedule_check_04'>긴급(2일이내)</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="mo_consult_scroll category_wrap" id="business_questions_mo">
                         </div>
-
-
                         
                         <div class='step_control_container'>
-                            <div class='prev'>
+                            <div class='prev move_step btn_consulting_move_step' data-step-move="0">
                                 <img src="resources/users/img/icon/arrow_left.png">
                                 <span>이전</span>
                             </div>
 
                             <span><b>2</b> / 5</span>
 
-                            <div class='next'>
+                            <div class='next move_step btn_consulting_move_step' data-step-move="2">
                                 <span>다음</span>
                                 <img src="resources/users/img/icon/arrow_right.png">
                             </div>
@@ -921,21 +686,14 @@
                     <div class="survey_container_wrapper">
                         <div class='survey_container'>
                             <span class='survey_content_title'>문의 내용</span>
-                            <div class='survey_wrap'>
-                                <span class='title'>상담신청</span>
-                                <span class='content'>이메일 상담</span>
-                            </div>
-                            <div class='survey_wrap'>
-                                <span class='title'>사업계획서</span>
-                                <span class='content'>~30P<br />긴급(2일이내)</span>
-                            </div>
+                            <div class='survey_wrap' id="print_result_step_2_mo"></div>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- step 03 -->
-            <div class='consulting_box step_box step_03'>
+            <div class='consulting_box step_box step_03 consulting_step d-none'>
                 <div class='left_wrap'>
                     <img class='section_text' src='resources/users/img/main/text/consulting.png' alt='consulting' />
                 </div>
@@ -951,36 +709,41 @@
                         </div>
 
                         <div class="mo_consult_scroll">
-                            <div class='input_wrap'>
+                            <div class='input_wrap first_input_wrap'>
                                 <label for='company_name'>업체명</label>
-                                <input type='text' name='company_name' id='company_name' />
+                                <input type="text" class="form-valid fv_empty" name="company_name" value="" maxlength="20" />
                             </div>
                             <div class='input_wrap'>
-                                <label for='company_name'>담당자</label>
-                                <input type='text' name='name' id='name' />
+                                <label for='company_user_name'>담당자</label>
+                                <input type="text" class="form-valid fv_empty" name="company_user_name" value="" maxlength="20" />
                             </div>
                             <div class='input_wrap'>
-                                <label for='company_name'>대표번호</label>
-                                <input type='text' name='company_phone' id='company_phone' />
+                                <label for='phone_number'>대표번호</label>
+                                <input type="number" class="form-valid fv_empty fv_numeric use_maxlength" data-maxlength="4" name="company_tel1" value="">
+                                <input type="number" class="form-valid fv_empty fv_numeric use_maxlength" data-maxlength="4" name="company_tel2" value="">
+                                <input type="number" class="form-valid fv_empty fv_numeric use_maxlength" data-maxlength="4" name="company_tel3" value="">
                             </div>
                             <div class='input_wrap'>
-                                <label for='company_name'>휴대전화</label>
-                                <input type='text' name='phone' id='phone' />
+                                <label for='phone_number'>휴대전화</label>
+                                <input type="number" class="form-valid fv_empty fv_numeric use_maxlength" data-maxlength="4" name="company_user_tel1" value="">
+                                <input type="number" class="form-valid fv_empty fv_numeric use_maxlength" data-maxlength="4" name="company_user_tel2" value="">
+                                <input type="number" class="form-valid fv_empty fv_numeric use_maxlength" data-maxlength="4" name="company_user_tel3" value="">
                             </div>
                             <div class='input_wrap'>
-                                <label for='company_name'>이메일</label>
-                                <input type='email' name='email' id='email' />
+                                <label for='company_user_email'>이메일</label>
+                                <input type="email" class="form-valid fv_empty fv_email" name="company_user_email" maxlength="50" value="" />
                             </div>
-                            </div>
+                        </div>
+
                         <div class='step_control_container'>
-                            <div class='prev'>
+                            <div class='prev move_step btn_consulting_move_step' data-step-move="1" >
                                 <img src="resources/users/img/icon/arrow_left.png">
                                 <span>이전</span>
                             </div>
 
                             <span><b>3</b> / 5</span>
 
-                            <div class='next'>
+                            <div class='next move_step btn_consulting_move_step' data-step-move="3">
                                 <span>다음</span>
                                 <img src="resources/users/img/icon/arrow_right.png">
                             </div>
@@ -990,31 +753,14 @@
                     <div class="survey_container_wrapper">
                         <div class='survey_container'>
                             <span class='survey_content_title'>문의 내용</span>
-                            <div class='survey_wrap'>
-                                <span class='title'>상담신청</span>
-                                <span class='content'>이메일 상담</span>
-                            </div>
-                            <div class='survey_wrap'>
-                                <span class='title'>사업계획서</span>
-                                <span class='content'>~30P<br />긴급(2일이내)</span>
-                            </div>
-                            <div class='survey_wrap'>
-                                <span class='title'>고객정보</span>
-                                <span class='content'>
-                                    엠티엠비코리<br />
-                                    홍길동<br />
-                                    010-1234-1234<br />
-                                    010-1234-1234<br />
-                                    abc@gmail.com<br />
-                                </span>
-                            </div>
+                            <div id="print_result_step_3_mo"></div>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- step 04 -->
-            <div class='consulting_box step_box step_04'>
+            <div class='consulting_box step_box step_04 consulting_step d-none'>
                 <div class='left_wrap'>
                     <img class='section_text' src='resources/users/img/main/text/consulting.png' alt='consulting' />
                 </div>
@@ -1032,24 +778,23 @@
                             <div class="scroll_inner_left">
                                 <div class='detail_input_wrap'>
                                     <span>세부 내용을 작성하시면 더욱 상세한 견적을 받으실 수 있습니다</span>
-                                    <textarea cols="30" rows="5"></textarea>
+                                    <textarea cols="30" rows="5" name="request" class="form-valid fv_empty" placeholder="기타 세부사항에 대해 적어주시면 더욱 상세한 견적을 받으실 수 있습니다."></textarea>
                                 </div>
 
 
-
                                 <div class='password_input_wrap'>
-                                    <input type='password' placeholder='패스워드를 입력해 주세요' />
+                                    <input type='password' class="form-valid fv_empty" name="consulting_pass" value="" placeholder="패스워드를 입력해주세요"  />
                                 </div>
 
                                 <div class='file_input_container'>
                                     <div class='file_input_wrap'>
-                                        <input type='file' />
+                                        <input type='file' name="consulting_file1_mo" id="consulting_file1_mo" />
                                     </div>
                                     <div class='file_input_wrap'>
-                                        <input type='file' />
+                                        <input type='file' name="consulting_file2_mo" id="consulting_file2_mo" />
                                     </div>
                                     <div class='file_input_wrap'>
-                                        <input type='file' />
+                                        <input type='file' name="consulting_file3_mo" id="consulting_file3_mo" />
                                     </div>
                                 </div>
                             </div>
@@ -1057,14 +802,14 @@
                         </div>
 
                         <div class='step_control_container'>
-                            <div class='prev'>
+                            <div class='prev move_step btn_consulting_move_step' data-step-move="2">
                                 <img src="resources/users/img/icon/arrow_left.png">
                                 <span>이전</span>
                             </div>
 
                             <span><b>4</b> / 5</span>
 
-                            <div class='next'>
+                            <div class='next move_step btn_consulting_move_step' data-step-move="4">
                                 <span>다음</span>
                                 <img src="resources/users/img/icon/arrow_right.png">
                             </div>
@@ -1074,39 +819,14 @@
                     <div class="survey_container_wrapper">
                         <div class='survey_container'>
                             <span class='survey_content_title'>문의 내용</span>
-                            <div class='survey_wrap'>
-                                <span class='title'>상담신청</span>
-                                <span class='content'>이메일 상담</span>
-                            </div>
-                            <div class='survey_wrap'>
-                                <span class='title'>사업계획서</span>
-                                <span class='content'>~30P<br />긴급(2일이내)</span>
-                            </div>
-                            <div class='survey_wrap'>
-                                <span class='title'>고객정보</span>
-                                <span class='content'>
-                                    엠티엠비코리<br />
-                                    홍길동<br />
-                                    010-1234-1234<br />
-                                    010-1234-1234<br />
-                                    abc@gmail.com<br />
-                                </span>
-                            </div>
-                            <div class='survey_wrap'>
-                                <span class='title'>추가정보</span>
-                                <span class='content'>
-                                    엠티엠비코리아<br />
-                                    홍길동<br />
-                                    010-1234-1234<br />
-                                </span>
-                            </div>
+                            <div id="print_result_step_4_mo"></div>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- step 05 -->
-            <div class='consulting_box step_box step_05'>
+            <div class='consulting_box step_box step_05 consulting_step d-none'>
                 <div class='left_wrap'>
                     <img class='section_text' src='resources/users/img/main/text/consulting.png' alt='consulting' />
                 </div>
@@ -1140,32 +860,7 @@
                     <div class='survey_container_wrapper'>
                         <div class='survey_container'>
                             <span class='survey_content_title'>문의 내용</span>
-                            <div class='survey_wrap'>
-                                <span class='title'>상담신청</span>
-                                <span class='content'>이메일 상담</span>
-                            </div>
-                            <div class='survey_wrap'>
-                                <span class='title'>사업계획서</span>
-                                <span class='content'>~30P<br />긴급(2일이내)</span>
-                            </div>
-                            <div class='survey_wrap'>
-                                <span class='title'>고객정보</span>
-                                <span class='content'>
-                                    엠티엠비코리<br />
-                                    홍길동<br />
-                                    010-1234-1234<br />
-                                    010-1234-1234<br />
-                                    abc@gmail.com<br />
-                                </span>
-                            </div>
-                            <div class='survey_wrap'>
-                                <span class='title'>추가정보</span>
-                                <span class='content'>
-                                    엠티엠비코리아<br />
-                                    홍길동<br />
-                                    010-1234-1234<br />
-                                </span>
-                            </div>
+                                <div id="print_result_step_5_mo"></div>
                         </div>
                     </div>
                 </div>
@@ -1207,7 +902,7 @@
                         </div>
 
                         <span>
-                            <b class='consulting_curr_page'>2</b>/<span class='consulting_total_page'></span>
+                            <b class='consulting_curr_page'>2</b> / <span class='consulting_total_page'></span>
                         </span>
                     </div>
 
@@ -1215,17 +910,16 @@
             </div>
 
             <!-- 파트너사 롤링배너 -->
-                <div class="partner_container" id='partnerCompanyMobile'>
+            <div class="partner_container" id='partnerCompanyMobile'>
                 <div class='partner_wrap marquee'>
                     <ul class="marquee-content">
-                        <li class='marquee-item'><img src='resources/users/img/partner/partner_01.png' /></i></li>
-                        <li class='marquee-item'><img src='resources/users/img/partner/partner_02.png' /></li>
-                        <li class='marquee-item'><img src='resources/users/img/partner/partner_03.png' /></i></li>
-                        <li class='marquee-item'><img src='resources/users/img/partner/partner_04.png' /></li>
-                        <li class='marquee-item'><img src='resources/users/img/partner/partner_05.png' /></li>
-                        <li class='marquee-item'><img src='resources/users/img/partner/partner_06.png' /></li>
-                        <li class='marquee-item'><img src='resources/users/img/partner/partner_07.png' /></li>
-                        <li class='marquee-item'><img src='resources/users/img/partner/partner_08.png' /></li>
+                            <?php
+                                foreach ($partbanner_list as $list) {
+                                ?>
+                                    <li class='marquee-item'>
+                                        <img src="<?= $list->img_name ?>" alt="<?= $list->title ?>">
+                                    </li>
+                            <?php } ?>
                     </ul>
                 </div>
             </div>
@@ -1273,15 +967,15 @@
                         </div>
 
                         <span>
-                            <b class='review_curr_page'></b>/<span class='review_total_page'></span>
+                            <b class='review_curr_page'></b> / <span class='review_total_page'></span>
                         </span>
                     </div>
                 </div>
             </div>
 
             <!-- 포트폴리오 영역 -->
-            <div class='portfolio_container' id='portfolioWrapMobile'>
-                <div class='title'>
+            <div class='portfolio_container'>
+                <div class='title'  id='portfolioWrapMobile'>
                     <span>Portfolio</span>
                     <img src='resources/users/img/main/text/title_arrow.png' />
                 </div>
@@ -1293,6 +987,12 @@
                     ?>
                         <li class='portfolio_wrap select_portfolio' data-curridx="<?= $list->idx ?>">
                             <img src="<?= $img ?>" alt="<?= $list->title ?>">
+                            <div class="hover_overlay">
+                                <div class="hover_top">
+                                    <img src='resources/users/img/main/view_detail.png' />
+                                    <span><?= $list->title ?></span>
+                                </div>
+                            </div>
                         </li>
                     <?php } ?>
 
@@ -1328,40 +1028,33 @@
     </div>
 </div>
 
+<!-- s:right_fixed -->
+<div class="right-fixed">
+    <button>
+        <img src='resources/users/img/icon/i_kakao_button.png' />
+    </button>
+    <button onclick="location.href='/'">
+        <img src='resources/users/img/icon/i_home_button.png' />
+    </button>
+    <button onclick="window.history.back()">
+        <img src='resources/users/img/icon/i_back_button.png' />
+    </button>
+    <button onclick="location.href='#pageTop'">
+        <img src='resources/users/img/icon/i_top_button.png' />
+    </button>
+</div>
+<!-- e:right_fixed -->
+
 <!-- s:writingModalL(글쓰기) -->
 <div class="modal fade write-modal" id="modal-review-write" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="writingModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title" id="writingModalLabel">만족도</h1>
+                <h1 class="modal-title" id="writingModalLabel">Review</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="modal_body_area" id="review_form">
-                    <div class="write-modal-title">디자인은 만족하셨나요?</div>
-                    <h6>다른 회원들을 위해 소중한 별점을 남겨주세요.</h6>
-                    <ul class="star">
-                        <li class="on">
-                            <input type="radio" class="score_radio" id="star_radio_1" name="review_score" value="1">
-                            <label class="score_radio_label" for="star_radio_1">★</label>
-                        </li>
-                        <li class="on">
-                            <input type="radio" class="score_radio" id="star_radio_2" name="review_score" value="2">
-                            <label class="score_radio_label" for="star_radio_2">★</label>
-                        </li>
-                        <li class="on">
-                            <input type="radio" class="score_radio" id="star_radio_3" name="review_score" value="3">
-                            <label class="score_radio_label" for="star_radio_3">★</label>
-                        </li>
-                        <li class="on">
-                            <input type="radio" class="score_radio" id="star_radio_4" name="review_score" value="4">
-                            <label class="score_radio_label" for="star_radio_4">★</label>
-                        </li>
-                        <li class="on">
-                            <input type="radio" class="score_radio" id="star_radio_5" name="review_score" value="5" checked>
-                            <label class="score_radio_label" for="star_radio_5">★</label>
-                        </li>
-                    </ul>
                     <div class="input_area">
                         <div class="row">
                             <div class="col-6">
@@ -1390,7 +1083,10 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-skyblue" id="btn_review_save">등록</button>
+                <button type="button" id="btn_review_save">
+                    <span>등록하기</span>
+                    <img src='/resources/users/img/icon/main_i_right.png' alt='후기 글쓰기 팝업 버튼 우측 오른쪽 꺽쇠 아이콘' />
+                </button>
             </div>
         </div>
     </div>
@@ -1402,7 +1098,7 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title" id="reviewModalLabel">만족도</h1>
+                <h1 class="modal-title" id="reviewModalLabel">Review</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -1410,20 +1106,11 @@
                     <h5 id="modal-review-subject"></h5>
                     <ul class="data">
                         <li id="modal-review-regdate"></li>
-                        <li>
-                            <ul class="star" id="modal-review-score">
-                                <li class="on">★</li>
-                                <li>☆</li>
-                                <li>☆</li>
-                                <li>☆</li>
-                                <li>☆</li>
-                            </ul>
-                        </li>
                     </ul>
                 </div>
                 <div class="modal_review_text" id="modal-review-content"></div>
-                <hr />
-                <div class="modal_review_text" id="modal-review-reply"></div>
+                <!-- <hr /> -->
+                <!-- <div class="modal_review_text" id="modal-review-reply"></div> -->
             </div>
             <!-- <div class="modal-footer justify-content-between">
                 <button type="button" class="btn btn-danger" id="btn_review_del">삭제</button>
@@ -1433,12 +1120,12 @@
     </div>
 </div>
 
-<!-- s:게시글 조회 모달 -->
+<!-- s:포트폴리오 조회 모달 -->
 <div class="modal fade write-modal view-modal" id="modal-portfolio-view" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title" id="reviewModalLabel">포트폴리오</h1>
+                <h1 class="modal-title" id="reviewModalLabel">Portfolio</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -1458,6 +1145,8 @@
 <script src="/resources/users/js/examples.js?<?= time() ?>"></script>
 <script src="/resources/users/js/common.js?<?= time() ?>"></script>
 <script src="/resources/users/js/consulting.js?<?= time() ?>"></script>
+<script src="js/sub_common.js"></script>
+
 <script>
     section = "<?= $page_info['section'] ?>";
 
@@ -1497,16 +1186,51 @@
     let fn_step_move_arr;
     let progress_xhr = false;
 
+    const isMobile = window.innerWidth <= 992;
+    console.log({isMobile})
+
     $(function() {
+
+        let selectedIndex = 0;
+
+        // service_wrap 요소들을 선택
+        const serviceWraps = $('.service_wrap');
+
+        // 각 요소에 순차적으로 애니메이션 지연 시간을 적용
+        serviceWraps.each(function (index) {
+            const $item = $(this).find('img');
+            const delay = index * 2; // 각 요소마다 2초 간격으로 지연 시간 설정
+            $item.css('animation-delay', `${delay}s`);
+        });
+        
+        const urlParams = new URLSearchParams(window.location.search);
+        const consultingIndex = parseInt(urlParams.get('consultingIndex'));
+
+        if(consultingIndex) {
+            goToStep('.step_0', '.step_01');
+            if(isMobile) {
+                $(".mo .consulting_step").eq(0).removeClass("d-none");
+                $(".mo .consulting_step_start").addClass("d-none");
+            } else {
+                $(".pc .consulting_step").eq(0).removeClass("d-none");
+                $(".pc .consulting_step_start").addClass("d-none");
+            }
+        }
+
         if (getCookie("show_consulting_first_step") == "1") {
             deleteCookie("show_consulting_first_step");
             $(".consulting_step").eq(0).removeClass("d-none");
             $(".consulting_step_start").addClass("d-none");
         }
 
-        $(".btn_consulting_start_step").on("click", function() {
-            $(".consulting_step").eq(0).removeClass("d-none");
-            $(".consulting_step_start").addClass("d-none");
+        $(".pc .btn_consulting_start_step").on("click", function() {
+            $(".pc .consulting_step").eq(0).removeClass("d-none");
+            $(".pc .consulting_step_start").addClass("d-none");
+        });
+
+        $(".mo .btn_consulting_start_step").on("click", function() {
+            $(".mo .consulting_step").eq(0).removeClass("d-none");
+            $(".mo .consulting_step_start").addClass("d-none");
         });
 
         let fn_step_move_arr = [
@@ -1517,9 +1241,9 @@
             consulting_step_4
         ];
 
-        $(".btn_consulting_move_step").on("click", function() {
+        $(".pc .btn_consulting_move_step").on("click", function() {
             if (progress_xhr) {
-                $modal_alert("MTMbiz Design", "잠시만 기다려 주십시오.", function() {
+                $modal_alert("MTMBPPT", "잠시만 기다려 주십시오.", function() {
                     $modal_hide();
                 });
                 progress_xhr = false;
@@ -1531,12 +1255,33 @@
                 .done(function(result) {
                     progress_xhr = false;
                     if (result) {
-                        $(".consulting_step").eq(step_curr).addClass("d-none");
-                        $(".consulting_step").eq(step_move).removeClass("d-none");
+                        $(".pc .consulting_step").eq(step_curr).addClass("d-none");
+                        $(".pc .consulting_step").eq(step_move).removeClass("d-none");
                         step_curr = step_move;
                     }
                 });
         });
+
+        $(".mo .btn_consulting_move_step").on("click", function() {
+            if (progress_xhr) {
+                $modal_alert("MTMBPPT", "잠시만 기다려 주십시오.", function() {
+                    $modal_hide();
+                });
+                progress_xhr = false;
+                return false;
+            }
+
+            step_move = $(this).data("step-move");
+            $.when(fn_step_move_arr[step_move](step_move))
+                .done(function(result) {
+                    progress_xhr = false;
+                    if (result) {
+                        $(".mo .consulting_step").eq(step_curr).addClass("d-none");
+                        $(".mo .consulting_step").eq(step_move).removeClass("d-none");
+                        step_curr = step_move;
+                    }
+                });
+            });
 
         $(".consulting_category").on("click", function() {
             chk_flag = $(this).is(":checked");
@@ -1545,14 +1290,15 @@
 
             if (chk_flag) {
                 label_tags = $("<span/>", {
-                    class: 'content'
+                    class: 'title'
                 }).text(category_name);
                 div_tags = $("<div/>", {
-                    class: "input_group " + category_segment
+                    class: "input_group survey_wrap " + category_segment
                 }).append(label_tags);
-                $("#print_result_step_1").append(div_tags);
+                
+                $(isMobile ? "#print_result_step_1_mo" :  "#print_result_step_1").append(div_tags);
             } else {
-                $("#print_result_step_1").children("." + category_segment).remove();
+                $(isMobile ? "#print_result_step_1_mo" :  "#print_result_step_1").children("." + category_segment).remove();
             }
         });
 
@@ -1560,13 +1306,15 @@
             this_data = $(this).data();
             p_tags_class = "choose_" + this_data["segment"] + "_" + this_data["questionidx"];
             answer_value = this_data["answer"];
-            question_div = $("#print_result_step_2").children("." + this_data["segment"]);
+            question_div = $(isMobile ? "#print_result_step_2_mo" : "#print_result_step_2").children("." + this_data["segment"]);
 
-            $("#print_result_step_2").find("." + p_tags_class).remove();
+            $(isMobile ? "#print_result_step_2_mo" : "#print_result_step_2").find("." + p_tags_class).remove();
             p_tags = $("<p/>", {
                 class: p_tags_class
             }).html(answer_value);
             question_div.append(p_tags);
+
+            console.log({question_div, p_tags, answer_value})
         });
 
         load_consulting();
@@ -1694,155 +1442,299 @@
     }
 
     const consulting_step_1 = function() {
-        if ($(".consulting_category:checked").length < 1) {
-            $modal_alert("MTMbiz Design", "최소 하나이상의 카테고리를 선택하여 주십시오.", function() {
-                $modal_hide();
-            });
-            return false;
-        }
-        param_category = [];
-        choose_category_list = [];
-        $(".consulting_category:checked").each(function() {
-            choose_category_list.push({
-                'segment': $(this).data('segment'),
-                'text': $(this).val()
-            });
-            param_category.push($(this).data('segment'));
-        });
-
-        par_idv = $("#business_questions").empty();
-
-        $.post('/consulting/questionList', {
-            'category': param_category
-        }, function(data) {
-            var result = JSON.parse(data);
-            if (result.flag) {
-                question_count = 0;
-               $.each(choose_category_list, function(key, val) {
-                    // 각 카테고리 컨테이너 생성
-                    var formContainer = $('<div/>', {
-                        class: 'form_container'
-                    });
-
-                    // 카테고리 제목
-                    $(formContainer).append($('<span/>', {
-                        class: 'form_title'
-                    }).text(val.text));
-
-                    // 질문 리스트 필터링
-                    var question_list = result.data.questions.filter(question => question.segment == val.segment);
-                    var segment = val.segment;
-
-                    $.each(question_list, function(key, val) {
-                        var question_val = val.question;
-                        var question_id = segment + '_' + val.idx;
-                        var input_name = question_id;
-                        question_count++;
-
-                        // 질문 컨테이너 생성
-                        var formWrap = $('<div/>', {
-                            class: 'form_wrap'
-                        });
-
-                        // 질문 제목
-                        $(formWrap).append($('<span/>', {
-                            class: 'form_sub_title'
-                        }).html(question_val));
-
-                        // 답변 리스트 필터링
-                        var answer_list = result.data.answers.filter(answer => answer.question_idx == val.idx);
-
-                        // 답변 컨테이너 생성
-                        var formCheckboxContainer = $('<div/>', {
-                            class: 'form_checkbox_container'
-                        });
-
-                        $.each(answer_list, function(key, val) {
-                            var answer_id = question_id + '_' + val.idx;
-
-                            // 체크박스 그룹 생성
-                            var checkWrap = $('<div/>', {
-                                class: 'check_wrap'
-                            });
-
-                            var radio_tags = $('<input/>', {
-                                class: 'choose_question_answer',
-                                type: 'radio',
-                                data: {
-                                    'segment': segment,
-                                    'questionidx': val.question_idx,
-                                    'question': question_val,
-                                    'answeridx': val.idx,
-                                    'answer': val.answer
-                                },
-                                name: input_name,
-                                id: answer_id
-                            });
-
-                            var frag_label_tags = $('<label/>');
-
-                            var label_tags = $('<label/>', {
-                                for: answer_id
-                            }).html(val.answer);
-
-                            // 체크박스 그룹에 라디오 버튼과 라벨 추가
-                            $(checkWrap).append(radio_tags).append(frag_label_tags).append(label_tags);
-                            // 답변 컨테이너에 체크박스 그룹 추가
-                            $(formCheckboxContainer).append(checkWrap);
-                        });
-
-                        // 질문 컨테이너에 답변 컨테이너 추가
-                        $(formWrap).append(formCheckboxContainer);
-                        // 카테고리 컨테이너에 질문 컨테이너 추가
-                        $(formContainer).append(formWrap);
-                    });
-
-                    // 부모 요소에 카테고리 컨테이너 추가
-                    $(par_idv).append(formContainer);
-                });
-
-            } else {
-                $modal_alert("MTMbiz Design", "카테고리별 질문목록을 불러오지 못했습니다. 문의 바랍니다.", function() {
+        if(!isMobile) {
+            if ($(".consulting_category:checked").length < 1) {
+                $modal_alert("MTMBPPT", "최소 하나이상의 카테고리를 선택하여 주십시오.", function() {
                     $modal_hide();
                 });
+                return false;
             }
-        });
-        prev_result = $("#print_result_step_1").html();
-        $("#print_result_step_2").empty().html(prev_result);
-        return true;
+            param_category = [];
+            choose_category_list = [];
+            $(".consulting_category:checked").each(function() {
+                choose_category_list.push({
+                    'segment': $(this).data('segment'),
+                    'text': $(this).val()
+                });
+                param_category.push($(this).data('segment'));
+            });
+
+            par_idv = $("#business_questions").empty();
+
+            $.post('/consulting/questionList', {
+                'category': param_category
+            }, function(data) {
+                var result = JSON.parse(data);
+                if (result.flag) {
+                    question_count = 0;
+                $.each(choose_category_list, function(key, val) {
+                        // 각 카테고리 컨테이너 생성
+                        var formContainer = $('<div/>', {
+                            class: 'form_container'
+                        });
+
+                        // 카테고리 제목
+                        $(formContainer).append($('<span/>', {
+                            class: 'form_title'
+                        }).text(val.text));
+
+                        // 질문 리스트 필터링
+                        var question_list = result.data.questions.filter(question => question.segment == val.segment);
+                        var segment = val.segment;
+
+                        $.each(question_list, function(key, val) {
+                            var question_val = val.question;
+                            var question_id = segment + '_' + val.idx;
+                            var input_name = question_id;
+                            question_count++;
+
+                            // 질문 컨테이너 생성
+                            var formWrap = $('<div/>', {
+                                class: 'form_wrap'
+                            });
+
+                            // 질문 제목
+                            $(formWrap).append($('<span/>', {
+                                class: 'form_sub_title'
+                            }).html(question_val));
+
+                            // 답변 리스트 필터링
+                            var answer_list = result.data.answers.filter(answer => answer.question_idx == val.idx);
+
+                            // 답변 컨테이너 생성
+                            var formCheckboxContainer = $('<div/>', {
+                                class: 'form_checkbox_container'
+                            });
+
+                            $.each(answer_list, function(key, val) {
+                                var answer_id = question_id + '_' + val.idx;
+
+                                // 체크박스 그룹 생성
+                                var checkWrap = $('<div/>', {
+                                    class: 'check_wrap'
+                                });
+
+                                var radio_tags = $('<input/>', {
+                                    class: 'choose_question_answer',
+                                    type: 'radio',
+                                    data: {
+                                        'segment': segment,
+                                        'questionidx': val.question_idx,
+                                        'question': question_val,
+                                        'answeridx': val.idx,
+                                        'answer': val.answer
+                                    },
+                                    name: input_name,
+                                    id: answer_id
+                                });
+
+                                var frag_label_tags = $('<label/>');
+
+                                var label_tags = $('<label/>', {
+                                    for: answer_id
+                                }).html(val.answer);
+
+                                // 체크박스 그룹에 라디오 버튼과 라벨 추가
+                                $(checkWrap).append(radio_tags).append(frag_label_tags).append(label_tags);
+                                // 답변 컨테이너에 체크박스 그룹 추가
+                                $(formCheckboxContainer).append(checkWrap);
+                            });
+
+                            // 질문 컨테이너에 답변 컨테이너 추가
+                            $(formWrap).append(formCheckboxContainer);
+                            // 카테고리 컨테이너에 질문 컨테이너 추가
+                            $(formContainer).append(formWrap);
+                        });
+
+                        // 부모 요소에 카테고리 컨테이너 추가
+                        $(par_idv).append(formContainer);
+                    });
+
+                } else {
+                    $modal_alert("MTMBPPT", "카테고리별 질문목록을 불러오지 못했습니다. 문의 바랍니다.", function() {
+                        $modal_hide();
+                    });
+                }
+            });
+            prev_result = $("#print_result_step_1").html();
+            $("#print_result_step_2").empty().html(prev_result);
+            return true;
+        } else {
+            if ($(".mo .consulting_category:checked").length < 1) {
+                $modal_alert("MTMBPPT", "최소 하나이상의 카테고리를 선택하여 주십시오.", function() {
+                    $modal_hide();
+                });
+                return false;
+            }
+
+            param_category = [];
+            choose_category_list = [];
+
+            $(".mo .consulting_category:checked").each(function() {
+                choose_category_list.push({
+                    'segment': $(this).data('segment'),
+                    'text': $(this).val()
+                });
+                param_category.push($(this).data('segment'));
+            });
+
+            par_idv = $("#business_questions_mo").empty();
+
+            $.post('/consulting/questionList', {
+                'category': param_category
+            }, function(data) {
+                var result = JSON.parse(data);
+                if (result.flag) {
+                    question_count = 0;
+                    
+                    $.each(choose_category_list, function(key, val) {
+                        // 각 카테고리 컨테이너 생성
+                        var formContainer = $('<div/>', {
+                            class: 'form_container'
+                        });
+
+                        // 카테고리 제목
+                        $(formContainer).append($('<span/>', {
+                            class: 'form_title'
+                        }).text(val.text));
+
+                        // 질문 리스트 필터링
+                        var question_list = result.data.questions.filter(question => question.segment == val.segment);
+                        var segment = val.segment;
+
+                        $.each(question_list, function(key, val) {
+                            var question_val = val.question;
+                            var question_id = segment + '_' + val.idx;
+                            var input_name = question_id;
+                            question_count++;
+
+                            // 질문 컨테이너 생성
+                            var formWrap = $('<div/>', {
+                                class: 'form_wrap'
+                            });
+
+                            // 질문 제목
+                            $(formWrap).append($('<span/>', {
+                                class: 'form_sub_title'
+                            }).html(question_val));
+
+                            // 답변 리스트 필터링
+                            var answer_list = result.data.answers.filter(answer => answer.question_idx == val.idx);
+
+                            // 답변 컨테이너 생성
+                            var formCheckboxContainer = $('<div/>', {
+                                class: 'form_checkbox_container'
+                            });
+
+                            $.each(answer_list, function(key, val) {
+                                var answer_id = question_id + '_' + val.idx;
+
+                                // 체크박스 그룹 생성
+                                var checkWrap = $('<div/>', {
+                                    class: 'check_wrap'
+                                });
+
+                                var radio_tags = $('<input/>', {
+                                    class: 'choose_question_answer',
+                                    type: 'radio',
+                                    data: {
+                                        'segment': segment,
+                                        'questionidx': val.question_idx,
+                                        'question': question_val,
+                                        'answeridx': val.idx,
+                                        'answer': val.answer
+                                    },
+                                    name: input_name,
+                                    id: answer_id
+                                });
+
+                                var frag_label_tags = $('<label/>');
+
+                                var label_tags = $('<label/>', {
+                                    for: answer_id
+                                }).html(val.answer);
+
+                                // 체크박스 그룹에 라디오 버튼과 라벨 추가
+                                $(checkWrap).append(radio_tags).append(frag_label_tags).append(label_tags);
+                                // 답변 컨테이너에 체크박스 그룹 추가
+                                $(formCheckboxContainer).append(checkWrap);
+                            });
+
+                            // 질문 컨테이너에 답변 컨테이너 추가
+                            $(formWrap).append(formCheckboxContainer);
+                            // 카테고리 컨테이너에 질문 컨테이너 추가
+                            $(formContainer).append(formWrap);
+                        });
+
+                        // 부모 요소에 카테고리 컨테이너 추가
+                        $(par_idv).append(formContainer);
+                    });
+
+                } else {
+                    $modal_alert("MTMBPPT", "카테고리별 질문목록을 불러오지 못했습니다. 문의 바랍니다.", function() {
+                        $modal_hide();
+                    });
+                }
+            });
+
+            prev_result = $("#print_result_step_1_mo").html();
+            $("#print_result_step_2_mo").empty().html(prev_result);
+
+            return true;
+        }
     }
 
     const consulting_step_2 = function() {
         answer_count = $(".choose_question_answer:checked").length;
         if (question_count != answer_count) {
-            $modal_alert("MTMbiz Design", "모든 질문에 답변을 선택하여 주십시오.", function() {
+            $modal_alert("MTMBPPT", "모든 질문에 답변을 선택하여 주십시오.", function() {
                 $modal_hide();
             });
             return false;
         }
-        prev_result = $("#print_result_step_2").html();
-        $("#print_result_step_3").empty().html(prev_result);
+        prev_result = $(isMobile ? "#print_result_step_2_mo" : "#print_result_step_2").html();
+        $(isMobile ? "#print_result_step_3_mo" : "#print_result_step_3").empty().html(prev_result);
         return true;
     }
 
     const consulting_step_3 = function() {
         if (!formValidate("#consulting_customer_info1")) return false;
-        prev_result = $("#print_result_step_3").html();
-        $("#print_result_step_4").empty().html(prev_result);
+        prev_result = $(isMobile ? "#print_result_step_3_mo" : "#print_result_step_3").html();
+        $(isMobile ? "#print_result_step_4_mo" : "#print_result_step_4").empty().html(prev_result);
 
-        append_html = $("input[name=company_name]").val() + " / ";
-        append_html += $("input[name=company_user_name]").val() + " / ";
-        append_html += $("input[name=company_user_tel1]").val() + "-" + $("input[name=company_user_tel2]").val() + "-" + $("input[name=company_user_tel3]").val() + " / ";
-        append_html += $("input[name=company_tel1]").val() + "-" + $("input[name=company_tel2]").val() + "-" + $("input[name=company_tel3]").val() + " / ";
-        append_html += $("input[name=company_user_email]").val();
+        const companyNameValue = $(`${isMobile ? '.mo' : '.pc'} input[name=company_name]`).val();
+        const companyUserNameValue = $(`${isMobile ? '.mo' : '.pc'} input[name=company_user_name]`).val();
+        const companyUserTelValue = $(`${isMobile ? '.mo' : '.pc'} input[name=company_user_tel1]`).val();
+        const companyUserEmailValue = $(`${isMobile ? '.mo' : '.pc'} input[name=company_user_email]`).val();
+
+        append_html = $(`${isMobile ? '.mo' : '.pc'} input[name=company_name]`).val() + " / ";
+        append_html += $(`${isMobile ? '.mo' : '.pc'} input[name=company_user_name]`).val() + " / ";
+        append_html += $(`${isMobile ? '.mo' : '.pc'} input[name=company_user_tel1]`).val() + "-" + $(`${isMobile ? '.mo' : '.pc'} input[name=company_user_tel2]`).val() + "-" + $(`${isMobile ? '.mo' : '.pc'} input[name=company_user_tel3]`).val() + " / ";
+        append_html += $(`${isMobile ? '.mo' : '.pc'} input[name=company_tel1]`).val() + "-" + $(`${isMobile ? '.mo' : '.pc'} input[name=company_tel2]`).val() + "-" + $(`${isMobile ? '.mo' : '.pc'} input[name=company_tel3]`).val() + " / ";
+        append_html += $(`${isMobile ? '.mo' : '.pc'} input[name=company_user_email]`).val();
+
+
+        const passwordElement = $(`${isMobile ? '.mo' : '.pc'} input[name=consulting_pass]`);
+        if(
+            (!companyNameValue || companyNameValue.length < 0) ||
+            (!companyUserNameValue || companyUserNameValue.length) < 0 ||
+            (!companyUserTelValue || companyUserTelValue.length < 0) ||
+            (!companyUserEmailValue || companyUserEmailValue.length < 0)) {
+            $modal_alert("MTMBPPT", "모든 항목을 입력해주세요.", function() {
+                $modal_hide();
+            });
+            return false;
+        }
 
         div_tags = $("<div/>", {
-            class: "info_group"
+            class: "info_group survey_wrap"
         });
-        h6_tags = $("<h6/>").text("의뢰자 정보");
+        h6_tags = $("<div/>", {
+            class: 'title'
+        }).text("고객 정보");
         p_tags = $("<p/>").html(append_html);
         div_tags.append(h6_tags).append(p_tags);
-        $("#print_result_step_4").append(div_tags);
+        $(isMobile ? "#print_result_step_4_mo": "#print_result_step_4").append(div_tags);
 
         return true;
     }
@@ -1850,18 +1742,32 @@
     const consulting_step_4 = function() {
         if (!formValidate("#consulting_customer_info2")) return false;
 
-        prev_result = $("#print_result_step_4").html();
-        $("#print_result_step_5").empty().html(prev_result);
+        const passwordValue = $(`${isMobile ? '.mo' : '.pc'} input[name=consulting_pass]`).val();
+        const requestValue = $(`${isMobile ? '.mo' : '.pc'} textarea[name=request]`).val();
+
+        console.log(passwordValue, requestValue)
+        
+        if(!passwordValue || passwordValue.length <= 0 || !requestValue || requestValue.length <= 0) {
+             $modal_alert("MTMBPPT", "비밀번호와 추가요청사항은 필수 입력란입니다.", function() {
+                $modal_hide();
+            });
+            return false;
+        }
+
+        prev_result = $(isMobile ? "#print_result_step_4_mo": "#print_result_step_4").html();
+        $(isMobile ? "#print_result_step_5_mo": "#print_result_step_5").empty().html(prev_result);
 
         append_html = $("textarea[name=request]").val();
 
         div_tags = $("<div/>", {
-            class: "info_group"
+            class: "info_group survey_wrap"
         });
-        h6_tags = $("<h6/>").text("추가 요청사항");
+        h6_tags = $("<h6/>", {
+            class: 'title'
+        }).text("추가 정보");
         p_tags = $("<p/>").html(append_html);
         div_tags.append(h6_tags).append(p_tags);
-        $("#print_result_step_5").append(div_tags);
+        $(isMobile ? "#print_result_step_5_mo": "#print_result_step_5").append(div_tags);
 
         question_values = [];
         $(".choose_question_answer:checked").each(function() {
@@ -1879,20 +1785,25 @@
         // question_values = question_values.slice(1, -1);
 
         var form_data = new FormData();
-        form_data.append("consulting_pass", $("input[name=consulting_pass]").val());
-        form_data.append("name", $("input[name=company_name]").val());
-        form_data.append("tel1", $("input[name=company_tel1]").val());
-        form_data.append("tel2", $("input[name=company_tel2]").val());
-        form_data.append("tel3", $("input[name=company_tel3]").val());
-        form_data.append("employee_name", $("input[name=company_user_name]").val());
-        form_data.append("employee_tel1", $("input[name=company_user_tel1]").val());
-        form_data.append("employee_tel2", $("input[name=company_user_tel2]").val());
-        form_data.append("employee_tel3", $("input[name=company_user_tel3]").val());
-        form_data.append("employee_email", $("input[name=company_user_email]").val());
-        form_data.append("request", $("textarea[name=request]").val());
-        form_data.append("consulting_file1", $("#consulting_file1")[0].files[0]);
-        form_data.append("consulting_file2", $("#consulting_file2")[0].files[0]);
-        form_data.append("consulting_file3", $("#consulting_file3")[0].files[0]);
+        form_data.append("consulting_pass", $(`${isMobile ? '.mo' : '.pc'} input[name=consulting_pass]`).val());
+        form_data.append("name", $(`${isMobile ? '.mo' : '.pc'} input[name=company_name]`).val());
+        form_data.append("tel1", $(`${isMobile ? '.mo' : '.pc'} input[name=company_tel1]`).val());
+        form_data.append("tel2", $(`${isMobile ? '.mo' : '.pc'} input[name=company_tel2]`).val());
+        form_data.append("tel3", $(`${isMobile ? '.mo' : '.pc'} input[name=company_tel3]`).val());
+        form_data.append("employee_name", $(`${isMobile ? '.mo' : '.pc'} input[name=company_user_name]`).val());
+        form_data.append("employee_tel1", $(`${isMobile ? '.mo' : '.pc'} input[name=company_user_tel1]`).val());
+        form_data.append("employee_tel2", $(`${isMobile ? '.mo' : '.pc'} input[name=company_user_tel2]`).val());
+        form_data.append("employee_tel3", $(`${isMobile ? '.mo' : '.pc'} input[name=company_user_tel3]`).val());
+        form_data.append("employee_email", $(`${isMobile ? '.mo' : '.pc'} input[name=company_user_email]`).val());
+        form_data.append("request", $(`${isMobile ? '.mo' : '.pc'} textarea[name=request]`).val());
+        
+        const file1 = $(`#consulting_file1${isMobile ? '_mo' : ''}`)[0];
+        const file2 = $(`#consulting_file2${isMobile ? '_mo' : ''}`)[0];
+        const file3 = $(`#consulting_file3${isMobile ? '_mo' : ''}`)[0];
+        
+        form_data.append("consulting_file1", file1 && file1.files && file1.files.length > 0 ? file1.files[0] : undefined);
+        form_data.append("consulting_file2", file2 && file2.files && file2.files.length > 0 ? file2.files[0] : undefined);
+        form_data.append("consulting_file3", file3 && file3.files && file3.files.length > 0 ? file3.files[0] : undefined);
         form_data.append("question_values", question_values);
 
         $.ajax({
@@ -1900,7 +1811,7 @@
             url: "/consulting/save/",
             beforeSend: function(xhr, opts) {
                 if (!formValidate("#consulting_customer_info1") || !formValidate("#consulting_customer_info2") || question_count != answer_count) {
-                    $modal_alert("MTMbiz Design", "정상적인 입력을 해주십시오.", function() {
+                    $modal_alert("MTMBPPT", "정상적인 입력을 해주십시오.", function() {
                         $modal_hide();
                     });
                     xhr.abort();
@@ -1918,7 +1829,7 @@
                     consulting_keyword = "";
                     load_consulting();
                 } else {
-                    $modal_alert("MTMbiz Design", result.message, function() {
+                    $modal_alert("MTMBPPT", result.message, function() {
                         $modal_hide();
                     });
                 }
@@ -1990,7 +1901,7 @@
                         }
                     });
                 } else {
-                    $modal_alert("MTMbiz Design", result.message, function() {
+                    $modal_alert("MTMBPPT", result.message, function() {
                         $modal_hide();
                         $modal_pasword(function() {
                             view_consulting();
@@ -2043,12 +1954,12 @@
                     review_curr_page = 1;
                     review_keyword = "";
                     load_review();
-                    $modal_alert("MTMbiz Design", result.message, function() {
+                    $modal_alert("MTMBPPT", result.message, function() {
                         load_review();
                         $modal_hide();
                     });
                 } else {
-                    $modal_alert("MTMbiz Design", result.message, function() {
+                    $modal_alert("MTMBPPT", result.message, function() {
                         $modal_hide();
                     });
                 }
@@ -2089,7 +2000,7 @@
                         }
                     });
                 } else {
-                    $modal_alert("MTMbiz Design", result.message, function() {
+                    $modal_alert("MTMBPPT", result.message, function() {
                         $modal_hide();
                         $modal_pasword(function() {
                             set_review_modify();
@@ -2135,12 +2046,12 @@
                 $modal_hide();
                 if (result.flag) {
                     load_review();
-                    $modal_alert("MTMbiz Design", result.message, function() {
+                    $modal_alert("MTMBPPT", result.message, function() {
                         load_review();
                         $modal_hide();
                     });
                 } else {
-                    $modal_alert("MTMbiz Design", result.message, function() {
+                    $modal_alert("MTMBPPT", result.message, function() {
                         $modal_hide();
                         $modal_pasword(function() {
                             del_review();
@@ -2166,7 +2077,7 @@
                     div_tags = $("<div/>", {
                         class: 'col-lg-6 col-sm-12 mb-2 text-center'
                     });
-                    img_tags = $("<resources/users/img/>", {
+                    img_tags = $("<img/>", {
                         class: 'w100per',
                         src: value
                     });

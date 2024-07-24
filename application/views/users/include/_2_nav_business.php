@@ -65,12 +65,16 @@
                         <a href="/consulting">견적문의</a>
                     </li>
                     <li>
-                        <a href="/consulting#portfolioWrap">포트폴리오</a>
+                        <a href="/consulting#portfolioWrapMobile">포트폴리오</a>
                     </li>
                     <li>
-                        <a href="//consulting#partnerCompany">파트너사</a>
+                        <a href="/consulting#partnerCompanyMobile">파트너사</a>
                     </li>
                 </ul>
             </div>
         </header>
         <!-- e:header -->
+
+        <?php $this->load->view('/users/include/_2_nav_offcanvas', $business_list); ?>
+
+        

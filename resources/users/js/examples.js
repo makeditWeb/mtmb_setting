@@ -327,6 +327,27 @@ $(document).ready(function () {
     slides[slides.length - 1].style.borderRight = borderStyle;
   }
 
+
+    function applySlideStylesPCBanner(swiper) {
+      const slides = swiper.slides;
+
+      for (let i = 0; i < slides.length; i++) {
+        const slide = slides[i];
+
+        if (i === swiper.activeIndex + 3) {
+          slide.style.alignItems = 'flex-end'
+        } else {
+          slide.style.alignItems = 'flex-start';
+        }
+      }
+
+    // Ensure that the first slide has a left border and the last slide has a right border
+    // slides[0].style.borderLeft = borderStyle;
+    // slides[slides.length - 1].style.borderRight = borderStyle;
+  }
+
+        // slide.style.justifyContent='flex-end';
+
   const progressBar = $('.swiper-hero-progress');
   const mobileProgressBar = $('.content-divider');
 
@@ -340,7 +361,7 @@ $(document).ready(function () {
     speed: 500,
     loop: true,
     autoplay: {
-      delay: 1000,
+      delay: 3000,
       disableOnInteraction: false,
     },
     effect: 'slide',
@@ -351,12 +372,9 @@ $(document).ready(function () {
     watchSlidesVisibility: true,
     roundLengths: true,
     observer: true,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false
-    },
     on: {
       slideChange: function () {
+        applySlideStylesPCBanner(this);
         const realIndex = this.realIndex;
         const rollingIndex = realIndex >= ROLLING_CONTENT_LENGTH ? realIndex % ROLLING_CONTENT_LENGTH : realIndex
 
@@ -384,6 +402,7 @@ $(document).ready(function () {
     section01Swiper.slideNext();
   });
 
+
   var section01MobileSwiper = new Swiper('.section01_listMobileSwiper', {
     slidesPerView: 4,
     slidePerGroup: 1,
@@ -393,7 +412,7 @@ $(document).ready(function () {
     speed: 500,
     loop: true,
     autoplay: {
-      delay: 1000,
+      delay: 3000,
       disableOnInteraction: false,
     },
     pagination: {
@@ -467,17 +486,19 @@ $(document).ready(function () {
   const isLargeScreen = window.innerWidth > 992;
   const observer = new IntersectionObserver(observerCallback, observerOptions);
   const footerElement = document.querySelectorAll('.footer');
-  observer.observe(footerElement[1]);
+  observer.observe(footerElement[isLargeScreen ? 0 : 1]);
 
   const marqueeSetPc = () => {
     const root = document.documentElement;
     const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
     const marqueeContent = document.querySelector(".pc ul.marquee-content");
 
-    root.style.setProperty("--marquee-elements", marqueeContent.children.length);
-
-    for (let i = 0; i < marqueeElementsDisplayed; i++) {
-      marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
+    if(marqueeContent) {
+      root.style.setProperty("--marquee-elements", marqueeContent.children.length);
+  
+      for (let i = 0; i < marqueeElementsDisplayed; i++) {
+        marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
+      }
     }
   }
 
@@ -501,3 +522,35 @@ $(document).ready(function () {
     marqueeSetMobile();
   }
 });
+
+
+function refreshPage(anchor) {
+    // 페이지를 새로고침하고 해시를 설정합니다.
+    window.location.href = anchor;
+    window.location.reload();
+}
+
+ // 페이지가 로드되었을 때 실행
+  window.onload = function() {
+    const isMobile = window.innerHeight <= 990;
+
+    if(!isMobile) {
+      return null;
+    }
+      // 현재 URL의 해시를 가져옴
+      var hash = window.location.hash;
+      // 해시가 존재하고, 해당 요소가 있는 경우
+      if (hash) {
+          var element = document.querySelector(hash);
+          if (element) {
+              // 오프셋 값을 이용해 위치 계산
+              var offset = -150; // 헤더 높이에 맞춰 이 값을 조정
+              var elementPosition = element.getBoundingClientRect().top + window.pageYOffset + offset;
+              // 조정된 위치로 스크롤
+              window.scrollTo({
+                  top: elementPosition,
+                  behavior: 'smooth' // 선택 사항: 부드러운 스크롤
+              });
+          }
+      }
+  };

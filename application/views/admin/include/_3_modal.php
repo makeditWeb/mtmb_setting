@@ -10,7 +10,7 @@
       <div class="modal-body" id="modal-confirm-content"></div>
       <div class="modal-footer justify-content-between">
         <button type="button" class="btn btn-secondary" id="modal-confirm-cancel">취소</button>
-        <button type="button" class="btn btn-blue" id="modal-confirm-agree">확인</button>
+        <button type="button" id="modal-confirm-agree">확인</button>
       </div>
     </div>
   </div>
@@ -27,7 +27,7 @@
       </div>
       <div class="modal-body" id="modal-alert-content"></div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-blue" id="modal-alert-agree">확인</button>
+        <button type="button" id="modal-alert-agree">확인</button>
       </div>
     </div>
   </div>

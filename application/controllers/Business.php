@@ -85,13 +85,14 @@ class Business extends MTMbiz_Controller
                 'business_list' => $this->business_list,
                 'business_current' => $this->business_list[$business],
                 'reference_list' => $reference_list,
-                'contents_list' => $contents_list
+                'contents_list' => $contents_list,
+                'business' => $business
             ];
 
             $this->load->view('/users/include/_1_head', $data);
             $this->load->view('/users/include/_2_nav_business', $data);
             $this->load->view('/users/business/list/' . $view_page, $data);
-            $this->load->view('/users/business/v_reference', $data);
+            // $this->load->view('/users/business/v_reference', $data);
             $this->load->view('/users/include/_4_footer');
         } catch (exception $e) {
             $this->load->view('/errors/html/error_custom', ['message' => $e->getMessage()]);

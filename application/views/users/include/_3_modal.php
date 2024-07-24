@@ -7,7 +7,7 @@
       </div>
       <div class="modal-body" id="modal-alert-content"></div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-skyblue" id="modal-alert-agree">확인</button>
+        <button type="button" class="btn btn-dark white-font" id="modal-alert-agree">확인</button>
       </div>
     </div>
   </div>

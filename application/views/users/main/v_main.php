@@ -29,8 +29,6 @@
         </header>
         <!-- e:header -->
 
-
-
         <?php
         $business_list_show = array_filter($business_list, function ($item) {
             return $item['use_menu'] === true;
@@ -125,58 +123,58 @@
                     <div class="col-6 mo">
                         <dl>
                             <dd>
-                                <a href="detailpage_businessPlan">사업계획서</a>
+                                <a href="/business/list/businessPlan">사업계획서</a>
                             </dd>
                             <dd>
-                                <a href="detailpage_workReport">업무보고서</a>
+                                <a href="/business/list/workReport">업무보고서</a>
                             </dd>
                             <dd>
-                                <a href="detailpage_performance-report">성과보고서</a>
+                                <a href="/business/list/performanceReport">성과보고서</a>
                             </dd>
                             <dd>
-                                <a href="detailpage_irReport">IR보고서</a>
+                                <a href="/business/list/irReport">IR보고서</a>
                             </dd>
                             <dd>
-                                <a href="detailpage_researchReport">연구보고서</a>
+                                <a href="/business/list/researchReport">연구보고서</a>
                             </dd>
                             <dd>
-                                <a href="detailpage_salesReport">영업보고서</a>
+                                <a href="/business/list/salesReport">영업보고서</a>
                             </dd>
                             <dd>
-                                <a href="detailpage_storeProposal">입점제안서</a>
+                                <a href="/business/list/storeProposal">입점제안서</a>
                             </dd>
                             <dd>
-                                <a href="detailpage_businessProposal">사업제안서</a>
+                                <a href="/business/list/businessProposal">사업제안서</a>
                             </dd>
                             <dd>
-                                <a href="detailpage_biddingProposal">입찰제안서</a>
+                                <a href="/business/list/biddingProposal">입찰제안서</a>
                             </dd>
                             <dd>
-                                <a href="detailpage_investmentProposal">투자제안서</a>
+                                <a href="/business/list/investmentProposal">투자제안서</a>
                             </dd>
                             <dd>
-                                <a href="detailpage_marketingProposal">마케팅제안서</a>
+                                <a href="/business/list/marketingProposal">마케팅제안서</a>
                             </dd>
                             <dd>
-                                <a href="detailpage_partnershipProposal">제휴제안서</a>
+                                <a href="/business/list/partnershipProposal">제휴제안서</a>
                             </dd>
                             <dd>
-                                <a href="detailpage_lectureMaterials">강의자료</a>
+                                <a href="/business/list/lectureMaterials">강의자료</a>
                             </dd>
                             <dd>
-                                <a href="detailpage_education">교육자료</a>
+                                <a href="/business/list/education">교육자료</a>
                             </dd>
                             <dd>
-                                <a href="detailpage_seminarMaterials">세미나자료</a>
+                                <a href="/business/list/seminarMaterials">세미나자료</a>
                             </dd>
                             <dd>
-                                <a href="detailpage_company">회사소개서</a>
+                                <a href="/business/list/company">회사소개서</a>
                             </dd>
                             <dd>
-                                <a href="detailpage_productIntroduction">제품소개서</a>
+                                <a href="/business/list/productIntroduction">제품소개서</a>
                             </dd>
                             <dd>
-                                <a href="detailpage_serviceIntroduction">서비스소개서</a>
+                                <a href="/business/list/serviceIntroduction">서비스소개서</a>
                             </dd>
                         </dl>
                     </div>
@@ -204,52 +202,52 @@
                     <div class='content_01'>
                         <div class='swiper section01_listSwiper'>
                             <div class='swiper-wrapper'>
-                                <a href='business?pptIndex=1' class='swiper-slide content'>
+                                <a href='/business?pptIndex=1' class='swiper-slide content'>
                                     <div class='proposal'>
                                         <span>Proposal<br />document</span>
                                     </div>
                                 </a>
-                                <a href='business?pptIndex=4' class='swiper-slide content'>
+                                <a href='/business?pptIndex=4' class='swiper-slide content'>
                                     <div class='lecture'>
                                         <span>Lecture <br />materials</span>
                                     </div>
                                 </a>
-                                <a href='business?pptIndex=2' class='swiper-slide content'>
+                                <a href='/business?pptIndex=2' class='swiper-slide content'>
                                     <div class='introduction'>
                                         <span>Introduction</span>
                                     </div>
                                 </a>
-                                <a href='business?pptIndex=4' class='swiper-slide content'>
+                                <a href='/business?pptIndex=4' class='swiper-slide content'>
                                     <div class='educational'>
                                         <span>Educational<br />materials</span>
                                     </div>
                                 </a>
-                                <a href='business?pptIndex=3' class='swiper-slide content'>
+                                <a href='/business?pptIndex=3' class='swiper-slide content'>
                                     <div class='business'>
                                         <span>Business report</span>
                                     </div>
                                 </a>
-                                <a href='business?pptIndex=1' class='swiper-slide content'>
+                                <a href='/business?pptIndex=1' class='swiper-slide content'>
                                     <div class='proposal'>
                                         <span>Proposal<br />document</span>
                                     </div>
                                 </a>
-                                <a href='business?pptIndex=4' class='swiper-slide content'>
+                                <a href='/business?pptIndex=4' class='swiper-slide content'>
                                     <div class='lecture'>
                                         <span>Lecture <br />materials</span>
                                     </div>
                                 </a>
-                                <a href='business?pptIndex=2' class='swiper-slide content'>
+                                <a href='/business?pptIndex=2' class='swiper-slide content'>
                                     <div class='introduction'>
                                         <span>Introduction</span>
                                     </div>
                                 </a>
-                                <a href='business?pptIndex=4' class='swiper-slide content'>
+                                <a href='/business?pptIndex=4' class='swiper-slide content'>
                                     <div class='educational'>
                                         <span>Educational<br />materials</span>
                                     </div>
                                 </a>
-                                <a href='business?pptIndex=3' class='swiper-slide content'>
+                                <a href='/business?pptIndex=3' class='swiper-slide content'>
                                     <div class='business'>
                                         <span>Business report</span>
                                     </div>
@@ -262,7 +260,7 @@
                         </div>
 
 
-                        <div class='content-panel active'>
+                        <a href='/business?pptIndex=2' class='content-panel active'>
                             <div class='img-wrap'>
                                 <img src='resources/users/img/main/contentImage/introduction-1.png' />
                             </div>
@@ -273,9 +271,9 @@
                                     <span>Introduction</span>
                                 </div>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class='content-panel'>
+                        <a href='/business?pptIndex=1' class='content-panel'>
                             <div class='img-wrap'>
                                 <img src='resources/users/img/main/contentImage/proposal-report-1.png' />
                             </div>
@@ -286,9 +284,9 @@
                                     <span>Proposal document</span>
                                 </div>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class='content-panel'>
+                        <a href='/business?pptIndex=3' class='content-panel'>
                             <div class='img-wrap'>
                                 <img src='resources/users/img/main/contentImage/business-report-1.png' />
                             </div>
@@ -299,9 +297,9 @@
                                     <span>Business report</span>
                                 </div>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class='content-panel'>
+                        <a href='/business?pptIndex=4' class='content-panel'>
                             <div class='img-wrap'>
                                 <img src='resources/users/img/main/contentImage/education-1.png' />
                             </div>
@@ -312,9 +310,9 @@
                                     <span>Educational meterials</span>
                                 </div>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class='content-panel'>
+                        <a href='/business?pptIndex=4' class='content-panel'>
                             <div class='img-wrap'>
                                 <img src='resources/users/img/main/contentImage/education-2.png' />
                             </div>
@@ -325,9 +323,9 @@
                                     <span>Lecture meterials</span>
                                 </div>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class='content-panel'>
+                        <a href='/business?pptIndex=2' class='content-panel'>
                             <div class='img-wrap'>
                                 <img src='resources/users/img/main/contentImage/introduction-2.png' />
                             </div>
@@ -338,9 +336,9 @@
                                     <span>Introduction</span>
                                 </div>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class='content-panel'>
+                        <a href='/business?pptIndex=1' class='content-panel'>
                             <div class='img-wrap'>
                                 <img src='resources/users/img/main/contentImage/proposal-report-2.png' />
                             </div>
@@ -351,9 +349,9 @@
                                     <span>Proposal document</span>
                                 </div>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class='content-panel'>
+                        <a href='/business?pptIndex=3' class='content-panel'>
                             <div class='img-wrap'>
                                 <img src='resources/users/img/main/contentImage/business-report-2.png' />
                             </div>
@@ -364,9 +362,9 @@
                                     <span>Business report</span>
                                 </div>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class='content-panel'>
+                        <a href='/business?pptIndex=4' class='content-panel'>
                             <div class='img-wrap'>
                                 <img src='resources/users/img/main/contentImage/education-1.png' />
                             </div>
@@ -377,9 +375,9 @@
                                     <span>Educational meterials</span>
                                 </div>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class='content-panel'>
+                        <a href='/business?pptIndex=4' class='content-panel'>
                             <div class='img-wrap'>
                                 <img src='resources/users/img/main/contentImage/education-2.png' />
                             </div>
@@ -390,7 +388,7 @@
                                     <span>Lecture meterials</span>
                                 </div>
                             </div>
-                        </div>
+                        </a>
 
                         <div class="scroll-controller">
                             <div class="arrow_wrap">
@@ -483,30 +481,14 @@
                         </div>
                         <div class='made_it_list swiper weMadeItSwiper'>
                             <div class='swiper-wrapper'>
-                                <div class='swiper-slide'>
-                                    <img src='resources/users/img/main/made_it_01.png' />
-                                </div>
-                                <div class='swiper-slide'>
-                                    <img src='resources/users/img/main/made_it_02.png' />
-                                </div>
-                                <div class='swiper-slide'>
-                                    <img src='resources/users/img/main/made_it_03.png' />
-                                </div>
-                                <div class='swiper-slide'>
-                                    <img src='resources/users/img/main/made_it_04.png' />
-                                </div>
-                                <div class='swiper-slide'>
-                                    <img src='resources/users/img/main/made_it_01.png' />
-                                </div>
-                                <div class='swiper-slide'>
-                                    <img src='resources/users/img/main/made_it_02.png' />
-                                </div>
-                                <div class='swiper-slide'>
-                                    <img src='resources/users/img/main/made_it_03.png' />
-                                </div>
-                                <div class='swiper-slide'>
-                                    <img src='resources/users/img/main/made_it_04.png' />
-                                </div>
+                                   <?php
+                                            foreach ($portfolio_list as $list) {
+                                                $img = json_decode($list->img_name)[0];
+                                            ?>
+                                                <div class="swiper-slide">
+                                                    <img src="<?= $img ?>" alt="<?= $list->title ?>">
+                                                </div>
+                                    <?php } ?>
                             </div>
                         </div>
                     </div>
@@ -522,13 +504,11 @@
                         </div>
 
                         <div class='service_list'>
-                                <?php
+                                 <?php
                                 $index = 1; // 인덱스 초기값 설정
                                 foreach ($business_list_show as $list) {
-                                    // 두 자리 숫자로 포맷팅
                                     $formattedIndex = sprintf("%02d", $index);
                                 ?>
-                                    <!-- 보고서 -->
                                     <a href="/business/list/<?= $list['segment'] ?>/" class='service_wrap'>
                                         <img src='resources/users/img/main/services/service_<?= $formattedIndex ?>.png'   />
                                         <div class='service_text'>
@@ -538,21 +518,20 @@
                                     </a>
                                 <?php
                                     $index++; 
-                                }
-                                ?>
+                                } 
+                                ?> 
                         </div>
                     </div>
 
                     <div class="partner_container marquee">
                         <ul class="partner_wrap marquee-content">
-                            <li class='marquee-item'><img src='resources/users/img/partner/partner_01.png' /></li>
-                            <li class='marquee-item'><img src='resources/users/img/partner/partner_02.png' /></li>
-                            <li class='marquee-item'><img src='resources/users/img/partner/partner_03.png' /></li>
-                            <li class='marquee-item'><img src='resources/users/img/partner/partner_04.png' /></li>
-                            <li class='marquee-item'><img src='resources/users/img/partner/partner_05.png' /></li>
-                            <li class='marquee-item'><img src='resources/users/img/partner/partner_06.png' /></li>
-                            <li class='marquee-item'><img src='resources/users/img/partner/partner_07.png' /></li>
-                            <li class='marquee-item'><img src='resources/users/img/partner/partner_08.png' /></li>
+                            <?php
+                                foreach ($partbanner_list as $list) {
+                                ?>
+                                    <li class='marquee-item'>
+                                        <img src="<?= $list->img_name ?>" alt="<?= $list->title ?>">
+                                    </li>
+                            <?php } ?>
                         </ul>
                     </div>
 
@@ -570,14 +549,14 @@
                             </a>
                         </div>
                         <ul class='review_list'>
-                        <?php
-                        foreach ($review_list as $list) {
-                        ?>
-                            <li class='review_box'>
-                                <span class='review_title' data-idx="<?= $list->idx ?>"><?= $list->subject ?></span>
-                                <span class='review_author'><?= $list->name ?></span>
-                            </li>
-                        <?php } ?>
+                            <?php
+                            foreach ($review_list as $list) {
+                            ?>
+                                <li class='review_box cursor_hand get_review_info' data-idx="<?= $list->idx ?>">
+                                    <span class='review_title cursor_hand get_review_info' data-idx="<?= $list->idx ?>"><?= $list->subject ?></span>
+                                    <span class='review_author'><?= $list->name ?></span>
+                                </li>
+                            <?php } ?>
                         </ul>
                     </div>
                 </div>
@@ -617,7 +596,6 @@
                             </div>
                         </a>
                     </div>
-                    <img src='resources/users/img/main/content_04.png' />
                 </div>
             </div>
 
@@ -628,30 +606,22 @@
                             <img src='resources/users/img/main/content_05.png' />
                             <div class='introduction_list swiper introducationSwiper'>
                                 <div class=' swiper-wrapper'>
-                                    <div class='swiper-slide'>
-                                        <img src='resources/users/img/main/introduce_01.png' />
-                                    </div>
-                                    <div class='swiper-slide'>
-                                        <img src='resources/users/img/main/introduce_02.png' />
-                                    </div>
-                                    <div class='swiper-slide'>
-                                        <img src='resources/users/img/main/introduce_03.png' />
-                                    </div>
-                                    <div class='swiper-slide'>
-                                        <img src='resources/users/img/main/introduce_04.png' />
-                                    </div>
-                                    <div class='swiper-slide'>
-                                        <img src='resources/users/img/main/introduce_01.png' />
-                                    </div>
-                                    <div class='swiper-slide'>
-                                        <img src='resources/users/img/main/introduce_02.png' />
-                                    </div>
-                                    <div class='swiper-slide'>
-                                        <img src='resources/users/img/main/introduce_03.png' />
-                                    </div>
-                                    <div class='swiper-slide'>
-                                        <img src='resources/users/img/main/introduce_04.png' />
-                                    </div>
+                                    <?php
+                                            foreach ($refrence_list as $list) {
+                                                $img = json_decode($list->img_name)[0];
+                                            ?>
+                                                <div class="swiper-slide">
+                                                    <img src="<?= $img ?>" alt="<?= $list->title ?>">
+                                                </div>
+                                    <?php } ?>
+                                    <?php
+                                            foreach ($refrence_list as $list) {
+                                                $img = json_decode($list->img_name)[0];
+                                            ?>
+                                                <div class="swiper-slide">
+                                                    <img src="<?= $img ?>" alt="<?= $list->title ?>">
+                                                </div>
+                                    <?php } ?>
                                 </div>
                             </div>
                         </div>
@@ -791,21 +761,13 @@
                             </div>
 
                             <ul class='notice_list'>
-                                <li class='notice_box'>
-                                    <span class='notice_title'>웹사이트 디자인 서비스가 새롭게 개편되었습니다</span>
-                                </li>
-                                <li class='notice_box'>
-                                    <span class='notice_title'>[패키지상품] 현수막, 실사출력물, 배너 제작 이벤트</span>
-                                </li>
-                                <li class='notice_box'>
-                                    <span class='notice_title'>디자인구독 서비스로 기업의 부담은 낮추고 퀄리티 있는 제작물을..</span>
-                                </li>
-                                <li class='notice_box'>
-                                    <span class='notice_title'>[엑스배너] 신규 탬플릿이 추가 되었습니다.</span>
-                                </li>
-                                <li class='notice_box'>
-                                    <span class='notice_title'>MTMBPPT 홈페이지 OPEN</span>
-                                </li>
+                                <?php
+                                    foreach ($notice_list as $list) {
+                                    ?>
+                                        <li class='notice_box cursor_hand get_notice_info' data-idx="<?= $list->idx ?>">
+                                            <span class='notice_title'><?= $list->title ?></span>
+                                        </li>
+                                <?php } ?>
                             </ul>
                             <a href='/customer' class='view_all_wrap_link'>
                                 <div class='view_all_wrap'>
@@ -823,17 +785,17 @@
                             <img src='resources/users/img/main/text/title_arrow.png' />
                         </div>
 
-                        <ul class='portfolio_list'>
+                        <ul class='portfolio_list' id='portfolioList'>
                             <?php
                             foreach ($portfolio_list as $list) {
-                                $img = json_decode($list->img_name)[0];
+                                // $img = json_decode($list->img_name)[0];
+                                $img = htmlspecialchars(json_decode($list->img_name)[0], ENT_QUOTES, 'UTF-8');
                                 $currIdx = htmlspecialchars($list->idx, ENT_QUOTES, 'UTF-8');
-                                $imgSrc = htmlspecialchars($img, ENT_QUOTES, 'UTF-8');
                                 $title = htmlspecialchars($list->title, ENT_QUOTES, 'UTF-8');
                                 ?>
-                                <li class="portfolio_wrap" data-curridx="<?= $currIdx ?>">
+                                <li class="portfolio_wrap select_portfolio" data-curridx="<?= $currIdx ?>" style="width: 300px; height: 300px;">
                                     <div class="portfolio_img_inner">
-                                            <img src="<?= $imgSrc ?>" alt="<?= $title ?>">
+                                        <img src="<?= $img ?>" alt="<?= $title ?>" loading="lazy" >
                                     </div>
                                     <div class="hover_overlay">
                                         <div class="hover_top">
@@ -846,33 +808,9 @@
                             }
                             ?>
                         </ul>
-                        <div id="sentinelPC"></div>
                     </div>
                 </div>
             </div>
-
-            <footer class="footer fp-auto-height pc" id='footer'>
-                <div class="ft_wrap">
-                    <div class="row">
-                        <div class="col-2">
-                            <p><b>(주)엠티엠비코리아</b></p>
-                        </div>
-                        <div class="col-4">
-                            <p>대표 : 정세종</p>
-                            <p>서울특별시 강서구 양천로 424 데시앙플렉스 지식산업센터 1231호<br>
-                                Tel : 02-374-0336 Fax : 02-374-0335 E-mail : mtmb@mtmbkorea.com</p>
-                            <button>
-                                <a href='#'>관리자</a>
-                            </button>
-                        </div>
-                        <div class="col-4">
-                            <p>사업자번호 : 130-87-09598 <span>통신판매업신고증 : 제 2021-서울마포-1684호</span><br />
-                                개인정보보호책임자 : 진동호</p>
-                            <p class='copyright'>COPYRIGHT (c) 2021 MTMBKOREA Co., Ltd. ALL RIGHTS RESERVED.</p>
-                        </div>
-                    </div>
-                </div>
-            </footer>
         </div>
         <!-- e:fullpage -->
 
@@ -940,36 +878,36 @@
                     <div class='content_01'>
                         <div class='swiper section01_listMobileSwiper'>
                             <div class='swiper-wrapper'>
-                                <div class='content proposal swiper-slide'>
+                                <a href='/business?pptIndex=1' class='content proposal swiper-slide'>
                                     <span>Proposal<br />document</span>
-                                </div>
-                                <div class='content lecture swiper-slide'>
+                                </a>
+                                <a href='/business?pptIndex=4' class='content lecture swiper-slide'>
                                     <span>Lecture <br />materials</span>
-                                </div>
-                                <div class='content introduction swiper-slide'>
+                                </a>
+                                <a href='/business?pptIndex=2' class='content introduction swiper-slide'>
                                     <span>Introduction</span>
-                                </div>
-                                <div class='content educational swiper-slide'>
+                                </a>
+                                <a href='/business?pptIndex=4' class='content educational swiper-slide'>
                                     <span>Educational<br />materials</span>
-                                </div>
-                                <div class='content business swiper-slide'>
+                                </a>
+                                <a href='/business?pptIndex=3' class='content business swiper-slide'>
                                     <span>Business report</span>
-                                </div>
-                                <div class='content proposal swiper-slide'>
+                                </a>
+                                <a href='/business?pptIndex=1'  class='content proposal swiper-slide'>
                                     <span>Proposal<br />document</span>
-                                </div>
-                                <div class='content lecture swiper-slide'>
+                                </a>
+                                <a href='/business?pptIndex=4' class='content lecture swiper-slide'>
                                     <span>Lecture <br />materials</span>
-                                </div>
-                                <div class='content introduction swiper-slide'>
+                                </a>
+                                <a href='/business?pptIndex=2' class='content introduction swiper-slide'>
                                     <span>Introduction</span>
-                                </div>
-                                <div class='content educational swiper-slide'>
+                                </a>
+                                <a href='/business?pptIndex=4' class='content educational swiper-slide'>
                                     <span>Educational<br />materials</span>
-                                </div>
-                                <div class='content business swiper-slide'>
+                                </a>
+                                <a href='/business?pptIndex=3' class='content business swiper-slide'>
                                     <span>Business report</span>
-                                </div>
+                                </a>
                             </div>
                         </div>
 
@@ -979,7 +917,8 @@
                                 stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M15 6l-6 6 6 6" />
                             </svg>
-                            <div class='content-panel active'>
+                            
+                            <a href='/business?pptIndex=2' class='content-panel active'>
                                 <div class='img-wrap'>
                                     <img src='resources/users/img/main/contentImage/introduction-1.png' />
                                 </div>
@@ -990,8 +929,9 @@
                                     </div>
                                     <span>Introduction</span>
                                 </div>
-                            </div>
-                            <div class='content-panel'>
+                            </a>
+                            
+                            <a href='/business?pptIndex=1' class='content-panel'>
                                 <div class='img-wrap'>
                                     <img src='resources/users/img/main/contentImage/proposal-report-1.png' />
                                 </div>
@@ -1002,8 +942,9 @@
                                     </div>
                                     <span>Proposal document</span>
                                 </div>
-                            </div>
-                            <div class='content-panel'>
+                            </a>
+                            
+                            <a href='/business?pptIndex=3' class='content-panel'>
                                 <div class='img-wrap'>
                                     <img src='resources/users/img/main/contentImage/business-report-1.png' />
                                 </div>
@@ -1014,8 +955,9 @@
                                     </div>
                                     <span>Business report</span>
                                 </div>
-                            </div>
-                            <div class='content-panel'>
+                            </a>
+                            
+                            <a href='/business?pptIndex=4' class='content-panel'>
                                 <div class='img-wrap'>
                                     <img src='resources/users/img/main/contentImage/education-1.png' />
                                 </div>
@@ -1026,8 +968,9 @@
                                     </div>
                                     <span>Educational meterials</span>
                                 </div>
-                            </div>
-                            <div class='content-panel'>
+                            </a>
+                            
+                            <a href='/business?pptIndex=4' class='content-panel'>
                                 <div class='img-wrap'>
                                     <img src='resources/users/img/main/contentImage/education-2.png' />
                                 </div>
@@ -1038,8 +981,9 @@
                                     </div>
                                     <span>Lecture meterials</span>
                                 </div>
-                            </div>
-                            <div class='content-panel'>
+                            </a>
+                            
+                            <a href='/business?pptIndex=2' class='content-panel'>
                                 <div class='img-wrap'>
                                     <img src='resources/users/img/main/contentImage/introduction-2.png' />
                                 </div>
@@ -1050,8 +994,9 @@
                                     </div>
                                     <span>Introduction</span>
                                 </div>
-                            </div>
-                            <div class='content-panel'>
+                            </a>
+
+                            <a href='/business?pptIndex=1' class='content-panel'>
                                 <div class='img-wrap'>
                                     <img src='resources/users/img/main/contentImage/proposal-report-2.png' />
                                 </div>
@@ -1062,8 +1007,9 @@
                                     </div>
                                     <span>Proposal document</span>
                                 </div>
-                            </div>
-                            <div class='content-panel'>
+                            </a>
+
+                            <a href='/business?pptIndex=3' class='content-panel'>
                                 <div class='img-wrap'>
                                     <img src='resources/users/img/main/contentImage/business-report-2.png' />
                                 </div>
@@ -1074,8 +1020,9 @@
                                     </div>
                                     <span>Business report</span>
                                 </div>
-                            </div>
-                            <div class='content-panel'>
+                            </a>
+
+                            <a href='/business?pptIndex=4' class='content-panel'>
                                 <div class='img-wrap'>
                                     <img src='resources/users/img/main/contentImage/education-1.png' />
                                 </div>
@@ -1086,8 +1033,9 @@
                                     </div>
                                     <span>Educational meterials</span>
                                 </div>
-                            </div>
-                            <div class='content-panel'>
+                            </a>
+
+                            <a href='/business?pptIndex=4' class='content-panel'>
                                 <div class='img-wrap'>
                                     <img src='resources/users/img/main/contentImage/education-2.png' />
                                 </div>
@@ -1098,7 +1046,8 @@
                                     </div>
                                     <span>Lecture meterials</span>
                                 </div>
-                            </div>
+                            </a>
+
                             <svg id="section_01_list_swiper_right" width="24" height="24" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2"
                                 stroke-linecap="round" stroke-linejoin="round">
@@ -1182,30 +1131,14 @@
                     </div>
                     <div class='made_it_list swiper weMadeItSwiper'>
                         <div class='swiper-wrapper'>
-                            <div class='swiper-slide'>
-                                <img src='resources/users/img/main/made_it_01.png' />
-                            </div>
-                            <div class='swiper-slide'>
-                                <img src='resources/users/img/main/made_it_02.png' />
-                            </div>
-                            <div class='swiper-slide'>
-                                <img src='resources/users/img/main/made_it_03.png' />
-                            </div>
-                            <div class='swiper-slide'>
-                                <img src='resources/users/img/main/made_it_04.png' />
-                            </div>
-                            <div class='swiper-slide'>
-                                <img src='resources/users/img/main/made_it_01.png' />
-                            </div>
-                            <div class='swiper-slide'>
-                                <img src='resources/users/img/main/made_it_02.png' />
-                            </div>
-                            <div class='swiper-slide'>
-                                <img src='resources/users/img/main/made_it_03.png' />
-                            </div>
-                            <div class='swiper-slide'>
-                                <img src='resources/users/img/main/made_it_04.png' />
-                            </div>
+                                    <?php
+                                            foreach ($portfolio_list as $list) {
+                                                $img = json_decode($list->img_name)[0];
+                                            ?>
+                                                <div class="swiper-slide">
+                                                    <img src="<?= $img ?>" alt="<?= $list->title ?>">
+                                                </div>
+                                    <?php } ?>
                         </div>
                     </div>
                 </div>
@@ -1222,37 +1155,37 @@
 
                 <div class='service_list'>
                     <!-- 보고서 -->
-                    <a href="detailpage_businessPlan" class='service_wrap'>
+                    <a href="/business/list/businessPlan" class='service_wrap'>
                         <img src='resources/users/img/main/services/service_01.png' />
                         <div class='service_text'>
                             <span>사업계획서</span>
                         </div>
                     </a>
-                    <a href="detailpage_workReport" class='service_wrap'>
+                    <a href="/business/list/workReport" class='service_wrap'>
                         <img src='resources/users/img/main/services/service_02.png' />
                         <div class='service_text'>
                             <span>업무보고서</span>
                         </div>
                     </a>
-                    <a href="detailpage_performance-report" class='service_wrap'>
+                    <a href="/business/list/performanceReport" class='service_wrap'>
                         <img src='resources/users/img/main/services/service_03.png' />
                         <div class='service_text'>
                             <span>성과보고서</span>
                         </div>
                     </a>
-                    <a href="detailpage_irReport" class='service_wrap'>
+                    <a href="/business/list/irReport" class='service_wrap'>
                         <img src='resources/users/img/main/services/service_04.png' />
                         <div class='service_text'>
                             <span>IR보고서</span>
                         </div>
                     </a>
-                    <a href="detailpage_researchReport" class='service_wrap'>
+                    <a href="/business/list/researchReport" class='service_wrap'>
                         <img src='resources/users/img/main/services/service_05.png' />
                         <div class='service_text'>
                             <span>연구보고서</span>
                         </div>
                     </a>
-                    <a href="detailpage_salesReport" class='service_wrap'>
+                    <a href="/business/list/salesReport" class='service_wrap'>
                         <img src='resources/users/img/main/services/service_06.png' />
                         <div class='service_text'>
                             <span>영업보고서</span>
@@ -1260,37 +1193,37 @@
                     </a>
 
                     <!-- 제안서 -->
-                    <a href="detailpage_storeProposal" class='service_wrap'>
+                    <a href="/business/list/storeProposal" class='service_wrap'>
                         <img src='resources/users/img/main/services/service_07.png' />
                         <div class='service_text'>
                             <span>입점제안서</span>
                         </div>
                     </a>
-                    <a href="detailpage_businessProposal" class='service_wrap'>
+                    <a href="/business/list/businessProposal" class='service_wrap'>
                         <img src='resources/users/img/main/services/service_08.png' />
                         <div class='service_text'>
                             <span>사업제안서</span>
                         </div>
                     </a>
-                    <a href="detailpage_biddingProposal" class='service_wrap'>
+                    <a href="/business/list/biddingProposal" class='service_wrap'>
                         <img src='resources/users/img/main/services/service_09.png' />
                         <div class='service_text'>
                             <span>입찰제안서</span>
                         </div>
                     </a>
-                    <a href="detailpage_investmentProposal" class='service_wrap'>
+                    <a href="/business/list/investmentProposal" class='service_wrap'>
                         <img src='resources/users/img/main/services/service_10.png' />
                         <div class='service_text'>
                             <span>투자제안서</span>
                         </div>
                     </a>
-                    <a href="detailpage_marketingProposal" class='service_wrap'>
+                    <a href="/business/list/marketingProposal" class='service_wrap'>
                         <img src='resources/users/img/main/services/service_11.png' />
                         <div class='service_text'>
                             <span>마케팅제안서</span>
                         </div>
                     </a>
-                    <a href="detailpage_partnershipProposal" class='service_wrap'>
+                    <a href="/business/list/partnershipProposal" class='service_wrap'>
                         <img src='resources/users/img/main/services/service_12.png' />
                         <div class='service_text'>
                             <span>제휴제안서</span>
@@ -1298,37 +1231,37 @@
                     </a>
 
                     <!-- 소개서 및 자료 -->
-                    <a href="detailpage_lectureMaterials" class='service_wrap'>
+                    <a href="/business/list/lectureMaterials" class='service_wrap'>
                         <img src='resources/users/img/main/services/service_13.png' />
                         <div class='service_text'>
                             <span>강의자료</span>
                         </div>
                     </a>
-                    <a href="detailpage_education" class='service_wrap'>
+                    <a href="/business/list/education" class='service_wrap'>
                         <img src='resources/users/img/main/services/service_14.png' />
                         <div class='service_text'>
                             <span>교육자료</span>
                         </div>
                     </a>
-                    <a href="detailpage_seminarMaterials" class='service_wrap'>
+                    <a href="/business/list/seminarMaterials" class='service_wrap'>
                         <img src='resources/users/img/main/services/service_15.png' />
                         <div class='service_text'>
                             <span>세미나자료</span>
                         </div>
                     </a>
-                    <a href="detailpage_company" class='service_wrap'>
+                    <a href="/business/list/company" class='service_wrap'>
                         <img src='resources/users/img/main/services/service_16.png' />
                         <div class='service_text'>
                             <span>회사소개서</span>
                         </div>
                     </a>
-                    <a href="detailpage_productIntroduction" class='service_wrap'>
+                    <a href="/business/list/productIntroduction" class='service_wrap'>
                         <img src='resources/users/img/main/services/service_17.png' />
                         <div class='service_text'>
                             <span>제품소개서</span>
                         </div>
                     </a>
-                    <a href="detailpage_serviceIntroduction" class='service_wrap'>
+                    <a href="/business/list/serviceIntroduction" class='service_wrap'>
                         <img src='resources/users/img/main/services/service_18.png' />
                         <div class='service_text'>
                             <span>서비스소개서</span>
@@ -1350,34 +1283,26 @@
                         </a>
                     </div>
                     <ul class='review_list'>
-                        <li class='review_box'>
-                            <span class='review_title'>친절한 상담 너무 감사드려요~</span>
-                        </li>
-                        <li class='review_box'>
-                            <span class='review_title'>미니 배너 너무 잘 사용하고 있습니다</span>
-                        </li>
-                        <li class='review_box'>
-                            <span class='review_title'>빠른 상담과 견적...모든게 빠르게 진행되어 만족합니다.</span>
-                        </li>
-                        <li class='review_box'>
-                            <span class='review_title'>가격대비 디자인과 품질 모두 만족합니다.</span>
-                        </li>
-                        <li class='review_box'>
-                            <span class='review_title'>친절한 상담 너무 감사드려요~</span>
-                        </li>
+
+                            <?php
+                            foreach ($review_list as $list) {
+                            ?>
+                            
+                                <li class='review_box cursor_hand get_review_info' data-idx="<?= $list->idx ?>">
+                                <span class='review_title'><?= $list->subject ?></span>
+                            <?php } ?>
                     </ul>
                 </div>
 
                 <div class="partner_box marquee">
                     <ul class="partner_wrap marquee-content">
-                        <li class='marquee-item'><img src='resources/users/img/partner/partner_01.png' /></i></li>
-                        <li class='marquee-item'><img src='resources/users/img/partner/partner_02.png' /></li>
-                        <li class='marquee-item'><img src='resources/users/img/partner/partner_03.png' /></i></li>
-                        <li class='marquee-item'><img src='resources/users/img/partner/partner_04.png' /></li>
-                        <li class='marquee-item'><img src='resources/users/img/partner/partner_05.png' /></li>
-                        <li class='marquee-item'><img src='resources/users/img/partner/partner_06.png' /></li>
-                        <li class='marquee-item'><img src='resources/users/img/partner/partner_07.png' /></li>
-                        <li class='marquee-item'><img src='resources/users/img/partner/partner_08.png' /></li>
+                        <?php
+                            foreach ($partbanner_list as $list) {
+                            ?>
+                                <li class='marquee-item'>
+                                    <img src="<?= $list->img_name ?>" alt="<?= $list->title ?>">
+                                </li>
+                        <?php } ?>
                     </ul>
                 </div>
             </section>
@@ -1573,11 +1498,13 @@
                         </div>
                         <div class='notice_list_wrap accordion-panel'>
                             <ul class='notice_list'>
-                                <li>웹사이트 디자인 서비스가 새롭게 개편되었습니다.</li>
-                                <li>[패키지상품] 현수막, 실사출력물, 배너 제작 이벤트</li>
-                                <li>디자인 구독 서비스로 기업의 부담은 낮추고 퀄리티 있는 제작</li>
-                                <li>[엑스베너] 신규 탬플릿이 추가 되었습니다.</li>
-                                <li>MTM Biz-Design 홈페이지 OPEN</li>
+                                <?php
+                                    foreach ($notice_list as $list) {
+                                    ?>
+                                        <li class='notice_box cursor_hand get_notice_info' data-idx="<?= $list->idx ?>">
+                                            <?= $list->title ?>
+                                        </li>
+                                <?php } ?>
                             </ul>
                         </div>
                     </div>
@@ -1589,16 +1516,35 @@
             <section class="section_06">
                 <div class='content_06'>
                     <div class='about_wrap' id='infinite-scroll-section-mo'>
-                        <div class='sub_title accordion-trigger'>
+                        <div class='sub_title'>
                             <div class='sub_title_wrap'>
                                 <span>Portfolio</span>
                                 <img src='resources/users/img/main/text/title_arrow.png' class='accordion-trigger-arrow-img' />
                             </div>
                         </div>
 
-                        <ul class='portfolio_list accordion-panel '>
-                            <li class='portfolio_wrap'>
-                            </li>
+                        <ul class='portfolio_list'>
+                               <?php
+                            foreach ($portfolio_list as $list) {
+                                $img = json_decode($list->img_name)[0];
+                                $currIdx = htmlspecialchars($list->idx, ENT_QUOTES, 'UTF-8');
+                                $imgSrc = htmlspecialchars($img, ENT_QUOTES, 'UTF-8');
+                                $title = htmlspecialchars($list->title, ENT_QUOTES, 'UTF-8');
+                                ?>
+                                <li class="portfolio_wrap select_portfolio" data-curridx="<?= $currIdx ?>">
+                                    <div class="portfolio_img_inner">
+                                        <img src="<?= $imgSrc ?>" alt="<?= $title ?>">
+                                    </div>
+                                    <div class="hover_overlay">
+                                        <div class="hover_top">
+                                            <img src='resources/users/img/main/view_detail.png' />
+                                            <span><?= $title ?></span>
+                                        </div>
+                                    </div>
+                                </li>
+                            <?php
+                            }
+                            ?>
                         </ul>
                         <div id="sentinelMO"></div>
                     </div>
@@ -1612,17 +1558,17 @@
                     <p>
                         대표: 정세종<br />
                         서울특별시 강서구 양천로 424 데시앙플렉스 지식산업센터 1231호<br />
-                        Tel : 02-374-0336 &emsp; Fax : 02-374-0335<br />
+                        Tel : 02-3663-0332 &emsp; Fax : 02-374-0335<br />
                         E-mail : mtmb@mtmbkorea.com<br />
                         사업자번호 : 130-87-09598 &emsp; 개인정보보호책임자 : 진동호 <br />
-                        통신판매업신고증 : 제 2021-서울마포-1684호
+                        통신판매업신고중 :제 2023-서울강서-3726호
                     </p>
                     <p>
                     </p>
                     <div class='copyright_wrap'>
                         <p>COPYRIGHT (c) 2021 MTMBKOREA Co., Ltd.<br /> ALL RIGHTS RESERVED.</p>
                         <button class='footer_btn'>
-                            <a href='#'>관리자</a>
+                            <a href='/main/manager'>관리자</a>
                         </button>
                     </div>
                 </div>
@@ -1633,7 +1579,7 @@
 
         <!-- s:top_fixed -->
         <div class="top" id="top_fixed">
-            <button type="button" onclick="location.href='#0'">
+            <button type="button" onclick="location.href='/#main'">
                 <img src='resources/users/img/main/top.png' id='top-icon-img' />
             </button>
         </div>
@@ -1644,26 +1590,47 @@
             <button>
                 <img src='resources/users/img/icon/i_kakao_button.png' />
             </button>
-            <button onclick="location.href='#pageTop'">
+            <button onclick="location.href='/#pageTop'">
                 <img src='resources/users/img/icon/i_home_button.png' />
             </button>
             <button onclick="window.history.back()">
                 <img src='resources/users/img/icon/i_back_button.png' />
             </button>
-            <button onclick="location.href='#pageTop'">
+            <button onclick="location.href='/#pageTop'">
                 <img src='resources/users/img/icon/i_top_button.png' />
             </button>
         </div>
         <!-- e:right_fixed -->
+
+            <footer class="footer footer_pc fp-auto-height" id='footer'>
+                <div class="ft_wrap">
+                    <div class="row">
+                        <div class="col-2">
+                            <p><b>(주)엠티엠비코리아</b></p>
+                        </div>
+                        <div class="col-4">
+                            <p>대표 : 정세종</p>
+                            <p>서울특별시 강서구 양천로 424 데시앙플렉스 지식산업센터 1231호<br>
+                                Tel : 02-3663-0332 Fax : 02-374-0335 E-mail : mtmb@mtmbkorea.com</p>
+                            <button>
+                                <a href='/main/manager'>관리자</a>
+                            </button>
+                        </div>
+                        <div class="col-4">
+                            <p>사업자번호 : 130-87-09598 <span>통신판매업신고중 :제 2023-서울강서-3726호</span><br />
+                                개인정보보호책임자 : 진동호</p>
+                            <p class='copyright'>COPYRIGHT (c) 2021 MTMBKOREA Co., Ltd. ALL RIGHTS RESERVED.</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
     </div>
-
-
 
     <div class="modal fade write-modal view-modal" id="modal-review-view" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title" id="reviewModalLabel">만족도</h1>
+                    <h1 class="modal-title" id="reviewModalLabel">Review</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -1671,15 +1638,6 @@
                         <h5 id="modal-review-subject"></h5>
                         <ul class="data">
                             <li id="modal-review-regdate"></li>
-                            <li>
-                                <ul class="star" id="modal-review-score">
-                                    <li class="on">★</li>
-                                    <li>☆</li>
-                                    <li>☆</li>
-                                    <li>☆</li>
-                                    <li>☆</li>
-                                </ul>
-                            </li>
                         </ul>
                     </div>
                     <div class="modal_review_text" id="modal-review-content"></div>
@@ -1709,6 +1667,22 @@
         </div>
     </div>
 
+    <div class="modal fade write-modal view-modal" id="modal-portfolio-view" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title" id="reviewModalLabel">Portfolio</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="modal_review">
+                    <h5 id="modal-portfolio-view-title"></h5>
+                </div>
+                <div class="modal_review_text row" id="modal-portfolio-view-img"></div>
+            </div>
+        </div>
+        </div>
+    </div>
 
     <?php foreach ($popup_list as $popup) { ?>
         <div class="popup-container" id="pop_container_<?= $popup->idx ?>" style="left: <?= $popup->location_left ?>px;top: <?= $popup->location_top ?>px;">
@@ -1726,7 +1700,7 @@
 </body>
 
 </html>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.25/vendors/easings.min.js" integrity="sha512-SrKslwu6IjHEo/8mAOtkoUOT3MzHCEOFWktrC8BNtjPuBBYLYjg1y/Marat34uYfOfxDMLEwy8DLArWEVc2i+w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="/resources/users/lib/jquery.min.js"></script>
 <script src="/resources/users/lib/bootstrap.bundle.min.js"></script>
 <script src="/resources/users/lib/jquery.fullpage.min.js"></script>
@@ -1735,10 +1709,10 @@
 <script src="/resources/users/js/examples.js?<?= time() ?>"></script>
 <script src="/resources/users/js/main.js?<?= time() ?>"></script>
 <script src="/resources/users/js/common.js?<?= time() ?>"></script>
-<script src="/resources/users/js/portfolio.js"></script>
-
-
 <script>
+    var portfolio_list = <?= json_encode($portfolio_list) ?>;
+    console.log('portfolio_list:', portfolio_list);
+
     let modal_review_view;
     let curr_review_idx;
 
@@ -1775,6 +1749,15 @@
             location.href = "/consulting";
             setCookie("show_consulting_first_step", "1", 1);
         });
+
+        modal_portfolio_view = new bootstrap.Modal(document.getElementById("modal-portfolio-view"), {
+            keyboard: false,
+        });
+
+        $(".select_portfolio").on("click", function() {
+            curr_portfolio_idx = $(this).data('curridx');
+            view_portfolio();
+        });
     });
 
     function pop_close_today(popIdx) {
@@ -1791,7 +1774,7 @@
             if (result.flag) {
                 $("#modal-review-subject").text(result.data.subject);
                 $("#modal-review-regdate").text(dateToIsoString(result.data.regdate));
-                $("#modal-review-content")(replaceToBr(result.data.contents));
+                $("#modal-review-content").html(replaceToBr(result.data.contents));
                 (result.data.score > 1) ? $("#modal-review-score li").eq(1).addClass("on").text("★"): $("#modal-review-score li").eq(1).removeClass("on").text("☆");
                 (result.data.score > 2) ? $("#modal-review-score li").eq(2).addClass("on").text("★"): $("#modal-review-score li").eq(2).removeClass("on").text("☆");
                 (result.data.score > 3) ? $("#modal-review-score li").eq(3).addClass("on").text("★"): $("#modal-review-score li").eq(3).removeClass("on").text("☆");
@@ -1811,6 +1794,35 @@
                 $("#modal-notice-regdate").text(dateToIsoString(result.data.regdate));
                 $("#modal-notice-content")(replaceToBr(result.data.contents));
                 modal_notice_view.show();
+            }
+        });
+    }
+
+
+    function view_portfolio() {
+        $.post("/consulting/portfolioView", {
+            idx: curr_portfolio_idx
+        }, function(data) {
+            var result = JSON.parse(data);
+            if (result.flag) {
+                modal_portfolio_view.show();
+                var img_list = JSON.parse(result.data.img_name);
+                console.log(img_list)
+
+                $("#modal-portfolio-view-title").text(result.data.title);
+                $("#modal-portfolio-view-img").empty();
+
+                $.each(img_list, function(key, value) {
+                    div_tags = $("<div/>", {
+                        class: 'col-lg-6 col-sm-12 mb-2 text-center'
+                    });
+                    img_tags = $("<img/>", {
+                        class: 'w100per',
+                        src: value
+                    });
+                    div_tags.append(img_tags);
+                    $("#modal-portfolio-view-img").append(div_tags);
+                });
             }
         });
     }

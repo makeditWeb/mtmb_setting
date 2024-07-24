@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta name=”format-detection” content=”no” />
+    <meta name="format-detection" content="telephone=no" />
+    
     <meta property="og:url" content="https://mtmbds.com/">
     <meta property="og:title" content="엠티엠비즈 디자인">
     <meta property="og:type" content="website">
@@ -28,23 +30,22 @@
 
         // 공통 스타일시트 로드
         if (strpos($url_path, 'business/list') !== false) {
-            echo '<link rel="stylesheet" type="text/css" href="/resources/users/css/subpage/detail.css">';
-            echo '<link rel="stylesheet" type="text/css" href="/resources/users/css/subpage/common.css">';
+            echo '<link rel="stylesheet" type="text/css" href="/resources/users/css/subpage/detail.css?' . time() . '">';
         }
 
         // 페이지 이름에 따라 스타일시트를 로드합니다.
         switch ($current_page) {
             case 'consulting':
-                echo '<link rel="stylesheet" type="text/css" href="/resources/users/css/subpage/consulting.css">';
+                echo '<link rel="stylesheet" type="text/css" href="/resources/users/css/subpage/consulting.css??' . time() . '">';
                 break;
             case 'business':
-                echo '<link rel="stylesheet" type="text/css" href="/resources/users/css/subpage/business.css">';
+                echo '<link rel="stylesheet" type="text/css" href="/resources/users/css/subpage/business.css??' . time() . '">';
                 break;
             case 'company':
-                echo '<link rel="stylesheet" type="text/css" href="/resources/users/css/subpage/company.css">';
+                echo '<link rel="stylesheet" type="text/css" href="/resources/users/css/subpage/company.css??' . time() . '">';
                 break;
             case 'customer':
-                echo '<link rel="stylesheet" type="text/css" href="/resources/users/css/subpage/customer.css">';
+                echo '<link rel="stylesheet" type="text/css" href="/resources/users/css/subpage/customer.css??' . time() . '">';
                 break;
             default:
                 // 기본 스타일시트를 로드하거나 아무 것도 하지 않습니다.

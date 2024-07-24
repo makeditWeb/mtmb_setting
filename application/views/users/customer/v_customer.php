@@ -9,7 +9,10 @@
                 </div>
                 <div class="notice_wrap cont_right">
                     <table class="notice_table">
-                        <ul id="table_notice_list"></ul>
+                        <!-- <ul class="table_notice_list"></ul> -->
+                         <tbody class='table_notice_list'>
+
+                         </tbody>
                     </table>
                 </div>
                 <div class="notice_pagination">
@@ -23,7 +26,7 @@
                     </ul>
                     <ul class="pagination_number">
                         <li class="notice_curr_page now_page"></li>
-                        <li>/</li>
+                        <li>&nbsp;/&nbsp;</li>
                         <li class="notice_total_page total_page"></li>
                     </ul>
                 </div>
@@ -51,7 +54,7 @@
                                     </ul>
                                     <ul class="pagination_number">
                                         <li class="notice_curr_page now_page"></li>
-                                        <li>/</li>
+                                        <li>&nbsp;/&nbsp;</li>
                                         <li class="notice_total_page total_page"></li>
                                     </ul>
                                 </div>
@@ -60,7 +63,10 @@
                     </div>
         
                     <div class="cont_right notice_wrap">
-                         <ul class="table_notice_list"></ul>
+                         <table class="notice_table">
+                                    <tbody class='table_notice_list'>
+                                    </tbody>
+                                </table>
                     </div>
                 </div>
 
@@ -96,7 +102,7 @@
                             </div>
 
                             <div class="input_write_button">
-                                <button class="qna-btn write-btn">
+                                <button class="qna-btn btn_qna_add">
                                     <p>글쓰기</p>
                                     <img src="resources/users/img/icon/arrow_right.png">
                                 </button>
@@ -112,7 +118,7 @@
                                     <col style="width:16%;">
                                     <col style="width:15%;">
                                 </colgroup>
-                                 <tbody id="table_qna_list_mo"></tbody>
+                                <tbody id="table_qna_list_mo"></tbody>
                             </table>
                             <div class="notice_pagination">
                                 <ul class="pagination_arrow">
@@ -123,7 +129,7 @@
                                 </ul>
                                 <ul class="pagination_number">
                                     <li class="qna_curr_page"></li>
-                                    <li>/</li>
+                                    <li>&nbsp;/&nbsp;</li>
                                     <li class="qna_total_page"></li>
                                 </ul>
                             </div>
@@ -160,7 +166,7 @@
 
                         <div class="cont_bot">
                             <div class="input_write_button">
-                                <button class="qna-btn write-btn">
+                                <button class="qna-btn btn_qna_add">
                                     <p>글쓰기</p>
                                     <img src="resources/users/img/icon/arrow_right.png">
                                 </button>
@@ -176,7 +182,7 @@
                                 </ul>
                                 <ul class="pagination_number">
                                     <li class="qna_curr_page now_page"></li>
-                                    <li>/</li>
+                                    <li>&nbsp;/&nbsp;</li>
                                     <li class="qna_total_page"></li>
                                 </ul>
                             </div>
@@ -195,12 +201,29 @@
     </div>
 </section>
 
+<!-- s:right_fixed -->
+<div class="right-fixed">
+    <button>
+        <img src='resources/users/img/icon/i_kakao_button.png' />
+    </button>
+    <button onclick="location.href='/'">
+        <img src='resources/users/img/icon/i_home_button.png' />
+    </button>
+    <button onclick="window.history.back()">
+        <img src='resources/users/img/icon/i_back_button.png' />
+    </button>
+    <button onclick="location.href='#pageTop'">
+        <img src='resources/users/img/icon/i_top_button.png' />
+    </button>
+</div>
+<!-- e:right_fixed -->
+
 <!-- s:게시글 조회 모달 -->
 <div class="modal fade write-modal view-modal" id="modal-notice-view" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title" id="reviewModalLabel">공지사항</h1>
+                <h1 class="modal-title" id="reviewModalLabel">Notice</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -221,37 +244,25 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title" id="writingModalLabel">문의하기</h1>
+                <h1 class="modal-title" id="writingModalLabel">Q&A</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="modal_body_area" id="qna_form">
                     <div class="input_area">
                         <div class="row">
-                            <div class="col-6">
+                            <div class="w-50">
                                 <div class="input_group">
                                     <label>작성자</label>
                                     <input type="text" class="form-valid fv_empty" name="qna_name" maxlength="20">
                                 </div>
                             </div>
-                            <div class="col-6">
+                            <div class="w-50">
                                 <div class="input_group">
                                     <label>패스워드</label>
                                     <input type="password" class="form-valid fv_empty" name="qna_pass" maxlength="20">
                                 </div>
                             </div>
-                            <div class="col-6">
-                                <div class="input_group">
-                                    <label>연락처</label>
-                                    <input type="text" class="form-valid fv_empty fv_telnum" name="qna_tel" maxlength="16">
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="input_group">
-                                    <label>이메일주소</label>
-                                    <input type="text" class="form-valid fv_empty fv_email" name="qna_email" maxlength="50">
-                                </div>
-                            </div>                            
                             <div class="col-12">
                                 <div class="input_group">
                                     <label class="w_17">제목</label>
@@ -266,7 +277,10 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-skyblue" id="btn_qna_save">등록</button>
+                <button type="button" id="btn_qna_save">
+                    <span>등록하기</span>
+                    <img src='/resources/users/img/icon/main_i_right.png' alt='후기 글쓰기 팝업 버튼 우측 오른쪽 꺽쇠 아이콘' />
+                </button>
             </div>
         </div>
     </div>
@@ -306,6 +320,7 @@
 <script src="/resources/users/lib/swiper-bundle.min.js"></script>
 <script src="/resources/users/js/examples.js"></script>
 <script src="/resources/users/js/common.js"></script>
+<script src="js/sub_common.js"></script>
 <script>
     section = "<?= $page_info['section'] ?>";
 
@@ -493,7 +508,7 @@
                         }
                     });
                 } else {
-                    $modal_alert("MTMbiz Design", result.message, function() {
+                    $modal_alert("MTMBPPT", result.message, function() {
                         $modal_hide();
                         $modal_pasword(function() {
                             view_qna();
@@ -531,11 +546,11 @@
                     qna_curr_page = 1;
                     qna_keyword = "";
                     load_qna();
-                    $modal_alert("MTMbiz Design", result.message, function() {
+                    $modal_alert("MTMBPPT", result.message, function() {
                         $modal_hide();
                     });
                 } else {
-                    $modal_alert("MTMbiz Design", result.message, function() {
+                    $modal_alert("MTMBPPT", result.message, function() {
                         $modal_hide();
                     });
                 }
@@ -559,12 +574,12 @@
                 $modal_hide();
                 if (result.flag) {
                     load_qna();
-                    $modal_alert("MTMbiz Design", result.message, function() {
+                    $modal_alert("MTMBPPT", result.message, function() {
                         load_qna();
                         $modal_hide();
                     });
                 } else {
-                    $modal_alert("MTMbiz Design", result.message, function() {
+                    $modal_alert("MTMBPPT", result.message, function() {
                         $modal_hide();
                         $modal_pasword(function() {
                             del_qna();
@@ -604,7 +619,7 @@
                         }
                     });
                 } else {
-                    $modal_alert("MTMbiz Design", result.message, function() {
+                    $modal_alert("MTMBPPT", result.message, function() {
                         $modal_hide();
                         $modal_pasword(function() {
                             set_qna_modify();

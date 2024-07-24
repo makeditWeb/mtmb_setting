@@ -264,9 +264,9 @@ class Consulting extends MTMbiz_Controller
 
 
                 $list_mo .= <<<LIST_MO
-                    <tr class='question'>
-                        <td rowspan='{$row_span}' class="ta_center">{$list->row_num}</td>
-                        <td class="cursor_hand get_consulting_info" data-idx="{$list->idx}">
+                    <tr class='question get_consulting_info' data-idx="{$list->idx}">
+                        <td rowspan='2' class="ta_center">{$list->row_num}</td>
+                        <td class="cursor_hand" data-idx="{$list->idx}">
                           <span>'{$list->name}'님의<br>디자인 견적요청이 접수되었습니다.</span>
                         </td>
                         <td class="ta_center">
@@ -277,15 +277,22 @@ class Consulting extends MTMbiz_Controller
                 LIST_MO;
                 if ($list->status > 0) {
                     $list_mo .= <<<LIST_MO
-                        <tr class='answer'>
+                        <tr class='answer get_consulting_info' data-idx="{$list->idx}">
                             <td class="cursor_hand get_consulting_info" data-idx="{$list->idx}">↳ 상담이 완료되었습니다.</td>
                             <td><b>답변완료</b></td>
+                        </tr>
+                    LIST_MO;
+                }else {
+                    $list_mo .= <<<LIST_MO
+                        <tr class='answer get_consulting_info'>
+                            <td class="cursor_hand get_consulting_info"></td>
+                            <td></td>
                         </tr>
                     LIST_MO;
                 }
 
                 $list_pc .= <<<LIST_PC
-                    <tr>
+                    <tr class='get_consulting_info' data-idx="{$list->idx}">
                         <td class="ta_center" rowspan="{$row_span}">{$list->row_num}</td>
                         <td data-idx="{$list->idx}">'{$list->name}'님의 디자인 견적요청이 접수되었습니다.</td>
                         <td>{$regdate}</td>
@@ -294,9 +301,9 @@ class Consulting extends MTMbiz_Controller
                 LIST_PC;
                 if ($list->status > 0) {
                     $list_pc .= <<<LIST_PC
-                        <tr class="answer_qna">
+                        <tr class="answer_qna get_consulting_info" data-idx="{$list->idx}">
                             <td class="cursor_hand get_consulting_info" data-idx="{$list->idx}">↳ 상담이 완료되었습니다.</td>
-                            <td><b>MTM Biz Design</b></td>                            
+                            <td><b>MTMBPPT</b></td>                            
                             <td>답변완료</td>
                         </tr>
                     LIST_PC;

@@ -54,7 +54,7 @@ class Main extends MTMbiz_Controller
             }
 
             $this->load->model('Reference_model');
-            $refrence_list = $this->Reference_model->get_reference_list('proposal');            
+            $refrence_list = $this->Reference_model->get_reference_list('company');            
 
             $data = [
                 'page_info' => $page_info,

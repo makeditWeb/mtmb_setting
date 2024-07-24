@@ -1,4 +1,4 @@
-<body>
+<body id='pageTop'>
     <div class="sub_wrap">
         <!-- s:header -->
 
@@ -35,7 +35,7 @@
                     </li>
                 </ul>
                 <ul class="sub_menu pc">
-                    <li class="<?= ($page_info['curr_segment'] == "about") ? "active" : "" ?>">
+                    <li class="<?= ($page_info['curr_segment'] == "company") ? "active" : "" ?>">
                         <a href="/company">회사소개</a>
                     </li>
                     <li class="<?= ($page_info['curr_segment'] == "business") ? "active" : "" ?>">
@@ -44,14 +44,14 @@
                     <li class="<?= ($page_info['curr_segment'] == "consulting") ? "active" : "" ?>">
                         <a href="/consulting">견적문의</a>
                     </li>
-                    <li class="<?= ($page_info['curr_segment'] == "service_center") ? "active" : "" ?>">
+                    <li class="<?= ($page_info['curr_segment'] == "customer") ? "active" : "" ?>">
                         <a href="/customer">고객센터</a>
                     </li>
                 </ul>
             </div>
             <div class="menu_wrap mo">
                 <ul class="sub_menu">
-                    <li class="<?= ($page_info['curr_segment'] == "about") ? "active" : "" ?>">
+                    <li class="<?= ($page_info['curr_segment'] == "company") ? "active" : "" ?>">
                         <a href="/company">회사소개</a>
                     </li>
                     <li class="<?= ($page_info['curr_segment'] == "business") ? "active" : "" ?>">
@@ -60,7 +60,7 @@
                     <li class="<?= ($page_info['curr_segment'] == "consulting") ? "active" : "" ?>">
                         <a href="/consulting">견적문의</a>
                     </li>
-                    <li class="<?= ($page_info['curr_segment'] == "service_center") ? "active" : "" ?>">
+                    <li class="<?= ($page_info['curr_segment'] == "customer") ? "active" : "" ?>">
                         <a href="/customer">고객센터</a>
                     </li>
                 </ul>

@@ -46,7 +46,9 @@
             </div>
 
 
-            <div id="mapPc"  class="location_content_container"></div>
+            <div id="mapPc"  class="location_content_container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.604367556322!2d126.84606881531155!3d37.56438397979839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9d051dfb5035%3A0x8cc5cac4f842631e!2z642w7Iuc7JWZ7ZSM66CJ7IqkIOyngOyLneyCsOyXheyEvO2EsA!5e0!3m2!1sko!2skr!4v1681697920499!5m2!1sko!2skr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </div>
     </div>
 </section>
@@ -93,14 +95,13 @@
                     <h2>Location</h2>
                     <img src='resources/users/img/main/text/title_arrow.png' alt='텍스트 우측 하단 화살표 이미지' />
                 </div>
-
-                
-                
             </div>
 
 
             <div class='location_content_wrapper'>
-                <div id="mapMobile"  style="width: 100%; height: 500px; margin: 40px 0 16px;"></div>
+                <div id="mapMobile"  style="width: 100%; height: 500px; margin: 40px 0 16px;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.604367556322!2d126.84606881531155!3d37.56438397979839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9d051dfb5035%3A0x8cc5cac4f842631e!2z642w7Iuc7JWZ7ZSM66CJ7IqkIOyngOyLneyCsOyXheyEvO2EsA!5e0!3m2!1sko!2skr!4v1681697920499!5m2!1sko!2skr" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
                 <div class="location_adress">
                     <p class="location_adress_Text">서울특별시 강서구 양천로 424 데시앙플렉스 지식산업센터 1231호</p>
                     <p>Tel : 02-3663-0332  /  Fax : 02-374-0335
@@ -113,12 +114,32 @@
     </div>
 </section>
 
+
+<!-- s:right_fixed -->
+<div class="right-fixed">
+    <button>
+        <img src='resources/users/img/icon/i_kakao_button.png' />
+    </button>
+    <button onclick="location.href='/'">
+        <img src='resources/users/img/icon/i_home_button.png' />
+    </button>
+    <button onclick="window.history.back()">
+        <img src='resources/users/img/icon/i_back_button.png' />
+    </button>
+    <button onclick="location.href='#pageTop'">
+        <img src='resources/users/img/icon/i_top_button.png' />
+    </button>
+</div>
+<!-- e:right_fixed -->
+
+
 <script src="/resources/users/lib/jquery.min.js"></script>
 <script src="/resources/users/lib/bootstrap.bundle.min.js"></script>
 <script src="/resources/users/lib/jquery.fullpage.min.js"></script>
 <script src="/resources/users/lib/swiper-bundle.min.js"></script>
 <script src="/resources/users/js/examples.js"></script>
 <script src="/resources/users/js/common.js"></script>
+<script src="js/sub_common.js"></script>
 <script>
     section = "<?= $page_info['section'] ?>";
 </script>

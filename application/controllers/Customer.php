@@ -62,15 +62,21 @@ class Customer extends MTMbiz_Controller
             $list_html = "";
 
             foreach ($result[0] as $list) {
+                $regdate = replaceDate2($list->regdate);
                 $list_html .= <<<LIST
-                    <li class="cursor_hand get_notice_info" data-idx="{$list->idx}">{$list->title}</li>
+                        <tr class="cursor_hand get_notice_info" data-idx="{$list->idx}">
+                            <td class="ta_center">{$list->idx}</td>
+                            <td>{$list->title}</td>
+                            <td></td>
+                            <td class='ta_center'>{$regdate}</td>
+                        </tr>
                 LIST;
             }
 
             $data = [
                 'dataList' => $list_html,
                 'totalRecord' => $result[1],
-                'totalPage' => $total_page
+                'totalPage' => $total_page == 0 ? 1 : $total_page
             ];
 
             $result = array("flag" => true, "message" => "data load success.", "data" => $data);
@@ -131,22 +137,17 @@ class Customer extends MTMbiz_Controller
                 $row_span = ($list->status > 0) ? "2" : "";
 
                 $list_mo .= <<<LIST_MO
-                    <tr>
+                    <tr class='quest_list'>
                         <td rowspan='{$row_span}' class="ta_center">{$list->row_num}</td>
                         <td class="cursor_hand get_qna_info" data-idx="{$list->idx}">{$list->subject}</td>
-                        <td>
-                            <ul>
-                                <li>{$list->name}</li>
-                                <li>{$regdate}</li>
-                            </ul>
-                        </td>
+                        <td>{$list->name}</td>
+                        <td>{$regdate}</td>
                     </tr>
                 LIST_MO;
                 if ($list->status > 0) {
                     $list_mo .= <<<LIST_MO
-                        <tr>
-                            <td class="cursor_hand get_qna_info" data-idx="{$list->idx}">↳ 문의하신 내용에 답변드립니다.</td>
-                            <td><b>MTM Biz Design</b></td>
+                        <tr class='answer_list'>
+                            <td class="cursor_hand get_qna_info" data-idx="{$list->idx}" colspan='3'>↳ 문의하신 내용에 답변드립니다.</td>
                         </tr>
                     LIST_MO;
                 }
@@ -162,8 +163,7 @@ class Customer extends MTMbiz_Controller
                 if ($list->status > 0) {
                     $list_pc .= <<<LIST_PC
                         <tr>
-                            <td class="cursor_hand get_qna_info" data-idx="{$list->idx}">↳ 문의하신 내용에 답변드립니다.</td>
-                            <td colspan="2" class="ta_l"><b>MTM Biz Design</b></td>
+                            <td class="cursor_hand get_qna_info" data-idx="{$list->idx}" colspan='3'>↳ 문의하신 내용에 답변드립니다.</td>
                         </tr>';                  
                     LIST_PC;
                 }

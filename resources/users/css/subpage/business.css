@@ -522,7 +522,6 @@
         justify-content: center;
         align-items: center;
 
-
         column-gap: 0px;
         row-gap: 0px;
     }
@@ -535,11 +534,13 @@
     }
 
 
-    .business_container .content_wrap .all_service_container .service_list .service_wrap>img {
+    .business_container .content_wrap .all_service_container .service_list .service_wrap > img {
         margin-top: 20px;
         width: auto;
         height: 25px;
         object-fit: contain;
+        margin-left: 0px;
+        margin-bottom: 8px;
     }
 
 
@@ -567,13 +568,14 @@
         transform: translate(0, -50%);
     }
 
-    .business_container .content_wrap .all_service_container .service_list .service_wrap .service_text::after {
+    .business_container .content_wrap .all_service_container .service_list .service_wrap .service_text:hover::after {
         content: none;
     }
 
     .service_step_container_mo {
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
 
     .service_step_container_mo .service_step_container {
@@ -735,6 +737,40 @@
         margin-right: 0;
         padding-left: 30px;
     }
+
+    .service_step_container_mo {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .business_container .content_wrap .service_step_container:first-child,
+    .business_container .content_wrap .service_step_container {
+        margin-top: 20px;
+    }
+
+    .business_container .content_wrap .service_step_container:first-child {
+        width: 80%;
+        justify-content: center;
+    }
+
+    .business_container .content_wrap .service_step_container:first-child li:nth-child(odd) {
+        flex: 1;
+        width: 100%;
+        min-width: max-content;
+    }
+
+    .business_container .content_wrap .service_step_container:first-child li:nth-child(even) {
+        flex: 0.5;
+    }
+
+    .business_container .content_wrap .service_step_container li:nth-child(odd) img {
+        width: 18px;
+    }
+
+    .business_container .content_wrap .service_step_container li p{
+        margin-top: 0px;
+        font-size: 12px;
+    }
 }
 
 @media (max-width: 580px) {
@@ -772,8 +808,8 @@
     }
 
     .ppt_wrap .sub_title>span {
-        font-size: 30px;
-        padding: 30px 10px 10px;
+        font-size: 26px;
+        padding: 30px 0px 10px 10px;
     }
 
     .business_container .content_wrap {
@@ -790,10 +826,6 @@
 }
 
 @media (max-width: 400px) {
-    .business_container .content_wrap .all_service_container .service_list .service_wrap .service_text span {
-        font-size: 14px;
-    }
-
     .business_container .content_wrap .all_service_container .service_list .service_wrap .service_text span {
         font-size: 14px;
     }
@@ -826,7 +858,7 @@
     }
 
     .ppt_wrap .sub_title>span {
-        font-size: 21px;
+        font-size: 18px;
     }
 
     .business_container .content_wrap .left_wrap .title_wrap {

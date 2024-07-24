@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
+    const isMobile = window.innerWidth <= 992;
+
     const rightFixed = document.querySelector('.right-fixed');
-    const footer = document.querySelector('footer.footer.mo');
+    const footer = isMobile ? document.querySelector('footer.footer.mo') : document.querySelector('footer.pc');
 
     if (!rightFixed || !footer) {
         console.error('Either .right-fixed or footer.footer.mo is not found in the DOM.');

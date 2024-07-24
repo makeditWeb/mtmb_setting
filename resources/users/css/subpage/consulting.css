@@ -10,9 +10,9 @@
   content: '';
   background: #000;
   width: 0.5px;
-  height: 100%;
+  height: 50%;
   left: 219px;
-  top: 1.75%;
+  top: 0px;
 
   z-index: 1;
 }
@@ -30,10 +30,11 @@
   position: relative;
   z-index: 2;
 
-  display: flex;
   justify-content: flex-start;
   width: 85%;
   height: 650px;
+
+  display: flex;
 
   background: #000;
   border-radius: 0px 100px 100px 0px;
@@ -209,6 +210,8 @@
 }
 
 /********************** Consulting Box Step 1-5 Style **********************/
+/* TODO */
+/* DB 연동 시 주석처리 */
 /* .consulting_container .step_box {
   display: none;
 } */
@@ -269,7 +272,9 @@
   align-items: flex-start;
   justify-content: flex-start;
   padding-right: 20px;
-
+  
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .survey_container_wrapper {
@@ -296,32 +301,49 @@
   align-items: flex-start;
   justify-content: flex-start;
 
+  margin-bottom: 18px;
+}
+
+.consulting_container .step_box .right_wrap .survey_container .survey_wrap .input_group {
+  width: 100%;
+  color: #000;
+
   margin-bottom: 20px;
 }
 
+.consulting_container .step_box .right_wrap .survey_container .survey_wrap .input_group .title,
 .consulting_container .step_box .right_wrap .survey_container .survey_wrap .title {
+  display: flex;
+
   width: 100%;
   padding: 4px 0px;
-  ;
   border-bottom: 1px solid #000;
-
-  font-family: 'SUIT';
-  font-weight: 600;
-  font-size: 16px;
-
-  color: #000000;
-}
-
-.consulting_container .step_box .right_wrap .survey_container .survey_wrap .content {
-  width: 100%;
-  padding: 4px 0px;
-  ;
 
   font-family: 'SUIT';
   font-weight: 500;
   font-size: 16px;
 
   color: #000000;
+
+  margin-bottom: 8px;
+}
+
+.consulting_container .step_box .right_wrap .survey_container .survey_wrap .input_group p:first-child,
+.consulting_container .step_box .right_wrap .survey_container .survey_wrap .content {
+  width: 100%;
+  padding: 4px 0px;
+
+  font-family: 'SUIT';
+  font-weight: 400;
+  font-size: 16px;
+
+  color: #000000;
+  line-height: 100%;;
+
+
+
+    word-break: keep-all;
+    overflow-wrap: break-word;
 }
 
 /* 상담신청  > 이전/다음 페이지네이션 */
@@ -416,7 +438,8 @@
 }
 
 
-input[type=checkbox] {
+input[type=checkbox],
+input[type=radio] {
   position: relative;
   border: 2px solid #b3b3b3;
   border-radius: 2px;
@@ -433,11 +456,13 @@ input[type=checkbox] {
   opacity: 1;
 }
 
-input[type=checkbox]:checked {
+input[type=checkbox]:checked,
+input[type=radio]:checked {
   background-color: #000;
 }
 
-input[type=checkbox]:checked:before {
+input[type=checkbox]:checked:before,
+input[type=radio]:checked:before {
   border: solid #0ff9db;
   border-width: 0 3px 3px 0;
   margin: -1px -1px 0 -1px;
@@ -450,7 +475,8 @@ input[type=checkbox]:checked:before {
   cursor: pointer;
 }
 
-input[type=checkbox]:before {
+input[type=checkbox]:before,
+input[type=radio]:before {
   content: '';
   position: absolute;
   right: -4px;
@@ -609,6 +635,7 @@ input[type=checkbox]:before {
 }
 
 .consulting_container .step_box.step_03 .input_wrap input {
+  width: calc(80% / 3);
   font-family: SUIT;
   font-weight: 400;
   font-size: 16px;
@@ -771,7 +798,6 @@ input[type=checkbox]:before {
 
 .consulting_container .step_box.step_05 .right_wrap .step_control_container {
   justify-content: center;
-
 }
 
 .consulting_container .consulting_qa_container table tr {
@@ -983,6 +1009,7 @@ input[type=checkbox]:before {
 .consulting_container .review_container table tr td:nth-child(2) {
   width: 60%;
   padding: 0px;
+  justify-content: flex-start;
   /* ... 처리 */
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1007,13 +1034,25 @@ input[type=checkbox]:before {
   vertical-align: middle;
   padding: 10px 20px;
   height: 40px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   color: #646464;
   font-size: 16px;
   letter-spacing: -0.06em;
   font-family: 'SUIT';
   font-weight: 500;
-  display: flex;
-  align-items: center;
+}
+
+.consulting_container .review_container table tr td,
+.consulting_container .consulting_qa_container table tr td{
+  color: #646464;
+  font-size: 16px;
+  letter-spacing: -0.06em;
+  font-family: 'SUIT';
+  font-weight: 500;
 }
 
 .review_container tr {
@@ -1103,7 +1142,7 @@ input[type=checkbox]:before {
   box-sizing: border-box;
   border: none;
   background-color: white;
-  background-image: url(../../img/icon/i_search.png);
+  background-image: url('../../img/icon/i_search.png');
   background-position: 87% 30%;
   background-repeat: no-repeat;
   background-size: 15%;
@@ -1182,10 +1221,12 @@ input[type=checkbox]:before {
 .consulting_container .review_container .pagination_wrap .arrow_wrap::before {
   position: absolute;
   content: '';
-  height: 100%;
   width: 1px;
   background: #626262;
+  height: 60%;
   left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%)
 }
 
 
@@ -1276,7 +1317,7 @@ input[type=checkbox]:before {
 .consulting_container .portfolio_container .portfolio_list {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .consulting_container .portfolio_container .portfolio_list .portfolio_wrap {
@@ -1328,12 +1369,12 @@ input[type=checkbox]:before {
 }
 
 
-li.portfolio_wrap:nth-child(4n) .hover_overlay::before {
+li.portfolio_wrap:nth-child(5n) .hover_overlay::before {
   display: none;
 }
 
 .hover_top {
-  text-align: right;
+  text-align: left;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -1383,6 +1424,10 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before {
   width: 15px;
   height: auto;
 }
+
+ .wrap-text {
+            white-space: pre-wrap; /* 줄바꿈 허용 */
+        }
 
 /********************** 반응형 Style **********************/
 /* 1920 * 1080 */
@@ -1750,11 +1795,13 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before {
   }
 
   .consulting_container .consulting_content_container {
-    width: 100%;
+    width: calc(100% - 60px);
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 30px 40px;
+    padding: 0 0 40px;
+    
+    margin: 0 30px;
     margin-top: 20px;
   }
 
@@ -1768,16 +1815,55 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before {
     font-size: 12px;
   }
 
+  .consulting_container .consulting_qa_container table tr {
+    border-bottom: 0px;
+  }
+
+  .consulting_container .consulting_qa_container table tr td {
+    height: 100%;
+    min-height: 100%;
+    box-sizing: border-box;
+  }
+
   .consulting_container .consulting_qa_container table tr.question {
     border: none;
     justify-content: space-between;
-    padding: 10px 0;
-    border-bottom: 1px solid #e6e6e6;
+    /* padding: 10px 0; */
+    /* border-bottom: 1px solid #e6e6e6; */
   }
 
   .consulting_container .consulting_qa_container table tr.question td {
-    height: 49px;
-    padding: 0;
+    height: 50px;
+    padding: 4px 0px;
+  }
+
+    /* .consulting_container .consulting_qa_container table tr.question:first-child td:first-child {
+      border-bottom: 1px solid #a2a2a2;
+    } */
+
+    .consulting_container .consulting_qa_container table tr.question:last-child td:first-child {
+      border: unset !important;
+    }
+
+    .consulting_container .consulting_qa_container table tr:last-child.question td{
+      border: none;
+    }
+
+    .consulting_container .consulting_qa_container table tr.question td:first-child {
+      border-bottom: none;
+    }
+
+    .consulting_container .consulting_qa_container table tr td {
+      border-bottom: 1px solid #e6e6e6;
+    }
+    .consulting_container .consulting_qa_container table tr.question td:first-child {
+      border-bottom: 1px solid #e6e6e6;
+    }
+
+  .consulting_container .consulting_qa_container table .tr:not(:nth-last-child(-n+2)) td:first-child {
+    /* border-bottom: 1px solid #e6e6e6; */
+    /* border: unset; */
+    /* border-bottom: 1px solid #a2a2a2; */
   }
 
   .consulting_content_container .question td span {
@@ -1825,6 +1911,7 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before {
 
   .consulting_container .consulting_qa_container table tr td:nth-child(2) {
     width: 65%;
+    transform: translateY(0.5px)
   }
 
   .consulting_container .consulting_qa_container table tr td {
@@ -1835,11 +1922,17 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before {
     width: 65%;
     text-align: center;
     padding: 0;
+    transform: translateY(0.2px)
   }
 
   .consulting_container .consulting_qa_container table tr.answer {
-    border-bottom: 1px solid #a2a2a2;
-    height: 42px;
+    /* border-bottom: 1px solid #a2a2a2; */
+    box-sizing: border-box;
+    border-collapse: collapse;
+  }
+
+  .consulting_container .consulting_qa_container table tr:last-child {
+    border-bottom: unset;
   }
 
   .review_container table td:nth-child(3) {
@@ -1975,11 +2068,55 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before {
     right: -5px; */
   }
 
-
   input[type=checkbox] {
     width: 15px;
     height: 15px;
     margin-right: .3rem
+  }
+
+  .hover_overlay{
+    padding: 12px;
+    background: rgba(0,0,0, 0.5);
+  }
+
+  .hover_top {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: flex-start;
+  }
+
+  .hover_top span {
+    width: auto;
+    font-size: 12px;
+  }
+
+  .hover_top img {
+    min-width: fit-content;
+    max-width: 12px;
+    height: auto;
+    object-fit: contain;
+  }
+
+  li.portfolio_wrap:nth-child(4n + 1) .hover_overlay::before {
+    display: flex;
+    top: 50%;
+    position: absolute;
+    content: '';
+    background: #fff;
+    width: 1px;
+    height: 95%;
+    transform: translateY(-50%);
+  }
+
+  li.portfolio_wrap:nth-child(even) .hover_overlay::before {
+    content: '';
+    display: none;
+  }
+
+  .consulting_container .content_wrap .portfolio_list .portfolio_wrap:nth-child(even)::after {
+    content: '';
+    display: none;
   }
 }
 
@@ -2064,6 +2201,11 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before {
     margin-bottom: 72px;
   }
 
+  .arrow_wrap span {
+    width: 8px;
+    height: auto;
+  }
+
   .survey_eng {
     width: 148px;
     height: auto;
@@ -2105,11 +2247,6 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before {
   .consulting_container .content_wrap .portfolio_list .portfolio_wrap>span {
     font-size: 18px;
   }
-
-  .consulting_container .content_wrap .portfolio_list .portfolio_wrap {
-    padding: 28px 32px
-  }
-
 
   .consulting_container .portfolio_container {
     width: 100%;
@@ -2167,10 +2304,6 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before {
     font-size: 16px;
   }
 
-  .consulting_container .content_wrap .portfolio_list .portfolio_wrap {
-    padding: 0;
-  }
-
   .consulting_container .portfolio_container .title span {
     font-size: 42px;
   }
@@ -2209,15 +2342,27 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before {
   .consulting_container .review_container .left_wrap .top_wrap .title_wrap::after {
     left: 54px;
   }
+  
+  .consulting_container .consulting_qa_container table tr.answer {
+    /* height: 32px; */
+  }
+
+  .consulting_container .consulting_qa_container table tr td {
+    padding: 4px 0px;
+    /* height: 32px; */
+  }
 
   .review_container .left_wrap .top_wrap .search_container button.review-button {
     min-width: 150px;
   }
 
-
   .review_container tr {
     height: 40px;
     padding: 4px 0;
+  }
+
+  .consulting_container .portfolio_container{
+    padding-top: 40px;
   }
 }
 
@@ -2286,12 +2431,6 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before {
     font-size: 14px;
   }
 
-  .consulting_container .content_wrap .portfolio_list .portfolio_wrap {
-    padding: 13px;
-  }
-
-
-
   .consulting_container .portfolio_container .title span {
     font-size: 32px;
   }
@@ -2337,10 +2476,6 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before {
     font-size: 12px;
   }
 
-  .consulting_container .content_wrap .portfolio_list .portfolio_wrap {
-    padding: 16px 20px
-  }
-
   .consulting_container .portfolio_container .title span {
     font-size: 28px;
   }
@@ -2381,4 +2516,78 @@ li.portfolio_wrap:nth-child(4n) .hover_overlay::before {
     --marquee-height: 4vh;
     --marquee-elements-displayed: 3;
   }
+}
+
+.consulting_container .input_group {
+  color: #000 !important;
+}
+
+#print_result_step_3, #print_result_step_3_mo {
+  width: 100%;
+}
+
+
+/* 후기 글쓰기 팝업 */
+.write-modal .input_group label{
+  font-family: 'SUIT';
+  font-weight: 400;
+  font-size: 1rem;
+  color: #000;
+}
+
+.write-modal textarea {
+  padding: 10px;
+  outline: none;
+  border-radius: 2px;
+  margin-top: 50px;
+}
+
+
+.modal-body {
+  font-family: 'SUIT';
+  font-weight: 400;
+  color: #000;
+}
+
+.modal-footer #btn_review_save {
+  border: none;
+  box-shadow: none;
+  height: 35px;
+  width: 200px;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  color: #fefefe;
+  font-size: 14px;
+  font-family: 'SUIT', sans-serif;
+}
+
+.modal-footer #btn_review_save > img {
+  width: 10px;
+  height: auto;
+  object-fit: contain;
+  margin-left: 4px;
+}
+
+@media (max-width: 990px) {
+  :root {
+    font-size: 12px;
+  }
+  .write-modal textarea {
+    margin-top: 20px;
+  }
+
+  #modal-review-view .modal-content{
+      padding: 8px;
+  }
+
+  .modal_review_text {
+    margin-top: 12px;
+  }
+}
+
+.modal hr {
+  background-color: #d5d5d5;
 }
