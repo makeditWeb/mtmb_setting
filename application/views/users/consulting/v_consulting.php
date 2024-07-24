@@ -66,7 +66,6 @@
                     <div class='survey_form_container'>
                         <span class='survey_title'>서비스 분야</span>
 
-                        <div class="survey_scroller">
                             <div class='check_container'>
                                 <?php
                                 $i = 0;
@@ -81,11 +80,10 @@
                                     $i++;
                                 }
                                 ?>
+                                <span class='check_wrap check_group' ><label class='check_description'>다중 선택 가능합니다.</label></span>
                             </div>
-                        </div>
 
                         <span class='description'>
-                            다중 선택 가능합니다.<br />
                             <span><strong>상담 신청</strong>을 선택하시면 담당자 배정 후 연락드립니다.</span>
                         </span>
 
@@ -106,7 +104,7 @@
 
                     <div class="survey_container_wrapper">
                         <div class='survey_container'>
-                            <span class='survey_content_title'>문의 내용</span>
+                            <span class='survey_content_title'>선택 정보</span>
                             <div class='survey_wrap' id='print_result_step_1'></div>
                         </div>
                     </div>
@@ -212,7 +210,7 @@
 
                     <div class="survey_container_wrapper">
                         <div class='survey_container'>
-                            <span class='survey_content_title'>문의 내용</span>
+                            <span class='survey_content_title'>선택 정보</span>
                                 <div class='survey_wrap' id="print_result_step_2"></div>
                         </div>
                     </div>
@@ -230,16 +228,24 @@
                         <span class='survey_title'>고객 정보</span>
 
                         <div class="survey_scroller">
+                            <span class='required_label'><span class='required_text'>*</span>필수입력</span>
+
                             <div class='input_wrap first_input_wrap'>
-                                <label for='company_name'>업체명</label>
+                                <label for='company_name'>업체명<span class='required_text'>*</span></label>
                                 <input type="text" class="form-valid fv_empty" name="company_name" value="" maxlength="20" />
                             </div>
-                            <div class='input_wrap'>
-                                <label for='company_user_name'>담당자</label>
-                                <input type="text" class="form-valid fv_empty" name="company_user_name" value="" maxlength="20" />
+                            <div class='input_flex_wrap'>
+                                <div class='input_wrap'>
+                                    <label for='company_user_name'>담당자<span class='required_text'>*</span></label>
+                                    <input type="text" class="form-valid fv_empty" name="company_user_name" value="" maxlength="20" />
+                                </div>
+                                <div class='input_wrap'>
+                                    <label for='company_user_rank'>직함<span class='required_text'>*</span></label>
+                                    <input type="text" class="form-valid fv_empty" name="company_user_rank" value="" maxlength="20" />
+                                </div>
                             </div>
                             <div class='input_wrap'>
-                                <label for='phone_number'>대표번호</label>
+                                <label for='phone_number'>대표번호<span class='required_text'>*</span></label>
                                 <input type="number" class="form-valid fv_empty fv_numeric use_maxlength" data-maxlength="4" name="company_tel1" value="">
                                 <span>-</span>
                                 <input type="number" class="form-valid fv_empty fv_numeric use_maxlength" data-maxlength="4" name="company_tel2" value="">
@@ -247,7 +253,7 @@
                                 <input type="number" class="form-valid fv_empty fv_numeric use_maxlength" data-maxlength="4" name="company_tel3" value="">
                             </div>
                             <div class='input_wrap'>
-                                <label for='phone_number'>휴대전화</label>
+                                <label for='phone_number'>휴대전화<span class='required_text'>*</span></label>
                                 <input type="number" class="form-valid fv_empty fv_numeric use_maxlength" data-maxlength="4" name="company_user_tel1" value="">
                                 <span>-</span>
                                 <input type="number" class="form-valid fv_empty fv_numeric use_maxlength" data-maxlength="4" name="company_user_tel2" value="">
@@ -255,8 +261,10 @@
                                 <input type="number" class="form-valid fv_empty fv_numeric use_maxlength" data-maxlength="4" name="company_user_tel3" value="">
                             </div>
                             <div class='input_wrap'>
-                                <label for='company_user_email'>이메일</label>
-                                <input type="email" class="form-valid fv_empty fv_email" name="company_user_email" maxlength="50" value="">
+                                <label for='company_user_email1'>이메일<span class='required_text'>*</span></label>
+                                <input type="email" class="form-valid fv_empty fv_email" name="company_user_email1" maxlength="50" value="">
+                                <span>@</span>
+                                <input type="email" class="form-valid fv_empty fv_email" name="company_user_email2" maxlength="50" value="">
                             </div>
                         </div>
                         <div class='step_control_container'>
@@ -277,7 +285,7 @@
 
                     <div class="survey_container_wrapper result_wrap">
                         <div class='survey_container step_result'>
-                            <span class='survey_content_title'>문의 내용</span>
+                            <span class='survey_content_title'>선택 정보</span>
                             <div id="print_result_step_3"></div>
                         </div>
                     </div>
@@ -292,7 +300,7 @@
 
                 <div class='right_wrap'>
                     <div class='survey_form_container'>
-                        <span class='survey_title'>추가 정보</span>
+                        <span class='survey_title'>추가 정보<span class='required_text'>*</span></span>
 
                         <div class="survey_scroller">
                             <div class='detail_input_wrap'>
@@ -302,6 +310,11 @@
 
                             <div class='password_input_wrap'>
                                 <input type="password" class="form-valid fv_empty" name="consulting_pass" value="" placeholder="패스워드를 입력해주세요" />
+                            </div>
+
+                            <div class="check_wrap check_group">
+                                <input type='checkbox' id="privacy-term-confirm" name='privacy-term-confirm' />
+                                <label for="privacy-term-confirm">*개인정보 수집 이용 동의</label>
                             </div>
 
                             <div class='file_input_container'>
@@ -334,7 +347,7 @@
 
                     <div class="survey_container_wrapper">
                         <div class='survey_container'>
-                            <span class='survey_content_title'>문의 내용</span>
+                            <span class='survey_content_title'>선택 정보</span>
                             <div id="print_result_step_4"></div>
                         </div>
                     </div>
@@ -376,7 +389,7 @@
 
                     <div class="survey_container_wrapper">
                         <div class='survey_container'>
-                            <span class='survey_content_title'>문의 내용</span>
+                            <span class='survey_content_title'>선택 정보</span>
                                 <div id="print_result_step_5"></div>
                         </div>
                     </div>
@@ -524,6 +537,22 @@
                                 </div>
                             </li>
                         <?php } ?>
+                        <?php
+                        foreach ($portfolio_list as $list) {
+                            $img = json_decode($list->img_name)[0];
+                        ?>
+                            <li class='portfolio_wrap select_portfolio' data-curridx="<?= $list->idx ?>">
+                                <div class="portfolio_img_inner">
+                                    <img src="<?= $img ?>" alt="<?= $list->title ?>">
+                                </div>
+                                <div class="hover_overlay">
+                                    <div class="hover_top">
+                                        <img src='resources/users/img/main/view_detail.png' />
+                                        <span><?= $list->title ?></span>
+                                    </div>
+                                </div>
+                            </li>
+                        <?php } ?>
                     </ul>
                     <div id="sentinel"></div>
                 </div>
@@ -602,26 +631,24 @@
                             <span class='survey_title'>서비스 분야</span>
                         </div>
                         
-                        <div class="mo_consult_scroll">
-                            <div class='check_container'>
-                                <?php
-                                $i = 0;
-                                foreach ($business_list as $blist) {
-                                    $category_list[$blist['segment']] = false;
-                                ?>
-                                    <div class="check_wrap check_group">
-                                        <input type='checkbox' id="cate_<?= $i ?>_mo" class="consulting_category" data-segment="<?= $blist['segment'] ?>" value="<?= $blist['name'] ?>" />
-                                        <label for="cate_<?= $i ?>_mo"><?= $blist['name'] ?></label>
-                                    </div>
-                                <?php
-                                    $i++;
-                                }
-                                ?>
-                            </div>
+                        <div class='check_container'>
+                            <?php
+                            $i = 0;
+                            foreach ($business_list as $blist) {
+                                $category_list[$blist['segment']] = false;
+                            ?>
+                                <div class="check_wrap check_group">
+                                    <input type='checkbox' id="cate_<?= $i ?>_mo" class="consulting_category" data-segment="<?= $blist['segment'] ?>" value="<?= $blist['name'] ?>" />
+                                    <label for="cate_<?= $i ?>_mo"><?= $blist['name'] ?></label>
+                                </div>
+                            <?php
+                                $i++;
+                            }
+                            ?>
+                            <span class='check_wrap check_group' ><label class='check_description'>다중 선택 가능합니다.</label></span>
                         </div>
                         
                         <span class='description'>
-                            다중 선택 가능합니다.<br />
                             <span><strong>상담 신청</strong>을 선택하시면 담당자 배정 후 연락드립니다.</span>
                         </span>
 
@@ -642,7 +669,7 @@
 
                     <div class="survey_container_wrapper">
                         <div class='survey_container'>
-                            <span class='survey_content_title'>문의 내용</span>
+                            <span class='survey_content_title'>선택 정보</span>
                             <div class='survey_wrap' id='print_result_step_1_mo'></div>
                         </div>
                     </div>
@@ -685,7 +712,7 @@
                     
                     <div class="survey_container_wrapper">
                         <div class='survey_container'>
-                            <span class='survey_content_title'>문의 내용</span>
+                            <span class='survey_content_title'>선택 정보</span>
                             <div class='survey_wrap' id="print_result_step_2_mo"></div>
                         </div>
                     </div>
@@ -705,33 +732,45 @@
                             <div class="survey_eng">
                                 <img src="resources/users/img/main/text/consulting_sub.png">
                             </div>
-                            <span class='survey_title'>서비스분야</span>
+                            <span class='survey_title'>고객 정보</span>
                         </div>
 
                         <div class="mo_consult_scroll">
+                            <span class='required_label'><span class='required_text'>*</span>필수입력</span>
+
                             <div class='input_wrap first_input_wrap'>
-                                <label for='company_name'>업체명</label>
+                                <label for='company_name'>업체명<span class='required_text'>*</span></label>
                                 <input type="text" class="form-valid fv_empty" name="company_name" value="" maxlength="20" />
                             </div>
                             <div class='input_wrap'>
-                                <label for='company_user_name'>담당자</label>
+                                <label for='company_user_name'>담당자<span class='required_text'>*</span></label>
                                 <input type="text" class="form-valid fv_empty" name="company_user_name" value="" maxlength="20" />
                             </div>
                             <div class='input_wrap'>
-                                <label for='phone_number'>대표번호</label>
+                                <label for='company_user_rank'>직함<span class='required_text'>*</span></label>
+                                <input type="text" class="form-valid fv_empty" name="company_user_rank" value="" maxlength="20" />
+                            </div>
+                            <div class='input_wrap'>
+                                <label for='phone_number'>대표번호<span class='required_text'>*</span></label>
                                 <input type="number" class="form-valid fv_empty fv_numeric use_maxlength" data-maxlength="4" name="company_tel1" value="">
+                                <span>-</span>
                                 <input type="number" class="form-valid fv_empty fv_numeric use_maxlength" data-maxlength="4" name="company_tel2" value="">
+                                <span>-</span>
                                 <input type="number" class="form-valid fv_empty fv_numeric use_maxlength" data-maxlength="4" name="company_tel3" value="">
                             </div>
                             <div class='input_wrap'>
-                                <label for='phone_number'>휴대전화</label>
+                                <label for='phone_number'>휴대전화<span class='required_text'>*</span></label>
                                 <input type="number" class="form-valid fv_empty fv_numeric use_maxlength" data-maxlength="4" name="company_user_tel1" value="">
+                                <span>-</span>
                                 <input type="number" class="form-valid fv_empty fv_numeric use_maxlength" data-maxlength="4" name="company_user_tel2" value="">
+                                <span>-</span>
                                 <input type="number" class="form-valid fv_empty fv_numeric use_maxlength" data-maxlength="4" name="company_user_tel3" value="">
                             </div>
                             <div class='input_wrap'>
-                                <label for='company_user_email'>이메일</label>
-                                <input type="email" class="form-valid fv_empty fv_email" name="company_user_email" maxlength="50" value="" />
+                                <label for='company_user_email1'>이메일<span class='required_text'>*</span></label>
+                                <input type="email" class="form-valid fv_empty fv_email" name="company_user_email1" maxlength="50" value="" />
+                                <span>@</span>
+                                <input type="email" class="form-valid fv_empty fv_email" name="company_user_email2" maxlength="50" value="" />
                             </div>
                         </div>
 
@@ -752,7 +791,7 @@
 
                     <div class="survey_container_wrapper">
                         <div class='survey_container'>
-                            <span class='survey_content_title'>문의 내용</span>
+                            <span class='survey_content_title'>선택 정보</span>
                             <div id="print_result_step_3_mo"></div>
                         </div>
                     </div>
@@ -771,7 +810,7 @@
                             <div class="survey_eng">
                                 <img src="resources/users/img/main/text/consulting_sub.png">
                             </div>
-                            <span class='survey_title'>추가정보</span>
+                            <span class='survey_title'>*추가정보</span>
                         </div>
 
                         <div class="mo_consult_scroll">
@@ -785,6 +824,13 @@
                                 <div class='password_input_wrap'>
                                     <input type='password' class="form-valid fv_empty" name="consulting_pass" value="" placeholder="패스워드를 입력해주세요"  />
                                 </div>
+
+
+                            <div class="check_wrap check_group">
+                                <input type='checkbox' id="privacy-term-confirm" name='privacy-term-confirm-mo' />
+                                <label for="privacy-term-confirm">*개인정보 수집 이용 동의</label>
+                            </div>
+
 
                                 <div class='file_input_container'>
                                     <div class='file_input_wrap'>
@@ -818,7 +864,7 @@
 
                     <div class="survey_container_wrapper">
                         <div class='survey_container'>
-                            <span class='survey_content_title'>문의 내용</span>
+                            <span class='survey_content_title'>선택 정보</span>
                             <div id="print_result_step_4_mo"></div>
                         </div>
                     </div>
@@ -859,7 +905,7 @@
 
                     <div class='survey_container_wrapper'>
                         <div class='survey_container'>
-                            <span class='survey_content_title'>문의 내용</span>
+                            <span class='survey_content_title'>선택 정보</span>
                                 <div id="print_result_step_5_mo"></div>
                         </div>
                     </div>
@@ -981,6 +1027,20 @@
                 </div>
 
                 <ul class='portfolio_list'>
+                    <?php
+                    foreach ($portfolio_list as $list) {
+                        $img = json_decode($list->img_name)[0];
+                    ?>
+                        <li class='portfolio_wrap select_portfolio' data-curridx="<?= $list->idx ?>">
+                            <img src="<?= $img ?>" alt="<?= $list->title ?>">
+                            <div class="hover_overlay">
+                                <div class="hover_top">
+                                    <img src='resources/users/img/main/view_detail.png' />
+                                    <span><?= $list->title ?></span>
+                                </div>
+                            </div>
+                        </li>
+                    <?php } ?>
                     <?php
                     foreach ($portfolio_list as $list) {
                         $img = json_decode($list->img_name)[0];
@@ -1145,7 +1205,7 @@
 <script src="/resources/users/js/examples.js?<?= time() ?>"></script>
 <script src="/resources/users/js/common.js?<?= time() ?>"></script>
 <script src="/resources/users/js/consulting.js?<?= time() ?>"></script>
-<script src="js/sub_common.js"></script>
+<script src="/resources/users/js/sub_common.js"></script>
 
 <script>
     section = "<?= $page_info['section'] ?>";
@@ -1206,6 +1266,20 @@
         const urlParams = new URLSearchParams(window.location.search);
         const consultingIndex = parseInt(urlParams.get('consultingIndex'));
 
+
+        $(document).on('keydown', 'input', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                event.stopPropagation();
+
+                var inputs = $('input');
+                var currentIndex = inputs.index(this);
+                if (currentIndex !== -1 && currentIndex < inputs.length - 1) {
+                    inputs.eq(currentIndex + 1).focus();
+                }
+            }
+        });
+
         if(consultingIndex) {
             goToStep('.step_0', '.step_01');
             if(isMobile) {
@@ -1258,6 +1332,14 @@
                         $(".pc .consulting_step").eq(step_curr).addClass("d-none");
                         $(".pc .consulting_step").eq(step_move).removeClass("d-none");
                         step_curr = step_move;
+
+                        if(step_move === 2) {
+                            $('.pc input[name=company_name]').focus();
+                        }
+
+                        if(step_move === 3) {
+                            $('.pc textarea[name=request]').focus();
+                        }
                     }
                 });
         });
@@ -1279,6 +1361,14 @@
                         $(".mo .consulting_step").eq(step_curr).addClass("d-none");
                         $(".mo .consulting_step").eq(step_move).removeClass("d-none");
                         step_curr = step_move;
+
+                        if(step_move === 2) {
+                            $('.mo input[name=company_name]').focus();
+                        }
+
+                        if(step_move === 3) {
+                            $('.mo textarea[name=request]').focus();
+                        }
                     }
                 });
             });
@@ -1309,12 +1399,18 @@
             question_div = $(isMobile ? "#print_result_step_2_mo" : "#print_result_step_2").children("." + this_data["segment"]);
 
             $(isMobile ? "#print_result_step_2_mo" : "#print_result_step_2").find("." + p_tags_class).remove();
-            p_tags = $("<p/>", {
+             p_tags = $('<p />', {
+                class: 'sub_question'
+            }).html(this_data.question + ' ');
+            
+            span_tag = $("<span />", {
                 class: p_tags_class
             }).html(answer_value);
+
+            p_tags.append(span_tag);            
             question_div.append(p_tags);
 
-            console.log({question_div, p_tags, answer_value})
+            console.log({this_data, question_div, p_tags, answer_value})
         });
 
         load_consulting();
@@ -1394,6 +1490,10 @@
             $(".score_radio").eq(4).trigger("click");
             review_write_mode = "add";
             modal_review_write.show();
+
+            setTimeout(() => {
+              $('input[name=review_subject').focus();
+            }, 500)
         });
 
         $("#btn_review_mod").on("click", function() {
@@ -1687,7 +1787,8 @@
     const consulting_step_2 = function() {
         answer_count = $(".choose_question_answer:checked").length;
         if (question_count != answer_count) {
-            $modal_alert("MTMBPPT", "모든 질문에 답변을 선택하여 주십시오.", function() {
+            
+            $modal_alert("MTMBPPT", `미선택 답변이 있습니다.${isMobile ? '<br/>': ' '}스크롤 내용을 확인해 주세요.`, function() {
                 $modal_hide();
             });
             return false;
@@ -1703,16 +1804,19 @@
         $(isMobile ? "#print_result_step_4_mo" : "#print_result_step_4").empty().html(prev_result);
 
         const companyNameValue = $(`${isMobile ? '.mo' : '.pc'} input[name=company_name]`).val();
+        const companyUserRank = $(`${isMobile ? '.mo' : '.pc'} input[name=company_user_rank]`).val();
         const companyUserNameValue = $(`${isMobile ? '.mo' : '.pc'} input[name=company_user_name]`).val();
         const companyUserTelValue = $(`${isMobile ? '.mo' : '.pc'} input[name=company_user_tel1]`).val();
-        const companyUserEmailValue = $(`${isMobile ? '.mo' : '.pc'} input[name=company_user_email]`).val();
+        const email1 = $(`${isMobile ? '.mo' : '.pc'} input[name=company_user_email1]`).val();
+        const email2 = $(`${isMobile ? '.mo' : '.pc'} input[name=company_user_email2]`).val();
+        const companyUserEmailValue = email1 + email2;
 
-        append_html = $(`${isMobile ? '.mo' : '.pc'} input[name=company_name]`).val() + " / ";
-        append_html += $(`${isMobile ? '.mo' : '.pc'} input[name=company_user_name]`).val() + " / ";
-        append_html += $(`${isMobile ? '.mo' : '.pc'} input[name=company_user_tel1]`).val() + "-" + $(`${isMobile ? '.mo' : '.pc'} input[name=company_user_tel2]`).val() + "-" + $(`${isMobile ? '.mo' : '.pc'} input[name=company_user_tel3]`).val() + " / ";
-        append_html += $(`${isMobile ? '.mo' : '.pc'} input[name=company_tel1]`).val() + "-" + $(`${isMobile ? '.mo' : '.pc'} input[name=company_tel2]`).val() + "-" + $(`${isMobile ? '.mo' : '.pc'} input[name=company_tel3]`).val() + " / ";
-        append_html += $(`${isMobile ? '.mo' : '.pc'} input[name=company_user_email]`).val();
-
+        append_html =  '업체명: ' + $(`${isMobile ? '.mo' : '.pc'} input[name=company_name]`).val() + " <br/> ";
+        append_html += '담당자: ' + $(`${isMobile ? '.mo' : '.pc'} input[name=company_user_name]`).val() + " <br/> ";
+        append_html += '직합: ' +$(`${isMobile ? '.mo' : '.pc'} input[name=company_user_rank]`).val() + " <br/> ";
+        append_html += '휴대전화: ' +$(`${isMobile ? '.mo' : '.pc'} input[name=company_user_tel1]`).val() + "-" + $(`${isMobile ? '.mo' : '.pc'} input[name=company_user_tel2]`).val() + "-" + $(`${isMobile ? '.mo' : '.pc'} input[name=company_user_tel3]`).val() + " <br/> ";
+        append_html += '업체 대표번호: ' +$(`${isMobile ? '.mo' : '.pc'} input[name=company_tel1]`).val() + "-" + $(`${isMobile ? '.mo' : '.pc'} input[name=company_tel2]`).val() + "-" + $(`${isMobile ? '.mo' : '.pc'} input[name=company_tel3]`).val() + " <br/> ";
+        append_html += '이메일: ' + companyUserEmailValue 
 
         const passwordElement = $(`${isMobile ? '.mo' : '.pc'} input[name=consulting_pass]`);
         if(
@@ -1720,7 +1824,7 @@
             (!companyUserNameValue || companyUserNameValue.length) < 0 ||
             (!companyUserTelValue || companyUserTelValue.length < 0) ||
             (!companyUserEmailValue || companyUserEmailValue.length < 0)) {
-            $modal_alert("MTMBPPT", "모든 항목을 입력해주세요.", function() {
+            $modal_alert("MTMBPPT", `미입력 항목이 있습니다.${isMobile ? '<br/>': ' '}필수항목을 입력해 주세요.`, function() {
                 $modal_hide();
             });
             return false;
@@ -1732,7 +1836,9 @@
         h6_tags = $("<div/>", {
             class: 'title'
         }).text("고객 정보");
-        p_tags = $("<p/>").html(append_html);
+        p_tags = $("<span/>", {
+            class: 'content'
+        }).html(append_html);
         div_tags.append(h6_tags).append(p_tags);
         $(isMobile ? "#print_result_step_4_mo": "#print_result_step_4").append(div_tags);
 
@@ -1744,11 +1850,25 @@
 
         const passwordValue = $(`${isMobile ? '.mo' : '.pc'} input[name=consulting_pass]`).val();
         const requestValue = $(`${isMobile ? '.mo' : '.pc'} textarea[name=request]`).val();
-
-        console.log(passwordValue, requestValue)
+        const privacyTermCheckValue = $(`${isMobile ? '.mo' : '.pc'} input[name=privacy-term-confirm${isMobile ? '-mo' : ''}]:checked`).val()
         
-        if(!passwordValue || passwordValue.length <= 0 || !requestValue || requestValue.length <= 0) {
-             $modal_alert("MTMBPPT", "비밀번호와 추가요청사항은 필수 입력란입니다.", function() {
+
+        if((!passwordValue || passwordValue.length <= 0) && !privacyTermCheckValue) {
+            $modal_alert("MTMBPPT", `미입력 항목이 있습니다.${isMobile ? '<br/>': ' '}필수항목을 입력해 주세요.`, function() {
+                $modal_hide();
+            });
+            return false;
+        }
+
+        if(!passwordValue || passwordValue.length <= 0 ) {
+            $modal_alert("MTMBPPT", `미입력 항목이 있습니다.${isMobile ? '<br/>': ' '}패스워드를 입력해 주세요.`, function() {
+                $modal_hide();
+            });
+            return false;
+        }
+
+        if(!privacyTermCheckValue) {
+            $modal_alert("MTMBPPT", `미선택 답변이 있습니다.${isMobile ? '<br/>': ' '}개인정보 수집 이용에 동의해 주세요.`, function() {
                 $modal_hide();
             });
             return false;
@@ -1796,6 +1916,7 @@
         form_data.append("employee_tel3", $(`${isMobile ? '.mo' : '.pc'} input[name=company_user_tel3]`).val());
         form_data.append("employee_email", $(`${isMobile ? '.mo' : '.pc'} input[name=company_user_email]`).val());
         form_data.append("request", $(`${isMobile ? '.mo' : '.pc'} textarea[name=request]`).val());
+        form_data.append("company_user_rank", $(`${isMobile ? '.mo' : '.pc'} input[name=company_user_rank]`).val());
         
         const file1 = $(`#consulting_file1${isMobile ? '_mo' : ''}`)[0];
         const file2 = $(`#consulting_file2${isMobile ? '_mo' : ''}`)[0];

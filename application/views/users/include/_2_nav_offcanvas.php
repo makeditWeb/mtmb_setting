@@ -12,13 +12,13 @@
                         <a href="/company">회사소개</a>
                     </dt>
                     <dd>
-                        <a href="/company#about" onclick="refreshPage('/company#about')">- 인사말</a>
+                        <a href="/company#about" onclick="refreshPage('/company#about')">About</a>
                     </dd>
                     <dd class='pc'>
-                        <a href="/company#location" onclick="refreshPage('/company#location')">- 위치</a>
+                        <a href="/company#location" onclick="refreshPage('/company#location')">Location</a>
                     </dd>
                     <dd class='mo'>
-                        <a href="/company#locationMobile" onclick="refreshPage('/company#locationMobile')">- 위치</a>
+                        <a href="/company#locationMobile" onclick="refreshPage('/company#locationMobile')">Location</a>
                     </dd>
                 </dl>
                 <dl>
@@ -26,19 +26,19 @@
                         <a href="/business">비지니스</a>
                     </dt>
                     <dd>
-                        <a href="/business">- 전체서비스</a>
+                        <a href="/business">All Service</a>
                     </dd>
                     <dd>
-                        <a href="/business?pptIndex=1">- 제안서</a>
+                        <a href="/business?pptIndex=1">제안서</a>
                     </dd>
                     <dd>
-                        <a href="/business?pptIndex=2">- 소개서</a>
+                        <a href="/business?pptIndex=2">소개서</a>
                     </dd>
                     <dd>
-                        <a href="/business?pptIndex=3">- 보고서</a>
+                        <a href="/business?pptIndex=3">보고서</a>
                     </dd>
                     <dd>
-                        <a href="/business?pptIndex=4">- 교육•강의</a>
+                        <a href="/business?pptIndex=4">교육•강의</a>
                     </dd>
                 </dl>
                 <dl>
@@ -46,26 +46,26 @@
                         <a href="/consulting">견적문의</a>
                     </dt>
                     <dd>
-                        <a href="/consulting">- 견적문의</a>
+                        <a href="/consulting">견적문의</a>
                     </dd>
                     <dd class='pc'>
-                        <a href="/consulting#reviewList" onclick="refreshPage('/consulting#reviewList')">- 이용후기</a>
+                        <a href="/consulting#reviewList" onclick="refreshPage('/consulting#reviewList')">리뷰</a>
                     </dd>
                     <dd class='mo'>
-                        <a href="/consulting#reviewListMobile" onclick="refreshPage('/consulting#reviewListMobile')">- 이용후기</a>
+                        <a href="/consulting#reviewListMobile" onclick="refreshPage('/consulting#reviewListMobile')">리뷰</a>
                     </dd>
                     <dd class='pc'>
-                        <a href="/consulting#partnerCompany" onclick="refreshPage('/consulting#partnerCompany')">- 파트너사</a>
+                        <a href="/consulting#partnerCompany" onclick="refreshPage('/consulting#partnerCompany')">파트너사</a>
                     </dd>
                     <dd class='mo'>
-                        <a href="/consulting#partnerCompanyMobile" onclick="refreshPage('/consulting#partnerCompanyMobile')">- 파트너사</a>
+                        <a href="/consulting#partnerCompanyMobile" onclick="refreshPage('/consulting#partnerCompanyMobile')">파트너사</a>
                     </dd>
 
                     <dd class='pc'>
-                        <a href="/consulting#portfolioWrap" onclick="refreshPage('/consulting#portfolioWrap')">- 포트폴리오</a>
+                        <a href="/consulting#portfolioWrap" onclick="refreshPage('/consulting#portfolioWrap')">포트폴리오</a>
                     </dd>
                     <dd class='mo'>
-                        <a href="/consulting#portfolioWrapMobile" onclick="refreshPage('/consulting#portfolioWrapMobile')">- 포트폴리오</a>
+                        <a href="/consulting#portfolioWrapMobile" onclick="refreshPage('/consulting#portfolioWrapMobile')">포트폴리오</a>
                     </dd>
                 </dl>
                 <dl>
@@ -73,10 +73,10 @@
                         <a href="/customer">고객센터</a>
                     </dt>
                     <dd>
-                        <a href="/customer">- 공지사항</a>
+                        <a href="/customer">Notice</a>
                     </dd>
                     <dd>
-                        <a href="/customer#serviceQna" onclick="refreshPage('/customer#serviceQna')">- 문의하기</a>
+                        <a href="/customer#serviceQna" onclick="refreshPage('/customer#serviceQna')">Q&A</a>
                     </dd>
                 </dl>
             </div>
@@ -141,4 +141,4 @@
         </div>
     </div>
 </div>
-<!-- e: (모바일) offcanvas -->
+<!--e: (모바일) offcanvas -->

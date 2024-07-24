@@ -109,7 +109,8 @@ class Consulting extends MTMbiz_Controller
                 array('field' => 'employee_tel2', 'label' => '담당자 연락처 가운데 자리', 'rules' => 'required', 'errors' => array('required' => '담당자 연락처 가운데 자리는 필수 입력입니다.')),
                 array('field' => 'employee_tel3', 'label' => '담당자 연락처 마지막 자리', 'rules' => 'required', 'errors' => array('required' => '담당자 연락처 마지막 자리는 필수 입력입니다.')),
                 array('field' => 'employee_email', 'label' => '담당자 이메일주소', 'rules' => 'required', 'errors' => array('required' => '담당자 이메일주소는 필수 입력입니다.')),
-                array('field' => 'request', 'label' => '세부사항', 'rules' => 'required', 'errors' => array('required' => '세부사항은 필수 입력입니다.'))
+                array('field' => 'company_user_rank', 'label' => '담당자 직급', 'rules' => 'required', 'errors' => array('required' => '담당자 직급은 필수 입력입니다.')),
+                // array('field' => 'request', 'label' => '세부사항', 'rules' => 'required', 'errors' => array('required' => '세부사항은 필수 입력입니다.'))
             );
 
             $this->form_validation->set_rules($valid_config);

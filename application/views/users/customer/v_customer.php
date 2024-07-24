@@ -320,7 +320,7 @@
 <script src="/resources/users/lib/swiper-bundle.min.js"></script>
 <script src="/resources/users/js/examples.js"></script>
 <script src="/resources/users/js/common.js"></script>
-<script src="js/sub_common.js"></script>
+<script src="/resources/users/js/sub_common.js"></script>
 <script>
     section = "<?= $page_info['section'] ?>";
 

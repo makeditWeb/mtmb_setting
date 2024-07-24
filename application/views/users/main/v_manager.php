@@ -140,9 +140,10 @@
 
         <div class="col-6">
             <div class="text-center" style="margin:140px auto;height:100px;">
-                <a href="https://nestjejuds.com/admin/">
-                    <h1 id='mainNextLogo'>MTMBPPT</h1>
-                    <!-- <img src="/resources/users/img/main_logo_nest.png" style="max-width:35%;" /> -->
+                <!-- <a href="https://nestjejuds.com/admin/"> -->
+                    <a href="/admin/login">
+                    <!-- <h1 id='mainNextLogo'>MTMBPPT</h1> -->
+                    <img src="/resources/users/img/MTMBPPT_logo.png" style="max-width:35%;" />
                 </a>
             </div>
 

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>MTMbiz Design Administrator</title>
+    <title>MTMBPPT Administrator</title>
 
     <link rel="icon" href="/resources/admin/favicon/favicon.ico">
 
@@ -28,7 +28,7 @@
                 <div class="card o-hidden border-0 shadow-lg" style="margin-top:50%;">
                     <div class="card-body p-0">
                         <div class="login_top py-4">
-                            <span>MTMbiz Design Administrator</span>
+                            <span>MTMBPPT Administrator</span>
                         </div>
                         <div class="p-5">
                             <form class="user" method="post">

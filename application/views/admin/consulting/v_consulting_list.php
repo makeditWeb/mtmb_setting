@@ -75,6 +75,7 @@
 						<th class="selectSort <?php if ($page_info['sort_key'] == 'name') echo ($page_info['sort_direction'] == 'desc') ? 'desc' : 'asc'; ?>" data-sort_key="name">기업명</th>
 						<th class="selectSort <?php if ($page_info['sort_key'] == 'tel') echo ($page_info['sort_direction'] == 'desc') ? 'desc' : 'asc'; ?>" data-sort_key="tel">대표번호</th>
 						<th class="selectSort <?php if ($page_info['sort_key'] == 'employee_name') echo ($page_info['sort_direction'] == 'desc') ? 'desc' : 'asc'; ?>" data-sort_key="employee_name">담당자명</th>
+						<th class="selectSort <?php if ($page_info['sort_key'] == 'company_user_rank') echo ($page_info['sort_direction'] == 'desc') ? 'desc' : 'asc'; ?>" data-sort_key="company_user_rank">직급</th>
 						<th class="selectSort <?php if ($page_info['sort_key'] == 'employee_tel') echo ($page_info['sort_direction'] == 'desc') ? 'desc' : 'asc'; ?>" data-sort_key="employee_tel">담당자연락처</th>
 						<th class="selectSort <?php if ($page_info['sort_key'] == 'employee_email') echo ($page_info['sort_direction'] == 'desc') ? 'desc' : 'asc'; ?>" data-sort_key="employee_email">담당자이메일</th>
 						<th>의뢰분야</th>
@@ -92,6 +93,7 @@
 							<td class="text-center"><a href="<?= $page_info['base_url'] ?>/view/<?= $list->idx ?>/<?= $page_info['url_param'] ?>&curr_page=<?= $page_info['curr_page'] ?>"><?= $list->name ?></a></td>
 							<td class="text-center"><?= $list->tel ?></td>
 							<td class="text-center"><?= $list->employee_name ?></td>
+							<td class="text-center"><?= $list->company_user_rank ?></td>
 							<td class="text-center"><?= $list->employee_tel ?></td>
 							<td class="text-center"><?= $list->employee_email ?></td>
 							<td class="text-center">

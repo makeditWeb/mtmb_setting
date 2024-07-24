@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-sm bg-navy navbar-white-font">
+<nav class="navbar navbar-expand-sm bg-black navbar-white-font">
     <a href="/admin/main/" class="navbar-brand">
-        <span class="brand-text font-weight-light">MTMbiz design</span>
+        <span class="brand-text font-weight-light">MTMBPPT</span>
     </a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,7 +29,7 @@
                 <a class="nav-link white-font" href="/" target="_blank">HOME</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link white-font" href="https://nestjejuds.com/admin/" target="_blank">제주</a>
+                <a class="nav-link white-font" href="https://nestjejuds.com/admin/" target="_blank">MTMBPPT</a>
             </li>
             <li class="nav-item dropdown no-arrow">
                 <a class="nav-link dropdown-toggle white-font" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

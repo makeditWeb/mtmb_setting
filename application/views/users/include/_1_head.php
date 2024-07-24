@@ -21,6 +21,7 @@
     <meta name="Description" content="차별화된 경쟁력과 체계적인 전략 및 기술력을 바탕으로 고객과의 소통을 최우선 가치로 삼고 오프라인 제작물과 온라인 디자인에 이르기까지 다양한 영역에 걸쳐 고객이 원하는 목표를 달성할 수 있도록 통합 디자인 서비스를 제공하는 고객맞춤형 디자인 전문기업입니다.">
 
     <link rel="icon" href="/resources/users/favicon/favicon.ico">
+    <link rel="stylesheet" href="/resources/users/css/common.css?<?= time() ?>">
     <link rel="stylesheet" href="/resources/users/css/styles.css?<?= time() ?>">
     
     <?php
@@ -36,16 +37,16 @@
         // 페이지 이름에 따라 스타일시트를 로드합니다.
         switch ($current_page) {
             case 'consulting':
-                echo '<link rel="stylesheet" type="text/css" href="/resources/users/css/subpage/consulting.css??' . time() . '">';
+                echo '<link rel="stylesheet" type="text/css" href="/resources/users/css/subpage/consulting.css?' . time() . '">';
                 break;
             case 'business':
-                echo '<link rel="stylesheet" type="text/css" href="/resources/users/css/subpage/business.css??' . time() . '">';
+                echo '<link rel="stylesheet" type="text/css" href="/resources/users/css/subpage/business.css?' . time() . '">';
                 break;
             case 'company':
-                echo '<link rel="stylesheet" type="text/css" href="/resources/users/css/subpage/company.css??' . time() . '">';
+                echo '<link rel="stylesheet" type="text/css" href="/resources/users/css/subpage/company.css?' . time() . '">';
                 break;
             case 'customer':
-                echo '<link rel="stylesheet" type="text/css" href="/resources/users/css/subpage/customer.css??' . time() . '">';
+                echo '<link rel="stylesheet" type="text/css" href="/resources/users/css/subpage/customer.css?' . time() . '">';
                 break;
             default:
                 // 기본 스타일시트를 로드하거나 아무 것도 하지 않습니다.

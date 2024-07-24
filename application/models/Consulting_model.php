@@ -193,6 +193,7 @@ class Consulting_model extends CI_Model
         $this->db->set('request', $param['request']);
         $this->db->set('status', '0');
         $this->db->set('reg_path', '0');
+        $this->db->set('company_user_rank', $param['company_user_rank']);
         $this->db->set('regdate', 'NOW(6)', false);
         $this->db->set('moddate', 'NOW(6)', false);
 

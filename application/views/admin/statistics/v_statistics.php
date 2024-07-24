@@ -356,7 +356,16 @@
           ?>
             <tr>
               <td class="text-center"><?= ($list->rank_sales == 99) ? '-' : $list->rank_sales ?></td>
-              <td class="text-center"><?= $business_list[$list->category]['name'] ?></td>
+              <!-- <td class="text-center"><?= $business_list[$list->category]['name'] ?></td> -->
+                <td class="text-center">
+                    <?php
+                    if (isset($business_list[$list->category])) {
+                        echo $business_list[$list->category]['name'];
+                    } else {
+                        echo '<span class="text-danger">Unknown category</span>';
+                    }
+                    ?>
+                </td>
               <td class="text-center"><?= ($list->sales > 0) ? number_format($list->sales * 1.1) : '-' ?></td>
               <td class="text-center"><?= ($list->cost > 0) ? number_format($list->cost) : '-' ?></td>
               <td class="text-center"><?= ($list->revenue > 0) ? number_format($list->revenue) : '-' ?></td>

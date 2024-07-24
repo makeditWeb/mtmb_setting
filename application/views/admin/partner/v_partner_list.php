@@ -84,13 +84,17 @@
 							<td>
 								<?php
 								$partners_category = json_decode($list->category);
-								foreach ($business_list as $blist) {
-									if ($partners_category->{$blist['segment']}) {
+								if (json_last_error() === JSON_ERROR_NONE && is_object($partners_category)) {
+									foreach ($business_list as $blist) {
+										if (isset($partners_category->{$blist['segment']}) && $partners_category->{$blist['segment']}) {
 								?>
-
-										<div class="btn btn-xs btn-secondary"><?= $blist['name'] ?></div>
+											<div class="btn btn-xs btn-secondary"><?= $blist['name'] ?></div>
 								<?php
+										}
 									}
+								} else {
+									// JSON 디코딩 오류 또는 유효하지 않은 데이터 처리
+									echo '<div class="btn btn-xs btn-danger">Invalid category data</div>';
 								}
 								?>
 							</td>
@@ -109,4 +113,13 @@
 
 <script>
 	page_info = JSON.parse('<?= json_encode($page_info) ?>');
+	
+        // PHP 변수를 JavaScript 변수로 변환하여 콘솔에 출력
+        var dataList = <?= json_encode($dataList) ?>;
+        var pageInfo = <?= json_encode($page_info) ?>;
+        var businessList = <?= json_encode($business_list) ?>;
+
+        console.log("dataList:", dataList);
+        console.log("pageInfo:", pageInfo);
+        console.log("businessList:", businessList);
 </script>

@@ -52,13 +52,13 @@
                                 <a href="/company">회사소개</a>
                             </dt>
                             <dd>
-                                <a href="/company#about">- 인사말</a>
+                                <a href="/company#about">About</a>
                             </dd>
                             <dd class='pc'>
-                                <a href="/company#location">- 위치</a>
+                                <a href="/company#location">Location</a>
                             </dd>
                             <dd class='mo'>
-                                <a href="/company#locationMobile">- 위치</a>
+                                <a href="/company#locationMobile">Location</a>
                             </dd>
                         </dl>
                         <dl>
@@ -66,19 +66,19 @@
                                 <a href="/business">비지니스</a>
                             </dt>
                             <dd>
-                                <a href="/business">- 전체서비스</a>
+                                <a href="/business">All Service</a>
                             </dd>
                             <dd>
-                                <a href="/business?pptIndex=1">- 제안서</a>
+                                <a href="/business?pptIndex=1">제안서</a>
                             </dd>
                             <dd>
-                                <a href="/business?pptIndex=2">- 소개서</a>
+                                <a href="/business?pptIndex=2">소개서</a>
                             </dd>
                             <dd>
-                                <a href="/business?pptIndex=3">- 보고서</a>
+                                <a href="/business?pptIndex=3">보고서</a>
                             </dd>
                             <dd>
-                                <a href="/business?pptIndex=4">- 교육•강의</a>
+                                <a href="/business?pptIndex=4">교육•강의</a>
                             </dd>
                         </dl>
                         <dl>
@@ -86,26 +86,26 @@
                                 <a href="/consulting">견적문의</a>
                             </dt>
                             <dd>
-                                <a href="/consulting">- 견적문의</a>
+                                <a href="/consulting">견적문의</a>
                             </dd>
                             <dd class='pc'>
-                                <a href="/consulting#reviewList">- 이용후기</a>
+                                <a href="/consulting#reviewList">리뷰</a>
                             </dd>
                             <dd class='mo'>
-                                <a href="/consulting#reviewListMobile">- 이용후기</a>
+                                <a href="/consulting#reviewListMobile">리뷰</a>
                             </dd>
                             <dd class='pc'>
-                                <a href="/consulting#partnerCompany">- 파트너사</a>
+                                <a href="/consulting#partnerCompany">파트너사</a>
                             </dd>
                             <dd class='mo'>
-                                <a href="/consulting#partnerCompanyMobile">- 파트너사</a>
+                                <a href="/consulting#partnerCompanyMobile">파트너사</a>
                             </dd>
 
                             <dd class='pc'>
-                                <a href="/consulting#portfolioWrap">- 포트폴리오</a>
+                                <a href="/consulting#portfolioWrap">포트폴리오</a>
                             </dd>
                             <dd class='mo'>
-                                <a href="/consulting#portfolioWrapMobile">- 포트폴리오</a>
+                                <a href="/consulting#portfolioWrapMobile">포트폴리오</a>
                             </dd>
                         </dl>
                         <dl>
@@ -113,10 +113,10 @@
                                 <a href="/customer">고객센터</a>
                             </dt>
                             <dd>
-                                <a href="/customer">- 공지사항</a>
+                                <a href="/customer">Notice</a>
                             </dd>
                             <dd>
-                                <a href="/customer#serviceQna">- 문의하기</a>
+                                <a href="/customer#serviceQna">Q&A</a>
                             </dd>
                         </dl>
                     </div>
@@ -793,7 +793,28 @@
                                 $currIdx = htmlspecialchars($list->idx, ENT_QUOTES, 'UTF-8');
                                 $title = htmlspecialchars($list->title, ENT_QUOTES, 'UTF-8');
                                 ?>
-                                <li class="portfolio_wrap select_portfolio" data-curridx="<?= $currIdx ?>" style="width: 300px; height: 300px;">
+                                <li class="portfolio_wrap select_portfolio" data-curridx="<?= $currIdx ?>">
+                                    <div class="portfolio_img_inner">
+                                        <img src="<?= $img ?>" alt="<?= $title ?>" loading="lazy" >
+                                    </div>
+                                    <div class="hover_overlay">
+                                        <div class="hover_top">
+                                            <img src='resources/users/img/main/view_detail.png' />
+                                            <span><?= $title ?></span>
+                                        </div>
+                                    </div>
+                                </li>
+                            <?php
+                            }
+                            ?>
+                            <?php
+                            foreach ($portfolio_list as $list) {
+                                // $img = json_decode($list->img_name)[0];
+                                $img = htmlspecialchars(json_decode($list->img_name)[0], ENT_QUOTES, 'UTF-8');
+                                $currIdx = htmlspecialchars($list->idx, ENT_QUOTES, 'UTF-8');
+                                $title = htmlspecialchars($list->title, ENT_QUOTES, 'UTF-8');
+                                ?>
+                                <li class="portfolio_wrap select_portfolio" data-curridx="<?= $currIdx ?>">
                                     <div class="portfolio_img_inner">
                                         <img src="<?= $img ?>" alt="<?= $title ?>" loading="lazy" >
                                     </div>
@@ -931,7 +952,7 @@
                                 </div>
                             </a>
                             
-                            <a href='/business?pptIndex=1' class='content-panel'>
+                            <a href='/business?pptIndex=2' class='content-panel'>
                                 <div class='img-wrap'>
                                     <img src='resources/users/img/main/contentImage/proposal-report-1.png' />
                                 </div>
@@ -944,7 +965,7 @@
                                 </div>
                             </a>
                             
-                            <a href='/business?pptIndex=3' class='content-panel'>
+                            <a href='/business?pptIndex=2' class='content-panel'>
                                 <div class='img-wrap'>
                                     <img src='resources/users/img/main/contentImage/business-report-1.png' />
                                 </div>
@@ -957,7 +978,7 @@
                                 </div>
                             </a>
                             
-                            <a href='/business?pptIndex=4' class='content-panel'>
+                            <a href='/business?pptIndex=2' class='content-panel'>
                                 <div class='img-wrap'>
                                     <img src='resources/users/img/main/contentImage/education-1.png' />
                                 </div>
@@ -1081,7 +1102,7 @@
                             </li>
                             <li>
                                 <img src="resources/users/img/main/step_3.png" alt="화상 대면 미팅">
-                                <p>화상 · 대면<br />미팅</p>
+                                <p>화상 · 대면 미팅</p>
                             </li>
                             <li class="arrow_between">
                                 <img src="resources/users/img/icon/between_arrows.png">
@@ -1545,6 +1566,27 @@
                             <?php
                             }
                             ?>
+                            <?php
+                            foreach ($portfolio_list as $list) {
+                                $img = json_decode($list->img_name)[0];
+                                $currIdx = htmlspecialchars($list->idx, ENT_QUOTES, 'UTF-8');
+                                $imgSrc = htmlspecialchars($img, ENT_QUOTES, 'UTF-8');
+                                $title = htmlspecialchars($list->title, ENT_QUOTES, 'UTF-8');
+                                ?>
+                                <li class="portfolio_wrap select_portfolio" data-curridx="<?= $currIdx ?>">
+                                    <div class="portfolio_img_inner">
+                                        <img src="<?= $imgSrc ?>" alt="<?= $title ?>">
+                                    </div>
+                                    <div class="hover_overlay">
+                                        <div class="hover_top">
+                                            <img src='resources/users/img/main/view_detail.png' />
+                                            <span><?= $title ?></span>
+                                        </div>
+                                    </div>
+                                </li>
+                            <?php
+                            }
+                            ?>
                         </ul>
                         <div id="sentinelMO"></div>
                     </div>
@@ -1553,25 +1595,26 @@
             <!-- e:section_06-->
 
             <footer class="footer mo" id='footer'>
-                <div class="ft_wrap">
-                    <p><b>(주)엠티엠비코리아</b></p>
-                    <p>
-                        대표: 정세종<br />
-                        서울특별시 강서구 양천로 424 데시앙플렉스 지식산업센터 1231호<br />
-                        Tel : 02-3663-0332 &emsp; Fax : 02-374-0335<br />
-                        E-mail : mtmb@mtmbkorea.com<br />
-                        사업자번호 : 130-87-09598 &emsp; 개인정보보호책임자 : 진동호 <br />
-                        통신판매업신고중 :제 2023-서울강서-3726호
-                    </p>
-                    <p>
-                    </p>
-                    <div class='copyright_wrap'>
-                        <p>COPYRIGHT (c) 2021 MTMBKOREA Co., Ltd.<br /> ALL RIGHTS RESERVED.</p>
-                        <button class='footer_btn'>
-                            <a href='/main/manager'>관리자</a>
-                        </button>
-                    </div>
+            <div class="ft_wrap">
+                <p><b>(주)엠티엠비코리아</b></p>
+                <p>
+                    대표: 정세종<br />
+                    서울특별시 강서구 양천로 424 데시앙플렉스 지식산업센터 1231호<br />
+                    Tel : 02-3663-0332 &emsp; Fax : 02-374-0335<br />
+                    E-mail : mtmb@mtmbkorea.com<br />
+                    사업자번호 : 130-87-09598 &emsp; 개인정보보호책임자 : 진동호 <br />
+                    통신판매업신고증 :제 2023-서울강서-3726호<br />
+                    <span class='open-policy-privacy'>개인정보처리방침 [ 전문보기 ]</span>
+                </p>
+                <p>
+                </p>
+                <div class='copyright_wrap'>
+                    <p>COPYRIGHT (c) 2021 MTMBKOREA Co., Ltd.<br /> ALL RIGHTS RESERVED.</p>
+                    <button class='footer_btn'>
+                        <a href='/main/manager'>관리자</a>
+                    </button>
                 </div>
+            </div>
             </footer>
 
         </div>
@@ -1602,28 +1645,29 @@
         </div>
         <!-- e:right_fixed -->
 
-            <footer class="footer footer_pc fp-auto-height" id='footer'>
-                <div class="ft_wrap">
-                    <div class="row">
-                        <div class="col-2">
-                            <p><b>(주)엠티엠비코리아</b></p>
-                        </div>
-                        <div class="col-4">
-                            <p>대표 : 정세종</p>
-                            <p>서울특별시 강서구 양천로 424 데시앙플렉스 지식산업센터 1231호<br>
-                                Tel : 02-3663-0332 Fax : 02-374-0335 E-mail : mtmb@mtmbkorea.com</p>
-                            <button>
-                                <a href='/main/manager'>관리자</a>
-                            </button>
-                        </div>
-                        <div class="col-4">
-                            <p>사업자번호 : 130-87-09598 <span>통신판매업신고중 :제 2023-서울강서-3726호</span><br />
-                                개인정보보호책임자 : 진동호</p>
-                            <p class='copyright'>COPYRIGHT (c) 2021 MTMBKOREA Co., Ltd. ALL RIGHTS RESERVED.</p>
-                        </div>
+        <footer class="footer footer_pc fp-auto-height" id='footer'>
+            <div class="ft_wrap">
+                <div class="row">
+                    <div class="col-2">
+                        <p><b>(주)엠티엠비코리아</b></p>
+                    </div>
+                    <div class="col-4">
+                        <p>
+                            대표 : 정세종<br />
+                            서울특별시 강서구 양천로 424 데시앙플렉스 지식산업센터 1231호<br>
+                            Tel : 02-3663-0332 Fax : 02-374-0335 E-mail : mtmb@mtmbkorea.com</p>
+                        <button>
+                            <a href='/main/manager'>관리자</a>
+                        </button>
+                    </div>
+                    <div class="col-4">
+                        <p>사업자번호 : 130-87-09598 <span>통신판매업신고증 :제 2023-서울강서-3726호</span><br />
+                            개인정보보호책임자 : 진동호 <span class='open-policy-privacy'>&nbsp;&nbsp;&nbsp;개인정보처리방침 [ 전문보기 ]</span></p>
+                        <p class='copyright'>COPYRIGHT (c) 2021 MTMBKOREA Co., Ltd. ALL RIGHTS RESERVED.</p>
                     </div>
                 </div>
-            </footer>
+            </div>
+        </footer>
     </div>
 
     <div class="modal fade write-modal view-modal" id="modal-review-view" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
@@ -1641,6 +1685,75 @@
                         </ul>
                     </div>
                     <div class="modal_review_text" id="modal-review-content"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade write-modal view-modal" id="modal-policy-privacy" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title" id="reviewModalLabel">개인정보처리방침</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body container">
+                    <p>본 개인정보 처리 방침은 [회사명] ("회사")가 제공하는 서비스 ("서비스")와 관련하여 회사가 처리하는 개인정보의 수집, 이용, 보관 및 보호에 관한 정책을 설명합니다.</p>
+
+                    <h2>1. 수집하는 개인정보의 항목</h2>
+                    <p>회사는 다음과 같은 개인정보를 수집합니다:</p>
+                    <ul>
+                        <li>이름, 생년월일, 성별, 이메일 주소, 전화번호 등 기본 정보</li>
+                        <li>서비스 이용 기록, 접속 로그, 쿠키, 접속 IP 정보 등 자동으로 수집되는 정보</li>
+                    </ul>
+
+                    <h2>2. 개인정보의 수집 및 이용 목적</h2>
+                    <p>회사는 수집한 개인정보를 다음의 목적을 위해 이용합니다:</p>
+                    <ul>
+                        <li>회원 관리 및 인증</li>
+                        <li>서비스 제공 및 개선</li>
+                        <li>고객 문의 응대 및 민원 처리</li>
+                        <li>마케팅 및 광고에 활용</li>
+                        <li>법적 의무 준수</li>
+                    </ul>
+
+                    <h2>3. 개인정보의 보유 및 이용 기간</h2>
+                    <p>회사는 수집한 개인정보를 수집 및 이용 목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다. 단, 관련 법령에 따라 일정 기간 보관이 필요한 경우에는 해당 기간 동안 보관합니다.</p>
+
+                    <h2>4. 개인정보의 제3자 제공</h2>
+                    <p>회사는 원칙적으로 이용자의 개인정보를 제3자에게 제공하지 않습니다. 다만, 이용자가 사전에 동의한 경우 또는 법령에 의해 요구되는 경우에는 예외로 합니다.</p>
+
+                    <h2>5. 개인정보의 처리 위탁</h2>
+                    <p>회사는 원활한 개인정보 업무 처리를 위하여 다음과 같이 개인정보 처리 업무를 위탁하고 있습니다:</p>
+                    <ul>
+                        <li>위탁 받는 자 (수탁자): [수탁업체명]</li>
+                        <li>위탁하는 업무의 내용: [위탁업무 내용]</li>
+                    </ul>
+
+                    <h2>6. 이용자의 권리와 행사 방법</h2>
+                    <p>이용자는 언제든지 자신의 개인정보에 대한 열람, 정정, 삭제, 처리 정지 등의 권리를 행사할 수 있습니다. 이러한 권리 행사는 회사에 서면, 이메일 등을 통하여 요청할 수 있으며, 회사는 지체 없이 조치하겠습니다.</p>
+
+                    <h2>7. 개인정보의 안전성 확보 조치</h2>
+                    <p>회사는 이용자의 개인정보를 안전하게 보호하기 위하여 다음과 같은 조치를 취하고 있습니다:</p>
+                    <ul>
+                        <li>개인정보의 암호화</li>
+                        <li>해킹 등에 대비한 기술적 대책</li>
+                        <li>개인정보 처리 시스템의 접근 제한</li>
+                        <li>개인정보 보호를 위한 직원 교육</li>
+                    </ul>
+
+                    <h2>8. 개인정보 보호책임자</h2>
+                    <p>회사는 개인정보 처리에 관한 업무를 총괄해서 책임지고, 개인정보 처리와 관련한 이용자의 불만 처리 및 피해 구제 등을 위하여 아래와 같이 개인정보 보호책임자를 지정하고 있습니다:</p>
+                    <p>
+                        개인정보 보호책임자: [성명]<br>
+                        연락처: [전화번호]<br>
+                        이메일: [이메일 주소]
+                    </p>
+
+                    <h2>9. 개인정보 처리 방침 변경</h2>
+                    <p>본 개인정보 처리 방침은 시행일로부터 적용되며, 법령 및 방침에 따른 변경 내용의 추가, 삭제 및 수정이 있을 경우에는 변경 사항의 시행 7일 전부터 공지사항을 통하여 고지합니다.</p>
+
+                    <p>시행일: [시행일]</p>
                 </div>
             </div>
         </div>
@@ -1719,6 +1832,8 @@
     let modal_notice_view;
     let curr_notice_idx;
 
+    let modal_policy_view;
+
     $(function() {
         modal_review_view = new bootstrap.Modal(document.getElementById("modal-review-view"), {
             keyboard: false,
@@ -1726,6 +1841,14 @@
 
         modal_notice_view = new bootstrap.Modal(document.getElementById("modal-notice-view"), {
             keyboard: false,
+        });
+
+        modal_policy_view = new bootstrap.Modal(document.getElementById("modal-policy-privacy"), {
+            keyboard: false,
+        });
+
+        $(document).on("click", ".open-policy-privacy", function() {
+            view_policy_privacy();
         });
 
         $(document).on("click", ".review_box", function() {
@@ -1764,6 +1887,10 @@
         $.post("/main/popupCloseToday", {
             idx: popIdx
         });
+    }
+
+    function view_policy_privacy() {
+        modal_policy_view.show();
     }
 
     function view_review() {
