@@ -101,6 +101,7 @@
 }
 
 .consulting_container .consulting_box .left_wrap>ul li:nth-child(5) {
+  min-width: fit-content;
   width: 215px;
 }
 
@@ -264,6 +265,10 @@
   overflow-y: auto;
 }
 
+.consulting_container .step_box.step_01 .right_wrap .survey_form_container {
+  height: max-content;
+}
+
 .consulting_container .step_box .right_wrap .survey_container {
   overflow-y: auto;
   height: 100%;
@@ -286,10 +291,10 @@
 
 .consulting_container .step_box .right_wrap .survey_container .survey_content_title {
   font-family: 'SUIT';
-  font-weight: 400;
+  font-weight: 700;
   font-size: 16px;
 
-  color: #646464;
+  color: #000;
   margin-bottom: 15px;
 }
 
@@ -328,6 +333,15 @@
   margin-bottom: 8px;
 }
 
+.consulting_container .step_box .right_wrap .survey_container .sub_question {
+  font-family: 'SUIT';
+  font-weight: 700;
+}
+
+.consulting_container .step_box .right_wrap .survey_container .sub_question > span {
+  font-weight: 400;
+}
+
 .consulting_container .step_box .right_wrap .survey_container .survey_wrap .input_group p:first-child,
 .consulting_container .step_box .right_wrap .survey_container .survey_wrap .content {
   width: 100%;
@@ -348,12 +362,14 @@
 
 /* 상담신청  > 이전/다음 페이지네이션 */
 .consulting_container .step_box .right_wrap .step_control_container {
-  width: 50%;
+  width: 100%;
   margin: 0px auto;
   padding-top: 1rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-end;
+  gap: 24px;
+  border-top: 1px solid #7f7f7f;
 }
 
 .consulting_container .step_box .right_wrap .step_control_container .prev,
@@ -434,9 +450,12 @@
 
 .check_wrap {
   align-items: center;
-
 }
 
+
+.check_wrap .check_description {
+  transform: translateX(-20%)
+}
 
 input[type=checkbox],
 input[type=radio] {
@@ -498,7 +517,7 @@ input[type=radio]:before {
   align-items: center;
 
   margin: 0px auto;
-  margin-top: 28px;
+  margin-top: 12px;
   margin-bottom: 32px;
 
 
@@ -519,7 +538,7 @@ input[type=radio]:before {
 
 .consulting_container .step_box.step_01 .check_container {
   width: 100%;
-  padding: 16px 0;
+  padding: 24px 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
@@ -527,12 +546,15 @@ input[type=radio]:before {
 /* step2 style */
 .consulting_container .step_box.step_02 .form_container {
   padding: 20px 0px 0;
+}
+
+.consulting_container .step_box.step_02 .form_container:not(:last-child){
   border-bottom: 1px solid #808080;
 }
 
 .consulting_container .step_box.step_02 .form_container .form_title {
   font-family: SUIT;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 24px;
   color: #fff;
 }
@@ -616,7 +638,6 @@ input[type=radio]:before {
 
   margin-bottom: 35px;
 
-  border-bottom: 1px solid #616161;
 }
 
 .consulting_container .step_box.step_03 .input_wrap.first_input_wrap {
@@ -634,8 +655,26 @@ input[type=radio]:before {
   margin-right: 12px;
 }
 
+.consulting_container .step_box.step_03 .input_wrap > span {
+  font-family: SUIT;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+/* 필수입력 */
+.required_label {
+  font-family: SUIT;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.required_text {
+  color: #02ead7;
+  margin: 8px;
+}
+
 .consulting_container .step_box.step_03 .input_wrap input {
-  width: calc(80% / 3);
+  width: 100%;
   font-family: SUIT;
   font-weight: 400;
   font-size: 16px;
@@ -643,7 +682,11 @@ input[type=radio]:before {
   color: #fff;
 
   border: none;
+  border-radius: 0px;
   background: transparent;
+
+  padding-bottom: 12px;
+  border-bottom: 1px solid #616161;
 }
 
 /* step4 style */
@@ -797,6 +840,7 @@ input[type=radio]:before {
 }
 
 .consulting_container .step_box.step_05 .right_wrap .step_control_container {
+  align-items: center;
   justify-content: center;
 }
 
@@ -1498,7 +1542,6 @@ li.portfolio_wrap:nth-child(5n) .hover_overlay::before {
   /* 상담신청 반응형 */
   .consulting_container .consulting_box {
     width: 90%;
-    height: 520px;
   }
 
   .consulting_container .step_box .left_wrap {
@@ -1537,7 +1580,6 @@ li.portfolio_wrap:nth-child(5n) .hover_overlay::before {
   /* 상담신청 반응형 */
   .consulting_container .consulting_box {
     width: 95%;
-    height: 500px;
   }
 
   .consulting_container .step_box .survey_title {
@@ -1553,11 +1595,12 @@ li.portfolio_wrap:nth-child(5n) .hover_overlay::before {
   }
 
   .consulting_container .step_box.step_02 .form_container .form_title {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .consulting_container .step_box.step_02 .form_container .form_wrap .form_sub_title {
-    font-size: 18px;
+    font-size: 15px;
+    margin-bottom: 8px;
   }
 
   .consulting_container .step_box .left_wrap {
@@ -1687,11 +1730,13 @@ li.portfolio_wrap:nth-child(5n) .hover_overlay::before {
 
   .consulting_container .consulting_box .left_wrap>ul {
     align-items: flex-end;
+    gap: 8px;
   }
 
 
   .consulting_container .consulting_box .left_wrap>ul li:nth-child(5) {
     width: 135px;
+    margin: 0px 4px;
   }
 
   .consulting_container .step_box .right_wrap .survey_form_container {
@@ -1740,8 +1785,9 @@ li.portfolio_wrap:nth-child(5n) .hover_overlay::before {
   }
 
   .consulting_container .step_box .right_wrap .step_control_container {
-    width: 100%;
-    justify-content: space-around;
+    width: calc(100% - 12px);
+    justify-content: space-between;
+    margin-top: 12px;
   }
 
   .consulting_container .step_box.step_02 .form_container {
@@ -1751,6 +1797,26 @@ li.portfolio_wrap:nth-child(5n) .hover_overlay::before {
 
   .consulting_container .step_box.step_02 .form_container .form_wrap .form_checkbox_container {
     grid-template-columns: repeat(2, 1fr)
+  }
+
+  .consulting_container .step_box.step_03 .input_wrap.first_input_wrap {
+    padding: 20px 12px 12px;
+  }
+
+  .consulting_container .step_box.step_03 .input_wrap{
+    margin-bottom: 12px;
+  }
+
+  .required_label {
+    font-size: 14px
+  }
+
+  .consulting_container .step_box.step_03 .input_wrap input{
+    padding-bottom: 8px;
+  }
+
+  .consulting_container .step_box.step_03 .input_wrap > span{
+    font-size: 12px;
   }
 
   /* QA + Review */
@@ -2068,9 +2134,10 @@ li.portfolio_wrap:nth-child(5n) .hover_overlay::before {
     right: -5px; */
   }
 
-  input[type=checkbox] {
-    width: 15px;
-    height: 15px;
+  input[type=checkbox],
+  input[type=radio]  {
+    width: 14px;
+    height: 14px;
     margin-right: .3rem
   }
 
@@ -2098,7 +2165,7 @@ li.portfolio_wrap:nth-child(5n) .hover_overlay::before {
     object-fit: contain;
   }
 
-  li.portfolio_wrap:nth-child(4n + 1) .hover_overlay::before {
+  li.portfolio_wrap:nth-child(odd) .hover_overlay::before {
     display: flex;
     top: 50%;
     position: absolute;
@@ -2129,7 +2196,7 @@ li.portfolio_wrap:nth-child(5n) .hover_overlay::before {
 
   .consulting_container .consulting_box .right_wrap {
     margin: 0;
-    padding: 30px 14px 35px 30px;
+    padding: 30px 24px 35px 24px;
   }
 
   .consulting_container .consulting_box .right_wrap>span:last-child {
@@ -2143,9 +2210,11 @@ li.portfolio_wrap:nth-child(5n) .hover_overlay::before {
     overflow-x: hidden;
     overflow-y: scroll;
     width: 100%;
+    padding-right: 12px;
   }
 
   .consulting_container .step_box.step_01 .description {
+    width: 100%;
     margin-top: 13px;
     margin-bottom: 4px;
   }
@@ -2165,6 +2234,12 @@ li.portfolio_wrap:nth-child(5n) .hover_overlay::before {
 
   .scroll_inner_left {
     padding-right: 20px;
+  }
+
+  .consulting_container .step_box span.check_wrap .check_description {
+    min-width: max-content;
+    font-size: 12px;
+    transform: translateX(-15%);
   }
 
   .consulting_container .step_box.step_04 .password_input_wrap input {
@@ -2188,11 +2263,12 @@ li.portfolio_wrap:nth-child(5n) .hover_overlay::before {
   }
 
   .consulting_container .step_box.step_01 .check_container {
+    width: 100%;
     padding: 16px 12px 16px 0;
   }
 
   .consulting_container .consulting_box .left_wrap {
-    padding: 32px;
+    padding: 20px;
     border-radius: 0px 50px 50px 0px;
   }
 
@@ -2213,10 +2289,10 @@ li.portfolio_wrap:nth-child(5n) .hover_overlay::before {
 
   .survey_top {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     padding-bottom: 12px;
     gap: 20px;
-    width: 100%;
+    width: calc(100% - 4px);
     border-bottom: 1px solid #fff;
   }
 
@@ -2431,6 +2507,16 @@ li.portfolio_wrap:nth-child(5n) .hover_overlay::before {
     font-size: 14px;
   }
 
+
+  .consulting_container .consulting_box .left_wrap>ul li {
+    height: 65px;
+  }
+
+  .consulting_container .consulting_box .left_wrap>ul li img {
+    width: 32px;
+    height: 32px;
+  }
+
   .consulting_container .portfolio_container .title span {
     font-size: 32px;
   }
@@ -2463,6 +2549,28 @@ li.portfolio_wrap:nth-child(5n) .hover_overlay::before {
 @media (max-width: 350px) {
   .review_container table td:nth-child(2) {
     min-width: 50px;
+  }
+
+  .consulting_container .consulting_box .left_wrap {
+    padding: 18px;
+  }
+  
+  .consulting_container .consulting_box .left_wrap>ul{
+    gap: 4px;
+  }
+
+  .consulting_container .consulting_box .left_wrap>ul li {
+    height: 48px;
+  }
+
+  .consulting_container .consulting_box .left_wrap>ul li img {
+    width: 26px;
+    height: 26px;
+  }
+
+  .consulting_container .consulting_box .left_wrap>ul li p {
+    font-size: 8px;
+    margin-top: 4px;
   }
 
   .question td,
@@ -2590,4 +2698,24 @@ li.portfolio_wrap:nth-child(5n) .hover_overlay::before {
 
 .modal hr {
   background-color: #d5d5d5;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox  */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.input_flex_wrap {
+  display: flex;
+}
+
+.input_flex_wrap > div:first-child {
+  margin-right: 8px;
 }

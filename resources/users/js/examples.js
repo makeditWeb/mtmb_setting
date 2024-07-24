@@ -315,10 +315,14 @@ $(document).ready(function () {
       slide.style.borderTop = borderStyle;
       slide.style.borderLeft = borderStyle;
 
-      if (i === swiper.activeIndex + 3) {
-        slide.style.borderRight = borderStyle;
+      if (i === swiper.activeIndex + 3 || i === swiper.activeIndex) {
+        if(i === swiper.activeIndex + 3) {
+          slide.style.borderRight = borderStyle;
+        }
+        slide.style.zIndex = 3;
       } else {
         slide.style.borderRight = 'none';
+        slide.style.zIndex = 1;
       }
     }
 
@@ -361,7 +365,7 @@ $(document).ready(function () {
     speed: 500,
     loop: true,
     autoplay: {
-      delay: 3000,
+      delay: 2000,
       disableOnInteraction: false,
     },
     effect: 'slide',
@@ -412,7 +416,7 @@ $(document).ready(function () {
     speed: 500,
     loop: true,
     autoplay: {
-      delay: 3000,
+      delay: 2000,
       disableOnInteraction: false,
     },
     pagination: {
@@ -530,27 +534,20 @@ function refreshPage(anchor) {
     window.location.reload();
 }
 
- // 페이지가 로드되었을 때 실행
-  window.onload = function() {
-    const isMobile = window.innerHeight <= 990;
-
-    if(!isMobile) {
-      return null;
-    }
-      // 현재 URL의 해시를 가져옴
-      var hash = window.location.hash;
-      // 해시가 존재하고, 해당 요소가 있는 경우
-      if (hash) {
-          var element = document.querySelector(hash);
-          if (element) {
-              // 오프셋 값을 이용해 위치 계산
-              var offset = -150; // 헤더 높이에 맞춰 이 값을 조정
-              var elementPosition = element.getBoundingClientRect().top + window.pageYOffset + offset;
-              // 조정된 위치로 스크롤
-              window.scrollTo({
-                  top: elementPosition,
-                  behavior: 'smooth' // 선택 사항: 부드러운 스크롤
-              });
-          }
+window.addEventListener("load", function() {
+  var hash = location.hash;
+  if (hash !== "") {
+    this.setTimeout(() =>{
+      var target = document.querySelector(hash);
+      if (target) {
+        var headerHeight = document.querySelector("header").offsetHeight;
+        var targetPosition = target.getBoundingClientRect().top;
+        window.scrollTo({
+          top: targetPosition + window.pageYOffset - headerHeight,
+          behavior: "auto"
+        });
       }
-  };
+    }, 50)
+  }
+
+});

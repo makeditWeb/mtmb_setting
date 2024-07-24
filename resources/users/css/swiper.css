@@ -709,7 +709,7 @@ Marquee animation
 }
 
 .section01_listMobileSwiper {
-  overflow: hidden
+  overflow: hidden;
 }
 
 .section01_listMobileSwiper .swiper-slide {

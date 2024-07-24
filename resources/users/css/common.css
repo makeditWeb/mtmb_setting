@@ -1484,10 +1484,8 @@ button.btn-skyblue:hover {
     }
 }
 
-
-.view-modal .modal-body {
-    border-bottom: 1px solid #000;
-    border-top: 1px solid #000;
+.view-modal .modal-body { 
+    width: calc(100% - 24px);
     margin: 0 12px 20px 12px;
     padding: 1rem;
 }
@@ -1529,6 +1527,7 @@ button.btn-skyblue:hover {
 
 @media (min-width: 1300px) {
     .view-modal .modal-body {
+        width: calc(100% - 80px);
         margin: 0 40px 40px 40px;
     }
 
@@ -1699,6 +1698,7 @@ button.btn-skyblue:hover {
 }
 
 /* 모달 Title */
+#modal-alert .modal-title,
 #modal-review-view .modal-title,
 #modal-portfolio-view .modal-title,
 #modal-review-write .modal-title,
@@ -1723,6 +1723,15 @@ button.btn-skyblue:hover {
     border-bottom: unset;
 }
 
+.write-modal .modal_body_area {
+  border-top: unset;
+}
+
+#modal-alert .modal-body {
+    text-align: center;
+    padding: 24px;
+}
+
 /* 공통 버튼 스타일 */
 .modal .btn.btn-skyblue, #modal-alert-agree {
 font-family: 'SUIT', sans-serif;
@@ -1740,7 +1749,12 @@ justify-content: center;
 background: #000;
 }
 
+
+
+    
+
 @media (max-width: 990px) {
+    #modal-alert .modal-title,
     #modal-review-view .modal-title,
     #modal-portfolio-view .modal-title,
     #modal-review-write .modal-title,
@@ -1748,12 +1762,116 @@ background: #000;
     #modal-qna-write .modal-title{
         font-size: 20px;
     }
-
+    
+    
     .view-modal .modal-body{
         padding: 0px;
+    }
+    
+    #modal-alert .modal-body {
+        padding: 12px;
     }
 
     #modal-portfolio-view .modal-body .modal_review_text > div > img {
         width: 60% !important;
+    }
+}
+
+.open-policy-privacy {
+    cursor: pointer;
+}
+
+/* 제목 스타일 */
+
+#modal-policy-privacy .modal-body{
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+#modal-policy-privacy .modal-body h1, 
+#modal-policy-privacy .modal-body h2 {
+    color: #333;
+}
+
+#modal-policy-privacy .modal-body h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+#modal-policy-privacy .modal-body h2 {
+    font-size: 1.2em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+/* 본문 텍스트 스타일 */
+#modal-policy-privacy .modal-body p {
+    margin-bottom: 16px;
+    color: #555;
+
+    font-size: 1em;
+}
+
+#modal-policy-privacy .modal-body p:first-child {
+    margin-bottom: 20px;
+    margin-top: 8px;
+}
+
+/* 목록 스타일 */
+#modal-policy-privacy .modal-body ul {
+    list-style: disc inside;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+#modal-policy-privacy .modal-body li {
+    margin-bottom: 5px;
+}
+
+/* 링크 스타일 */
+#modal-policy-privacy .modal-body a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+#modal-policy-privacy .modal-body a:hover {
+    text-decoration: underline;
+}
+
+/* 에러 메시지 스타일 */
+#modal-policy-privacy .modal-body .error {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+@media (max-width: 992px) {
+    #modal-policy-privacy .modal-body p {
+        font-size: 0.8em;
+    }
+
+    #modal-policy-privacy .modal-body h2{
+        font-size: 1em;
+    }
+
+    #modal-policy-privacy .modal-body ul li {
+        font-size: 0.8em;
+    }
+
+    .write-modal .input_area {
+        margin-top: 8px;
+    }
+
+    .write-modal .modal-footer{
+        padding-bottom: 20px;
+    }
+
+    .modal-content {
+        width: 90%;
+        height: 90%;
+        margin: 0 auto;
     }
 }

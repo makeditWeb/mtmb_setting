@@ -88,10 +88,10 @@ function linkHashEventForPc(index) {
   if (targetElement.length) {
     targetElement.click();
 
-    // 클릭 후 해당 요소로 스크롤
-    $('html, body').animate({
-      scrollTop: scrollTargetElement.offset().top  - 120
-    }, 100); // 스크롤 애니메이션 시간 (밀리초)
+    // // 클릭 후 해당 요소로 스크롤
+    // $('html, body').animate({
+    //   scrollTop: scrollTargetElement.offset().top  - 120
+    // }, 100); // 스크롤 애니메이션 시간 (밀리초)
   }
 }
 
@@ -102,17 +102,17 @@ function linkHashEventForMobile(index) {
     if (index !== 0) {
       targetElement.click()
 
-      setTimeout(() => {
-        // 클릭 후 아코디언이 열리면 스크롤
-        $('html, body').animate({
-          scrollTop: targetElement.offset().top - 100
-        }, 100);
-      }, 500)
+      // setTimeout(() => {
+      //   // 클릭 후 아코디언이 열리면 스크롤
+      //   $('html, body').animate({
+      //     scrollTop: targetElement.offset().top - 100
+      //   }, 100);
+      // }, 500)
     } else {
-      // 첫 번째 요소는 클릭 후 바로 스크롤
-      $('html, body').animate({
-        scrollTop: targetElement.offset().top - 100
-      }, 100); 
+      // // 첫 번째 요소는 클릭 후 바로 스크롤
+      // $('html, body').animate({
+      //   scrollTop: targetElement.offset().top - 100
+      // }, 100); 
     }
   }
 }

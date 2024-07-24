@@ -231,3 +231,20 @@ function goToStep(currentStep, nextStep) {
 
 //   $('.mo .content.customer_info').html(customerInfo);
 // });
+
+
+// window.addEventListener("load", function() {
+//   var hash = location.hash;
+//   if (hash !== "") {
+//     var target = document.querySelector(hash);
+//     if (target) {
+//       var headerHeight = document.querySelector("header").offsetHeight;
+//       var targetPosition = target.getBoundingClientRect().top;
+//       window.scrollTo({
+//         top: targetPosition + window.pageYOffset - headerHeight,
+//         behavior: "auto"
+//       });
+//     }
+//   }
+
+// });
